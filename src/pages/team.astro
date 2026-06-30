@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import TeamBuilderIsland from '../components/TeamBuilderIsland.jsx';
+---
+
+<MainLayout title="Team Builder — PokeWeak" description="Build a team of 6 Pokémon and analyze their combined weaknesses" currentPath="/team">
+  <TeamBuilderIsland client:load />
+</MainLayout>

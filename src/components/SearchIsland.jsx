@@ -1,10 +1,12 @@
 import { h } from 'preact';
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
+import typeChart from '../data/types.json';
 import TypeIcon from './TypeIcon.jsx';
 import { getSprite, displayName } from '../utils/pokemon';
 
 const pokemonList = Object.entries(pokemonData);
+const allTypes = Object.keys(typeChart);
 
 const championsPokemon = [
   'abomasnow','absol','aegislash','aerodactyl','aggron','alakazam','alcremie','altaria','ampharos',
@@ -24,17 +26,18 @@ const championsPokemon = [
   'milotic','mimikyu','morpeko','mudsdale','musharna','ninetales','noivern','oranguru','orthworm',
   'overqwil','palafin','pangoro','passimian','pelipper','pidgeot','pikachu','pinsir','politoed',
   'polteageist','primarina','pyroar','quaquaval','qwilfish','raichu','rampardos','reuniclus','rhyperior',
-  'roserade','rotom','runerigus','sableye','salazzle','samurott','sandaconda','sceptile','scizor',
-  'scolipede','scovillain','scrafty','serperior','sharpedo','simipour','simisage','simisear','sinistcha',
-  'skarmory','skeledirge','slowbro','slowking','slurpuff','sneasler','snorlax','spiritomb','staraptor',
-  'starmie','steelix','stunfisk','swampert','sylveon','talonflame','tauros','tinkaton','torkoal',
-  'torterra','toucannon','toxapex','toxicroak','trevenant','tsareena','typhlosion','tyranitar','tyrantrum',
-  'umbreon','vanilluxe','vaporeon','venusaur','victreebel','vileplume','vivillon','volcarona','watchog',
-  'weavile','whimsicott','wyrdeer','zoroark'
+  'roserade','rotom','rotom-wash','rotom-heat','rotom-mow','rotom-frost','runerigus','sableye','salazzle',
+  'samurott','sandaconda','sceptile','scizor','scolipede','scovillain','scrafty','serperior','sharpedo',
+  'simipour','simisage','simisear','sinistcha','skarmory','skeledirge','slowbro','slowking','slurpuff',
+  'sneasler','snorlax','spiritomb','staraptor','starmie','steelix','stunfisk','swampert','sylveon',
+  'talonflame','tauros','tinkaton','torkoal','torterra','toucannon','toxapex','toxicroak','trevenant',
+  'tsareena','typhlosion','tyranitar','tyrantrum','umbreon','vanilluxe','vaporeon','venusaur','victreebel',
+  'vileplume','vivillon','volcarona','watchog','weavile','whimsicott','wyrdeer','zoroark'
 ].filter(name => pokemonData[name]);
 
 export default function SearchIsland() {
   const [query, setQuery] = useState('');
+  const [filterTypes, setFilterTypes] = useState([]);
   const [focusedIdx, setFocusedIdx] = useState(-1);
   const inputRef = useRef(null);
   const listRef = useRef(null);
@@ -50,11 +53,42 @@ export default function SearchIsland() {
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return [];
-    return pokemonList
-      .filter(([name]) => championsSet.has(name) && name.includes(q))
-      .slice(0, 20);
-  }, [query]);
+    let filtered = pokemonList;
+
+    if (q) {
+      filtered = filtered.filter(([name]) => championsSet.has(name) && name.includes(q));
+    } else {
+      filtered = sortedChampions;
+    }
+
+    if (filterTypes.length > 0) {
+      filtered = filtered.filter(([, data]) =>
+        filterTypes.some(t => data.types.includes(t))
+      );
+    }
+
+    if (filterTypes.length === 2) {
+      filtered.sort(([, a], [, b]) => {
+        const aHasBoth = filterTypes.every(t => a.types.includes(t));
+        const bHasBoth = filterTypes.every(t => b.types.includes(t));
+        if (aHasBoth && !bHasBoth) return -1;
+        if (!aHasBoth && bHasBoth) return 1;
+        return 0;
+      });
+    }
+
+    return filtered.slice(0, 20);
+  }, [query, filterTypes, sortedChampions, championsSet]);
+
+  const toggleFilterType = useCallback((type) => {
+    setFilterTypes((prev) => {
+      if (prev.includes(type)) {
+        return prev.filter((t) => t !== type);
+      }
+      if (prev.length >= 2) return prev;
+      return [...prev, type];
+    });
+  }, []);
 
   const handleInput = useCallback((e) => {
     setQuery(e.target.value);
@@ -73,6 +107,7 @@ export default function SearchIsland() {
       window.location.href = `/pokemon/${name}`;
     } else if (e.key === 'Escape') {
       setQuery('');
+      setFilterTypes([]);
       inputRef.current?.blur();
     }
   }, [results, focusedIdx]);
@@ -88,8 +123,10 @@ export default function SearchIsland() {
     const handleClickOutside = (e) => {
       const isInput = inputRef.current && inputRef.current.contains(e.target);
       const isDropdown = dropdownRef.current && dropdownRef.current.contains(e.target);
-      if (!isInput && !isDropdown) {
+      const isFilter = e.target.closest('[data-type-filter]');
+      if (!isInput && !isDropdown && !isFilter) {
         setQuery('');
+        setFilterTypes([]);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -183,11 +220,106 @@ export default function SearchIsland() {
             </div>
           )}
         </div>
+
+        <div
+          data-type-filter
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '6px',
+            marginTop: '8px',
+          }}
+        >
+          <button
+            onClick={() => setFilterTypes([])}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '32px',
+              padding: '0 10px',
+              borderRadius: '8px',
+              border: filterTypes.length === 0 ? '1.5px solid #FFFFFF' : '1.5px solid transparent',
+              background: filterTypes.length === 0 ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.07)',
+              color: filterTypes.length === 0 ? '#FFFFFF' : '#A0A0A0',
+              cursor: 'pointer',
+              fontSize: '11px',
+              fontWeight: 600,
+              fontFamily: 'inherit',
+            }}
+          >
+            All
+          </button>
+          {allTypes.map((t) => {
+            const isSelected = filterTypes.includes(t);
+            return (
+              <button
+                key={t}
+                onClick={() => toggleFilterType(t)}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '32px',
+                  padding: '0 6px',
+                  borderRadius: '8px',
+                  border: isSelected ? '1.5px solid #FFFFFF' : '1.5px solid transparent',
+                  background: isSelected ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.07)',
+                  cursor: 'pointer',
+                }}
+                title={t}
+              >
+                <TypeIcon type={t} size={18} />
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {!query.trim() && (
+      {!query.trim() && filterTypes.length === 0 && (
         <div>
           {sortedChampions.map(([name, data]) => (
+            <a
+              key={name}
+              href={`/pokemon/${name}`}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                width: '100%',
+                padding: '8px 16px',
+                background: 'transparent',
+                color: '#FFFFFF',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontFamily: 'inherit',
+                minHeight: '44px',
+                textAlign: 'left',
+                textDecoration: 'none',
+                borderBottom: '1px solid rgba(255,255,255,0.04)',
+              }}
+            >
+              <img
+                src={getSprite(data)}
+                alt={name}
+                width={36}
+                height={36}
+                style={{ imageRendering: 'pixelated', flexShrink: 0 }}
+              />
+              <span style={{ fontWeight: 500 }}>{name}</span>
+              <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+                {data.types.map((t) => (
+                  <TypeIcon key={t} type={t} size={14} />
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {!query.trim() && filterTypes.length > 0 && (
+        <div>
+          {results.map(([name, data]) => (
             <a
               key={name}
               href={`/pokemon/${name}`}

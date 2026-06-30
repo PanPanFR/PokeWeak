@@ -19,7 +19,7 @@ const typeColor = (type) => `var(--color-pk-${type.toLowerCase()})`;
 const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
 ---
 
-<MainLayout title={`${data.name || Astro.params.name} — PokeWeak`} description={`${data.name || Astro.params.name} type weaknesses and resistances`}>
+<MainLayout title={`${data.name || Astro.params.name} — PokeWeak`} description={`${data.name || Astro.params.name} type weaknesses and resistances`} currentPath={`/pokemon/${Astro.params.name}`}>
   <div class="header-row">
     <a href="/" class="back-link" onclick="history.back();return false">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -43,6 +43,21 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
     <div style="margin-top:8px;color:#A0A0A0;font-size:14px;">
       Speed: <strong style="color:#FFFFFF;">{data.speed}</strong>
     </div>
+  </div>
+
+  <div style="margin-top:16px;text-align:center;">
+    <div style="font-size:13px;font-weight:700;color:#FFFFFF;margin-bottom:8px;">Abilities</div>
+    {data.abilities && data.abilities.length > 0 ? (
+      <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;">
+        {data.abilities.map((ab) => (
+          <span style="display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:4px 10px;font-size:12px;font-weight:500;text-transform:capitalize;">
+            {ab}
+          </span>
+        ))}
+      </div>
+    ) : (
+      <div style="color:#A0A0A0;font-size:13px;">No abilities data</div>
+    )}
   </div>
 
   <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
@@ -118,6 +133,7 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
     )}
   </div>
 </MainLayout>
+
 
 <style is:global>
   .back-link {

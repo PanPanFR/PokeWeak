@@ -21,3 +21,7 @@ pnpm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# opencode local config
+.kilo/
+.agents/

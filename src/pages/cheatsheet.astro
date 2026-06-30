@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import TypeIcon from '../components/TypeIcon.astro';
+import TypeCheckerIsland from '../components/TypeCheckerIsland.jsx';
 import typeChart from '../data/types.json';
 import { calculateWeaknesses } from '../utils/typeCalc';
 
@@ -15,6 +16,7 @@ const weaknessData = typeKeys.map((type) => {
 
 <MainLayout title="Type Cheatsheet — PokeWeak" description="Quick reference for all Pokémon type matchups" currentPath="/cheatsheet">
   <h1 style="font-size:16px;font-weight:700;margin:0 0 12px;">Type Matchups</h1>
+  <TypeCheckerIsland client:load />
 
   <div class="cs-grid">
     {
