@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SpeedIsland from '../components/SpeedIsland.jsx';
+---
+
+<MainLayout title="Speed Leaderboard — PokeWeak" description="Compare Pokémon speed stats" currentPath="/speed">
+  <SpeedIsland client:load />
+</MainLayout>

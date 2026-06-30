@@ -1,0 +1,142 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import QuickSearch from '../../components/QuickSearch.jsx';
+import pokemonData from '../../data/pokemon.json';
+import typeChart from '../../data/types.json';
+import { calculateWeaknesses } from '../../utils/typeCalc';
+
+export function getStaticPaths() {
+  return Object.keys(pokemonData).map((name) => ({
+    params: { name },
+    props: { data: pokemonData[name] },
+  }));
+}
+
+const { data } = Astro.props;
+const weaknesses = calculateWeaknesses(data.types, typeChart);
+
+const typeColor = (type) => `var(--color-pk-${type.toLowerCase()})`;
+const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
+---
+
+<MainLayout title={`${data.name || Astro.params.name} — PokeWeak`} description={`${data.name || Astro.params.name} type weaknesses and resistances`}>
+  <div class="header-row">
+    <a href="/" class="back-link" onclick="history.back();return false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/>
+      </svg>
+    </a>
+    <QuickSearch client:load />
+  </div>
+
+  <div style="text-align:center;">
+    <img src={spriteUrl} alt={data.name} width="128" height="128" style="image-rendering:pixelated;display:block;margin:0 auto;" />
+    <h1 style="font-size:24px;font-weight:700;margin:8px 0 4px;">{data.name}</h1>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      {data.types.map((t) => (
+        <span style={`display:inline-flex;align-items:center;gap:4px;border-radius:9999px;border:1px solid ${typeColor(t)};background:color-mix(in srgb, ${typeColor(t)} 20%, transparent);padding:4px 12px;font-size:13px;font-weight:500;white-space:nowrap;color:inherit;`}>
+          <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="20" height="20" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+          <span>{t}</span>
+        </span>
+      ))}
+    </div>
+    <div style="margin-top:8px;color:#A0A0A0;font-size:14px;">
+      Speed: <strong style="color:#FFFFFF;">{data.speed}</strong>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+    {weaknesses.quadWeak?.length > 0 && (
+      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #E6394630;">
+        <div style="font-size:13px;font-weight:700;color:#E63946;margin-bottom:8px;">Extremely Weak (&times;4)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          {weaknesses.quadWeak.map((t) => (
+            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
+              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+              <span>{t}</span>
+              <span style="margin-left:auto;font-weight:700;color:#E63946;">&times;4</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+    {weaknesses.doubleWeak?.length > 0 && (
+      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #FF6B3530;">
+        <div style="font-size:13px;font-weight:700;color:#FF6B35;margin-bottom:8px;">Weak (&times;2)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          {weaknesses.doubleWeak.map((t) => (
+            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
+              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+              <span>{t}</span>
+              <span style="margin-left:auto;font-weight:700;color:#FF6B35;">&times;2</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+    {weaknesses.resist?.length > 0 && (
+      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #7AC74C30;">
+        <div style="font-size:13px;font-weight:700;color:#7AC74C;margin-bottom:8px;">Resists (&times;&frac12;)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          {weaknesses.resist.map((t) => (
+            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
+              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+              <span>{t}</span>
+              <span style="margin-left:auto;font-weight:700;color:#7AC74C;">&times;&frac12;</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+    {weaknesses.doubleResist?.length > 0 && (
+      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #6390F030;">
+        <div style="font-size:13px;font-weight:700;color:#6390F0;margin-bottom:8px;">Double Resists (&times;&frac14;)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          {weaknesses.doubleResist.map((t) => (
+            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
+              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+              <span>{t}</span>
+              <span style="margin-left:auto;font-weight:700;color:#6390F0;">&times;&frac14;</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+    {weaknesses.immune?.length > 0 && (
+      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #A0A0A030;">
+        <div style="font-size:13px;font-weight:700;color:#A0A0A0;margin-bottom:8px;">Immune (&times;0)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          {weaknesses.immune.map((t) => (
+            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
+              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+              <span>{t}</span>
+              <span style="margin-left:auto;font-weight:700;color:#A0A0A0;">&times;0</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</MainLayout>
+
+<style is:global>
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #A0A0A0;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .header-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 12px;
+  }
+  .header-row > *:last-child {
+    flex: 1;
+  }
+</style>

@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SearchIsland from '../components/SearchIsland.jsx';
+---
+
+<MainLayout title="PokeWeak — Pokémon Type Weakness Checker" description="Search any Pokémon to see its type weaknesses and resistances" currentPath="/">
+  <SearchIsland client:load />
+</MainLayout>

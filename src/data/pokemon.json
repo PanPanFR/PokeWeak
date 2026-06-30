@@ -1,0 +1,2737 @@
+{
+  "venusaur": {
+    "id": 3,
+    "name": "Venusaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/003.png"
+  },
+  "mega-venusaur": {
+    "id": 3,
+    "name": "Mega Venusaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/003-m.png"
+  },
+  "charizard": {
+    "id": 6,
+    "name": "Charizard",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006.png"
+  },
+  "mega-charizard-x": {
+    "id": 6,
+    "name": "Mega Charizard X",
+    "types": [
+      "Fire",
+      "Dragon"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006-mx.png"
+  },
+  "mega-charizard-y": {
+    "id": 6,
+    "name": "Mega Charizard Y",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006-my.png"
+  },
+  "blastoise": {
+    "id": 9,
+    "name": "Blastoise",
+    "types": [
+      "Water"
+    ],
+    "speed": 78,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/009.png"
+  },
+  "mega-blastoise": {
+    "id": 9,
+    "name": "Mega Blastoise",
+    "types": [
+      "Water"
+    ],
+    "speed": 78,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/009-m.png"
+  },
+  "beedrill": {
+    "id": 15,
+    "name": "Beedrill",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/015.png"
+  },
+  "mega-beedrill": {
+    "id": 15,
+    "name": "Mega Beedrill",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 145,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/015-m.png"
+  },
+  "pidgeot": {
+    "id": 18,
+    "name": "Pidgeot",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "speed": 101,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/018.png"
+  },
+  "mega-pidgeot": {
+    "id": 18,
+    "name": "Mega Pidgeot",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "speed": 121,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/018-m.png"
+  },
+  "arbok": {
+    "id": 24,
+    "name": "Arbok",
+    "types": [
+      "Poison"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/024.png"
+  },
+  "pikachu": {
+    "id": 25,
+    "name": "Pikachu",
+    "types": [
+      "Electric"
+    ],
+    "speed": 90,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/025.png"
+  },
+  "raichu": {
+    "id": 26,
+    "name": "Raichu",
+    "types": [
+      "Electric"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026.png"
+  },
+  "mega-raichu-x": {
+    "id": 26,
+    "name": "Mega Raichu X",
+    "types": [
+      "Electric"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026-mx.png"
+  },
+  "mega-raichu-y": {
+    "id": 26,
+    "name": "Mega Raichu Y",
+    "types": [
+      "Electric"
+    ],
+    "speed": 130,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026-my.png"
+  },
+  "clefable": {
+    "id": 36,
+    "name": "Clefable",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/036.png"
+  },
+  "mega-clefable": {
+    "id": 36,
+    "name": "Mega Clefable",
+    "types": [
+      "Fairy",
+      "Flying"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/036-m.png"
+  },
+  "ninetales": {
+    "id": 38,
+    "name": "Ninetales",
+    "types": [
+      "Fire"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/038.png"
+  },
+  "vileplume": {
+    "id": 45,
+    "name": "Vileplume",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/045.png"
+  },
+  "arcanine": {
+    "id": 59,
+    "name": "Arcanine",
+    "types": [
+      "Fire"
+    ],
+    "speed": 95,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/059.png"
+  },
+  "alakazam": {
+    "id": 65,
+    "name": "Alakazam",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 120,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/065.png"
+  },
+  "mega-alakazam": {
+    "id": 65,
+    "name": "Mega Alakazam",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 150,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/065-m.png"
+  },
+  "machamp": {
+    "id": 68,
+    "name": "Machamp",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 55,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/068.png"
+  },
+  "victreebel": {
+    "id": 71,
+    "name": "Victreebel",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/071.png"
+  },
+  "mega-victreebel": {
+    "id": 71,
+    "name": "Mega Victreebel",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/071-m.png"
+  },
+  "slowbro": {
+    "id": 80,
+    "name": "Slowbro",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/080.png"
+  },
+  "mega-slowbro": {
+    "id": 80,
+    "name": "Mega Slowbro",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/080-m.png"
+  },
+  "gengar": {
+    "id": 94,
+    "name": "Gengar",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/094.png"
+  },
+  "mega-gengar": {
+    "id": 94,
+    "name": "Mega Gengar",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "speed": 130,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/094-m.png"
+  },
+  "kangaskhan": {
+    "id": 115,
+    "name": "Kangaskhan",
+    "types": [
+      "Normal"
+    ],
+    "speed": 90,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/115.png"
+  },
+  "mega-kangaskhan": {
+    "id": 115,
+    "name": "Mega Kangaskhan",
+    "types": [
+      "Normal"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/115-m.png"
+  },
+  "starmie": {
+    "id": 121,
+    "name": "Starmie",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 115,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/121.png"
+  },
+  "mega-starmie": {
+    "id": 121,
+    "name": "Mega Starmie",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 120,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/121-m.png"
+  },
+  "pinsir": {
+    "id": 127,
+    "name": "Pinsir",
+    "types": [
+      "Bug"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/127.png"
+  },
+  "mega-pinsir": {
+    "id": 127,
+    "name": "Mega Pinsir",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "speed": 105,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/127-m.png"
+  },
+  "tauros": {
+    "id": 128,
+    "name": "Tauros",
+    "types": [
+      "Normal"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/128.png"
+  },
+  "gyarados": {
+    "id": 130,
+    "name": "Gyarados",
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "speed": 81,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/130.png"
+  },
+  "mega-gyarados": {
+    "id": 130,
+    "name": "Mega Gyarados",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 81,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/130-m.png"
+  },
+  "ditto": {
+    "id": 132,
+    "name": "Ditto",
+    "types": [
+      "Normal"
+    ],
+    "speed": 48,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/132.png"
+  },
+  "vaporeon": {
+    "id": 134,
+    "name": "Vaporeon",
+    "types": [
+      "Water"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/134.png"
+  },
+  "jolteon": {
+    "id": 135,
+    "name": "Jolteon",
+    "types": [
+      "Electric"
+    ],
+    "speed": 130,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/135.png"
+  },
+  "flareon": {
+    "id": 136,
+    "name": "Flareon",
+    "types": [
+      "Fire"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/136.png"
+  },
+  "aerodactyl": {
+    "id": 142,
+    "name": "Aerodactyl",
+    "types": [
+      "Rock",
+      "Flying"
+    ],
+    "speed": 130,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/142.png"
+  },
+  "mega-aerodactyl": {
+    "id": 142,
+    "name": "Mega Aerodactyl",
+    "types": [
+      "Rock",
+      "Flying"
+    ],
+    "speed": 150,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/142-m.png"
+  },
+  "snorlax": {
+    "id": 143,
+    "name": "Snorlax",
+    "types": [
+      "Normal"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/143.png"
+  },
+  "dragonite": {
+    "id": 149,
+    "name": "Dragonite",
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/149.png"
+  },
+  "mega-dragonite": {
+    "id": 149,
+    "name": "Mega Dragonite",
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/149-m.png"
+  },
+  "meganium": {
+    "id": 154,
+    "name": "Meganium",
+    "types": [
+      "Grass"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/154.png"
+  },
+  "mega-meganium": {
+    "id": 154,
+    "name": "Mega Meganium",
+    "types": [
+      "Grass",
+      "Fairy"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/154-m.png"
+  },
+  "typhlosion": {
+    "id": 157,
+    "name": "Typhlosion",
+    "types": [
+      "Fire"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/157.png"
+  },
+  "feraligatr": {
+    "id": 160,
+    "name": "Feraligatr",
+    "types": [
+      "Water"
+    ],
+    "speed": 78,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/160.png"
+  },
+  "mega-feraligatr": {
+    "id": 160,
+    "name": "Mega Feraligatr",
+    "types": [
+      "Water",
+      "Dragon"
+    ],
+    "speed": 78,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/160-m.png"
+  },
+  "ariados": {
+    "id": 168,
+    "name": "Ariados",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 40,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/168.png"
+  },
+  "ampharos": {
+    "id": 181,
+    "name": "Ampharos",
+    "types": [
+      "Electric"
+    ],
+    "speed": 55,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/181.png"
+  },
+  "mega-ampharos": {
+    "id": 181,
+    "name": "Mega Ampharos",
+    "types": [
+      "Electric",
+      "Dragon"
+    ],
+    "speed": 45,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/181-m.png"
+  },
+  "azumarill": {
+    "id": 184,
+    "name": "Azumarill",
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/184.png"
+  },
+  "politoed": {
+    "id": 186,
+    "name": "Politoed",
+    "types": [
+      "Water"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/186.png"
+  },
+  "espeon": {
+    "id": 196,
+    "name": "Espeon",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/196.png"
+  },
+  "umbreon": {
+    "id": 197,
+    "name": "Umbreon",
+    "types": [
+      "Dark"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/197.png"
+  },
+  "slowking": {
+    "id": 199,
+    "name": "Slowking",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/199.png"
+  },
+  "forretress": {
+    "id": 205,
+    "name": "Forretress",
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "speed": 40,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/205.png"
+  },
+  "steelix": {
+    "id": 208,
+    "name": "Steelix",
+    "types": [
+      "Steel",
+      "Ground"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/208.png"
+  },
+  "mega-steelix": {
+    "id": 208,
+    "name": "Mega Steelix",
+    "types": [
+      "Steel",
+      "Ground"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/208-m.png"
+  },
+  "qwilfish": {
+    "id": 211,
+    "name": "Qwilfish",
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/211.png"
+  },
+  "scizor": {
+    "id": 212,
+    "name": "Scizor",
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/212.png"
+  },
+  "mega-scizor": {
+    "id": 212,
+    "name": "Mega Scizor",
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/212-m.png"
+  },
+  "heracross": {
+    "id": 214,
+    "name": "Heracross",
+    "types": [
+      "Bug",
+      "Fighting"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/214.png"
+  },
+  "mega-heracross": {
+    "id": 214,
+    "name": "Mega Heracross",
+    "types": [
+      "Bug",
+      "Fighting"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/214-m.png"
+  },
+  "skarmory": {
+    "id": 227,
+    "name": "Skarmory",
+    "types": [
+      "Steel",
+      "Flying"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/227.png"
+  },
+  "mega-skarmory": {
+    "id": 227,
+    "name": "Mega Skarmory",
+    "types": [
+      "Steel",
+      "Flying"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/227-m.png"
+  },
+  "houndoom": {
+    "id": 229,
+    "name": "Houndoom",
+    "types": [
+      "Dark",
+      "Fire"
+    ],
+    "speed": 95,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/229.png"
+  },
+  "mega-houndoom": {
+    "id": 229,
+    "name": "Mega Houndoom",
+    "types": [
+      "Dark",
+      "Fire"
+    ],
+    "speed": 115,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/229-m.png"
+  },
+  "tyranitar": {
+    "id": 248,
+    "name": "Tyranitar",
+    "types": [
+      "Rock",
+      "Dark"
+    ],
+    "speed": 61,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/248.png"
+  },
+  "mega-tyranitar": {
+    "id": 248,
+    "name": "Mega Tyranitar",
+    "types": [
+      "Rock",
+      "Dark"
+    ],
+    "speed": 71,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/248-m.png"
+  },
+  "sceptile": {
+    "id": 254,
+    "name": "Sceptile",
+    "types": [
+      "Grass"
+    ],
+    "speed": 120,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/254.png"
+  },
+  "mega-sceptile": {
+    "id": 254,
+    "name": "Mega Sceptile",
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
+    "speed": 145,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/254-m.png"
+  },
+  "blaziken": {
+    "id": 257,
+    "name": "Blaziken",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/257.png"
+  },
+  "mega-blaziken": {
+    "id": 257,
+    "name": "Mega Blaziken",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/257-m.png"
+  },
+  "swampert": {
+    "id": 260,
+    "name": "Swampert",
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/260.png"
+  },
+  "mega-swampert": {
+    "id": 260,
+    "name": "Mega Swampert",
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/260-m.png"
+  },
+  "pelipper": {
+    "id": 279,
+    "name": "Pelipper",
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/279.png"
+  },
+  "gardevoir": {
+    "id": 282,
+    "name": "Gardevoir",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/282.png"
+  },
+  "mega-gardevoir": {
+    "id": 282,
+    "name": "Mega Gardevoir",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/282-m.png"
+  },
+  "sableye": {
+    "id": 302,
+    "name": "Sableye",
+    "types": [
+      "Dark",
+      "Ghost"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/302.png"
+  },
+  "mega-sableye": {
+    "id": 302,
+    "name": "Mega Sableye",
+    "types": [
+      "Dark",
+      "Ghost"
+    ],
+    "speed": 20,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/302-m.png"
+  },
+  "mawile": {
+    "id": 303,
+    "name": "Mawile",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/303.png"
+  },
+  "mega-mawile": {
+    "id": 303,
+    "name": "Mega Mawile",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/303-m.png"
+  },
+  "aggron": {
+    "id": 306,
+    "name": "Aggron",
+    "types": [
+      "Steel",
+      "Rock"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/306.png"
+  },
+  "mega-aggron": {
+    "id": 306,
+    "name": "Mega Aggron",
+    "types": [
+      "Steel"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/306-m.png"
+  },
+  "medicham": {
+    "id": 308,
+    "name": "Medicham",
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/308.png"
+  },
+  "mega-medicham": {
+    "id": 308,
+    "name": "Mega Medicham",
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/308-m.png"
+  },
+  "manectric": {
+    "id": 310,
+    "name": "Manectric",
+    "types": [
+      "Electric"
+    ],
+    "speed": 105,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/310.png"
+  },
+  "mega-manectric": {
+    "id": 310,
+    "name": "Mega Manectric",
+    "types": [
+      "Electric"
+    ],
+    "speed": 135,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/310-m.png"
+  },
+  "sharpedo": {
+    "id": 319,
+    "name": "Sharpedo",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 95,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/319.png"
+  },
+  "mega-sharpedo": {
+    "id": 319,
+    "name": "Mega Sharpedo",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 105,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/319-m.png"
+  },
+  "camerupt": {
+    "id": 323,
+    "name": "Camerupt",
+    "types": [
+      "Fire",
+      "Ground"
+    ],
+    "speed": 40,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/323.png"
+  },
+  "mega-camerupt": {
+    "id": 323,
+    "name": "Mega Camerupt",
+    "types": [
+      "Fire",
+      "Ground"
+    ],
+    "speed": 20,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/323-m.png"
+  },
+  "torkoal": {
+    "id": 324,
+    "name": "Torkoal",
+    "types": [
+      "Fire"
+    ],
+    "speed": 20,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/324.png"
+  },
+  "altaria": {
+    "id": 334,
+    "name": "Altaria",
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/334.png"
+  },
+  "mega-altaria": {
+    "id": 334,
+    "name": "Mega Altaria",
+    "types": [
+      "Dragon",
+      "Fairy"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/334-m.png"
+  },
+  "milotic": {
+    "id": 350,
+    "name": "Milotic",
+    "types": [
+      "Water"
+    ],
+    "speed": 81,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/350.png"
+  },
+  "castform": {
+    "id": 351,
+    "name": "Castform",
+    "types": [
+      "Normal"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/351.png"
+  },
+  "banette": {
+    "id": 354,
+    "name": "Banette",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/354.png"
+  },
+  "mega-banette": {
+    "id": 354,
+    "name": "Mega Banette",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/354-m.png"
+  },
+  "chimecho": {
+    "id": 358,
+    "name": "Chimecho",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/358.png"
+  },
+  "mega-chimecho": {
+    "id": 358,
+    "name": "Mega Chimecho",
+    "types": [
+      "Psychic",
+      "Steel"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/358-m.png"
+  },
+  "absol": {
+    "id": 359,
+    "name": "Absol",
+    "types": [
+      "Dark"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/359.png"
+  },
+  "mega-absol": {
+    "id": 359,
+    "name": "Mega Absol",
+    "types": [
+      "Dark"
+    ],
+    "speed": 115,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/359-m.png"
+  },
+  "glalie": {
+    "id": 362,
+    "name": "Glalie",
+    "types": [
+      "Ice"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/362.png"
+  },
+  "mega-glalie": {
+    "id": 362,
+    "name": "Mega Glalie",
+    "types": [
+      "Ice"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/362-m.png"
+  },
+  "metagross": {
+    "id": 376,
+    "name": "Metagross",
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/376.png"
+  },
+  "mega-metagross": {
+    "id": 376,
+    "name": "Mega Metagross",
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/376-m.png"
+  },
+  "torterra": {
+    "id": 389,
+    "name": "Torterra",
+    "types": [
+      "Grass",
+      "Ground"
+    ],
+    "speed": 56,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/389.png"
+  },
+  "infernape": {
+    "id": 392,
+    "name": "Infernape",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 108,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/392.png"
+  },
+  "empoleon": {
+    "id": 395,
+    "name": "Empoleon",
+    "types": [
+      "Water",
+      "Steel"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/395.png"
+  },
+  "staraptor": {
+    "id": 398,
+    "name": "Staraptor",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/398.png"
+  },
+  "mega-staraptor": {
+    "id": 398,
+    "name": "Mega Staraptor",
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/398-m.png"
+  },
+  "luxray": {
+    "id": 405,
+    "name": "Luxray",
+    "types": [
+      "Electric"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/405.png"
+  },
+  "roserade": {
+    "id": 407,
+    "name": "Roserade",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 90,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/407.png"
+  },
+  "rampardos": {
+    "id": 409,
+    "name": "Rampardos",
+    "types": [
+      "Rock"
+    ],
+    "speed": 58,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/409.png"
+  },
+  "bastiodon": {
+    "id": 411,
+    "name": "Bastiodon",
+    "types": [
+      "Rock",
+      "Steel"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/411.png"
+  },
+  "lopunny": {
+    "id": 428,
+    "name": "Lopunny",
+    "types": [
+      "Normal"
+    ],
+    "speed": 105,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/428.png"
+  },
+  "mega-lopunny": {
+    "id": 428,
+    "name": "Mega Lopunny",
+    "types": [
+      "Normal",
+      "Fighting"
+    ],
+    "speed": 135,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/428-m.png"
+  },
+  "spiritomb": {
+    "id": 442,
+    "name": "Spiritomb",
+    "types": [
+      "Ghost",
+      "Dark"
+    ],
+    "speed": 35,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/442.png"
+  },
+  "garchomp": {
+    "id": 445,
+    "name": "Garchomp",
+    "types": [
+      "Dragon",
+      "Ground"
+    ],
+    "speed": 102,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/445.png"
+  },
+  "mega-garchomp": {
+    "id": 445,
+    "name": "Mega Garchomp",
+    "types": [
+      "Dragon",
+      "Ground"
+    ],
+    "speed": 92,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/445-m.png"
+  },
+  "lucario": {
+    "id": 448,
+    "name": "Lucario",
+    "types": [
+      "Fighting",
+      "Steel"
+    ],
+    "speed": 90,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/448.png"
+  },
+  "mega-lucario": {
+    "id": 448,
+    "name": "Mega Lucario",
+    "types": [
+      "Fighting",
+      "Steel"
+    ],
+    "speed": 112,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/448-m.png"
+  },
+  "hippowdon": {
+    "id": 450,
+    "name": "Hippowdon",
+    "types": [
+      "Ground"
+    ],
+    "speed": 47,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/450.png"
+  },
+  "toxicroak": {
+    "id": 454,
+    "name": "Toxicroak",
+    "types": [
+      "Poison",
+      "Fighting"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/454.png"
+  },
+  "abomasnow": {
+    "id": 460,
+    "name": "Abomasnow",
+    "types": [
+      "Grass",
+      "Ice"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/460.png"
+  },
+  "mega-abomasnow": {
+    "id": 460,
+    "name": "Mega Abomasnow",
+    "types": [
+      "Grass",
+      "Ice"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/460-m.png"
+  },
+  "weavile": {
+    "id": 461,
+    "name": "Weavile",
+    "types": [
+      "Dark",
+      "Ice"
+    ],
+    "speed": 125,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/461.png"
+  },
+  "rhyperior": {
+    "id": 464,
+    "name": "Rhyperior",
+    "types": [
+      "Ground",
+      "Rock"
+    ],
+    "speed": 40,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/464.png"
+  },
+  "leafeon": {
+    "id": 470,
+    "name": "Leafeon",
+    "types": [
+      "Grass"
+    ],
+    "speed": 95,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/470.png"
+  },
+  "glaceon": {
+    "id": 471,
+    "name": "Glaceon",
+    "types": [
+      "Ice"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/471.png"
+  },
+  "gliscor": {
+    "id": 472,
+    "name": "Gliscor",
+    "types": [
+      "Ground",
+      "Flying"
+    ],
+    "speed": 95,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/472.png"
+  },
+  "mamoswine": {
+    "id": 473,
+    "name": "Mamoswine",
+    "types": [
+      "Ice",
+      "Ground"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/473.png"
+  },
+  "gallade": {
+    "id": 475,
+    "name": "Gallade",
+    "types": [
+      "Psychic",
+      "Fighting"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/475.png"
+  },
+  "mega-gallade": {
+    "id": 475,
+    "name": "Mega Gallade",
+    "types": [
+      "Psychic",
+      "Fighting"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/475-m.png"
+  },
+  "froslass": {
+    "id": 478,
+    "name": "Froslass",
+    "types": [
+      "Ice",
+      "Ghost"
+    ],
+    "speed": 110,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/478.png"
+  },
+  "mega-froslass": {
+    "id": 478,
+    "name": "Mega Froslass",
+    "types": [
+      "Ice",
+      "Ghost"
+    ],
+    "speed": 120,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/478-m.png"
+  },
+  "rotom": {
+    "id": 479,
+    "name": "Rotom",
+    "types": [
+      "Electric",
+      "Ghost"
+    ],
+    "speed": 91,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479.png"
+  },
+  "serperior": {
+    "id": 497,
+    "name": "Serperior",
+    "types": [
+      "Grass"
+    ],
+    "speed": 113,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/497.png"
+  },
+  "emboar": {
+    "id": 500,
+    "name": "Emboar",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/500.png"
+  },
+  "mega-emboar": {
+    "id": 500,
+    "name": "Mega Emboar",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/500-m.png"
+  },
+  "samurott": {
+    "id": 503,
+    "name": "Samurott",
+    "types": [
+      "Water"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/503.png"
+  },
+  "watchog": {
+    "id": 505,
+    "name": "Watchog",
+    "types": [
+      "Normal"
+    ],
+    "speed": 77,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/505.png"
+  },
+  "liepard": {
+    "id": 510,
+    "name": "Liepard",
+    "types": [
+      "Dark"
+    ],
+    "speed": 106,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/510.png"
+  },
+  "simisage": {
+    "id": 512,
+    "name": "Simisage",
+    "types": [
+      "Grass"
+    ],
+    "speed": 101,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/512.png"
+  },
+  "simisear": {
+    "id": 514,
+    "name": "Simisear",
+    "types": [
+      "Fire"
+    ],
+    "speed": 101,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/514.png"
+  },
+  "simipour": {
+    "id": 516,
+    "name": "Simipour",
+    "types": [
+      "Water"
+    ],
+    "speed": 101,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/516.png"
+  },
+  "musharna": {
+    "id": 518,
+    "name": "Musharna",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 29,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/518.png"
+  },
+  "excadrill": {
+    "id": 530,
+    "name": "Excadrill",
+    "types": [
+      "Ground",
+      "Steel"
+    ],
+    "speed": 88,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/530.png"
+  },
+  "mega-excadrill": {
+    "id": 530,
+    "name": "Mega Excadrill",
+    "types": [
+      "Ground",
+      "Steel"
+    ],
+    "speed": 103,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/530-m.png"
+  },
+  "audino": {
+    "id": 531,
+    "name": "Audino",
+    "types": [
+      "Normal"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/531.png"
+  },
+  "mega-audino": {
+    "id": 531,
+    "name": "Mega Audino",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/531-m.png"
+  },
+  "conkeldurr": {
+    "id": 534,
+    "name": "Conkeldurr",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 45,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/534.png"
+  },
+  "scolipede": {
+    "id": 545,
+    "name": "Scolipede",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 112,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/545.png"
+  },
+  "mega-scolipede": {
+    "id": 545,
+    "name": "Mega Scolipede",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 62,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/545-m.png"
+  },
+  "whimsicott": {
+    "id": 547,
+    "name": "Whimsicott",
+    "types": [
+      "Grass",
+      "Fairy"
+    ],
+    "speed": 116,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/547.png"
+  },
+  "krookodile": {
+    "id": 553,
+    "name": "Krookodile",
+    "types": [
+      "Ground",
+      "Dark"
+    ],
+    "speed": 92,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/553.png"
+  },
+  "scrafty": {
+    "id": 560,
+    "name": "Scrafty",
+    "types": [
+      "Dark",
+      "Fighting"
+    ],
+    "speed": 58,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/560.png"
+  },
+  "mega-scrafty": {
+    "id": 560,
+    "name": "Mega Scrafty",
+    "types": [
+      "Dark",
+      "Fighting"
+    ],
+    "speed": 68,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/560-m.png"
+  },
+  "cofagrigus": {
+    "id": 563,
+    "name": "Cofagrigus",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/563.png"
+  },
+  "garbodor": {
+    "id": 569,
+    "name": "Garbodor",
+    "types": [
+      "Poison"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/569.png"
+  },
+  "zoroark": {
+    "id": 571,
+    "name": "Zoroark",
+    "types": [
+      "Dark"
+    ],
+    "speed": 105,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/571.png"
+  },
+  "reuniclus": {
+    "id": 579,
+    "name": "Reuniclus",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/579.png"
+  },
+  "vanilluxe": {
+    "id": 584,
+    "name": "Vanilluxe",
+    "types": [
+      "Ice"
+    ],
+    "speed": 79,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/584.png"
+  },
+  "emolga": {
+    "id": 587,
+    "name": "Emolga",
+    "types": [
+      "Electric",
+      "Flying"
+    ],
+    "speed": 103,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/587.png"
+  },
+  "eelektross": {
+    "id": 604,
+    "name": "Eelektross",
+    "types": [
+      "Electric"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/604.png"
+  },
+  "mega-eelektross": {
+    "id": 604,
+    "name": "Mega Eelektross",
+    "types": [
+      "Electric"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/604-m.png"
+  },
+  "chandelure": {
+    "id": 609,
+    "name": "Chandelure",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/609.png"
+  },
+  "mega-chandelure": {
+    "id": 609,
+    "name": "Mega Chandelure",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "speed": 90,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/609-m.png"
+  },
+  "beartic": {
+    "id": 614,
+    "name": "Beartic",
+    "types": [
+      "Ice"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/614.png"
+  },
+  "stunfisk": {
+    "id": 618,
+    "name": "Stunfisk",
+    "types": [
+      "Ground",
+      "Electric"
+    ],
+    "speed": 32,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/618.png"
+  },
+  "golurk": {
+    "id": 623,
+    "name": "Golurk",
+    "types": [
+      "Ground",
+      "Ghost"
+    ],
+    "speed": 55,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/623.png"
+  },
+  "mega-golurk": {
+    "id": 623,
+    "name": "Mega Golurk",
+    "types": [
+      "Ground",
+      "Ghost"
+    ],
+    "speed": 55,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/623-m.png"
+  },
+  "hydreigon": {
+    "id": 635,
+    "name": "Hydreigon",
+    "types": [
+      "Dark",
+      "Dragon"
+    ],
+    "speed": 98,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/635.png"
+  },
+  "volcarona": {
+    "id": 637,
+    "name": "Volcarona",
+    "types": [
+      "Bug",
+      "Fire"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/637.png"
+  },
+  "chesnaught": {
+    "id": 652,
+    "name": "Chesnaught",
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "speed": 64,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/652.png"
+  },
+  "mega-chesnaught": {
+    "id": 652,
+    "name": "Mega Chesnaught",
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "speed": 44,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/652-m.png"
+  },
+  "delphox": {
+    "id": 655,
+    "name": "Delphox",
+    "types": [
+      "Fire",
+      "Psychic"
+    ],
+    "speed": 104,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/655.png"
+  },
+  "mega-delphox": {
+    "id": 655,
+    "name": "Mega Delphox",
+    "types": [
+      "Fire",
+      "Psychic"
+    ],
+    "speed": 134,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/655-m.png"
+  },
+  "greninja": {
+    "id": 658,
+    "name": "Greninja",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 122,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/658.png"
+  },
+  "mega-greninja": {
+    "id": 658,
+    "name": "Mega Greninja",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 142,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/658-m.png"
+  },
+  "diggersby": {
+    "id": 660,
+    "name": "Diggersby",
+    "types": [
+      "Normal",
+      "Ground"
+    ],
+    "speed": 78,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/660.png"
+  },
+  "talonflame": {
+    "id": 663,
+    "name": "Talonflame",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "speed": 126,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/663.png"
+  },
+  "vivillon": {
+    "id": 666,
+    "name": "Vivillon",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "speed": 89,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/666.png"
+  },
+  "pyroar": {
+    "id": 668,
+    "name": "Pyroar",
+    "types": [
+      "Fire",
+      "Normal"
+    ],
+    "speed": 106,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/668.png"
+  },
+  "mega-pyroar": {
+    "id": 668,
+    "name": "Mega Pyroar",
+    "types": [
+      "Fire",
+      "Normal"
+    ],
+    "speed": 126,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/668-m.png"
+  },
+  "floette": {
+    "id": 670,
+    "name": "Floette",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 52,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/670-e.png"
+  },
+  "mega-floette": {
+    "id": 670,
+    "name": "Mega Floette",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 102,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/670-m.png"
+  },
+  "florges": {
+    "id": 671,
+    "name": "Florges",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/671.png"
+  },
+  "pangoro": {
+    "id": 675,
+    "name": "Pangoro",
+    "types": [
+      "Fighting",
+      "Dark"
+    ],
+    "speed": 58,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/675.png"
+  },
+  "furfrou": {
+    "id": 676,
+    "name": "Furfrou",
+    "types": [
+      "Normal"
+    ],
+    "speed": 102,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/676.png"
+  },
+  "meowstic": {
+    "id": 678,
+    "name": "Meowstic",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 104,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/678.png"
+  },
+  "mega-meowstic": {
+    "id": 678,
+    "name": "Mega Meowstic",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 104,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/678-m.png"
+  },
+  "aegislash": {
+    "id": 681,
+    "name": "Aegislash",
+    "types": [
+      "Steel",
+      "Ghost"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/681.png"
+  },
+  "aromatisse": {
+    "id": 683,
+    "name": "Aromatisse",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 29,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/683.png"
+  },
+  "slurpuff": {
+    "id": 685,
+    "name": "Slurpuff",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 72,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/685.png"
+  },
+  "malamar": {
+    "id": 687,
+    "name": "Malamar",
+    "types": [
+      "Dark",
+      "Psychic"
+    ],
+    "speed": 73,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/687.png"
+  },
+  "mega-malamar": {
+    "id": 687,
+    "name": "Mega Malamar",
+    "types": [
+      "Dark",
+      "Psychic"
+    ],
+    "speed": 88,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/687-m.png"
+  },
+  "barbaracle": {
+    "id": 689,
+    "name": "Barbaracle",
+    "types": [
+      "Rock",
+      "Water"
+    ],
+    "speed": 68,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/689.png"
+  },
+  "mega-barbaracle": {
+    "id": 689,
+    "name": "Mega Barbaracle",
+    "types": [
+      "Rock",
+      "Fighting"
+    ],
+    "speed": 88,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/689-m.png"
+  },
+  "dragalge": {
+    "id": 691,
+    "name": "Dragalge",
+    "types": [
+      "Poison",
+      "Dragon"
+    ],
+    "speed": 44,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/691.png"
+  },
+  "mega-dragalge": {
+    "id": 691,
+    "name": "Mega Dragalge",
+    "types": [
+      "Poison",
+      "Dragon"
+    ],
+    "speed": 44,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/691-m.png"
+  },
+  "clawitzer": {
+    "id": 693,
+    "name": "Clawitzer",
+    "types": [
+      "Water"
+    ],
+    "speed": 59,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/693.png"
+  },
+  "heliolisk": {
+    "id": 695,
+    "name": "Heliolisk",
+    "types": [
+      "Electric",
+      "Normal"
+    ],
+    "speed": 109,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/695.png"
+  },
+  "tyrantrum": {
+    "id": 697,
+    "name": "Tyrantrum",
+    "types": [
+      "Rock",
+      "Dragon"
+    ],
+    "speed": 71,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/697.png"
+  },
+  "aurorus": {
+    "id": 699,
+    "name": "Aurorus",
+    "types": [
+      "Rock",
+      "Ice"
+    ],
+    "speed": 58,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/699.png"
+  },
+  "sylveon": {
+    "id": 700,
+    "name": "Sylveon",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/700.png"
+  },
+  "hawlucha": {
+    "id": 701,
+    "name": "Hawlucha",
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
+    "speed": 118,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/701.png"
+  },
+  "mega-hawlucha": {
+    "id": 701,
+    "name": "Mega Hawlucha",
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
+    "speed": 118,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/701-m.png"
+  },
+  "dedenne": {
+    "id": 702,
+    "name": "Dedenne",
+    "types": [
+      "Electric",
+      "Fairy"
+    ],
+    "speed": 101,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/702.png"
+  },
+  "goodra": {
+    "id": 706,
+    "name": "Goodra",
+    "types": [
+      "Dragon"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/706.png"
+  },
+  "klefki": {
+    "id": 707,
+    "name": "Klefki",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/707.png"
+  },
+  "trevenant": {
+    "id": 709,
+    "name": "Trevenant",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "speed": 56,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/709.png"
+  },
+  "gourgeist": {
+    "id": 711,
+    "name": "Gourgeist",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "speed": 84,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/711.png"
+  },
+  "avalugg": {
+    "id": 713,
+    "name": "Avalugg",
+    "types": [
+      "Ice"
+    ],
+    "speed": 28,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/713.png"
+  },
+  "noivern": {
+    "id": 715,
+    "name": "Noivern",
+    "types": [
+      "Flying",
+      "Dragon"
+    ],
+    "speed": 123,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/715.png"
+  },
+  "decidueye": {
+    "id": 724,
+    "name": "Decidueye",
+    "types": [
+      "Grass",
+      "Ghost"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/724.png"
+  },
+  "incineroar": {
+    "id": 727,
+    "name": "Incineroar",
+    "types": [
+      "Fire",
+      "Dark"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/727.png"
+  },
+  "primarina": {
+    "id": 730,
+    "name": "Primarina",
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/730.png"
+  },
+  "toucannon": {
+    "id": 733,
+    "name": "Toucannon",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/733.png"
+  },
+  "crabominable": {
+    "id": 740,
+    "name": "Crabominable",
+    "types": [
+      "Fighting",
+      "Ice"
+    ],
+    "speed": 43,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/740.png"
+  },
+  "mega-crabominable": {
+    "id": 740,
+    "name": "Mega Crabominable",
+    "types": [
+      "Fighting",
+      "Ice"
+    ],
+    "speed": 33,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/740-m.png"
+  },
+  "lycanroc": {
+    "id": 745,
+    "name": "Lycanroc",
+    "types": [
+      "Rock"
+    ],
+    "speed": 112,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/745.png"
+  },
+  "toxapex": {
+    "id": 748,
+    "name": "Toxapex",
+    "types": [
+      "Poison",
+      "Water"
+    ],
+    "speed": 35,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/748.png"
+  },
+  "mudsdale": {
+    "id": 750,
+    "name": "Mudsdale",
+    "types": [
+      "Ground"
+    ],
+    "speed": 35,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/750.png"
+  },
+  "araquanid": {
+    "id": 752,
+    "name": "Araquanid",
+    "types": [
+      "Water",
+      "Bug"
+    ],
+    "speed": 42,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/752.png"
+  },
+  "salazzle": {
+    "id": 758,
+    "name": "Salazzle",
+    "types": [
+      "Poison",
+      "Fire"
+    ],
+    "speed": 117,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/758.png"
+  },
+  "tsareena": {
+    "id": 763,
+    "name": "Tsareena",
+    "types": [
+      "Grass"
+    ],
+    "speed": 72,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/763.png"
+  },
+  "oranguru": {
+    "id": 765,
+    "name": "Oranguru",
+    "types": [
+      "Normal",
+      "Psychic"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/765.png"
+  },
+  "passimian": {
+    "id": 766,
+    "name": "Passimian",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 80,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/766.png"
+  },
+  "mimikyu": {
+    "id": 778,
+    "name": "Mimikyu",
+    "types": [
+      "Ghost",
+      "Fairy"
+    ],
+    "speed": 96,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/778.png"
+  },
+  "drampa": {
+    "id": 780,
+    "name": "Drampa",
+    "types": [
+      "Normal",
+      "Dragon"
+    ],
+    "speed": 36,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/780.png"
+  },
+  "mega-drampa": {
+    "id": 780,
+    "name": "Mega Drampa",
+    "types": [
+      "Normal",
+      "Dragon"
+    ],
+    "speed": 36,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/780-m.png"
+  },
+  "kommo-o": {
+    "id": 784,
+    "name": "Kommo-o",
+    "types": [
+      "Dragon",
+      "Fighting"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/784.png"
+  },
+  "corviknight": {
+    "id": 823,
+    "name": "Corviknight",
+    "types": [
+      "Flying",
+      "Steel"
+    ],
+    "speed": 67,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/823.png"
+  },
+  "flapple": {
+    "id": 841,
+    "name": "Flapple",
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/841.png"
+  },
+  "appletun": {
+    "id": 842,
+    "name": "Appletun",
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/842.png"
+  },
+  "sandaconda": {
+    "id": 844,
+    "name": "Sandaconda",
+    "types": [
+      "Ground"
+    ],
+    "speed": 71,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/844.png"
+  },
+  "polteageist": {
+    "id": 855,
+    "name": "Polteageist",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/855.png"
+  },
+  "hatterene": {
+    "id": 858,
+    "name": "Hatterene",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "speed": 29,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/858.png"
+  },
+  "grimmsnarl": {
+    "id": 861,
+    "name": "Grimmsnarl",
+    "types": [
+      "Dark",
+      "Fairy"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/861.png"
+  },
+  "mr-rime": {
+    "id": 866,
+    "name": "Mr. Rime",
+    "types": [
+      "Ice",
+      "Psychic"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/866.png"
+  },
+  "runerigus": {
+    "id": 867,
+    "name": "Runerigus",
+    "types": [
+      "Ground",
+      "Ghost"
+    ],
+    "speed": 30,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/867.png"
+  },
+  "alcremie": {
+    "id": 869,
+    "name": "Alcremie",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 64,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/869.png"
+  },
+  "falinks": {
+    "id": 870,
+    "name": "Falinks",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/870.png"
+  },
+  "mega-falinks": {
+    "id": 870,
+    "name": "Mega Falinks",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/870-m.png"
+  },
+  "morpeko": {
+    "id": 877,
+    "name": "Morpeko",
+    "types": [
+      "Electric",
+      "Dark"
+    ],
+    "speed": 97,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/877.png"
+  },
+  "dragapult": {
+    "id": 887,
+    "name": "Dragapult",
+    "types": [
+      "Dragon",
+      "Ghost"
+    ],
+    "speed": 142,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/887.png"
+  },
+  "wyrdeer": {
+    "id": 899,
+    "name": "Wyrdeer",
+    "types": [
+      "Normal",
+      "Psychic"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/899.png"
+  },
+  "kleavor": {
+    "id": 900,
+    "name": "Kleavor",
+    "types": [
+      "Bug",
+      "Rock"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/900.png"
+  },
+  "basculegion": {
+    "id": 902,
+    "name": "Basculegion",
+    "types": [
+      "Water",
+      "Ghost"
+    ],
+    "speed": 78,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/902.png"
+  },
+  "sneasler": {
+    "id": 903,
+    "name": "Sneasler",
+    "types": [
+      "Fighting",
+      "Poison"
+    ],
+    "speed": 120,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/903.png"
+  },
+  "overqwil": {
+    "id": 904,
+    "name": "Overqwil",
+    "types": [
+      "Dark",
+      "Poison"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/904.png"
+  },
+  "meowscarada": {
+    "id": 908,
+    "name": "Meowscarada",
+    "types": [
+      "Grass",
+      "Dark"
+    ],
+    "speed": 123,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/908.png"
+  },
+  "skeledirge": {
+    "id": 911,
+    "name": "Skeledirge",
+    "types": [
+      "Fire",
+      "Ghost"
+    ],
+    "speed": 66,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/911.png"
+  },
+  "quaquaval": {
+    "id": 914,
+    "name": "Quaquaval",
+    "types": [
+      "Water",
+      "Fighting"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/914.png"
+  },
+  "maushold": {
+    "id": 925,
+    "name": "Maushold",
+    "types": [
+      "Normal"
+    ],
+    "speed": 111,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/925.png"
+  },
+  "garganacl": {
+    "id": 934,
+    "name": "Garganacl",
+    "types": [
+      "Rock"
+    ],
+    "speed": 35,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/934.png"
+  },
+  "armarouge": {
+    "id": 936,
+    "name": "Armarouge",
+    "types": [
+      "Fire",
+      "Psychic"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/936.png"
+  },
+  "ceruledge": {
+    "id": 937,
+    "name": "Ceruledge",
+    "types": [
+      "Fire",
+      "Ghost"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/937.png"
+  },
+  "bellibolt": {
+    "id": 939,
+    "name": "Bellibolt",
+    "types": [
+      "Electric"
+    ],
+    "speed": 45,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/939.png"
+  },
+  "scovillain": {
+    "id": 952,
+    "name": "Scovillain",
+    "types": [
+      "Grass",
+      "Fire"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/952.png"
+  },
+  "mega-scovillain": {
+    "id": 952,
+    "name": "Mega Scovillain",
+    "types": [
+      "Grass",
+      "Fire"
+    ],
+    "speed": 75,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/952-m.png"
+  },
+  "espathra": {
+    "id": 956,
+    "name": "Espathra",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 105,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/956.png"
+  },
+  "tinkaton": {
+    "id": 959,
+    "name": "Tinkaton",
+    "types": [
+      "Fairy",
+      "Steel"
+    ],
+    "speed": 94,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/959.png"
+  },
+  "palafin": {
+    "id": 964,
+    "name": "Palafin",
+    "types": [
+      "Water"
+    ],
+    "speed": 100,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/964.png"
+  },
+  "orthworm": {
+    "id": 968,
+    "name": "Orthworm",
+    "types": [
+      "Steel"
+    ],
+    "speed": 65,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/968.png"
+  },
+  "glimmora": {
+    "id": 970,
+    "name": "Glimmora",
+    "types": [
+      "Rock",
+      "Poison"
+    ],
+    "speed": 86,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/970.png"
+  },
+  "mega-glimmora": {
+    "id": 970,
+    "name": "Mega Glimmora",
+    "types": [
+      "Rock",
+      "Poison"
+    ],
+    "speed": 101,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/970-m.png"
+  },
+  "houndstone": {
+    "id": 972,
+    "name": "Houndstone",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 68,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/972.png"
+  },
+  "annihilape": {
+    "id": 979,
+    "name": "Annihilape",
+    "types": [
+      "Fighting",
+      "Ghost"
+    ],
+    "speed": 90,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/979.png"
+  },
+  "farigiraf": {
+    "id": 981,
+    "name": "Farigiraf",
+    "types": [
+      "Normal",
+      "Psychic"
+    ],
+    "speed": 60,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/981.png"
+  },
+  "kingambit": {
+    "id": 983,
+    "name": "Kingambit",
+    "types": [
+      "Dark",
+      "Steel"
+    ],
+    "speed": 50,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/983.png"
+  },
+  "gholdengo": {
+    "id": 1000,
+    "name": "Gholdengo",
+    "types": [
+      "Steel",
+      "Ghost"
+    ],
+    "speed": 84,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1000.png"
+  },
+  "sinistcha": {
+    "id": 1013,
+    "name": "Sinistcha",
+    "types": [
+      "Grass",
+      "Ghost"
+    ],
+    "speed": 70,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1013.png"
+  },
+  "archaludon": {
+    "id": 1018,
+    "name": "Archaludon",
+    "types": [
+      "Steel",
+      "Dragon"
+    ],
+    "speed": 85,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1018.png"
+  },
+  "hydrapple": {
+    "id": 1019,
+    "name": "Hydrapple",
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
+    "speed": 44,
+    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1019.png"
+  }
+}

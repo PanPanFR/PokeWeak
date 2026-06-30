@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="32" fill="#121212"/>
+  <circle cx="96" cy="96" r="72" fill="none" stroke="#E63946" stroke-width="6"/>
+  <path d="M96 24 A72 72 0 0 1 96 168" fill="#E63946"/>
+  <circle cx="96" cy="96" r="18" fill="#121212" stroke="#E63946" stroke-width="4"/>
+  <circle cx="96" cy="96" r="8" fill="#E63946"/>
+  <rect x="24" y="92" width="144" height="8" rx="4" fill="#E63946"/>
+  <text x="96" y="130" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">PW</text>
+  <text x="96" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#A0A0A0" text-anchor="middle">PokeWeak</text>
+</svg>

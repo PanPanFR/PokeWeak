@@ -1,0 +1,19 @@
+---
+export interface Props {
+  typeName: string;
+  size?: number;
+}
+
+const { typeName, size = 20 } = Astro.props;
+const iconPath = `/icons/types/${typeName.toLowerCase()}.svg`;
+---
+
+<img src={iconPath} alt={typeName} width={size} height={size} class="type-icon" loading="lazy" />
+
+<style>
+  .type-icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+</style>
