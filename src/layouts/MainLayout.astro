@@ -90,6 +90,23 @@ const isDev = import.meta.env.DEV;
     padding: 16px 12px 0;
   }
 
+  #main-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  #main-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #main-content::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+  }
+
+  #main-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   @media (min-width: 521px) {
     body {
       background:
