@@ -27,7 +27,21 @@ async function main() {
   for (let i = 0; i < total; i++) {
     const key = keys[i];
     const entry = data[key];
-    const name = entry.name.toLowerCase().replace(/[^a-z0-9-]/g, '');
+
+    if (entry.abilities && entry.abilities.length > 0) {
+      console.log(`[${i + 1}/${total}] ${entry.name}: SKIP (already has abilities)`);
+      continue;
+    }
+
+    let name = key;
+
+    if (key.startsWith('mega-')) {
+      // Convert mega-venusaur -> venusaur-mega, mega-charizard-x -> charizard-mega-x
+      const rest = key.slice(5);
+      if (rest.endsWith('-x')) name = rest.slice(0, -2) + '-mega-x';
+      else if (rest.endsWith('-y')) name = rest.slice(0, -2) + '-mega-y';
+      else name = rest + '-mega';
+    }
 
     try {
       const json = await fetchWithRetry(`https://pokeapi.co/api/v2/pokemon/${name}`);

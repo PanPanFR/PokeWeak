@@ -22,7 +22,9 @@
     ],
     "speed": 80,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/003-m.png",
-    "abilities": []
+    "abilities": [
+      "thick fat"
+    ]
   },
   "charizard": {
     "id": 6,
@@ -47,7 +49,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006-mx.png",
-    "abilities": []
+    "abilities": [
+      "tough claws"
+    ]
   },
   "mega-charizard-y": {
     "id": 6,
@@ -58,7 +62,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006-my.png",
-    "abilities": []
+    "abilities": [
+      "drought"
+    ]
   },
   "blastoise": {
     "id": 9,
@@ -81,7 +87,9 @@
     ],
     "speed": 78,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/009-m.png",
-    "abilities": []
+    "abilities": [
+      "mega launcher"
+    ]
   },
   "beedrill": {
     "id": 15,
@@ -106,7 +114,9 @@
     ],
     "speed": 145,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/015-m.png",
-    "abilities": []
+    "abilities": [
+      "adaptability"
+    ]
   },
   "pidgeot": {
     "id": 18,
@@ -132,7 +142,9 @@
     ],
     "speed": 121,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/018-m.png",
-    "abilities": []
+    "abilities": [
+      "no guard"
+    ]
   },
   "arbok": {
     "id": 24,
@@ -182,7 +194,9 @@
     ],
     "speed": 110,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026-mx.png",
-    "abilities": []
+    "abilities": [
+      "electric surge"
+    ]
   },
   "mega-raichu-y": {
     "id": 26,
@@ -192,7 +206,9 @@
     ],
     "speed": 130,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026-my.png",
-    "abilities": []
+    "abilities": [
+      "no guard"
+    ]
   },
   "clefable": {
     "id": 36,
@@ -217,7 +233,9 @@
     ],
     "speed": 70,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/036-m.png",
-    "abilities": []
+    "abilities": [
+      "magic bounce"
+    ]
   },
   "ninetales": {
     "id": 38,
@@ -282,7 +300,9 @@
     ],
     "speed": 150,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/065-m.png",
-    "abilities": []
+    "abilities": [
+      "trace"
+    ]
   },
   "machamp": {
     "id": 68,
@@ -321,7 +341,9 @@
     ],
     "speed": 70,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/071-m.png",
-    "abilities": []
+    "abilities": [
+      "innards out"
+    ]
   },
   "slowbro": {
     "id": 80,
@@ -347,7 +369,9 @@
     ],
     "speed": 30,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/080-m.png",
-    "abilities": []
+    "abilities": [
+      "shell armor"
+    ]
   },
   "gengar": {
     "id": 94,
@@ -371,7 +395,9 @@
     ],
     "speed": 130,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/094-m.png",
-    "abilities": []
+    "abilities": [
+      "shadow tag"
+    ]
   },
   "kangaskhan": {
     "id": 115,
@@ -395,7 +421,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/115-m.png",
-    "abilities": []
+    "abilities": [
+      "parental bond"
+    ]
   },
   "starmie": {
     "id": 121,
@@ -421,7 +449,9 @@
     ],
     "speed": 120,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/121-m.png",
-    "abilities": []
+    "abilities": [
+      "huge power"
+    ]
   },
   "pinsir": {
     "id": 127,
@@ -446,7 +476,9 @@
     ],
     "speed": 105,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/127-m.png",
-    "abilities": []
+    "abilities": [
+      "aerilate"
+    ]
   },
   "tauros": {
     "id": 128,
@@ -485,7 +517,9 @@
     ],
     "speed": 81,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/130-m.png",
-    "abilities": []
+    "abilities": [
+      "mold breaker"
+    ]
   },
   "ditto": {
     "id": 132,
@@ -563,7 +597,9 @@
     ],
     "speed": 150,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/142-m.png",
-    "abilities": []
+    "abilities": [
+      "tough claws"
+    ]
   },
   "snorlax": {
     "id": 143,
@@ -602,7 +638,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/149-m.png",
-    "abilities": []
+    "abilities": [
+      "multiscale"
+    ]
   },
   "meganium": {
     "id": 154,
@@ -626,7 +664,9 @@
     ],
     "speed": 80,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/154-m.png",
-    "abilities": []
+    "abilities": [
+      "mega sol"
+    ]
   },
   "typhlosion": {
     "id": 157,
@@ -663,7 +703,9 @@
     ],
     "speed": 78,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/160-m.png",
-    "abilities": []
+    "abilities": [
+      "dragonize"
+    ]
   },
   "ariados": {
     "id": 168,
@@ -702,7 +744,9 @@
     ],
     "speed": 45,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/181-m.png",
-    "abilities": []
+    "abilities": [
+      "mold breaker"
+    ]
   },
   "azumarill": {
     "id": 184,
@@ -812,7 +856,9 @@
     ],
     "speed": 30,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/208-m.png",
-    "abilities": []
+    "abilities": [
+      "sand force"
+    ]
   },
   "qwilfish": {
     "id": 211,
@@ -853,7 +899,9 @@
     ],
     "speed": 75,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/212-m.png",
-    "abilities": []
+    "abilities": [
+      "technician"
+    ]
   },
   "heracross": {
     "id": 214,
@@ -879,7 +927,9 @@
     ],
     "speed": 75,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/214-m.png",
-    "abilities": []
+    "abilities": [
+      "skill link"
+    ]
   },
   "skarmory": {
     "id": 227,
@@ -905,7 +955,9 @@
     ],
     "speed": 110,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/227-m.png",
-    "abilities": []
+    "abilities": [
+      "stalwart"
+    ]
   },
   "houndoom": {
     "id": 229,
@@ -931,7 +983,9 @@
     ],
     "speed": 115,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/229-m.png",
-    "abilities": []
+    "abilities": [
+      "solar power"
+    ]
   },
   "tyranitar": {
     "id": 248,
@@ -956,7 +1010,9 @@
     ],
     "speed": 71,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/248-m.png",
-    "abilities": []
+    "abilities": [
+      "sand stream"
+    ]
   },
   "sceptile": {
     "id": 254,
@@ -980,7 +1036,9 @@
     ],
     "speed": 145,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/254-m.png",
-    "abilities": []
+    "abilities": [
+      "lightning rod"
+    ]
   },
   "blaziken": {
     "id": 257,
@@ -1005,7 +1063,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/257-m.png",
-    "abilities": []
+    "abilities": [
+      "speed boost"
+    ]
   },
   "swampert": {
     "id": 260,
@@ -1030,7 +1090,9 @@
     ],
     "speed": 70,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/260-m.png",
-    "abilities": []
+    "abilities": [
+      "swift swim"
+    ]
   },
   "pelipper": {
     "id": 279,
@@ -1071,7 +1133,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/282-m.png",
-    "abilities": []
+    "abilities": [
+      "pixilate"
+    ]
   },
   "sableye": {
     "id": 302,
@@ -1097,7 +1161,9 @@
     ],
     "speed": 20,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/302-m.png",
-    "abilities": []
+    "abilities": [
+      "magic bounce"
+    ]
   },
   "mawile": {
     "id": 303,
@@ -1123,7 +1189,9 @@
     ],
     "speed": 50,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/303-m.png",
-    "abilities": []
+    "abilities": [
+      "huge power"
+    ]
   },
   "aggron": {
     "id": 306,
@@ -1148,7 +1216,9 @@
     ],
     "speed": 50,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/306-m.png",
-    "abilities": []
+    "abilities": [
+      "filter"
+    ]
   },
   "medicham": {
     "id": 308,
@@ -1173,7 +1243,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/308-m.png",
-    "abilities": []
+    "abilities": [
+      "pure power"
+    ]
   },
   "manectric": {
     "id": 310,
@@ -1197,7 +1269,9 @@
     ],
     "speed": 135,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/310-m.png",
-    "abilities": []
+    "abilities": [
+      "intimidate"
+    ]
   },
   "sharpedo": {
     "id": 319,
@@ -1222,7 +1296,9 @@
     ],
     "speed": 105,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/319-m.png",
-    "abilities": []
+    "abilities": [
+      "strong jaw"
+    ]
   },
   "camerupt": {
     "id": 323,
@@ -1248,7 +1324,9 @@
     ],
     "speed": 20,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/323-m.png",
-    "abilities": []
+    "abilities": [
+      "sheer force"
+    ]
   },
   "torkoal": {
     "id": 324,
@@ -1287,7 +1365,9 @@
     ],
     "speed": 80,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/334-m.png",
-    "abilities": []
+    "abilities": [
+      "pixilate"
+    ]
   },
   "milotic": {
     "id": 350,
@@ -1337,7 +1417,9 @@
     ],
     "speed": 75,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/354-m.png",
-    "abilities": []
+    "abilities": [
+      "prankster"
+    ]
   },
   "chimecho": {
     "id": 358,
@@ -1360,7 +1442,9 @@
     ],
     "speed": 65,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/358-m.png",
-    "abilities": []
+    "abilities": [
+      "levitate"
+    ]
   },
   "absol": {
     "id": 359,
@@ -1384,7 +1468,9 @@
     ],
     "speed": 115,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/359-m.png",
-    "abilities": []
+    "abilities": [
+      "magic bounce"
+    ]
   },
   "glalie": {
     "id": 362,
@@ -1408,7 +1494,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/362-m.png",
-    "abilities": []
+    "abilities": [
+      "refrigerate"
+    ]
   },
   "metagross": {
     "id": 376,
@@ -1433,7 +1521,9 @@
     ],
     "speed": 110,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/376-m.png",
-    "abilities": []
+    "abilities": [
+      "tough claws"
+    ]
   },
   "torterra": {
     "id": 389,
@@ -1500,7 +1590,9 @@
     ],
     "speed": 110,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/398-m.png",
-    "abilities": []
+    "abilities": [
+      "contrary"
+    ]
   },
   "luxray": {
     "id": 405,
@@ -1581,7 +1673,9 @@
     ],
     "speed": 135,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/428-m.png",
-    "abilities": []
+    "abilities": [
+      "scrappy"
+    ]
   },
   "spiritomb": {
     "id": 442,
@@ -1620,7 +1714,9 @@
     ],
     "speed": 92,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/445-m.png",
-    "abilities": []
+    "abilities": [
+      "sand force"
+    ]
   },
   "lucario": {
     "id": 448,
@@ -1646,7 +1742,9 @@
     ],
     "speed": 112,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/448-m.png",
-    "abilities": []
+    "abilities": [
+      "adaptability"
+    ]
   },
   "hippowdon": {
     "id": 450,
@@ -1699,7 +1797,9 @@
     ],
     "speed": 30,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/460-m.png",
-    "abilities": []
+    "abilities": [
+      "snow warning"
+    ]
   },
   "weavile": {
     "id": 461,
@@ -1810,7 +1910,9 @@
     ],
     "speed": 110,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/475-m.png",
-    "abilities": []
+    "abilities": [
+      "inner focus"
+    ]
   },
   "froslass": {
     "id": 478,
@@ -1835,7 +1937,9 @@
     ],
     "speed": 120,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/478-m.png",
-    "abilities": []
+    "abilities": [
+      "snow warning"
+    ]
   },
   "rotom": {
     "id": 479,
@@ -1938,7 +2042,9 @@
     ],
     "speed": 75,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/500-m.png",
-    "abilities": []
+    "abilities": [
+      "mold breaker"
+    ]
   },
   "samurott": {
     "id": 503,
@@ -2058,7 +2164,9 @@
     ],
     "speed": 103,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/530-m.png",
-    "abilities": []
+    "abilities": [
+      "piercing drill"
+    ]
   },
   "audino": {
     "id": 531,
@@ -2083,7 +2191,9 @@
     ],
     "speed": 50,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/531-m.png",
-    "abilities": []
+    "abilities": [
+      "healer"
+    ]
   },
   "conkeldurr": {
     "id": 534,
@@ -2123,7 +2233,9 @@
     ],
     "speed": 62,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/545-m.png",
-    "abilities": []
+    "abilities": [
+      "shell armor"
+    ]
   },
   "whimsicott": {
     "id": 547,
@@ -2179,7 +2291,9 @@
     ],
     "speed": 68,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/560-m.png",
-    "abilities": []
+    "abilities": [
+      "intimidate"
+    ]
   },
   "cofagrigus": {
     "id": 563,
@@ -2281,7 +2395,9 @@
     ],
     "speed": 80,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/604-m.png",
-    "abilities": []
+    "abilities": [
+      "eelevate"
+    ]
   },
   "chandelure": {
     "id": 609,
@@ -2307,7 +2423,9 @@
     ],
     "speed": 90,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/609-m.png",
-    "abilities": []
+    "abilities": [
+      "infiltrator"
+    ]
   },
   "beartic": {
     "id": 614,
@@ -2362,7 +2480,9 @@
     ],
     "speed": 55,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/623-m.png",
-    "abilities": []
+    "abilities": [
+      "unseen fist"
+    ]
   },
   "hydreigon": {
     "id": 635,
@@ -2414,7 +2534,9 @@
     ],
     "speed": 44,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/652-m.png",
-    "abilities": []
+    "abilities": [
+      "bulletproof"
+    ]
   },
   "delphox": {
     "id": 655,
@@ -2439,7 +2561,9 @@
     ],
     "speed": 134,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/655-m.png",
-    "abilities": []
+    "abilities": [
+      "levitate"
+    ]
   },
   "greninja": {
     "id": 658,
@@ -2464,7 +2588,9 @@
     ],
     "speed": 142,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/658-m.png",
-    "abilities": []
+    "abilities": [
+      "protean"
+    ]
   },
   "diggersby": {
     "id": 660,
@@ -2519,7 +2645,11 @@
     ],
     "speed": 106,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/668.png",
-    "abilities": []
+    "abilities": [
+      "rivalry",
+      "unnerve",
+      "moxie"
+    ]
   },
   "mega-pyroar": {
     "id": 668,
@@ -2530,7 +2660,9 @@
     ],
     "speed": 126,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/668-m.png",
-    "abilities": []
+    "abilities": [
+      "fire mane"
+    ]
   },
   "floette": {
     "id": 670,
@@ -2553,7 +2685,9 @@
     ],
     "speed": 102,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/670-m.png",
-    "abilities": []
+    "abilities": [
+      "fairy aura"
+    ]
   },
   "florges": {
     "id": 671,
@@ -2603,17 +2737,11 @@
     ],
     "speed": 104,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/678.png",
-    "abilities": []
-  },
-  "mega-meowstic": {
-    "id": 678,
-    "name": "Mega Meowstic",
-    "types": [
-      "Psychic"
-    ],
-    "speed": 104,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/678-m.png",
-    "abilities": []
+    "abilities": [
+      "keen eye",
+      "infiltrator",
+      "prankster"
+    ]
   },
   "aegislash": {
     "id": 681,
@@ -2624,7 +2752,9 @@
     ],
     "speed": 60,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/681.png",
-    "abilities": []
+    "abilities": [
+      "stance change"
+    ]
   },
   "aromatisse": {
     "id": 683,
@@ -2676,7 +2806,9 @@
     ],
     "speed": 88,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/687-m.png",
-    "abilities": []
+    "abilities": [
+      "contrary"
+    ]
   },
   "barbaracle": {
     "id": 689,
@@ -2702,7 +2834,9 @@
     ],
     "speed": 88,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/689-m.png",
-    "abilities": []
+    "abilities": [
+      "tough claws"
+    ]
   },
   "dragalge": {
     "id": 691,
@@ -2728,7 +2862,9 @@
     ],
     "speed": 44,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/691-m.png",
-    "abilities": []
+    "abilities": [
+      "regenerator"
+    ]
   },
   "clawitzer": {
     "id": 693,
@@ -2822,7 +2958,9 @@
     ],
     "speed": 118,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/701-m.png",
-    "abilities": []
+    "abilities": [
+      "no guard"
+    ]
   },
   "dedenne": {
     "id": 702,
@@ -2891,7 +3029,11 @@
     ],
     "speed": 84,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/711.png",
-    "abilities": []
+    "abilities": [
+      "pickup",
+      "frisk",
+      "insomnia"
+    ]
   },
   "avalugg": {
     "id": 713,
@@ -3003,7 +3145,9 @@
     ],
     "speed": 33,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/740-m.png",
-    "abilities": []
+    "abilities": [
+      "iron fist"
+    ]
   },
   "lycanroc": {
     "id": 745,
@@ -3013,7 +3157,11 @@
     ],
     "speed": 112,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/745.png",
-    "abilities": []
+    "abilities": [
+      "keen eye",
+      "sand rush",
+      "steadfast"
+    ]
   },
   "toxapex": {
     "id": 748,
@@ -3123,7 +3271,9 @@
     ],
     "speed": 96,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/778.png",
-    "abilities": []
+    "abilities": [
+      "disguise"
+    ]
   },
   "drampa": {
     "id": 780,
@@ -3149,7 +3299,9 @@
     ],
     "speed": 36,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/780-m.png",
-    "abilities": []
+    "abilities": [
+      "berserk"
+    ]
   },
   "kommo-o": {
     "id": 784,
@@ -3277,7 +3429,11 @@
     ],
     "speed": 70,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/866.png",
-    "abilities": []
+    "abilities": [
+      "ice body",
+      "screen cleaner",
+      "tangled feet"
+    ]
   },
   "runerigus": {
     "id": 867,
@@ -3326,7 +3482,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/870-m.png",
-    "abilities": []
+    "abilities": [
+      "defiant"
+    ]
   },
   "morpeko": {
     "id": 877,
@@ -3337,7 +3495,9 @@
     ],
     "speed": 97,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/877.png",
-    "abilities": []
+    "abilities": [
+      "hunger switch"
+    ]
   },
   "dragapult": {
     "id": 887,
@@ -3393,7 +3553,11 @@
     ],
     "speed": 78,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/902.png",
-    "abilities": []
+    "abilities": [
+      "swift swim",
+      "adaptability",
+      "mold breaker"
+    ]
   },
   "sneasler": {
     "id": 903,
@@ -3475,7 +3639,11 @@
     ],
     "speed": 111,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/925.png",
-    "abilities": []
+    "abilities": [
+      "friend guard",
+      "cheek pouch",
+      "technician"
+    ]
   },
   "garganacl": {
     "id": 934,
@@ -3557,7 +3725,9 @@
     ],
     "speed": 75,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/952-m.png",
-    "abilities": []
+    "abilities": [
+      "spicy spray"
+    ]
   },
   "espathra": {
     "id": 956,
@@ -3596,7 +3766,9 @@
     ],
     "speed": 100,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/964.png",
-    "abilities": []
+    "abilities": [
+      "zero to hero"
+    ]
   },
   "orthworm": {
     "id": 968,
@@ -3634,7 +3806,9 @@
     ],
     "speed": 101,
     "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/970-m.png",
-    "abilities": []
+    "abilities": [
+      "adaptability"
+    ]
   },
   "houndstone": {
     "id": 972,
