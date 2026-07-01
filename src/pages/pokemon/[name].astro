@@ -86,11 +86,21 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
     <div style="margin-top:16px;">
       <div style="font-size:13px;font-weight:700;color:#FFFFFF;margin-bottom:8px;">Mega Forms</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        {megaForms.map((form) => (
-          <a href={`/pokemon/${form}`} style="display:inline-block;padding:8px 12px;background:#E63946;color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;" onmouseover="this.style.background='#c92a35'" onmouseout="this.style.background='#E63946'">
-            {pokemonData[form]?.name || form}
-          </a>
-        ))}
+        {megaForms.map((form) => {
+          const formData = pokemonData[form];
+          return (
+            <a href={`/pokemon/${form}`} style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:#E63946;color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;" onmouseover="this.style.background='#c92a35'" onmouseout="this.style.background='#E63946'">
+              <span>{formData?.name || form}</span>
+              {formData?.types && (
+                <div style="display:flex;gap:3px;">
+                  {formData.types.map((t) => (
+                    <img key={t} src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="14" height="14" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+                  ))}
+                </div>
+              )}
+            </a>
+          );
+        })}
       </div>
     </div>
   )}
@@ -99,11 +109,21 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
     <div style="margin-top:16px;">
       <div style="font-size:13px;font-weight:700;color:#FFFFFF;margin-bottom:8px;">Alternative Forms</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        {alternativeForms.map((form) => (
-          <a href={`/pokemon/${form}`} style="display:inline-block;padding:8px 12px;background:#6390F0;color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;" onmouseover="this.style.background='#4a6fd0'" onmouseout="this.style.background='#6390F0'">
-            {pokemonData[form]?.name || form}
-          </a>
-        ))}
+        {alternativeForms.map((form) => {
+          const formData = pokemonData[form];
+          return (
+            <a href={`/pokemon/${form}`} style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:#6390F0;color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;" onmouseover="this.style.background='#4a6fd0'" onmouseout="this.style.background='#6390F0'">
+              <span>{formData?.name || form}</span>
+              {formData?.types && (
+                <div style="display:flex;gap:3px;">
+                  {formData.types.map((t) => (
+                    <img key={t} src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="14" height="14" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+                  ))}
+                </div>
+              )}
+            </a>
+          );
+        })}
       </div>
     </div>
   )}
