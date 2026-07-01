@@ -1,5 +1,6 @@
 ---
 import BottomNav from '../components/BottomNav.astro';
+import Analytics from '@vercel/analytics/astro';
 import '../styles/global.css';
 
 export interface Props {
@@ -51,6 +52,7 @@ const isDev = import.meta.env.DEV;
       </main>
       <BottomNav currentPath={currentPath} />
     </div>
+    <Analytics />
   </body>
 </html>
 
