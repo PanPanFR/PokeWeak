@@ -221,7 +221,7 @@ export default function SearchIsland() {
                       height={40}
                       style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                     />
-                    <span style={{ fontWeight: 500 }}>{name}</span>
+<span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
                     <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
                       {data.types.map((t) => (
                         <TypeIcon key={t} type={t} size={16} />
@@ -319,7 +319,7 @@ export default function SearchIsland() {
                 height={36}
                 style={{ imageRendering: 'pixelated', flexShrink: 0 }}
               />
-              <span style={{ fontWeight: 500 }}>{name}</span>
+              <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
               <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
                 {data.types.map((t) => (
                   <TypeIcon key={t} type={t} size={14} />
@@ -360,7 +360,7 @@ export default function SearchIsland() {
                 height={36}
                 style={{ imageRendering: 'pixelated', flexShrink: 0 }}
               />
-              <span style={{ fontWeight: 500 }}>{name}</span>
+              <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
               <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
                 {data.types.map((t) => (
                   <TypeIcon key={t} type={t} size={14} />

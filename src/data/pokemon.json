@@ -2774,7 +2774,7 @@
       "Ghost"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479.svg",
     "abilities": [
       {
         "name": "levitate",
@@ -2784,13 +2784,13 @@
   },
   "rotom-wash": {
     "id": 479,
-    "name": "Rotom-Wash",
+    "name": "Rotom Wash",
     "types": [
       "Electric",
       "Water"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-wash.svg",
     "abilities": [
       {
         "name": "levitate",
@@ -2800,13 +2800,13 @@
   },
   "rotom-heat": {
     "id": 479,
-    "name": "Rotom-Heat",
+    "name": "Rotom Heat",
     "types": [
       "Electric",
       "Fire"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-heat.svg",
     "abilities": [
       {
         "name": "levitate",
@@ -2816,13 +2816,13 @@
   },
   "rotom-mow": {
     "id": 479,
-    "name": "Rotom-Mow",
+    "name": "Rotom Mow",
     "types": [
       "Electric",
       "Grass"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-mow.svg",
     "abilities": [
       {
         "name": "levitate",
@@ -2832,13 +2832,13 @@
   },
   "rotom-frost": {
     "id": 479,
-    "name": "Rotom-Frost",
+    "name": "Rotom Frost",
     "types": [
       "Electric",
       "Ice"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-frost.svg",
     "abilities": [
       {
         "name": "levitate",

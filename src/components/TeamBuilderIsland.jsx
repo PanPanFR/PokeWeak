@@ -2,7 +2,7 @@ import { h } from 'preact';
 import { useState, useMemo } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite } from '../utils/pokemon';
+import { getSprite, displayName } from '../utils/pokemon';
 import { calculateWeaknesses } from '../utils/typeCalc';
 import typeChart from '../data/types.json';
 
@@ -28,8 +28,8 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch }) {
           height={36}
           style={{ imageRendering: 'pixelated', flexShrink: 0 }}
         />
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: '13px', fontWeight: 500 }}>{pokemon.name}</div>
+<div style={{ flex: 1, minWidth: 0 }}>
+           <div style={{ fontSize: '13px', fontWeight: 500 }}>{displayName(pokemon.name, pokemon)}</div>
           <div style={{ display: 'flex', gap: '3px', marginTop: '2px' }}>
             {pokemon.types.map((t) => (
               <TypeIcon key={t} type={t} size={12} />
@@ -421,7 +421,7 @@ export default function TeamBuilderIsland() {
                     height={36}
                     style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                   />
-                  <span style={{ fontWeight: 500 }}>{name}</span>
+                  <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
                   <div style={{ display: 'flex', gap: '3px', marginLeft: 'auto' }}>
                     {data.types.map((t) => (
                       <TypeIcon key={t} type={t} size={14} />

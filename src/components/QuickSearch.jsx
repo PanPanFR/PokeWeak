@@ -2,7 +2,7 @@ import { h } from 'preact';
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite } from '../utils/pokemon';
+import { getSprite, displayName } from '../utils/pokemon';
 
 const pokemonList = Object.entries(pokemonData);
 
@@ -132,7 +132,7 @@ export default function QuickSearch() {
                   height={40}
                   style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                 />
-                <span style={{ fontWeight: 500 }}>{name}</span>
+                <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
                 <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
                   {data.types.map((t) => (
                     <TypeIcon key={t} type={t} />
