@@ -2790,7 +2790,7 @@
       "Water"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479-wash.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2806,7 +2806,7 @@
       "Fire"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479-heat.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2822,7 +2822,7 @@
       "Grass"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479-mow.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2838,7 +2838,7 @@
       "Ice"
     ],
     "speed": 91,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/479-frost.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
     "abilities": [
       {
         "name": "levitate",

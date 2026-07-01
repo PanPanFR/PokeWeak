@@ -1,9 +1,17 @@
-export function getSpriteUrl(id: number): string {
+export function getSpriteUrl(id: number, name?: string): string {
+  // Handle special cases like rotom forms
+  if (name && name.toLowerCase().includes('rotom')) {
+    const form = name.toLowerCase().replace('rotom-', '').replace('rotom', '');
+    if (form) {
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+    }
+  }
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }
 
-export function getSprite(data: { id: number; sprite?: string }): string {
-  return data.sprite || getSpriteUrl(data.id);
+export function getSprite(data: { id: number; name?: string; sprite?: string }): string {
+  if (data.sprite) return data.sprite;
+  return getSpriteUrl(data.id, data.name);
 }
 
 export function displayName(key: string, data: { name?: string }): string {

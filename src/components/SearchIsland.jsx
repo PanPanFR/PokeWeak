@@ -64,7 +64,11 @@ export default function SearchIsland() {
     let filtered = pokemonList;
 
     if (q) {
-      filtered = filtered.filter(([name]) => championsSet.has(name) && name.includes(q));
+      // Support both "mega pyroar" and "mega-pyroar" format
+      const normalizedQ = q.replace(/\s+/g, '-');
+      filtered = filtered.filter(([name]) => 
+        championsSet.has(name) && (name.includes(q) || name.includes(normalizedQ))
+      );
     } else {
       filtered = sortedChampions;
     }
