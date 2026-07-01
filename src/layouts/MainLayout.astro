@@ -58,6 +58,14 @@ const isDev = import.meta.env.DEV;
           }
         });
       }
+
+      // Ultimate PWA Viewport Height Fix
+      const setAppHeight = () => {
+        document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+      };
+      window.addEventListener('resize', setAppHeight);
+      window.addEventListener('orientationchange', setAppHeight);
+      setAppHeight();
     </script>
   </head>
   <body>
@@ -87,12 +95,12 @@ const isDev = import.meta.env.DEV;
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    height: 100dvh;
+    height: var(--app-height, 100dvh);
     overflow: hidden;
   }
 
   .app-shell {
-    height: 100dvh;
+    height: var(--app-height, 100dvh);
     display: flex;
     flex-direction: column;
     overflow: hidden;
