@@ -43,6 +43,21 @@ const isDev = import.meta.env.DEV;
             .catch((err) => console.error('Service Worker registration failed:', err));
         });
       }
+
+      // Intercept local links inside standalone PWA to prevent opening in external browser or breaking navigation context
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || ('standalone' in navigator && (navigator as any).standalone);
+      if (isStandalone) {
+        document.addEventListener('click', (e) => {
+          const target = (e.target as HTMLElement).closest('a');
+          if (target && target.href && target.href.includes(window.location.hostname)) {
+            const hrefAttr = target.getAttribute('href');
+            if (hrefAttr && !hrefAttr.startsWith('javascript:') && !target.hasAttribute('onclick')) {
+              e.preventDefault();
+              window.location.href = target.href;
+            }
+          }
+        });
+      }
     </script>
   </head>
   <body>
