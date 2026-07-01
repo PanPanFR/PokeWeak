@@ -32,18 +32,16 @@ const isDev = import.meta.env.DEV;
     <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
     <title>{title}</title>
-    {isDev && (
-      <script is:inline>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.getRegistrations().then((registrations) => {
-            registrations.forEach((registration) => registration.unregister());
-          });
-        }
-        if ('caches' in window) {
-          caches.keys().then((keys) => keys.forEach((key) => caches.delete(key)));
-        }
-      </script>
-    )}
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          registrations.forEach((registration) => registration.unregister());
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then((keys) => keys.forEach((key) => caches.delete(key)));
+      }
+    </script>
   </head>
   <body>
     <div class="app-shell">
