@@ -17,6 +17,8 @@ export default defineConfig({
         name: 'PokeWeak',
         short_name: 'PokeWeak',
         description: 'Pokémon Type Weakness Checker',
+        start_url: '/',
+        scope: '/',
         display: 'standalone',
         orientation: 'portrait',
         theme_color: '#E63946',

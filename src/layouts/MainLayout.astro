@@ -1,6 +1,7 @@
 ---
 import BottomNav from '../components/BottomNav.astro';
 import Analytics from '@vercel/analytics/astro';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 
 export interface Props {
@@ -35,6 +36,7 @@ const isDev = import.meta.env.DEV;
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>{title}</title>
+    <ClientRouter />
     <script>
       if ('serviceWorker' in navigator && import.meta.env.PROD) {
         window.addEventListener('load', () => {
