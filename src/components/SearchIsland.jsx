@@ -124,7 +124,8 @@ export default function SearchIsland() {
       const isInput = inputRef.current && inputRef.current.contains(e.target);
       const isDropdown = dropdownRef.current && dropdownRef.current.contains(e.target);
       const isFilter = e.target.closest('[data-type-filter]');
-      if (!isInput && !isDropdown && !isFilter) {
+      const isPokemonLink = e.target.closest('a[href*="/pokemon/"]');
+      if (!isInput && !isDropdown && !isFilter && !isPokemonLink) {
         setQuery('');
         setFilterTypes([]);
       }
