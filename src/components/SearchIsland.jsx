@@ -35,6 +35,14 @@ const championsPokemon = [
   'vileplume','vivillon','volcarona','watchog','weavile','whimsicott','wyrdeer','zoroark'
 ].filter(name => pokemonData[name]);
 
+// Add mega and alternative forms
+const megaAndForms = Object.keys(pokemonData).filter(name => 
+  (name.includes('mega-') || name.includes('rotom-') || name.includes('-alola') || name.includes('-galar') || name.includes('-hisui')) 
+  && !championsPokemon.includes(name)
+);
+
+const allChampionsPokemon = [...championsPokemon, ...megaAndForms];
+
 export default function SearchIsland() {
   const [query, setQuery] = useState('');
   const [filterTypes, setFilterTypes] = useState([]);
@@ -43,10 +51,10 @@ export default function SearchIsland() {
   const listRef = useRef(null);
   const dropdownRef = useRef(null);
 
-  const championsSet = useMemo(() => new Set(championsPokemon), []);
+  const championsSet = useMemo(() => new Set(allChampionsPokemon), []);
 
   const sortedChampions = useMemo(() =>
-    championsPokemon
+    allChampionsPokemon
       .map(name => [name, pokemonData[name]])
       .sort((a, b) => a[0].localeCompare(b[0])),
   []);
