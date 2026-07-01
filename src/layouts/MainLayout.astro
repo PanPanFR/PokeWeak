@@ -31,7 +31,6 @@ const isDev = import.meta.env.DEV;
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
-    <link rel="manifest" href="/manifest.json" />
     <title>{title}</title>
     {isDev && (
       <script is:inline>
@@ -42,15 +41,6 @@ const isDev = import.meta.env.DEV;
         }
         if ('caches' in window) {
           caches.keys().then((keys) => keys.forEach((key) => caches.delete(key)));
-        }
-      </script>
-    )}
-    {!isDev && (
-      <script is:inline>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js');
-          });
         }
       </script>
     )}
