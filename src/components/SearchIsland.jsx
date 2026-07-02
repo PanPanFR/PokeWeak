@@ -305,14 +305,14 @@ export default function SearchIsland() {
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              height: '32px',
-              padding: '0 10px',
-              borderRadius: '8px',
+              height: '28px',
+              padding: '0 8px',
+              borderRadius: '6px',
               border: filterTypes.length === 0 ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
               background: filterTypes.length === 0 ? 'var(--bg-focus)' : 'var(--bg-card)',
               color: filterTypes.length === 0 ? 'var(--text-primary)' : 'var(--text-secondary)',
               cursor: 'pointer',
-              fontSize: '11px',
+              fontSize: '10px',
               fontWeight: 600,
               fontFamily: 'inherit',
             }}
@@ -329,16 +329,16 @@ export default function SearchIsland() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  height: '32px',
-                  padding: '0 6px',
-                  borderRadius: '8px',
+                  height: '28px',
+                  padding: '0 4px',
+                  borderRadius: '6px',
                   border: isSelected ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
                   background: isSelected ? 'var(--bg-focus)' : 'var(--bg-card)',
                   cursor: 'pointer',
                 }}
                 title={t}
               >
-                <TypeIcon type={t} size={18} />
+                <TypeIcon type={t} size={16} />
               </button>
             );
           })}
