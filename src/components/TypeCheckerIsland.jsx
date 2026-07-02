@@ -52,8 +52,8 @@ export default function TypeCheckerIsland() {
                 width: '40px',
                 height: '40px',
                 borderRadius: '10px',
-                border: isSelected ? '2px solid #FFFFFF' : '2px solid transparent',
-                background: isSelected ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.07)',
+                border: isSelected ? '2px solid var(--text-primary)' : '2px solid transparent',
+                background: isSelected ? 'var(--bg-focus)' : 'var(--bg-card)',
                 cursor: 'pointer',
                 padding: '0',
                 transition: 'all 0.15s ease',
@@ -69,7 +69,7 @@ export default function TypeCheckerIsland() {
       {selectedTypes.length > 0 && (
         <div style={{
           fontSize: '12px',
-          color: '#A0A0A0',
+          color: 'var(--text-secondary)',
           marginBottom: '8px',
           minHeight: '18px',
         }}>
@@ -80,7 +80,7 @@ export default function TypeCheckerIsland() {
           ) : (
             <span>
               Selected: {selectedTypes.map((t) => (
-                <span key={t} style={{ fontWeight: 500, color: '#FFFFFF' }}>{t}</span>
+                <span key={t} style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{t}</span>
               )).reduce((prev, curr) => [prev, ' + ', curr])}
             </span>
           )}
@@ -102,7 +102,7 @@ export default function TypeCheckerIsland() {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '4px',
-                      background: 'rgba(255,255,255,0.07)',
+                      background: 'var(--bg-hover)',
                       borderRadius: '8px',
                       padding: '4px 8px',
                       fontSize: '12px',
@@ -129,7 +129,7 @@ export default function TypeCheckerIsland() {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '4px',
-                      background: 'rgba(255,255,255,0.07)',
+                      background: 'var(--bg-hover)',
                       borderRadius: '8px',
                       padding: '4px 8px',
                       fontSize: '12px',
@@ -156,7 +156,7 @@ export default function TypeCheckerIsland() {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '4px',
-                      background: 'rgba(255,255,255,0.07)',
+                      background: 'var(--bg-hover)',
                       borderRadius: '8px',
                       padding: '4px 8px',
                       fontSize: '12px',
@@ -184,7 +184,7 @@ export default function TypeCheckerIsland() {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '4px',
-                      background: 'rgba(255,255,255,0.07)',
+                      background: 'var(--bg-hover)',
                       borderRadius: '8px',
                       padding: '4px 8px',
                       fontSize: '12px',
@@ -212,7 +212,7 @@ export default function TypeCheckerIsland() {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '4px',
-                      background: 'rgba(255,255,255,0.07)',
+                      background: 'var(--bg-hover)',
                       borderRadius: '8px',
                       padding: '4px 8px',
                       fontSize: '12px',

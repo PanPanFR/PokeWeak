@@ -9,7 +9,7 @@ import typeChart from '../data/types.json';
 const pokemonList = Object.entries(pokemonData);
 const allTypes = Object.keys(typeChart);
 
-function TeamSlot({ slotIndex, pokemon, onRemove, onSearch }) {
+function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
   if (pokemon) {
     return (
       <div style={{
@@ -17,8 +17,9 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch }) {
         alignItems: 'center',
         gap: '8px',
         padding: '8px',
-        background: '#1E1E1E',
+        background: 'var(--bg-surface)',
         borderRadius: '10px',
+        border: '1px solid var(--border-medium)',
         minHeight: '44px',
       }}>
         <img
@@ -28,8 +29,8 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch }) {
           height={36}
           style={{ imageRendering: 'pixelated', flexShrink: 0 }}
         />
-<div style={{ flex: 1, minWidth: 0 }}>
-           <div style={{ fontSize: '13px', fontWeight: 500 }}>{displayName(pokemon.name, pokemon)}</div>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>{displayName(pokemon.name, pokemon)}</div>
           <div style={{ display: 'flex', gap: '3px', marginTop: '2px' }}>
             {pokemon.types.map((t) => (
               <TypeIcon key={t} type={t} size={12} />
@@ -41,7 +42,7 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch }) {
           style={{
             background: 'transparent',
             border: 'none',
-            color: '#A0A0A0',
+            color: 'var(--text-secondary)',
             cursor: 'pointer',
             fontSize: '16px',
             padding: '4px',
@@ -62,16 +63,20 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch }) {
         justifyContent: 'center',
         gap: '8px',
         padding: '8px',
-        background: '#1E1E1E',
+        background: 'var(--bg-surface)',
+        border: '1px dashed var(--border-medium)',
         borderRadius: '10px',
         minHeight: '44px',
-        color: '#A0A0A0',
+        color: 'var(--text-secondary)',
         cursor: 'pointer',
         fontSize: '13px',
+        transition: 'background 0.2s',
       }}
+      onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
+      onMouseLeave={(e) => e.currentTarget.style.background = 'var(--bg-surface)'}
     >
       <span style={{ fontSize: '16px' }}>+</span>
-      <span>Slot {slotIndex + 1}</span>
+      <span>{label || `Slot ${slotIndex + 1}`}</span>
     </div>
   );
 }
@@ -85,10 +90,12 @@ function TypeBadge({ type, count, multiplier }) {
         display: 'inline-flex',
         alignItems: 'center',
         gap: '4px',
-        background: 'rgba(255,255,255,0.07)',
+        background: 'var(--bg-focus)',
+        border: '1px solid var(--border-subtle)',
         borderRadius: '8px',
         padding: '6px 10px',
         fontSize: '12px',
+        color: 'var(--text-primary)'
       }}
     >
       <TypeIcon type={type} size={16} />
@@ -97,7 +104,7 @@ function TypeBadge({ type, count, multiplier }) {
         marginLeft: '4px',
         fontWeight: 700,
         color,
-        background: 'rgba(255,255,255,0.1)',
+        background: 'var(--bg-card)',
         borderRadius: '4px',
         padding: '2px 6px',
         fontSize: '11px',
@@ -167,12 +174,12 @@ function TeamWeaknessDisplay({ team }) {
 
   return (
     <div>
-      <h3 style={{ fontSize: '14px', fontWeight: 600, margin: '0 0 12px' }}>
+      <h3 style={{ fontSize: '14px', fontWeight: 600, margin: '0 0 12px', color: 'var(--text-primary)' }}>
         Team Weaknesses
       </h3>
       <p style={{
         fontSize: '12px',
-        color: '#A0A0A0',
+        color: 'var(--text-muted)',
         margin: '0 0 12px',
         lineHeight: 1.4,
       }}>
@@ -210,7 +217,8 @@ function TeamWeaknessDisplay({ team }) {
 
 export default function TeamBuilderIsland() {
   const [team, setTeam] = useState(Array(6).fill(null));
-  const [searchSlot, setSearchSlot] = useState(null);
+  
+  const [searchSlot, setSearchSlot] = useState(null); // { type: 'player', index: number }
   const [query, setQuery] = useState('');
   const [filterTypes, setFilterTypes] = useState([]);
 
@@ -224,19 +232,21 @@ export default function TeamBuilderIsland() {
     });
   };
 
-  const handleSelect = (slotIndex, name) => {
+  const handleSelect = (slotInfo, name) => {
     const selected = pokemonData[name];
     if (selected) {
-      const newTeam = [...team];
-      newTeam[slotIndex] = selected;
-      setTeam(newTeam);
+      if (slotInfo.type === 'player') {
+        const newTeam = [...team];
+        newTeam[slotInfo.index] = selected;
+        setTeam(newTeam);
+      }
     }
     setSearchSlot(null);
     setQuery('');
     setFilterTypes([]);
   };
 
-  const handleRemove = (slotIndex) => {
+  const handleRemovePlayer = (slotIndex) => {
     const newTeam = [...team];
     newTeam[slotIndex] = null;
     setTeam(newTeam);
@@ -269,36 +279,49 @@ export default function TeamBuilderIsland() {
     return filtered.slice(0, 20);
   }, [query, filterTypes]);
 
-  const activeTeam = team.filter(Boolean);
+  const activePlayerTeam = team.filter(Boolean);
 
   return (
     <div>
-      <h2 style={{ fontSize: '16px', fontWeight: 600, margin: '0 0 12px' }}>
-        Team Builder
-      </h2>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-        {team.map((pokemon, idx) => (
-          <TeamSlot
-            key={idx}
-            slotIndex={idx}
-            pokemon={pokemon}
-            onRemove={handleRemove}
-            onSearch={setSearchSlot}
-          />
-        ))}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+        <h2 style={{ fontSize: '18px', fontWeight: 700, margin: 0, color: 'var(--text-primary)' }}>
+          Team Builder
+        </h2>
       </div>
 
-      {activeTeam.length > 0 && (
-        <div style={{
-          background: '#1E1E1E',
-          borderRadius: '12px',
-          padding: '12px',
-          marginBottom: '16px',
-        }}>
-          <TeamWeaknessDisplay team={activeTeam} />
+      <div style={{ display: 'grid', gap: '24px' }}>
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <h3 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-primary)', margin: 0 }}>
+              Your Team
+            </h3>
+            <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{activePlayerTeam.length} / 6</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '8px' }}>
+            {team.map((pokemon, idx) => (
+              <TeamSlot
+                key={idx}
+                slotIndex={idx}
+                pokemon={pokemon}
+                onRemove={handleRemovePlayer}
+                onSearch={(index) => setSearchSlot({ type: 'player', index })}
+                label={`Your Slot ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
-      )}
+
+        {activePlayerTeam.length > 0 && (
+          <div style={{
+            background: 'var(--bg-elevated)',
+            borderRadius: '12px',
+            padding: '16px',
+            border: '1px solid var(--border-medium)',
+          }}>
+            <TeamWeaknessDisplay team={activePlayerTeam} />
+          </div>
+        )}
+      </div>
 
       {searchSlot !== null && (
         <div style={{
@@ -307,7 +330,7 @@ export default function TeamBuilderIsland() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'rgba(0,0,0,0.8)',
+          background: 'var(--overlay-bg)',
           zIndex: 100,
           display: 'flex',
           alignItems: 'center',
@@ -315,16 +338,21 @@ export default function TeamBuilderIsland() {
           padding: '16px',
         }}>
           <div style={{
-            background: '#1E1E1E',
-            borderRadius: '12px',
+            background: 'var(--bg-elevated)',
+            borderRadius: '16px',
             width: '100%',
-            maxWidth: '400px',
-            maxHeight: '80vh',
+            maxWidth: '420px',
+            maxHeight: '85vh',
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
+            boxShadow: '0 24px 60px rgba(0,0,0,0.4)',
+            border: '1px solid var(--border-medium)'
           }}>
-            <div style={{ padding: '12px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+            <div style={{ padding: '16px', borderBottom: '1px solid var(--border-subtle)' }}>
+              <h3 style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 700, color: 'var(--text-primary)' }}>
+                Select for Your Team
+              </h3>
               <input
                 type="text"
                 placeholder="Search Pokémon..."
@@ -332,22 +360,23 @@ export default function TeamBuilderIsland() {
                 onInput={(e) => setQuery(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '10px 14px',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  background: '#121212',
-                  color: '#FFFFFF',
-                  fontSize: '14px',
+                  padding: '12px 16px',
+                  borderRadius: '10px',
+                  border: '1px solid var(--border-medium)',
+                  background: 'var(--bg-body)',
+                  color: 'var(--text-primary)',
+                  fontSize: '15px',
                   fontFamily: 'inherit',
                   outline: 'none',
-                  marginBottom: '8px',
+                  marginBottom: '12px',
+                  boxSizing: 'border-box'
                 }}
                 autoFocus
               />
               <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
-                gap: '6px',
+                gap: '8px',
               }}>
                 <button
                   onClick={() => setFilterTypes([])}
@@ -355,15 +384,14 @@ export default function TeamBuilderIsland() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: '36px',
                     height: '36px',
+                    padding: '0 14px',
                     borderRadius: '8px',
-                    border: filterTypes.length === 0 ? '2px solid #FFFFFF' : '2px solid transparent',
-                    background: filterTypes.length === 0 ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.07)',
+                    border: filterTypes.length === 0 ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
+                    background: filterTypes.length === 0 ? 'var(--bg-focus)' : 'var(--bg-card)',
                     cursor: 'pointer',
-                    padding: '0',
-                    fontSize: '10px',
-                    color: '#A0A0A0',
+                    fontSize: '12px',
+                    color: filterTypes.length === 0 ? 'var(--text-primary)' : 'var(--text-secondary)',
                     fontWeight: 600,
                   }}
                 >
@@ -382,8 +410,8 @@ export default function TeamBuilderIsland() {
                         width: '36px',
                         height: '36px',
                         borderRadius: '8px',
-                        border: isSelected ? '2px solid #FFFFFF' : '2px solid transparent',
-                        background: isSelected ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.07)',
+                        border: isSelected ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
+                        background: isSelected ? 'var(--bg-focus)' : 'var(--bg-card)',
                         cursor: 'pointer',
                         padding: '0',
                       }}
@@ -395,42 +423,52 @@ export default function TeamBuilderIsland() {
                 })}
               </div>
             </div>
-            <div style={{ overflowY: 'auto', flex: 1 }}>
-              {results.map(([name, data]) => (
-                <button
-                  key={name}
-                  onClick={() => handleSelect(searchSlot, name)}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    width: '100%',
-                    padding: '10px 14px',
-                    background: 'transparent',
-                    border: 'none',
-                    color: '#FFFFFF',
-                    cursor: 'pointer',
-                    textAlign: 'left',
-                    fontFamily: 'inherit',
-                  }}
-                >
-                  <img
-                    src={getSprite(data)}
-                    alt={name}
-                    width={36}
-                    height={36}
-                    style={{ imageRendering: 'pixelated', flexShrink: 0 }}
-                  />
-                  <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
-                  <div style={{ display: 'flex', gap: '3px', marginLeft: 'auto' }}>
-                    {data.types.map((t) => (
-                      <TypeIcon key={t} type={t} size={14} />
-                    ))}
-                  </div>
-                </button>
-              ))}
+            <div class="scrollbar-thin" style={{ overflowY: 'auto', flex: 1, padding: '8px' }}>
+              {results.length === 0 ? (
+                <div style={{ padding: '24px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                  No Pokémon found.
+                </div>
+              ) : (
+                results.map(([name, data]) => (
+                  <button
+                    key={name}
+                    onClick={() => handleSelect(searchSlot, name)}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      width: '100%',
+                      padding: '10px 12px',
+                      background: 'transparent',
+                      border: 'none',
+                      borderRadius: '8px',
+                      color: 'var(--text-primary)',
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                      fontFamily: 'inherit',
+                      transition: 'background 0.2s',
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
+                    onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+                  >
+                    <img
+                      src={getSprite(data)}
+                      alt={name}
+                      width={40}
+                      height={40}
+                      style={{ imageRendering: 'pixelated', flexShrink: 0 }}
+                    />
+                    <span style={{ fontWeight: 600, fontSize: '14px' }}>{displayName(name, data)}</span>
+                    <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+                      {data.types.map((t) => (
+                        <TypeIcon key={t} type={t} size={14} />
+                      ))}
+                    </div>
+                  </button>
+                ))
+              )}
             </div>
-            <div style={{ padding: '12px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+            <div style={{ padding: '16px', borderTop: '1px solid var(--border-subtle)', background: 'var(--bg-surface)' }}>
               <button
                 onClick={() => {
                   setSearchSlot(null);
@@ -439,14 +477,19 @@ export default function TeamBuilderIsland() {
                 }}
                 style={{
                   width: '100%',
-                  padding: '10px',
-                  background: '#2A2A2A',
-                  border: 'none',
-                  borderRadius: '8px',
-                  color: '#FFFFFF',
+                  padding: '12px',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-medium)',
+                  borderRadius: '10px',
+                  color: 'var(--text-primary)',
                   cursor: 'pointer',
                   fontFamily: 'inherit',
+                  fontWeight: 600,
+                  fontSize: '14px',
+                  transition: 'background 0.2s',
                 }}
+                onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
+                onMouseLeave={(e) => e.currentTarget.style.background = 'var(--bg-card)'}
               >
                 Cancel
               </button>

@@ -1,5 +1,63 @@
 @import "tailwindcss";
 
+:root {
+  --bg-body: #121212;
+  --bg-surface: #1E1E1E;
+  --bg-surface-alt: #2A2A2A;
+  --bg-elevated: rgba(14, 18, 25, 0.9);
+  --bg-dropdown: #10151F;
+  --bg-card: rgba(255, 255, 255, 0.035);
+  --bg-hover: rgba(255, 255, 255, 0.06);
+  --bg-focus: rgba(255, 255, 255, 0.08);
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #AEB7C4;
+  --text-inverse: #111827;
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-medium: rgba(255, 255, 255, 0.13);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb: #444;
+  --scrollbar-thumb-hover: #555;
+  --scrollbar-track: #1E1E1E;
+  --search-input-bg: #F8FAFC;
+  --card-gradient-start: rgba(251, 191, 36, 0.18);
+  --card-gradient-end: rgba(56, 189, 248, 0.1);
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --body-gradient-1: rgba(239, 68, 68, 0.16);
+  --body-gradient-2: #090B10;
+  --body-gradient-3: #111827;
+  --body-gradient-4: #0B1117;
+}
+
+[data-theme="light"] {
+  --bg-body: #EAE8E3;
+  --bg-surface: #F5F3EC;
+  --bg-surface-alt: #DFDDD6;
+  --bg-elevated: rgba(245, 243, 236, 0.95);
+  --bg-dropdown: #F5F3EC;
+  --bg-card: rgba(0, 0, 0, 0.04);
+  --bg-hover: rgba(0, 0, 0, 0.06);
+  --bg-focus: rgba(0, 0, 0, 0.09);
+  --text-primary: #333333;
+  --text-secondary: #5C5C5C;
+  --text-muted: #7A7A7A;
+  --text-inverse: #FFFFFF;
+  --border-subtle: rgba(0, 0, 0, 0.07);
+  --border-medium: rgba(0, 0, 0, 0.13);
+  --border-strong: rgba(0, 0, 0, 0.22);
+  --scrollbar-thumb: #CCC8C0;
+  --scrollbar-thumb-hover: #AFAAA0;
+  --scrollbar-track: #EAE8E3;
+  --search-input-bg: #FCFAF5;
+  --card-gradient-start: rgba(217, 160, 20, 0.08);
+  --card-gradient-end: rgba(14, 165, 233, 0.04);
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --body-gradient-1: rgba(239, 68, 68, 0.04);
+  --body-gradient-2: #EAE8E3;
+  --body-gradient-3: #F5F3EC;
+  --body-gradient-4: #DFDDD6;
+}
+
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Archivo', 'Inter', system-ui, sans-serif;
@@ -23,10 +81,10 @@
   --color-pk-steel: #B7B7CE;
   --color-pk-fairy: #D685AD;
 
-  --color-surface: #1E1E1E;
-  --color-surface-alt: #2A2A2A;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #A0A0A0;
+  --color-surface: var(--bg-surface);
+  --color-surface-alt: var(--bg-surface-alt);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
   --color-accent: #E63946;
 }
 
@@ -37,8 +95,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  color: var(--color-text-primary);
+  background-color: var(--bg-body);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,7 +110,7 @@ body {
 
 .scrollbar-thin {
   scrollbar-width: thin;
-  scrollbar-color: #444 #1E1E1E;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 .scrollbar-thin::-webkit-scrollbar {
@@ -60,17 +118,17 @@ body {
 }
 
 .scrollbar-thin::-webkit-scrollbar-track {
-  background: #1E1E1E;
+  background: var(--scrollbar-track);
   border-radius: 3px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #444;
+  background: var(--scrollbar-thumb);
   border-radius: 3px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scrollbar-thumb-hover);
 }
 
 button,
@@ -98,8 +156,8 @@ input:focus-visible {
 
 .search-panel,
 .detail-panel {
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(14, 18, 25, 0.9);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
 }
 
@@ -115,7 +173,7 @@ input:focus-visible {
 .detail-hero p,
 .search-empty p {
   margin: 0;
-  color: #AEB7C4;
+  color: var(--text-muted);
 }
 
 .search-panel__copy p,
@@ -149,17 +207,17 @@ input:focus-visible {
 .search-box input {
   width: 100%;
   min-height: 54px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid var(--border-medium);
   border-radius: 8px;
-  background: #F8FAFC;
-  color: #111827;
+  background: var(--search-input-bg);
+  color: var(--search-input-color);
   font-size: 17px;
   font-weight: 700;
   padding: 0 16px;
 }
 
 .search-box input::placeholder {
-  color: #64748B;
+  color: var(--text-muted);
 }
 
 .search-results {
@@ -171,9 +229,9 @@ input:focus-visible {
   max-height: min(360px, 58dvh);
   overflow: auto;
   overscroll-behavior: contain;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-medium);
   border-radius: 8px;
-  background: #10151F;
+  background: var(--bg-dropdown);
   padding: 6px;
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
 }
@@ -188,7 +246,7 @@ input:focus-visible {
   border: 0;
   border-radius: 6px;
   background: transparent;
-  color: #FFFFFF;
+  color: var(--text-primary);
   cursor: pointer;
   padding: 6px 10px;
   text-align: left;
@@ -196,7 +254,7 @@ input:focus-visible {
 
 .search-result:hover,
 .search-result.is-focused {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--bg-focus);
 }
 
 .search-result img,
@@ -215,7 +273,7 @@ input:focus-visible {
 }
 
 .search-result small {
-  color: #94A3B8;
+  color: var(--text-muted);
   font-size: 12px;
   font-weight: 700;
 }
@@ -230,7 +288,7 @@ input:focus-visible {
 }
 
 .search-no-result {
-  color: #CBD5E1;
+  color: var(--text-muted);
   padding: 18px 12px;
 }
 
@@ -240,7 +298,7 @@ input:focus-visible {
   align-items: center;
   gap: 12px;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(56, 189, 248, 0.1));
+  background: linear-gradient(135deg, var(--card-gradient-start), var(--card-gradient-end));
   padding: 12px;
 }
 
@@ -277,7 +335,7 @@ input:focus-visible {
   gap: 16px;
   align-items: center;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .detail-hero img {
@@ -311,7 +369,7 @@ input:focus-visible {
 }
 
 .speed-pill strong {
-  color: #FFFFFF;
+  color: var(--text-primary);
   font-size: 26px;
 }
 
@@ -323,7 +381,7 @@ input:focus-visible {
   border: 1px solid color-mix(in srgb, var(--type-color) 72%, white 8%);
   border-radius: 999px;
   background: color-mix(in srgb, var(--type-color) 18%, transparent);
-  color: #FFFFFF;
+  color: var(--text-primary);
   cursor: pointer;
   font-weight: 800;
   padding: 5px 12px;
@@ -343,7 +401,7 @@ input:focus-visible {
 .weakness-card {
   border: 1px solid color-mix(in srgb, var(--weakness-color) 48%, transparent);
   border-radius: 8px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--weakness-color) 12%, transparent), rgba(255, 255, 255, 0.035));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--weakness-color) 12%, transparent), var(--bg-card));
   padding: 12px;
 }
 
@@ -360,7 +418,7 @@ input:focus-visible {
 }
 
 .weakness-card__head strong {
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .weakness-chip {
@@ -369,8 +427,8 @@ input:focus-visible {
   align-items: center;
   gap: 6px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
+  background: var(--bg-focus);
+  color: var(--text-primary);
   font-size: 13px;
   font-weight: 700;
   padding: 5px 9px;
@@ -394,10 +452,10 @@ input:focus-visible {
   place-items: center;
   width: 112px;
   height: 112px;
-  border: 10px solid #FFFFFF;
+  border: 10px solid var(--bg-surface);
   border-radius: 50%;
-  background: linear-gradient(#EF4444 0 48%, #111827 48% 52%, #FFFFFF 52%);
-  color: #111827;
+  background: linear-gradient(#EF4444 0 48%, var(--text-inverse) 48% 52%, var(--bg-surface) 52%);
+  color: var(--text-inverse);
   font-family: var(--font-display);
   font-size: 42px;
   font-weight: 900;
@@ -516,7 +574,7 @@ input:focus-visible {
 }
 
 .pk-list-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--bg-hover);
   transform: scale(1.01);
 }
 
@@ -531,7 +589,7 @@ input:focus-visible {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
   margin: 16px 0;
 }
 

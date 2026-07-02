@@ -87,8 +87,8 @@ const weaknessData = typeKeys.map((type) => {
     flex-direction: column;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.07);
-    background: var(--color-surface, #1E1E1E);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
   }
 
   .cs-head {
@@ -98,7 +98,7 @@ const weaknessData = typeKeys.map((type) => {
     gap: 5px;
     padding: 7px 6px;
     background: color-mix(in srgb, var(--tc) 14%, transparent);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid var(--border-subtle);
   }
 
   .cs-name {
@@ -122,7 +122,7 @@ const weaknessData = typeKeys.map((type) => {
   .cs-label {
     font-size: 9px;
     font-weight: 700;
-    color: #777;
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     width: 30px;
@@ -131,7 +131,7 @@ const weaknessData = typeKeys.map((type) => {
   }
 
   .cs-label--special {
-    color: #666;
+    color: var(--text-muted);
   }
 
   .cs-badges {
@@ -147,7 +147,7 @@ const weaknessData = typeKeys.map((type) => {
     width: 22px;
     height: 22px;
     border-radius: 5px;
-    background: rgba(255,255,255,0.07);
+    background: var(--bg-hover);
   }
 
   .cs-badge--resist {
@@ -160,7 +160,7 @@ const weaknessData = typeKeys.map((type) => {
 
   .cs-none {
     font-size: 10px;
-    color: #444;
+    color: var(--text-muted);
     line-height: 22px;
   }
 </style>
