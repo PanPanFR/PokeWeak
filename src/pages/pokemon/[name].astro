@@ -36,7 +36,7 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
 
 <MainLayout title={`${data.name || Astro.params.name} — PokeWeak`} description={`${data.name || Astro.params.name} type weaknesses and resistances`} currentPath={`/pokemon/${Astro.params.name}`}>
   <div class="header-row">
-    <a href="/" class="back-link" onclick="history.back();return false">
+    <a href="/" class="back-link" aria-label="Go back" onclick="history.back();return false">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/>
       </svg>
@@ -45,8 +45,8 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
   </div>
 
   <div style="text-align:center;">
-    <img src={spriteUrl} alt={data.name} width="128" height="128" style="image-rendering:pixelated;display:block;margin:0 auto;" />
-    <h1 style="font-size:24px;font-weight:700;margin:8px 0 4px;">{data.name}</h1>
+    <img src={spriteUrl} alt={data.name} width="128" height="128" fetchpriority="high" decoding="async" style="image-rendering:pixelated;display:block;margin:0 auto;" />
+    <h1 class="heading-glow" style="font-size:24px;font-weight:700;margin:8px 0 4px;">{data.name}</h1>
     <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
       {data.types.map((t) => (
         <span style={`display:inline-flex;align-items:center;gap:4px;border-radius:9999px;border:1px solid ${typeColor(t)};background:color-mix(in srgb, ${typeColor(t)} 20%, transparent);padding:4px 12px;font-size:13px;font-weight:500;white-space:nowrap;color:inherit;`}>
@@ -128,9 +128,11 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
     </div>
   )}
 
-  <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+  <div class="section-divider"></div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
     {weaknesses.quadWeak?.length > 0 && (
-      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #E6394630;">
+      <section aria-label="Extremely weak types" class="animate-stagger" style={`--i:0;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #E6394630;`}>
         <div style="font-size:13px;font-weight:700;color:#E63946;margin-bottom:8px;">Extremely Weak (&times;4)</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {weaknesses.quadWeak.map((t) => (
@@ -141,10 +143,10 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
             </span>
           ))}
         </div>
-      </div>
+      </section>
     )}
     {weaknesses.doubleWeak?.length > 0 && (
-      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #FF6B3530;">
+      <section aria-label="Weak types" class="animate-stagger" style={`--i:1;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #FF6B3530;`}>
         <div style="font-size:13px;font-weight:700;color:#FF6B35;margin-bottom:8px;">Weak (&times;2)</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {weaknesses.doubleWeak.map((t) => (
@@ -155,10 +157,10 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
             </span>
           ))}
         </div>
-      </div>
+      </section>
     )}
     {weaknesses.resist?.length > 0 && (
-      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #7AC74C30;">
+      <section aria-label="Resistant types" class="animate-stagger" style={`--i:2;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #7AC74C30;`}>
         <div style="font-size:13px;font-weight:700;color:#7AC74C;margin-bottom:8px;">Resists (&times;&frac12;)</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {weaknesses.resist.map((t) => (
@@ -169,10 +171,10 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
             </span>
           ))}
         </div>
-      </div>
+      </section>
     )}
     {weaknesses.doubleResist?.length > 0 && (
-      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #6390F030;">
+      <section aria-label="Double resistant types" class="animate-stagger" style={`--i:3;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #6390F030;`}>
         <div style="font-size:13px;font-weight:700;color:#6390F0;margin-bottom:8px;">Double Resists (&times;&frac14;)</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {weaknesses.doubleResist.map((t) => (
@@ -183,10 +185,10 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
             </span>
           ))}
         </div>
-      </div>
+      </section>
     )}
     {weaknesses.immune?.length > 0 && (
-      <div style="background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #A0A0A030;">
+      <section aria-label="Immune types" class="animate-stagger" style={`--i:4;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #A0A0A030;`}>
         <div style="font-size:13px;font-weight:700;color:#A0A0A0;margin-bottom:8px;">Immune (&times;0)</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {weaknesses.immune.map((t) => (
@@ -197,7 +199,7 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
             </span>
           ))}
         </div>
-      </div>
+      </section>
     )}
   </div>
 </MainLayout>

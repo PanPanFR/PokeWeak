@@ -483,3 +483,117 @@ input:focus-visible {
     border-radius: 8px;
   }
 }
+
+/* === Micro-Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 250ms ease-out both;
+}
+
+.animate-stagger {
+  animation: fadeInUp 250ms ease-out both;
+  animation-delay: calc(var(--i, 0) * 30ms);
+}
+
+/* === Hover & Active States === */
+.pk-list-item {
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.pk-list-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: scale(1.01);
+}
+
+.pk-list-item:active {
+  transform: scale(0.98);
+}
+
+/* === Visual Hierarchy === */
+.heading-glow {
+  text-shadow: 0 0 20px rgba(230, 57, 70, 0.3);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  margin: 16px 0;
+}
+
+/* === Search Focus Glow === */
+.search-input-glow {
+  transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.search-input-glow:focus {
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.25);
+  border-color: rgba(230, 57, 70, 0.5) !important;
+}
+
+/* === Dropdown Animation === */
+.dropdown-animate {
+  animation: fadeInUp 200ms ease-out;
+}
+
+/* === Accessibility === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+button,
+a,
+input,
+[role="option"] {
+  touch-action: manipulation;
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-stagger {
+    animation: none !important;
+  }
+
+  .pk-list-item {
+    transition: none !important;
+  }
+
+  .search-input-glow {
+    transition: none !important;
+  }
+
+  .dropdown-animate {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

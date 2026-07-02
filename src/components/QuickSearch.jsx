@@ -67,29 +67,77 @@ export default function QuickSearch() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <input
-        ref={inputRef}
-        type="text"
-        placeholder="Search Pokémon..."
-        value={query}
-        onInput={handleInput}
-        onKeyDown={handleKeyDown}
-        style={{
-          width: '100%',
-          padding: '12px 16px',
-          borderRadius: '12px',
-          border: '1px solid rgba(255,255,255,0.1)',
-          background: '#1E1E1E',
-          color: '#FFFFFF',
-          fontSize: '16px',
-          fontFamily: 'inherit',
-          outline: 'none',
-          minHeight: '44px',
-        }}
-      />
+      <div style={{ position: 'relative' }}>
+        <svg
+          style={{
+            position: 'absolute',
+            left: '14px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            pointerEvents: 'none',
+            color: '#64748B',
+            zIndex: 1,
+          }}
+          width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder="Search Pokémon..."
+          value={query}
+          onInput={handleInput}
+          onKeyDown={handleKeyDown}
+          aria-label="Search Pokémon by name"
+          class="search-input-glow"
+          style={{
+            width: '100%',
+            padding: '12px 36px 12px 38px',
+            borderRadius: '12px',
+            border: '1px solid rgba(255,255,255,0.1)',
+            background: '#1E1E1E',
+            color: '#FFFFFF',
+            fontSize: '16px',
+            fontFamily: 'inherit',
+            outline: 'none',
+            minHeight: '44px',
+          }}
+        />
+        {query.trim() && (
+          <button
+            onClick={() => { setQuery(''); inputRef.current?.focus(); }}
+            aria-label="Clear search"
+            style={{
+              position: 'absolute',
+              right: '10px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(255,255,255,0.1)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '24px',
+              height: '24px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: '#A0A0A0',
+              fontSize: '14px',
+              fontWeight: 700,
+              padding: 0,
+            }}
+          >
+            ×
+          </button>
+        )}
+      </div>
       {query.trim() && results.length > 0 && (
         <div
           ref={dropdownRef}
+          class="scrollbar-thin dropdown-animate"
           style={{
             position: 'absolute',
             top: 'calc(100% + 4px)',
@@ -102,7 +150,6 @@ export default function QuickSearch() {
             overflowY: 'auto',
             zIndex: 100,
           }}
-          class="scrollbar-thin"
         >
           <div ref={listRef}>
             {results.map(([name, data], idx) => (
@@ -127,9 +174,11 @@ export default function QuickSearch() {
               >
                 <img
                   src={getSprite(data)}
-                  alt={name}
+                  alt={displayName(name, data)}
                   width={40}
                   height={40}
+                  loading="lazy"
+                  decoding="async"
                   style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                 />
                 <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>

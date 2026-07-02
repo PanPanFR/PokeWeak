@@ -29,8 +29,9 @@ const isDev = import.meta.env.DEV;
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;700&display=swap" rel="stylesheet" /></noscript>
     <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
     <link rel="icon" href="/icons/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" />
@@ -72,10 +73,10 @@ const isDev = import.meta.env.DEV;
   </head>
   <body>
     <div class="app-shell">
-      <main id="main-content">
+      <main id="main-content" transition:animate="fade">
         <slot />
       </main>
-      <BottomNav currentPath={currentPath} />
+      <BottomNav currentPath={currentPath} transition:persist transition:name="main-nav" />
     </div>
     <Analytics />
   </body>

@@ -35,7 +35,7 @@ const navItems: NavItem[] = [
 ];
 ---
 
-<nav class="bottom-nav">
+<nav class="bottom-nav" aria-label="Main navigation">
   <div class="nav-inner">
     {
       navItems.map((item) => {
@@ -54,6 +54,24 @@ const navItems: NavItem[] = [
     }
   </div>
 </nav>
+
+<script>
+  function updateActiveNav() {
+    const path = window.location.pathname;
+    document.querySelectorAll('.nav-item').forEach(item => {
+      const href = item.getAttribute('href');
+      const isActive = path === href || (href !== '/' && path.startsWith(href));
+      item.classList.toggle('active', isActive);
+      if (isActive) {
+        item.setAttribute('aria-current', 'page');
+      } else {
+        item.removeAttribute('aria-current');
+      }
+    });
+  }
+  document.addEventListener('astro:after-swap', updateActiveNav);
+  updateActiveNav();
+</script>
 
 <style is:global>
   .bottom-nav {
@@ -80,14 +98,32 @@ const navItems: NavItem[] = [
     gap: 2px;
     text-decoration: none;
     color: #A0A0A0;
-    transition: color 0.15s ease;
+    transition: color 0.15s ease, background 0.15s ease;
     min-width: 44px;
     min-height: 44px;
     padding: 4px 8px;
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .nav-item.active {
     color: #E63946;
+  }
+
+  .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #E63946;
+    border-radius: 0 0 2px 2px;
   }
 
   .nav-icon {

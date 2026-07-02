@@ -181,6 +181,8 @@ export default function SpeedIsland() {
                 alt={displayName(name, data)}
                 width={32}
                 height={32}
+                loading="lazy"
+                decoding="async"
                 style={{ imageRendering: 'pixelated', flexShrink: 0 }}
               />
               <div style={{ flex: 1, minWidth: 0 }}>

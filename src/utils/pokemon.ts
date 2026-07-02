@@ -8,8 +8,7 @@ export function getSpriteUrl(id: number, name?: string): string {
 }
 
 export function getSprite(data: { id: number; name?: string; sprite?: string }): string {
-  // Override local serebii URLs with PokeAPI to avoid hotlink blocks on Vercel
-  if (data.sprite && !data.sprite.includes('serebii.net')) return data.sprite;
+  if (data.sprite) return data.sprite;
   return getSpriteUrl(data.id, data.name);
 }
 
