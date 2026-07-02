@@ -4,6 +4,7 @@ import QuickSearch from '../../components/QuickSearch.jsx';
 import pokemonData from '../../data/pokemon.json';
 import typeChart from '../../data/types.json';
 import { calculateWeaknesses } from '../../utils/typeCalc';
+import { calculateSpeedTiers } from '../../utils/speedCalc';
 
 export function getStaticPaths() {
   return Object.keys(pokemonData).map((name) => ({
@@ -15,6 +16,7 @@ export function getStaticPaths() {
 const { data } = Astro.props;
 const currentKey = Astro.params.name;
 const weaknesses = calculateWeaknesses(data.types, typeChart);
+const speedTiers = calculateSpeedTiers(data.speed);
 
 // Find mega forms
 const megaForms = Object.keys(pokemonData).filter(key => 
@@ -55,8 +57,36 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
         </span>
       ))}
     </div>
-    <div style="margin-top:8px;color:var(--text-secondary);font-size:14px;">
-      Speed: <strong style="color:var(--text-primary);">{data.speed}</strong>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;text-align:left;">
+    <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;text-align:center;">Speed Tiers (Lv 50)</div>
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:8px;">
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">Base</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.base}</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">No Invest</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.basePlus}</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">No Invest+</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.noInvestPlus}</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">MAX</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.max}</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">MAX+</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.maxPlus}</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">Tailwind</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.tailwind}</div>
+      </div>
     </div>
   </div>
 
