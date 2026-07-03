@@ -273,7 +273,8 @@ export default function SearchIsland() {
                       alt={displayName(name, data)}
                       width={40}
                       height={40}
-                      loading="lazy"
+                      loading={idx < 6 ? "eager" : "lazy"}
+                      fetchpriority={idx < 3 ? "high" : "auto"}
                       decoding="async"
                       style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                     />
@@ -347,7 +348,7 @@ export default function SearchIsland() {
 
       {!query.trim() && filterTypes.length === 0 && (
         <div>
-          {sortedChampions.map(([name, data]) => (
+          {sortedChampions.map(([name, data], idx) => (
             <a
               key={name}
               href={`/pokemon/${name}`}
@@ -375,7 +376,8 @@ export default function SearchIsland() {
                 alt={displayName(name, data)}
                 width={36}
                 height={36}
-                loading="lazy"
+                loading={idx < 8 ? "eager" : "lazy"}
+                fetchpriority={idx < 4 ? "high" : "auto"}
                 decoding="async"
                 style={{ imageRendering: 'pixelated', flexShrink: 0 }}
               />
@@ -392,7 +394,7 @@ export default function SearchIsland() {
 
       {!query.trim() && filterTypes.length > 0 && (
         <div>
-          {results.map(([name, data]) => (
+          {results.map(([name, data], idx) => (
             <a
               key={name}
               href={`/pokemon/${name}`}
@@ -420,7 +422,8 @@ export default function SearchIsland() {
                 alt={displayName(name, data)}
                 width={36}
                 height={36}
-                loading="lazy"
+                loading={idx < 8 ? "eager" : "lazy"}
+                fetchpriority={idx < 4 ? "high" : "auto"}
                 decoding="async"
                 style={{ imageRendering: 'pixelated', flexShrink: 0 }}
               />
