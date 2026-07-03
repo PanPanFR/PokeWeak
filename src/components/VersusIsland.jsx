@@ -140,7 +140,16 @@ export default function VersusIsland() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <div style={{ background: 'var(--bg-surface)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
-        <h2 style={{ margin: '0 0 16px', fontSize: '16px', textAlign: 'center', color: 'var(--text-primary)' }}>Select Matchup</h2>
+        <h2 style={{ margin: '0 0 4px', fontSize: '16px', textAlign: 'center', color: 'var(--text-primary)' }}>Select Matchup</h2>
+        <p style={{
+          fontSize: '12px',
+          color: 'var(--text-muted)',
+          margin: '0 0 16px',
+          lineHeight: 1.4,
+          textAlign: 'center',
+        }}>
+          Pick two Pokémon for a 1v1 matchup breakdown — type effectiveness, speed comparison, and battle prediction.
+        </p>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <SearchSelect value={pokeA} onChange={setPokeA} placeholder="Pokémon A" />
           <div style={{ fontWeight: 800, fontSize: '14px', color: '#E63946' }}>VS</div>

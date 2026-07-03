@@ -197,6 +197,14 @@ export default function SearchIsland() {
 
   return (
     <div>
+      <p style={{
+        fontSize: '12px',
+        color: 'var(--text-muted)',
+        margin: '0 0 12px',
+        lineHeight: 1.4,
+      }}>
+        Search any Champion Pokémon to check its type weaknesses, resistances, and immunities.
+      </p>
       <div style={{
         background: 'var(--bg-elevated)',
         padding: '16px',

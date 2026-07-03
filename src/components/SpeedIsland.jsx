@@ -43,8 +43,9 @@ export default function SpeedIsland() {
     const q = query.trim().toLowerCase();
     
     if (q) {
+      const normalizedQ = q.replace(/\s+/g, '-');
       list = list.filter(([name, data]) => 
-        name.includes(q) || 
+        name.includes(q) || name.includes(normalizedQ) ||
         (data.name && data.name.toLowerCase().includes(q)) || 
         data.types.some(t => t.toLowerCase().includes(q))
       );

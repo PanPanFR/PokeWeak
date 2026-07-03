@@ -27,8 +27,9 @@ export default function SearchSelect({ value, onChange, placeholder, disabled })
     const lower = query.trim().toLowerCase();
     
     if (lower) {
+      const normalizedLower = lower.replace(/\s+/g, '-');
       list = list.filter(([k, v]) => 
-        k.includes(lower) || (v.name && v.name.toLowerCase().includes(lower)) || v.types.some(t => t.toLowerCase().includes(lower))
+        k.includes(lower) || k.includes(normalizedLower) || (v.name && v.name.toLowerCase().includes(lower)) || v.types.some(t => t.toLowerCase().includes(lower))
       );
     }
     

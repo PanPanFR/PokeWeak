@@ -1,78 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import TypeIcon from '../components/TypeIcon.astro';
 import TypeCheckerIsland from '../components/TypeCheckerIsland.jsx';
-import typeChart from '../data/types.json';
-import { calculateWeaknesses } from '../utils/typeCalc';
-
-const typeKeys = Object.keys(typeChart);
-
-const weaknessData = typeKeys.map((type) => {
-  const w = calculateWeaknesses([type], typeChart);
-  const superEffective = [...w.quadWeak, ...w.doubleWeak];
-  return { type, superEffective, weaknesses: w };
-});
 ---
 
 <MainLayout title="Type Cheatsheet — PokeWeak" description="Quick reference for all Pokémon type matchups" currentPath="/cheatsheet">
-  <h1 style="font-size:16px;font-weight:700;margin:0 0 12px;">Type Matchups</h1>
+  <h1 style="font-size:16px;font-weight:700;margin:0 0 4px;">Type Matchups</h1>
+  <p style="font-size:12px;color:var(--text-muted);margin:0 0 12px;line-height:1.4;">Quick reference for all 18 type matchups. Use Manual Type Check to explore offensive and defensive type interactions.</p>
   <TypeCheckerIsland client:load />
-
-  <div class="cs-grid">
-    {
-      weaknessData.map(({ type, superEffective, weaknesses }) => {
-        const c = `var(--color-pk-${type.toLowerCase()})`;
-        const hasSpecial = weaknesses.immune.length > 0 || weaknesses.doubleResist.length > 0;
-        return (
-          <div class="cs-card" style={`--tc:${c};`}>
-            <div class="cs-head">
-              <TypeIcon typeName={type} size={16} />
-              <span class="cs-name">{type}</span>
-            </div>
-            <div class="cs-body">
-              <div class="cs-row">
-                <span class="cs-label">Weak</span>
-                <span class="cs-badges">
-                  {superEffective.length > 0 ? superEffective.map((atk) => (
-                    <span class="cs-badge" title={`${atk} → ×2`}>
-                      <TypeIcon typeName={atk} size={12} />
-                    </span>
-                  )) : <span class="cs-none">—</span>}
-                </span>
-              </div>
-              <div class="cs-row">
-                <span class="cs-label">Resist</span>
-                <span class="cs-badges">
-                  {weaknesses.resist.length > 0 ? weaknesses.resist.map((atk) => (
-                    <span class="cs-badge cs-badge--resist" title={`${atk} → ×½`}>
-                      <TypeIcon typeName={atk} size={12} />
-                    </span>
-                  )) : <span class="cs-none">—</span>}
-                </span>
-              </div>
-              {hasSpecial && (
-                <div class="cs-row">
-                  <span class="cs-label cs-label--special">Imm</span>
-                  <span class="cs-badges">
-                    {weaknesses.immune.map((atk) => (
-                      <span class="cs-badge cs-badge--immune" title={`${atk} → ×0`}>
-                        <TypeIcon typeName={atk} size={12} />
-                      </span>
-                    ))}
-                    {weaknesses.doubleResist.map((atk) => (
-                      <span class="cs-badge cs-badge--resist" title={`${atk} → ×¼`}>
-                        <TypeIcon typeName={atk} size={12} />
-                      </span>
-                    ))}
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-        );
-      })
-    }
-  </div>
 </MainLayout>
 
 <style is:global>
@@ -125,7 +59,7 @@ const weaknessData = typeKeys.map((type) => {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    width: 30px;
+    width: 48px;
     flex-shrink: 0;
     line-height: 20px;
   }

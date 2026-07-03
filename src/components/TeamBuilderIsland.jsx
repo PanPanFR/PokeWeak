@@ -3,7 +3,7 @@ import { useState, useMemo } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import TypeIcon from './TypeIcon.jsx';
 import { getSprite, displayName } from '../utils/pokemon';
-import { calculateWeaknesses } from '../utils/typeCalc';
+import { calculateWeaknesses, calculateStrengths } from '../utils/typeCalc';
 import typeChart from '../data/types.json';
 
 const pokemonList = Object.entries(pokemonData);
@@ -215,6 +215,90 @@ function TeamWeaknessDisplay({ team }) {
   );
 }
 
+function TeamStrengthDisplay({ team }) {
+  const aggregatedStrengths = useMemo(() => {
+    if (team.length === 0) return null;
+
+    const strengthCounts = {};
+
+    team.forEach((p) => {
+      const strengths = calculateStrengths(p.types, typeChart);
+      strengths.superEffective.forEach((defType) => {
+        if (!strengthCounts[defType]) {
+          strengthCounts[defType] = { count: 0 };
+        }
+        strengthCounts[defType].count++;
+      });
+    });
+
+    return Object.entries(strengthCounts)
+      .sort(([, a], [, b]) => b.count - a.count)
+      .map(([type, data]) => ({ type, ...data }));
+  }, [team]);
+
+  if (!aggregatedStrengths || aggregatedStrengths.length === 0) {
+    return (
+      <div style={{
+        textAlign: 'center',
+        color: 'var(--text-muted)',
+        padding: '20px',
+        fontSize: '13px',
+        fontWeight: 500,
+      }}>
+        No offensive coverage data.
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ marginTop: '16px' }}>
+      <h3 style={{ fontSize: '14px', fontWeight: 600, margin: '0 0 12px', color: 'var(--text-primary)' }}>
+        Team Strong Against
+      </h3>
+      <p style={{
+        fontSize: '12px',
+        color: 'var(--text-muted)',
+        margin: '0 0 12px',
+        lineHeight: 1.4,
+      }}>
+        Types your team can hit super effectively. Higher count = more Pokémon with coverage.
+      </p>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+        {aggregatedStrengths.map(({ type, count }) => (
+          <span
+            key={type}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '4px',
+              background: 'var(--bg-focus)',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: '8px',
+              padding: '6px 10px',
+              fontSize: '12px',
+              color: 'var(--text-primary)'
+            }}
+          >
+            <TypeIcon type={type} size={16} />
+            <span style={{ fontWeight: 500 }}>{type}</span>
+            <span style={{
+              marginLeft: '4px',
+              fontWeight: 700,
+              color: '#7AC74C',
+              background: 'var(--bg-card)',
+              borderRadius: '4px',
+              padding: '2px 6px',
+              fontSize: '11px',
+            }}>
+              {count}
+            </span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function TeamBuilderIsland() {
   const [team, setTeam] = useState(Array(6).fill(null));
   
@@ -257,7 +341,8 @@ export default function TeamBuilderIsland() {
     let filtered = pokemonList;
 
     if (q) {
-      filtered = filtered.filter(([name]) => name.includes(q));
+      const normalizedQ = q.replace(/\s+/g, '-');
+      filtered = filtered.filter(([name]) => name.includes(q) || name.includes(normalizedQ));
     }
 
     if (filterTypes.length > 0) {
@@ -289,6 +374,15 @@ export default function TeamBuilderIsland() {
         </h2>
       </div>
 
+      <p style={{
+        fontSize: '12px',
+        color: 'var(--text-muted)',
+        margin: '0 0 16px',
+        lineHeight: 1.4,
+      }}>
+        Build your team of 6 Pokémon. Analyze shared weaknesses and type coverage at a glance.
+      </p>
+
       <div style={{ display: 'grid', gap: '24px' }}>
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
@@ -319,6 +413,7 @@ export default function TeamBuilderIsland() {
             border: '1px solid var(--border-medium)',
           }}>
             <TeamWeaknessDisplay team={activePlayerTeam} />
+            <TeamStrengthDisplay team={activePlayerTeam} />
           </div>
         )}
       </div>

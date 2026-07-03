@@ -16,8 +16,9 @@ export default function QuickSearch() {
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
+    const normalizedQ = q.replace(/\s+/g, '-');
     return pokemonList
-      .filter(([name]) => name.includes(q))
+      .filter(([name]) => name.includes(q) || name.includes(normalizedQ))
       .slice(0, 30);
   }, [query]);
 
@@ -41,7 +42,7 @@ export default function QuickSearch() {
     } else if (e.key === 'Enter' && focusedIdx >= 0 && results[focusedIdx]) {
       navigate(results[focusedIdx][0]);
     } else if (e.key === 'Enter' && query.trim()) {
-      navigate(query.trim().toLowerCase());
+      navigate(query.trim().toLowerCase().replace(/\s+/g, '-'));
     } else if (e.key === 'Escape') {
       setQuery('');
       inputRef.current?.blur();
