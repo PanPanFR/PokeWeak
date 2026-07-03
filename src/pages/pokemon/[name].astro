@@ -63,30 +63,19 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
   <div style="margin-top:24px;text-align:left;">
     <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;text-align:center;">Speed Tiers (Lv 50)</div>
     <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:8px;">
-      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">Base</div>
-        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.base}</div>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">No Invest</div>
-        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.basePlus}</div>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">No Invest+</div>
-        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.noInvestPlus}</div>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">MAX</div>
-        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.max}</div>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">MAX+</div>
-        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.maxPlus}</div>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">Tailwind</div>
-        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{speedTiers.tailwind}</div>
-      </div>
+      {[
+        { label: 'Base', val: speedTiers.base },
+        { label: 'No Invest', val: speedTiers.basePlus },
+        { label: 'No Invest+', val: speedTiers.noInvestPlus },
+        { label: 'MAX', val: speedTiers.max },
+        { label: 'MAX+', val: speedTiers.maxPlus },
+        { label: 'Tailwind', val: speedTiers.tailwind }
+      ].map((stat) => (
+        <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">{stat.label}</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{stat.val}</div>
+        </div>
+      ))}
     </div>
   </div>
 
@@ -112,14 +101,17 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
     )}
   </div>
 
-  {megaForms.length > 0 && (
+  {[
+    { title: 'Mega Forms', items: megaForms, color: '#E63946', hover: '#c92a35' },
+    { title: 'Alternative Forms', items: alternativeForms, color: '#1E40AF', hover: '#1E3A8A' }
+  ].map((formGroup) => formGroup.items.length > 0 && (
     <div style="margin-top:16px;">
-      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Mega Forms</div>
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">{formGroup.title}</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        {megaForms.map((form) => {
+        {formGroup.items.map((form) => {
           const formData = pokemonData[form];
           return (
-            <a href={`/pokemon/${form}`} style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:#E63946;color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;" onmouseover="this.style.background='#c92a35'" onmouseout="this.style.background='#E63946'">
+            <a href={`/pokemon/${form}`} style={`display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:${formGroup.color};color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;`} onmouseover={`this.style.background='${formGroup.hover}'`} onmouseout={`this.style.background='${formGroup.color}'`}>
               <span>{formData?.name?.replaceAll('-', ' ') || form.replaceAll('-', ' ')}</span>
               {formData?.types && (
                 <div style="display:flex;gap:3px;">
@@ -133,104 +125,33 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
         })}
       </div>
     </div>
-  )}
-
-{alternativeForms.length > 0 && (
-    <div style="margin-top:16px;">
-      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Alternative Forms</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        {alternativeForms.map((form) => {
-          const formData = pokemonData[form];
-          return (
-            <a href={`/pokemon/${form}`} style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:#1E40AF;color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;" onmouseover="this.style.background='#1E3A8A'" onmouseout="this.style.background='#1E40AF'">
-              <span>{formData?.name?.replaceAll('-', ' ') || form.replaceAll('-', ' ')}</span>
-              {formData?.types && (
-                <div style="display:flex;gap:3px;">
-                  {formData.types.map((t) => (
-                    <img key={t} src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="14" height="14" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
-                  ))}
-                </div>
-              )}
-            </a>
-          );
-        })}
-      </div>
-    </div>
-  )}
+  ))}
 
   <div class="section-divider"></div>
 
   <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
-    {weaknesses.quadWeak?.length > 0 && (
-      <section aria-label="Extremely weak types" class="animate-stagger" style={`--i:0;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #E6394630;`}>
-        <div style="font-size:13px;font-weight:700;color:#E63946;margin-bottom:8px;">Extremely Weak (&times;4)</div>
+    {[
+      { data: weaknesses.quadWeak, title: 'Extremely Weak', multiplierHtml: '&times;4', color: '#E63946' },
+      { data: weaknesses.doubleWeak, title: 'Weak', multiplierHtml: '&times;2', color: '#FF6B35' },
+      { data: weaknesses.resist, title: 'Resists', multiplierHtml: '&times;&frac12;', color: '#7AC74C' },
+      { data: weaknesses.doubleResist, title: 'Double Resists', multiplierHtml: '&times;&frac14;', color: '#6390F0' },
+      { data: weaknesses.immune, title: 'Immune', multiplierHtml: '&times;0', color: '#A0A0A0' }
+    ].map((section, idx) => section.data?.length > 0 && (
+      <section aria-label={`${section.title} types`} class="animate-stagger" style={`--i:${idx};background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid ${section.color}30;`}>
+        <div style={`font-size:13px;font-weight:700;color:${section.color};margin-bottom:8px;`}>
+          {section.title} (<span set:html={section.multiplierHtml} />)
+        </div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          {weaknesses.quadWeak.map((t) => (
+          {section.data.map((t) => (
             <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
               <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
               <span>{t}</span>
-              <span style="margin-left:auto;font-weight:700;color:#E63946;">&times;4</span>
+              <span style={`margin-left:auto;font-weight:700;color:${section.color};`} set:html={section.multiplierHtml} />
             </span>
           ))}
         </div>
       </section>
-    )}
-    {weaknesses.doubleWeak?.length > 0 && (
-      <section aria-label="Weak types" class="animate-stagger" style={`--i:1;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #FF6B3530;`}>
-        <div style="font-size:13px;font-weight:700;color:#FF6B35;margin-bottom:8px;">Weak (&times;2)</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          {weaknesses.doubleWeak.map((t) => (
-            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
-              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
-              <span>{t}</span>
-              <span style="margin-left:auto;font-weight:700;color:#FF6B35;">&times;2</span>
-            </span>
-          ))}
-        </div>
-      </section>
-    )}
-    {weaknesses.resist?.length > 0 && (
-      <section aria-label="Resistant types" class="animate-stagger" style={`--i:2;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #7AC74C30;`}>
-        <div style="font-size:13px;font-weight:700;color:#7AC74C;margin-bottom:8px;">Resists (&times;&frac12;)</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          {weaknesses.resist.map((t) => (
-            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
-              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
-              <span>{t}</span>
-              <span style="margin-left:auto;font-weight:700;color:#7AC74C;">&times;&frac12;</span>
-            </span>
-          ))}
-        </div>
-      </section>
-    )}
-    {weaknesses.doubleResist?.length > 0 && (
-      <section aria-label="Double resistant types" class="animate-stagger" style={`--i:3;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #6390F030;`}>
-        <div style="font-size:13px;font-weight:700;color:#6390F0;margin-bottom:8px;">Double Resists (&times;&frac14;)</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          {weaknesses.doubleResist.map((t) => (
-            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
-              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
-              <span>{t}</span>
-              <span style="margin-left:auto;font-weight:700;color:#6390F0;">&times;&frac14;</span>
-            </span>
-          ))}
-        </div>
-      </section>
-    )}
-    {weaknesses.immune?.length > 0 && (
-      <section aria-label="Immune types" class="animate-stagger" style={`--i:4;background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid #A0A0A030;`}>
-        <div style="font-size:13px;font-weight:700;color:#A0A0A0;margin-bottom:8px;">Immune (&times;0)</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          {weaknesses.immune.map((t) => (
-            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
-              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
-              <span>{t}</span>
-              <span style="margin-left:auto;font-weight:700;color:#A0A0A0;">&times;0</span>
-            </span>
-          ))}
-        </div>
-      </section>
-    )}
+    ))}
   </div>
 </MainLayout>
 
