@@ -107,20 +107,6 @@ const isDev = import.meta.env.DEV;
         window.visualViewport.addEventListener('resize', setAppHeight);
       }
       setAppHeight();
-
-      // PWA Install Prompt
-      let deferredPrompt = null;
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        const btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'flex';
-      });
-      window.addEventListener('appinstalled', () => {
-        deferredPrompt = null;
-        const btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'none';
-      });
     </script>
   </head>
   <body>
@@ -131,9 +117,6 @@ const isDev = import.meta.env.DEV;
     </button>
     <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-    </button>
-    <button id="pwa-install-btn" class="pwa-install-btn" aria-label="Install app" style="display:none;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     </button>
     <div class="app-shell">
       <main id="main-content" transition:animate="fade">
@@ -170,20 +153,6 @@ const isDev = import.meta.env.DEV;
           });
           scrollTopBtn.addEventListener('click', () => {
             mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-        }
-
-        const installBtn = document.getElementById('pwa-install-btn');
-        if (installBtn) {
-          installBtn.addEventListener('click', async () => {
-            if (deferredPrompt) {
-              deferredPrompt.prompt();
-              const { outcome } = await deferredPrompt.userChoice;
-              if (outcome === 'accepted') {
-                installBtn.style.display = 'none';
-              }
-              deferredPrompt = null;
-            }
           });
         }
       });
@@ -308,33 +277,6 @@ const isDev = import.meta.env.DEV;
     transform: scale(0.95);
   }
 
-  .pwa-install-btn {
-    position: fixed;
-    bottom: 80px;
-    left: 68px;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--bg-surface);
-    border: 1px solid var(--border-medium);
-    color: var(--text-primary);
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .pwa-install-btn:hover {
-    transform: scale(1.05);
-    background: var(--bg-hover);
-  }
-
-  .pwa-install-btn:active {
-    transform: scale(0.95);
-  }
 
   .sun-icon { display: none; }
   .moon-icon { display: block; }
