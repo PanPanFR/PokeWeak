@@ -1,12 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import TypeCheckerIsland from '../components/TypeCheckerIsland.jsx';
+import CheatsheetTabs from '../components/CheatsheetTabs.jsx';
 ---
 
-<MainLayout title="Type Cheatsheet — PokeWeak" description="Quick reference for all Pokémon type matchups" currentPath="/cheatsheet">
-  <h1 style="font-size:16px;font-weight:700;margin:0 0 4px;">Type Matchups</h1>
-  <p style="font-size:12px;color:var(--text-muted);margin:0 0 12px;line-height:1.4;">Quick reference for all 18 type matchups. Use Manual Type Check to explore offensive and defensive type interactions.</p>
-  <TypeCheckerIsland client:load />
+<MainLayout title="Cheatsheet — PokeWeak" description="Quick reference for Pokémon type matchups and hidden battle mechanics" currentPath="/cheatsheet">
+  <h1 style="font-size:16px;font-weight:700;margin:0 0 4px;">Cheatsheet</h1>
+  <p style="font-size:12px;color:var(--text-muted);margin:0 0 12px;line-height:1.4;">Type matchups and hidden battle mechanics at a glance.</p>
+  <CheatsheetTabs client:load />
 </MainLayout>
 
 <style is:global>
