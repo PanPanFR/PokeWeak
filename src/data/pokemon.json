@@ -19,22 +19,6 @@
       }
     ]
   },
-  "mega-venusaur": {
-    "id": 10033,
-    "name": "Mega Venusaur",
-    "types": [
-      "Grass",
-      "Poison"
-    ],
-    "speed": 80,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10033.png",
-    "abilities": [
-      {
-        "name": "thick fat",
-        "description": "This Pokémon takes half as much damage from Fire- and Ice-type moves."
-      }
-    ]
-  },
   "charizard": {
     "id": 6,
     "name": "Charizard",
@@ -52,38 +36,6 @@
       {
         "name": "solar power",
         "description": "During strong sunlight, this Pokémon has 1.5× its Special Attack but takes 1/8 of its maximum HP in damage after each turn."
-      }
-    ]
-  },
-  "mega-charizard-x": {
-    "id": 10034,
-    "name": "Mega Charizard X",
-    "types": [
-      "Fire",
-      "Dragon"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png",
-    "abilities": [
-      {
-        "name": "tough claws",
-        "description": "Strengthens moves that make contact to 1.33× their power."
-      }
-    ]
-  },
-  "mega-charizard-y": {
-    "id": 10035,
-    "name": "Mega Charizard Y",
-    "types": [
-      "Fire",
-      "Flying"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png",
-    "abilities": [
-      {
-        "name": "drought",
-        "description": "The weather changes to strong sunlight when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Sand Stream, or Snow Warning are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
       }
     ]
   },
@@ -106,21 +58,6 @@
       }
     ]
   },
-  "mega-blastoise": {
-    "id": 10036,
-    "name": "Mega Blastoise",
-    "types": [
-      "Water"
-    ],
-    "speed": 78,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10036.png",
-    "abilities": [
-      {
-        "name": "mega launcher",
-        "description": "Strengthens aura and pulse moves to 1.5× their power."
-      }
-    ]
-  },
   "beedrill": {
     "id": 15,
     "name": "Beedrill",
@@ -138,22 +75,6 @@
       {
         "name": "swarm",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Bug-type moves inflict 1.5× as much regular damage.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is increased."
-      }
-    ]
-  },
-  "mega-beedrill": {
-    "id": 10090,
-    "name": "Mega Beedrill",
-    "types": [
-      "Bug",
-      "Poison"
-    ],
-    "speed": 145,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10090.png",
-    "abilities": [
-      {
-        "name": "adaptability",
-        "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×."
       }
     ]
   },
@@ -178,22 +99,6 @@
       {
         "name": "tangled feet",
         "description": "When this Pokémon is confused, it has twice its evasion."
-      }
-    ]
-  },
-  "mega-pidgeot": {
-    "id": 10073,
-    "name": "Mega Pidgeot",
-    "types": [
-      "Normal",
-      "Flying"
-    ],
-    "speed": 121,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10073.png",
-    "abilities": [
-      {
-        "name": "no guard",
-        "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled."
       }
     ]
   },
@@ -258,36 +163,6 @@
       }
     ]
   },
-  "mega-raichu-x": {
-    "id": 10304,
-    "name": "Mega Raichu X",
-    "types": [
-      "Electric"
-    ],
-    "speed": 110,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10304.png",
-    "abilities": [
-      {
-        "name": "electric surge",
-        "description": "When this Pokémon enters battle, it changes the terrain to Electric Terrain."
-      }
-    ]
-  },
-  "mega-raichu-y": {
-    "id": 10305,
-    "name": "Mega Raichu Y",
-    "types": [
-      "Electric"
-    ],
-    "speed": 130,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10305.png",
-    "abilities": [
-      {
-        "name": "no guard",
-        "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled."
-      }
-    ]
-  },
   "clefable": {
     "id": 36,
     "name": "Clefable",
@@ -308,22 +183,6 @@
       {
         "name": "unaware",
         "description": "This Pokémon ignores other Pokémon's stat modifiers for the purposes of damage and accuracy calculation.\n\nEffectively, this affects modifiers of every stat except Speed.\n\nThe power of Punishment and Stored Power is calculated as usual.  When this Pokémon hurts itself in confusion, its stat modifiers affect damage as usual."
-      }
-    ]
-  },
-  "mega-clefable": {
-    "id": 10278,
-    "name": "Mega Clefable",
-    "types": [
-      "Fairy",
-      "Flying"
-    ],
-    "speed": 70,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10278.png",
-    "abilities": [
-      {
-        "name": "magic bounce",
-        "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or Magic Coat cannot be reflected back."
       }
     ]
   },
@@ -412,21 +271,6 @@
       }
     ]
   },
-  "mega-alakazam": {
-    "id": 10037,
-    "name": "Mega Alakazam",
-    "types": [
-      "Psychic"
-    ],
-    "speed": 150,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10037.png",
-    "abilities": [
-      {
-        "name": "trace",
-        "description": "When this Pokémon enters battle, it copies a random opponent's ability.\n\nThis ability cannot copy Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, Wonder Guard, or Zen Mode."
-      }
-    ]
-  },
   "machamp": {
     "id": 68,
     "name": "Machamp",
@@ -470,22 +314,6 @@
       }
     ]
   },
-  "mega-victreebel": {
-    "id": 10279,
-    "name": "Mega Victreebel",
-    "types": [
-      "Grass",
-      "Poison"
-    ],
-    "speed": 70,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10279.png",
-    "abilities": [
-      {
-        "name": "innards out",
-        "description": "When this Pokémon faints from an opponent's move, that opponent takes damage equal to the HP this Pokémon had remaining."
-      }
-    ]
-  },
   "slowbro": {
     "id": 80,
     "name": "Slowbro",
@@ -510,22 +338,6 @@
       }
     ]
   },
-  "mega-slowbro": {
-    "id": 10071,
-    "name": "Mega Slowbro",
-    "types": [
-      "Water",
-      "Psychic"
-    ],
-    "speed": 30,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
-    "abilities": [
-      {
-        "name": "shell armor",
-        "description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to Battle Armor."
-      }
-    ]
-  },
   "gengar": {
     "id": 94,
     "name": "Gengar",
@@ -539,22 +351,6 @@
       {
         "name": "cursed body",
         "description": "Moves that hit this Pokémon have a 30% chance of being Disabled afterward."
-      }
-    ]
-  },
-  "mega-gengar": {
-    "id": 10038,
-    "name": "Mega Gengar",
-    "types": [
-      "Ghost",
-      "Poison"
-    ],
-    "speed": 130,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png",
-    "abilities": [
-      {
-        "name": "shadow tag",
-        "description": "While this Pokémon is in battle, opposing Pokémon cannot flee or switch out.\n\nOther Pokémon with this ability are unaffected.  Pokémon with Run Away can still flee.  Pokémon can still switch out with the use of a move or item."
       }
     ]
   },
@@ -578,21 +374,6 @@
       {
         "name": "scrappy",
         "description": "This Pokémon ignores Ghost-type Pokémon's immunity to Normal- and Fighting-type moves.\n\nGhost Pokémon's other types affect damage as usual."
-      }
-    ]
-  },
-  "mega-kangaskhan": {
-    "id": 10039,
-    "name": "Mega Kangaskhan",
-    "types": [
-      "Normal"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10039.png",
-    "abilities": [
-      {
-        "name": "parental bond",
-        "description": "Lets the bearer hit twice with damaging moves.  The second hit has half power."
       }
     ]
   },
@@ -620,22 +401,6 @@
       }
     ]
   },
-  "mega-starmie": {
-    "id": 10280,
-    "name": "Mega Starmie",
-    "types": [
-      "Water",
-      "Psychic"
-    ],
-    "speed": 120,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10280.png",
-    "abilities": [
-      {
-        "name": "huge power",
-        "description": "This Pokémon's Attack is doubled while in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to Pure Power."
-      }
-    ]
-  },
   "pinsir": {
     "id": 127,
     "name": "Pinsir",
@@ -656,22 +421,6 @@
       {
         "name": "moxie",
         "description": "This Pokémon's Attack rises one stage upon knocking out another Pokémon, even a friendly Pokémon.\n\nThis ability does not take effect when the Pokémon indirectly causes another Pokémon to faint, e.g. through poison or Spikes.\n\nIf this Pokémon knocks out a Pokémon with Mummy, the former's ability will change without taking effect."
-      }
-    ]
-  },
-  "mega-pinsir": {
-    "id": 10040,
-    "name": "Mega Pinsir",
-    "types": [
-      "Bug",
-      "Flying"
-    ],
-    "speed": 105,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10040.png",
-    "abilities": [
-      {
-        "name": "aerilate",
-        "description": "Turns the bearer's Normal-type moves into Flying-type moves.  Moves changed by this ability have 1.3× their power."
       }
     ]
   },
@@ -715,22 +464,6 @@
       {
         "name": "moxie",
         "description": "This Pokémon's Attack rises one stage upon knocking out another Pokémon, even a friendly Pokémon.\n\nThis ability does not take effect when the Pokémon indirectly causes another Pokémon to faint, e.g. through poison or Spikes.\n\nIf this Pokémon knocks out a Pokémon with Mummy, the former's ability will change without taking effect."
-      }
-    ]
-  },
-  "mega-gyarados": {
-    "id": 10041,
-    "name": "Mega Gyarados",
-    "types": [
-      "Water",
-      "Dark"
-    ],
-    "speed": 81,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10041.png",
-    "abilities": [
-      {
-        "name": "mold breaker",
-        "description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as Water Absorb; abilities that would prevent any of their effects, such as Clear Body, Shell Armor, or Sticky Hold; and abilities that grant any general protective benefit, such as Simple, Snow Cloak, or Thick Fat.  If an ability could either hinder or help this Pokémon's moves, e.g. Dry Skin or Unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, Cursed Body only affects potential future uses of the move, while Liquid Ooze and Shadow Tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example Color Change or Forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from Drizzle.  This ability cannot ignore Multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with Limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's Spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to Teravolt and Turboblaze."
       }
     ]
   },
@@ -834,22 +567,6 @@
       }
     ]
   },
-  "mega-aerodactyl": {
-    "id": 10042,
-    "name": "Mega Aerodactyl",
-    "types": [
-      "Rock",
-      "Flying"
-    ],
-    "speed": 150,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10042.png",
-    "abilities": [
-      {
-        "name": "tough claws",
-        "description": "Strengthens moves that make contact to 1.33× their power."
-      }
-    ]
-  },
   "snorlax": {
     "id": 143,
     "name": "Snorlax",
@@ -893,22 +610,6 @@
       }
     ]
   },
-  "mega-dragonite": {
-    "id": 10281,
-    "name": "Mega Dragonite",
-    "types": [
-      "Dragon",
-      "Flying"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10281.png",
-    "abilities": [
-      {
-        "name": "multiscale",
-        "description": "This Pokémon takes half as much damage when it is hit having full HP."
-      }
-    ]
-  },
   "meganium": {
     "id": 154,
     "name": "Meganium",
@@ -925,22 +626,6 @@
       {
         "name": "overgrow",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Grass-type moves inflict 1.5× as much regular damage."
-      }
-    ]
-  },
-  "mega-meganium": {
-    "id": 10282,
-    "name": "Mega Meganium",
-    "types": [
-      "Grass",
-      "Fairy"
-    ],
-    "speed": 80,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10282.png",
-    "abilities": [
-      {
-        "name": "mega sol",
-        "description": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight."
       }
     ]
   },
@@ -979,22 +664,6 @@
       {
         "name": "torrent",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Water-type moves inflict 1.5× as much regular damage."
-      }
-    ]
-  },
-  "mega-feraligatr": {
-    "id": 10283,
-    "name": "Mega Feraligatr",
-    "types": [
-      "Water",
-      "Dragon"
-    ],
-    "speed": 78,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10283.png",
-    "abilities": [
-      {
-        "name": "dragonize",
-        "description": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%."
       }
     ]
   },
@@ -1038,22 +707,6 @@
       {
         "name": "static",
         "description": "Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being paralyzed.\n\nPokémon that are immune to Electric-type moves can still be paralyzed by this ability.\n\nOverworld: If the lead Pokémon has this ability, there is a 50% chance that encounters will be with an Electric Pokémon, if applicable."
-      }
-    ]
-  },
-  "mega-ampharos": {
-    "id": 10045,
-    "name": "Mega Ampharos",
-    "types": [
-      "Electric",
-      "Dragon"
-    ],
-    "speed": 45,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10045.png",
-    "abilities": [
-      {
-        "name": "mold breaker",
-        "description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as Water Absorb; abilities that would prevent any of their effects, such as Clear Body, Shell Armor, or Sticky Hold; and abilities that grant any general protective benefit, such as Simple, Snow Cloak, or Thick Fat.  If an ability could either hinder or help this Pokémon's moves, e.g. Dry Skin or Unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, Cursed Body only affects potential future uses of the move, while Liquid Ooze and Shadow Tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example Color Change or Forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from Drizzle.  This ability cannot ignore Multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with Limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's Spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to Teravolt and Turboblaze."
       }
     ]
   },
@@ -1210,22 +863,6 @@
       }
     ]
   },
-  "mega-steelix": {
-    "id": 10072,
-    "name": "Mega Steelix",
-    "types": [
-      "Steel",
-      "Ground"
-    ],
-    "speed": 30,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
-    "abilities": [
-      {
-        "name": "sand force",
-        "description": "During a sandstorm, this Pokémon's Rock-, Ground-, and Steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type."
-      }
-    ]
-  },
   "qwilfish": {
     "id": 211,
     "name": "Qwilfish",
@@ -1274,22 +911,6 @@
       }
     ]
   },
-  "mega-scizor": {
-    "id": 10046,
-    "name": "Mega Scizor",
-    "types": [
-      "Bug",
-      "Steel"
-    ],
-    "speed": 75,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10046.png",
-    "abilities": [
-      {
-        "name": "technician",
-        "description": "This Pokémon's moves have 1.5× their power if their base power is 60 or less.\n\nThis includes moves of variable power, such as Hidden Power and Magnitude, when their power is 60 or less.  Helping Hand's power boost is taken into account for any move, as is Defense Curl's power boost for Rollout."
-      }
-    ]
-  },
   "heracross": {
     "id": 214,
     "name": "Heracross",
@@ -1311,22 +932,6 @@
       {
         "name": "swarm",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Bug-type moves inflict 1.5× as much regular damage.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is increased."
-      }
-    ]
-  },
-  "mega-heracross": {
-    "id": 10047,
-    "name": "Mega Heracross",
-    "types": [
-      "Bug",
-      "Fighting"
-    ],
-    "speed": 75,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10047.png",
-    "abilities": [
-      {
-        "name": "skill link",
-        "description": "This Pokémon always hits five times with two-to-five-hit moves, such as Icicle Spear.  It also bypasses the accuracy checks on Triple Kick's second and third hits."
       }
     ]
   },
@@ -1354,22 +959,6 @@
       }
     ]
   },
-  "mega-skarmory": {
-    "id": 10284,
-    "name": "Mega Skarmory",
-    "types": [
-      "Steel",
-      "Flying"
-    ],
-    "speed": 110,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10284.png",
-    "abilities": [
-      {
-        "name": "stalwart",
-        "description": "Ignores the effects of opposing Pokémon’s Abilities and moves that draw in moves."
-      }
-    ]
-  },
   "houndoom": {
     "id": 229,
     "name": "Houndoom",
@@ -1394,22 +983,6 @@
       }
     ]
   },
-  "mega-houndoom": {
-    "id": 10048,
-    "name": "Mega Houndoom",
-    "types": [
-      "Dark",
-      "Fire"
-    ],
-    "speed": 115,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10048.png",
-    "abilities": [
-      {
-        "name": "solar power",
-        "description": "During strong sunlight, this Pokémon has 1.5× its Special Attack but takes 1/8 of its maximum HP in damage after each turn."
-      }
-    ]
-  },
   "tyranitar": {
     "id": 248,
     "name": "Tyranitar",
@@ -1430,22 +1003,6 @@
       }
     ]
   },
-  "mega-tyranitar": {
-    "id": 10049,
-    "name": "Mega Tyranitar",
-    "types": [
-      "Rock",
-      "Dark"
-    ],
-    "speed": 71,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10049.png",
-    "abilities": [
-      {
-        "name": "sand stream",
-        "description": "The weather changes to a sandstorm when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Snow Warning are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is halved in a sandstorm."
-      }
-    ]
-  },
   "sceptile": {
     "id": 254,
     "name": "Sceptile",
@@ -1462,22 +1019,6 @@
       {
         "name": "unburden",
         "description": "When this Pokémon uses or loses its held item, its Speed is doubled.  If it gains another item or leaves battle, this bonus is lost.\n\nThis includes when the Pokémon drops its item because of Knock Off.  This bonus does not count as a stat modifier.  There is no notification when this ability takes effect."
-      }
-    ]
-  },
-  "mega-sceptile": {
-    "id": 10065,
-    "name": "Mega Sceptile",
-    "types": [
-      "Grass",
-      "Dragon"
-    ],
-    "speed": 145,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10065.png",
-    "abilities": [
-      {
-        "name": "lightning rod",
-        "description": "All other Pokémon's single-target Electric-type moves are redirected to this Pokémon if it is an eligible target.  Other Pokémon's Electric moves raise this Pokémon's Special Attack one stage, negating any other effect on it, and cannot miss it.\n\nIf the move's intended target also has this ability, the move is not redirected.  When multiple Pokémon with this ability are possible targets for redirection, the move is redirected to the one with the highest Speed stat, or, in the case of a tie, to a random tied Pokémon.  Follow Me takes precedence over this ability.\n\nIf the Pokémon is a Ground-type and thus immune to Electric moves, its immunity prevents the Special Attack boost."
       }
     ]
   },
@@ -1501,22 +1042,6 @@
       }
     ]
   },
-  "mega-blaziken": {
-    "id": 10050,
-    "name": "Mega Blaziken",
-    "types": [
-      "Fire",
-      "Fighting"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10050.png",
-    "abilities": [
-      {
-        "name": "speed boost",
-        "description": "This Pokémon's Speed rises one stage after each turn."
-      }
-    ]
-  },
   "swampert": {
     "id": 260,
     "name": "Swampert",
@@ -1534,22 +1059,6 @@
       {
         "name": "torrent",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Water-type moves inflict 1.5× as much regular damage."
-      }
-    ]
-  },
-  "mega-swampert": {
-    "id": 10064,
-    "name": "Mega Swampert",
-    "types": [
-      "Water",
-      "Ground"
-    ],
-    "speed": 70,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10064.png",
-    "abilities": [
-      {
-        "name": "swift swim",
-        "description": "This Pokémon's Speed is doubled during rain.\n\nThis bonus does not count as a stat modifier."
       }
     ]
   },
@@ -1601,22 +1110,6 @@
       }
     ]
   },
-  "mega-gardevoir": {
-    "id": 10051,
-    "name": "Mega Gardevoir",
-    "types": [
-      "Psychic",
-      "Fairy"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10051.png",
-    "abilities": [
-      {
-        "name": "pixilate",
-        "description": "Turns the bearer's Normal-type moves into Fairy moves.  Moves changed by this ability have 1.3× their power."
-      }
-    ]
-  },
   "sableye": {
     "id": 302,
     "name": "Sableye",
@@ -1638,22 +1131,6 @@
       {
         "name": "stall",
         "description": "This Pokémon moves last within its priority bracket.\n\nMultiple Pokémon with this ability move in order of Speed amongst themselves.\n\nThe Full Incense and Lagging Tail take precedence over this ability; that is, Pokémon with these items move after Pokémon with this ability.  Pokémon with both this ability and one of these items are delayed as much as if they had only the item.\n\nThis ability works as usual during Trick Room: Pokémon with this ability will move in reverse order of Speed after Pokémon without it."
-      }
-    ]
-  },
-  "mega-sableye": {
-    "id": 10066,
-    "name": "Mega Sableye",
-    "types": [
-      "Dark",
-      "Ghost"
-    ],
-    "speed": 20,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10066.png",
-    "abilities": [
-      {
-        "name": "magic bounce",
-        "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or Magic Coat cannot be reflected back."
       }
     ]
   },
@@ -1681,22 +1158,6 @@
       }
     ]
   },
-  "mega-mawile": {
-    "id": 10052,
-    "name": "Mega Mawile",
-    "types": [
-      "Steel",
-      "Fairy"
-    ],
-    "speed": 50,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10052.png",
-    "abilities": [
-      {
-        "name": "huge power",
-        "description": "This Pokémon's Attack is doubled while in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to Pure Power."
-      }
-    ]
-  },
   "aggron": {
     "id": 306,
     "name": "Aggron",
@@ -1721,21 +1182,6 @@
       }
     ]
   },
-  "mega-aggron": {
-    "id": 10053,
-    "name": "Mega Aggron",
-    "types": [
-      "Steel"
-    ],
-    "speed": 50,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10053.png",
-    "abilities": [
-      {
-        "name": "filter",
-        "description": "This Pokémon takes 0.75× as much damage from moves that are super effective against it.\n\nThis ability functions identically to Solid Rock."
-      }
-    ]
-  },
   "medicham": {
     "id": 308,
     "name": "Medicham",
@@ -1753,22 +1199,6 @@
       {
         "name": "telepathy",
         "description": "This Pokémon does not take damage from friendly Pokémon's moves, including single-target moves aimed at it."
-      }
-    ]
-  },
-  "mega-medicham": {
-    "id": 10054,
-    "name": "Mega Medicham",
-    "types": [
-      "Fighting",
-      "Psychic"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10054.png",
-    "abilities": [
-      {
-        "name": "pure power",
-        "description": "This Pokémon's Attack is doubled in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to Huge Power."
       }
     ]
   },
@@ -1795,21 +1225,6 @@
       }
     ]
   },
-  "mega-manectric": {
-    "id": 10055,
-    "name": "Mega Manectric",
-    "types": [
-      "Electric"
-    ],
-    "speed": 135,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10055.png",
-    "abilities": [
-      {
-        "name": "intimidate",
-        "description": "When this Pokémon enters battle, the opponent's Attack is lowered by one stage.  In a double battle, both opponents are affected.\n\nThis ability also takes effect when acquired during a battle, but will not take effect again if lost and reobtained without leaving battle.\n\nThis ability has no effect on an opponent that has a Substitute.\n\nOverworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
-      }
-    ]
-  },
   "sharpedo": {
     "id": 319,
     "name": "Sharpedo",
@@ -1827,22 +1242,6 @@
       {
         "name": "speed boost",
         "description": "This Pokémon's Speed rises one stage after each turn."
-      }
-    ]
-  },
-  "mega-sharpedo": {
-    "id": 10070,
-    "name": "Mega Sharpedo",
-    "types": [
-      "Water",
-      "Dark"
-    ],
-    "speed": 105,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
-    "abilities": [
-      {
-        "name": "strong jaw",
-        "description": "Strengthens biting moves to 1.5× their power."
       }
     ]
   },
@@ -1867,22 +1266,6 @@
       {
         "name": "solid rock",
         "description": "This Pokémon takes 0.75× as much damage from moves that are super effective against it.\n\nThis ability functions identically to Filter."
-      }
-    ]
-  },
-  "mega-camerupt": {
-    "id": 10087,
-    "name": "Mega Camerupt",
-    "types": [
-      "Fire",
-      "Ground"
-    ],
-    "speed": 20,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10087.png",
-    "abilities": [
-      {
-        "name": "sheer force",
-        "description": "This Pokémon's moves with extra effects have 1.3× their power, but lose their extra effects.\n\nAn effect chance is a move's chance to inflict a status ailment, cause a stat change, or make the target flinch in addition to the move's main effect. For example, Thunder Shock's paralysis is an extra effect, but Thunder Wave's is not, nor are Knock Off's item removal and Air Cutter's increased critical hit rate.\n\nMoves that lower the user's stats are unaffected."
       }
     ]
   },
@@ -1926,22 +1309,6 @@
       {
         "name": "natural cure",
         "description": "This Pokémon is cured of any major status ailment when it is switched out for another Pokémon.\n\nIf this ability is acquired during battle, the Pokémon is cured upon leaving battle before losing the temporary ability."
-      }
-    ]
-  },
-  "mega-altaria": {
-    "id": 10067,
-    "name": "Mega Altaria",
-    "types": [
-      "Dragon",
-      "Fairy"
-    ],
-    "speed": 80,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10067.png",
-    "abilities": [
-      {
-        "name": "pixilate",
-        "description": "Turns the bearer's Normal-type moves into Fairy moves.  Moves changed by this ability have 1.3× their power."
       }
     ]
   },
@@ -2006,21 +1373,6 @@
       }
     ]
   },
-  "mega-banette": {
-    "id": 10056,
-    "name": "Mega Banette",
-    "types": [
-      "Ghost"
-    ],
-    "speed": 75,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10056.png",
-    "abilities": [
-      {
-        "name": "prankster",
-        "description": "This Pokémon's non-damaging moves have their priority increased by one stage."
-      }
-    ]
-  },
   "chimecho": {
     "id": 358,
     "name": "Chimecho",
@@ -2029,22 +1381,6 @@
     ],
     "speed": 65,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png",
-    "abilities": [
-      {
-        "name": "levitate",
-        "description": "This Pokémon is immune to Ground-type moves, Spikes, Toxic Spikes, and Arena Trap.\n\nThis ability is disabled during Gravity or Ingrain, or while holding an Iron Ball.  This ability is not disabled during Roost."
-      }
-    ]
-  },
-  "mega-chimecho": {
-    "id": 10306,
-    "name": "Mega Chimecho",
-    "types": [
-      "Psychic",
-      "Steel"
-    ],
-    "speed": 65,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10306.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2075,21 +1411,6 @@
       }
     ]
   },
-  "mega-absol": {
-    "id": 10057,
-    "name": "Mega Absol",
-    "types": [
-      "Dark"
-    ],
-    "speed": 115,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10057.png",
-    "abilities": [
-      {
-        "name": "magic bounce",
-        "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or Magic Coat cannot be reflected back."
-      }
-    ]
-  },
   "glalie": {
     "id": 362,
     "name": "Glalie",
@@ -2113,21 +1434,6 @@
       }
     ]
   },
-  "mega-glalie": {
-    "id": 10074,
-    "name": "Mega Glalie",
-    "types": [
-      "Ice"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10074.png",
-    "abilities": [
-      {
-        "name": "refrigerate",
-        "description": "Turns the bearer's Normal-type moves into Ice-type moves.  Moves changed by this ability have 1.3× their power."
-      }
-    ]
-  },
   "metagross": {
     "id": 376,
     "name": "Metagross",
@@ -2145,22 +1451,6 @@
       {
         "name": "light metal",
         "description": "This Pokémon has half the usual weight for its species."
-      }
-    ]
-  },
-  "mega-metagross": {
-    "id": 10076,
-    "name": "Mega Metagross",
-    "types": [
-      "Steel",
-      "Psychic"
-    ],
-    "speed": 110,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10076.png",
-    "abilities": [
-      {
-        "name": "tough claws",
-        "description": "Strengthens moves that make contact to 1.33× their power."
       }
     ]
   },
@@ -2241,22 +1531,6 @@
       {
         "name": "reckless",
         "description": "This Pokémon's recoil moves and crash moves have 1.2× their base power.\n\nStruggle is unaffected.\n\nThe \"crash moves\" are the moves that damage the user upon missing: Jump Kick and High Jump Kick."
-      }
-    ]
-  },
-  "mega-staraptor": {
-    "id": 10308,
-    "name": "Mega Staraptor",
-    "types": [
-      "Fighting",
-      "Flying"
-    ],
-    "speed": 110,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10308.png",
-    "abilities": [
-      {
-        "name": "contrary",
-        "description": "Whenever this Pokémon's stats would be raised, they are instead lowered by the same amount, and vice versa."
       }
     ]
   },
@@ -2369,22 +1643,6 @@
       }
     ]
   },
-  "mega-lopunny": {
-    "id": 10088,
-    "name": "Mega Lopunny",
-    "types": [
-      "Normal",
-      "Fighting"
-    ],
-    "speed": 135,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10088.png",
-    "abilities": [
-      {
-        "name": "scrappy",
-        "description": "This Pokémon ignores Ghost-type Pokémon's immunity to Normal- and Fighting-type moves.\n\nGhost Pokémon's other types affect damage as usual."
-      }
-    ]
-  },
   "spiritomb": {
     "id": 442,
     "name": "Spiritomb",
@@ -2425,22 +1683,6 @@
       }
     ]
   },
-  "mega-garchomp": {
-    "id": 10058,
-    "name": "Mega Garchomp",
-    "types": [
-      "Dragon",
-      "Ground"
-    ],
-    "speed": 92,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10058.png",
-    "abilities": [
-      {
-        "name": "sand force",
-        "description": "During a sandstorm, this Pokémon's Rock-, Ground-, and Steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type."
-      }
-    ]
-  },
   "lucario": {
     "id": 448,
     "name": "Lucario",
@@ -2462,22 +1704,6 @@
       {
         "name": "steadfast",
         "description": "Whenever this Pokémon flinches, its Speed rises one stage."
-      }
-    ]
-  },
-  "mega-lucario": {
-    "id": 10059,
-    "name": "Mega Lucario",
-    "types": [
-      "Fighting",
-      "Steel"
-    ],
-    "speed": 112,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10059.png",
-    "abilities": [
-      {
-        "name": "adaptability",
-        "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×."
       }
     ]
   },
@@ -2541,22 +1767,6 @@
       {
         "name": "soundproof",
         "description": "This Pokémon is immune to moves flagged as being sound-based.\n\nHeal Bell is unaffected.  Uproar still prevents this Pokémon from sleeping.  This Pokémon can still receive a Perish Song counter through Baton Pass, and will retain a Perish Song counter if it acquires this ability after Perish Song is used.\n\nHowl, Roar of Time, Sonic Boom, and Yawn are not flagged as sound-based."
-      }
-    ]
-  },
-  "mega-abomasnow": {
-    "id": 10060,
-    "name": "Mega Abomasnow",
-    "types": [
-      "Grass",
-      "Ice"
-    ],
-    "speed": 30,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10060.png",
-    "abilities": [
-      {
-        "name": "snow warning",
-        "description": "The weather changes to hail when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Sand Stream are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
       }
     ]
   },
@@ -2714,22 +1924,6 @@
       }
     ]
   },
-  "mega-gallade": {
-    "id": 10068,
-    "name": "Mega Gallade",
-    "types": [
-      "Psychic",
-      "Fighting"
-    ],
-    "speed": 110,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
-    "abilities": [
-      {
-        "name": "inner focus",
-        "description": "This Pokémon cannot flinch."
-      }
-    ]
-  },
   "froslass": {
     "id": 478,
     "name": "Froslass",
@@ -2750,22 +1944,6 @@
       }
     ]
   },
-  "mega-froslass": {
-    "id": 10285,
-    "name": "Mega Froslass",
-    "types": [
-      "Ice",
-      "Ghost"
-    ],
-    "speed": 120,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10285.png",
-    "abilities": [
-      {
-        "name": "snow warning",
-        "description": "The weather changes to hail when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Sand Stream are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
-      }
-    ]
-  },
   "rotom": {
     "id": 479,
     "name": "Rotom",
@@ -2774,7 +1952,7 @@
       "Ghost"
     ],
     "speed": 91,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479.svg",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2790,7 +1968,7 @@
       "Water"
     ],
     "speed": 91,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-wash.svg",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10009.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2806,7 +1984,7 @@
       "Fire"
     ],
     "speed": 91,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-heat.svg",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10008.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2822,7 +2000,7 @@
       "Grass"
     ],
     "speed": 91,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-mow.svg",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10012.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2838,7 +2016,7 @@
       "Ice"
     ],
     "speed": 91,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/479-frost.svg",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10010.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2882,22 +2060,6 @@
       {
         "name": "reckless",
         "description": "This Pokémon's recoil moves and crash moves have 1.2× their base power.\n\nStruggle is unaffected.\n\nThe \"crash moves\" are the moves that damage the user upon missing: Jump Kick and High Jump Kick."
-      }
-    ]
-  },
-  "mega-emboar": {
-    "id": 10286,
-    "name": "Mega Emboar",
-    "types": [
-      "Fire",
-      "Fighting"
-    ],
-    "speed": 75,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10286.png",
-    "abilities": [
-      {
-        "name": "mold breaker",
-        "description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as Water Absorb; abilities that would prevent any of their effects, such as Clear Body, Shell Armor, or Sticky Hold; and abilities that grant any general protective benefit, such as Simple, Snow Cloak, or Thick Fat.  If an ability could either hinder or help this Pokémon's moves, e.g. Dry Skin or Unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, Cursed Body only affects potential future uses of the move, while Liquid Ooze and Shadow Tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example Color Change or Forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from Drizzle.  This ability cannot ignore Multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with Limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's Spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to Teravolt and Turboblaze."
       }
     ]
   },
@@ -3070,22 +2232,6 @@
       }
     ]
   },
-  "mega-excadrill": {
-    "id": 10287,
-    "name": "Mega Excadrill",
-    "types": [
-      "Ground",
-      "Steel"
-    ],
-    "speed": 103,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10287.png",
-    "abilities": [
-      {
-        "name": "piercing drill",
-        "description": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered."
-      }
-    ]
-  },
   "audino": {
     "id": 531,
     "name": "Audino",
@@ -3106,22 +2252,6 @@
       {
         "name": "regenerator",
         "description": "This Pokémon regains 1/3 of its maximum HP when it is switched out for another Pokémon under any circumstances other than having fainted.\n\nThis ability does not take effect when a battle ends."
-      }
-    ]
-  },
-  "mega-audino": {
-    "id": 10069,
-    "name": "Mega Audino",
-    "types": [
-      "Normal",
-      "Fairy"
-    ],
-    "speed": 50,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
-    "abilities": [
-      {
-        "name": "healer",
-        "description": "Friendly Pokémon next to this Pokémon in double and triple battles each have a 30% chance of being cured of any major status ailment after each turn."
       }
     ]
   },
@@ -3169,22 +2299,6 @@
       {
         "name": "swarm",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Bug-type moves inflict 1.5× as much regular damage.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is increased."
-      }
-    ]
-  },
-  "mega-scolipede": {
-    "id": 10288,
-    "name": "Mega Scolipede",
-    "types": [
-      "Bug",
-      "Poison"
-    ],
-    "speed": 62,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10288.png",
-    "abilities": [
-      {
-        "name": "shell armor",
-        "description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to Battle Armor."
       }
     ]
   },
@@ -3257,22 +2371,6 @@
       {
         "name": "shed skin",
         "description": "After each turn, this Pokémon has a 33% of being cured of any major status ailment."
-      }
-    ]
-  },
-  "mega-scrafty": {
-    "id": 10289,
-    "name": "Mega Scrafty",
-    "types": [
-      "Dark",
-      "Fighting"
-    ],
-    "speed": 68,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10289.png",
-    "abilities": [
-      {
-        "name": "intimidate",
-        "description": "When this Pokémon enters battle, the opponent's Attack is lowered by one stage.  In a double battle, both opponents are affected.\n\nThis ability also takes effect when acquired during a battle, but will not take effect again if lost and reobtained without leaving battle.\n\nThis ability has no effect on an opponent that has a Substitute.\n\nOverworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
       }
     ]
   },
@@ -3410,21 +2508,6 @@
       }
     ]
   },
-  "mega-eelektross": {
-    "id": 10290,
-    "name": "Mega Eelektross",
-    "types": [
-      "Electric"
-    ],
-    "speed": 80,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10290.png",
-    "abilities": [
-      {
-        "name": "eelevate",
-        "description": "The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. When the Pokémon knocks out a target with an attack, its highest stat is boosted by 1 stage."
-      }
-    ]
-  },
   "chandelure": {
     "id": 609,
     "name": "Chandelure",
@@ -3443,22 +2526,6 @@
         "name": "flash fire",
         "description": "This Pokémon is immune to Fire-type moves.  Once this Pokémon has been hit by a Fire move, its own Fire moves will inflict 1.5× as much damage until it leaves battle.\n\nThis ability has no effect while the Pokémon is frozen.  The Fire damage bonus is retained even if the Pokémon is frozen and thawed or the ability is lost or disabled.  Fire moves will ignore this Pokémon's Substitute.  This ability takes effect even on non-damaging moves, i.e. Will-O-Wisp."
       },
-      {
-        "name": "infiltrator",
-        "description": "This Pokémon's moves ignore Light Screen, Reflect, and Safeguard."
-      }
-    ]
-  },
-  "mega-chandelure": {
-    "id": 10291,
-    "name": "Mega Chandelure",
-    "types": [
-      "Ghost",
-      "Fire"
-    ],
-    "speed": 90,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10291.png",
-    "abilities": [
       {
         "name": "infiltrator",
         "description": "This Pokémon's moves ignore Light Screen, Reflect, and Safeguard."
@@ -3536,22 +2603,6 @@
       }
     ]
   },
-  "mega-golurk": {
-    "id": 10313,
-    "name": "Mega Golurk",
-    "types": [
-      "Ground",
-      "Ghost"
-    ],
-    "speed": 55,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10313.png",
-    "abilities": [
-      {
-        "name": "unseen fist",
-        "description": "If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself."
-      }
-    ]
-  },
   "hydreigon": {
     "id": 635,
     "name": "Hydreigon",
@@ -3608,22 +2659,6 @@
       }
     ]
   },
-  "mega-chesnaught": {
-    "id": 10292,
-    "name": "Mega Chesnaught",
-    "types": [
-      "Grass",
-      "Fighting"
-    ],
-    "speed": 44,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10292.png",
-    "abilities": [
-      {
-        "name": "bulletproof",
-        "description": "Protects against bullet, ball, and bomb-based moves."
-      }
-    ]
-  },
   "delphox": {
     "id": 655,
     "name": "Delphox",
@@ -3644,22 +2679,6 @@
       }
     ]
   },
-  "mega-delphox": {
-    "id": 10293,
-    "name": "Mega Delphox",
-    "types": [
-      "Fire",
-      "Psychic"
-    ],
-    "speed": 134,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10293.png",
-    "abilities": [
-      {
-        "name": "levitate",
-        "description": "This Pokémon is immune to Ground-type moves, Spikes, Toxic Spikes, and Arena Trap.\n\nThis ability is disabled during Gravity or Ingrain, or while holding an Iron Ball.  This ability is not disabled during Roost."
-      }
-    ]
-  },
   "greninja": {
     "id": 658,
     "name": "Greninja",
@@ -3677,22 +2696,6 @@
       {
         "name": "torrent",
         "description": "When this Pokémon has 1/3 or less of its HP remaining, its Water-type moves inflict 1.5× as much regular damage."
-      }
-    ]
-  },
-  "mega-greninja": {
-    "id": 10294,
-    "name": "Mega Greninja",
-    "types": [
-      "Water",
-      "Dark"
-    ],
-    "speed": 142,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10294.png",
-    "abilities": [
-      {
-        "name": "protean",
-        "description": "Changes the bearer's type to match each move it uses.\n\nThe type change takes place just before the move is used."
       }
     ]
   },
@@ -3788,21 +2791,15 @@
       }
     ]
   },
-  "mega-pyroar": {
-    "id": 10295,
-    "name": "Mega Pyroar",
+  "pyroar-f": {
+    "id": 668,
+    "name": "Pyroar (Female)",
     "types": [
       "Fire",
       "Normal"
     ],
-    "speed": 126,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
-    "abilities": [
-      {
-        "name": "fire mane",
-        "description": "Boosts the power of the Pokémon's Fire-type moves by 50%."
-      }
-    ]
+    "speed": 106,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png"
   },
   "floette": {
     "id": 670,
@@ -3820,21 +2817,6 @@
       {
         "name": "symbiosis",
         "description": "Passes the bearer's held item to an ally when the ally uses up its item."
-      }
-    ]
-  },
-  "mega-floette": {
-    "id": 10296,
-    "name": "Mega Floette",
-    "types": [
-      "Fairy"
-    ],
-    "speed": 102,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10296.png",
-    "abilities": [
-      {
-        "name": "fairy aura",
-        "description": "Strengthens Fairy moves for all friendly and opposing Pokémon."
       }
     ]
   },
@@ -3919,6 +2901,15 @@
       }
     ]
   },
+  "meowstic-f": {
+    "id": 678,
+    "name": "Meowstic (Female)",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 104,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png"
+  },
   "aegislash": {
     "id": 681,
     "name": "Aegislash",
@@ -3997,22 +2988,6 @@
       }
     ]
   },
-  "mega-malamar": {
-    "id": 10297,
-    "name": "Mega Malamar",
-    "types": [
-      "Dark",
-      "Psychic"
-    ],
-    "speed": 88,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10297.png",
-    "abilities": [
-      {
-        "name": "contrary",
-        "description": "Whenever this Pokémon's stats would be raised, they are instead lowered by the same amount, and vice versa."
-      }
-    ]
-  },
   "barbaracle": {
     "id": 689,
     "name": "Barbaracle",
@@ -4031,22 +3006,6 @@
         "name": "sniper",
         "description": "This Pokémon inflicts triple damage with critical hits, rather than the usual double damage."
       },
-      {
-        "name": "tough claws",
-        "description": "Strengthens moves that make contact to 1.33× their power."
-      }
-    ]
-  },
-  "mega-barbaracle": {
-    "id": 10298,
-    "name": "Mega Barbaracle",
-    "types": [
-      "Rock",
-      "Fighting"
-    ],
-    "speed": 88,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10298.png",
-    "abilities": [
       {
         "name": "tough claws",
         "description": "Strengthens moves that make contact to 1.33× their power."
@@ -4074,22 +3033,6 @@
       {
         "name": "poison touch",
         "description": "This Pokémon's contact moves have a 30% chance of poisoning the target with each hit.\n\nThis counts as an extra effect for the purposes of Shield Dust.  This ability takes effect before Mummy."
-      }
-    ]
-  },
-  "mega-dragalge": {
-    "id": 10299,
-    "name": "Mega Dragalge",
-    "types": [
-      "Poison",
-      "Dragon"
-    ],
-    "speed": 44,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10299.png",
-    "abilities": [
-      {
-        "name": "regenerator",
-        "description": "This Pokémon regains 1/3 of its maximum HP when it is switched out for another Pokémon under any circumstances other than having fainted.\n\nThis ability does not take effect when a battle ends."
       }
     ]
   },
@@ -4212,22 +3155,6 @@
       {
         "name": "unburden",
         "description": "When this Pokémon uses or loses its held item, its Speed is doubled.  If it gains another item or leaves battle, this bonus is lost.\n\nThis includes when the Pokémon drops its item because of Knock Off.  This bonus does not count as a stat modifier.  There is no notification when this ability takes effect."
-      }
-    ]
-  },
-  "mega-hawlucha": {
-    "id": 10300,
-    "name": "Mega Hawlucha",
-    "types": [
-      "Fighting",
-      "Flying"
-    ],
-    "speed": 118,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10300.png",
-    "abilities": [
-      {
-        "name": "no guard",
-        "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled."
       }
     ]
   },
@@ -4501,22 +3428,6 @@
       }
     ]
   },
-  "mega-crabominable": {
-    "id": 10315,
-    "name": "Mega Crabominable",
-    "types": [
-      "Fighting",
-      "Ice"
-    ],
-    "speed": 33,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10315.png",
-    "abilities": [
-      {
-        "name": "iron fist",
-        "description": "Moves flagged as being punch-based have 1.2× their base power for this Pokémon.\n\nSucker Punch is not flagged as punch-based; its original, Japanese name only means \"surprise attack\"."
-      }
-    ]
-  },
   "lycanroc": {
     "id": 745,
     "name": "Lycanroc",
@@ -4730,22 +3641,6 @@
       {
         "name": "sap sipper",
         "description": "Whenever a Grass-type move hits this Pokémon, its Attack rises one stage, negating any other effect on it."
-      }
-    ]
-  },
-  "mega-drampa": {
-    "id": 10302,
-    "name": "Mega Drampa",
-    "types": [
-      "Normal",
-      "Dragon"
-    ],
-    "speed": 36,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10302.png",
-    "abilities": [
-      {
-        "name": "berserk",
-        "description": "Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage."
       }
     ]
   },
@@ -5007,21 +3902,6 @@
         "name": "battle armor",
         "description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to Shell Armor."
       },
-      {
-        "name": "defiant",
-        "description": "When any of this Pokémon's stats are lowered, its Attack rises by two stages.\n\nIf multiple stats are lowered at once, this ability takes effect with each stat lowered."
-      }
-    ]
-  },
-  "mega-falinks": {
-    "id": 10303,
-    "name": "Mega Falinks",
-    "types": [
-      "Fighting"
-    ],
-    "speed": 100,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10303.png",
-    "abilities": [
       {
         "name": "defiant",
         "description": "When any of this Pokémon's stats are lowered, its Attack rises by two stages.\n\nIf multiple stats are lowered at once, this ability takes effect with each stat lowered."
@@ -5381,22 +4261,6 @@
       }
     ]
   },
-  "mega-scovillain": {
-    "id": 10320,
-    "name": "Mega Scovillain",
-    "types": [
-      "Grass",
-      "Fire"
-    ],
-    "speed": 75,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10320.png",
-    "abilities": [
-      {
-        "name": "spicy spray",
-        "description": "When the Pokémon takes damage from a move, it burns the attacker."
-      }
-    ]
-  },
   "espathra": {
     "id": 956,
     "name": "Espathra",
@@ -5495,22 +4359,6 @@
       {
         "name": "toxic debris",
         "description": "Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves."
-      }
-    ]
-  },
-  "mega-glimmora": {
-    "id": 10321,
-    "name": "Mega Glimmora",
-    "types": [
-      "Rock",
-      "Poison"
-    ],
-    "speed": 101,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10321.png",
-    "abilities": [
-      {
-        "name": "adaptability",
-        "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×."
       }
     ]
   },
@@ -5689,6 +4537,700 @@
       }
     ]
   },
+  "castform-sunny": {
+    "id": 10013,
+    "name": "Castform (Sunny)",
+    "types": [
+      "Fire"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10013.png"
+  },
+  "castform-rainy": {
+    "id": 10014,
+    "name": "Castform (Rainy)",
+    "types": [
+      "Water"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10014.png"
+  },
+  "castform-snowy": {
+    "id": 10015,
+    "name": "Castform (Snowy)",
+    "types": [
+      "Ice"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10015.png"
+  },
+  "mega-venusaur": {
+    "id": 10033,
+    "name": "Mega Venusaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 80,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10033.png",
+    "abilities": [
+      {
+        "name": "thick fat",
+        "description": "This Pokémon takes half as much damage from Fire- and Ice-type moves."
+      }
+    ]
+  },
+  "mega-charizard-x": {
+    "id": 10034,
+    "name": "Mega Charizard X",
+    "types": [
+      "Fire",
+      "Dragon"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png",
+    "abilities": [
+      {
+        "name": "tough claws",
+        "description": "Strengthens moves that make contact to 1.33× their power."
+      }
+    ]
+  },
+  "mega-charizard-y": {
+    "id": 10035,
+    "name": "Mega Charizard Y",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png",
+    "abilities": [
+      {
+        "name": "drought",
+        "description": "The weather changes to strong sunlight when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Sand Stream, or Snow Warning are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
+      }
+    ]
+  },
+  "mega-blastoise": {
+    "id": 10036,
+    "name": "Mega Blastoise",
+    "types": [
+      "Water"
+    ],
+    "speed": 78,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10036.png",
+    "abilities": [
+      {
+        "name": "mega launcher",
+        "description": "Strengthens aura and pulse moves to 1.5× their power."
+      }
+    ]
+  },
+  "mega-alakazam": {
+    "id": 10037,
+    "name": "Mega Alakazam",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 150,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10037.png",
+    "abilities": [
+      {
+        "name": "trace",
+        "description": "When this Pokémon enters battle, it copies a random opponent's ability.\n\nThis ability cannot copy Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, Wonder Guard, or Zen Mode."
+      }
+    ]
+  },
+  "mega-gengar": {
+    "id": 10038,
+    "name": "Mega Gengar",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "speed": 130,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png",
+    "abilities": [
+      {
+        "name": "shadow tag",
+        "description": "While this Pokémon is in battle, opposing Pokémon cannot flee or switch out.\n\nOther Pokémon with this ability are unaffected.  Pokémon with Run Away can still flee.  Pokémon can still switch out with the use of a move or item."
+      }
+    ]
+  },
+  "mega-kangaskhan": {
+    "id": 10039,
+    "name": "Mega Kangaskhan",
+    "types": [
+      "Normal"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10039.png",
+    "abilities": [
+      {
+        "name": "parental bond",
+        "description": "Lets the bearer hit twice with damaging moves.  The second hit has half power."
+      }
+    ]
+  },
+  "mega-pinsir": {
+    "id": 10040,
+    "name": "Mega Pinsir",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "speed": 105,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10040.png",
+    "abilities": [
+      {
+        "name": "aerilate",
+        "description": "Turns the bearer's Normal-type moves into Flying-type moves.  Moves changed by this ability have 1.3× their power."
+      }
+    ]
+  },
+  "mega-gyarados": {
+    "id": 10041,
+    "name": "Mega Gyarados",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 81,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10041.png",
+    "abilities": [
+      {
+        "name": "mold breaker",
+        "description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as Water Absorb; abilities that would prevent any of their effects, such as Clear Body, Shell Armor, or Sticky Hold; and abilities that grant any general protective benefit, such as Simple, Snow Cloak, or Thick Fat.  If an ability could either hinder or help this Pokémon's moves, e.g. Dry Skin or Unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, Cursed Body only affects potential future uses of the move, while Liquid Ooze and Shadow Tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example Color Change or Forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from Drizzle.  This ability cannot ignore Multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with Limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's Spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to Teravolt and Turboblaze."
+      }
+    ]
+  },
+  "mega-aerodactyl": {
+    "id": 10042,
+    "name": "Mega Aerodactyl",
+    "types": [
+      "Rock",
+      "Flying"
+    ],
+    "speed": 150,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10042.png",
+    "abilities": [
+      {
+        "name": "tough claws",
+        "description": "Strengthens moves that make contact to 1.33× their power."
+      }
+    ]
+  },
+  "mega-ampharos": {
+    "id": 10045,
+    "name": "Mega Ampharos",
+    "types": [
+      "Electric",
+      "Dragon"
+    ],
+    "speed": 45,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10045.png",
+    "abilities": [
+      {
+        "name": "mold breaker",
+        "description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as Water Absorb; abilities that would prevent any of their effects, such as Clear Body, Shell Armor, or Sticky Hold; and abilities that grant any general protective benefit, such as Simple, Snow Cloak, or Thick Fat.  If an ability could either hinder or help this Pokémon's moves, e.g. Dry Skin or Unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, Cursed Body only affects potential future uses of the move, while Liquid Ooze and Shadow Tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example Color Change or Forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from Drizzle.  This ability cannot ignore Multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with Limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's Spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to Teravolt and Turboblaze."
+      }
+    ]
+  },
+  "mega-scizor": {
+    "id": 10046,
+    "name": "Mega Scizor",
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "speed": 75,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10046.png",
+    "abilities": [
+      {
+        "name": "technician",
+        "description": "This Pokémon's moves have 1.5× their power if their base power is 60 or less.\n\nThis includes moves of variable power, such as Hidden Power and Magnitude, when their power is 60 or less.  Helping Hand's power boost is taken into account for any move, as is Defense Curl's power boost for Rollout."
+      }
+    ]
+  },
+  "mega-heracross": {
+    "id": 10047,
+    "name": "Mega Heracross",
+    "types": [
+      "Bug",
+      "Fighting"
+    ],
+    "speed": 75,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10047.png",
+    "abilities": [
+      {
+        "name": "skill link",
+        "description": "This Pokémon always hits five times with two-to-five-hit moves, such as Icicle Spear.  It also bypasses the accuracy checks on Triple Kick's second and third hits."
+      }
+    ]
+  },
+  "mega-houndoom": {
+    "id": 10048,
+    "name": "Mega Houndoom",
+    "types": [
+      "Dark",
+      "Fire"
+    ],
+    "speed": 115,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10048.png",
+    "abilities": [
+      {
+        "name": "solar power",
+        "description": "During strong sunlight, this Pokémon has 1.5× its Special Attack but takes 1/8 of its maximum HP in damage after each turn."
+      }
+    ]
+  },
+  "mega-tyranitar": {
+    "id": 10049,
+    "name": "Mega Tyranitar",
+    "types": [
+      "Rock",
+      "Dark"
+    ],
+    "speed": 71,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10049.png",
+    "abilities": [
+      {
+        "name": "sand stream",
+        "description": "The weather changes to a sandstorm when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Snow Warning are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is halved in a sandstorm."
+      }
+    ]
+  },
+  "mega-blaziken": {
+    "id": 10050,
+    "name": "Mega Blaziken",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10050.png",
+    "abilities": [
+      {
+        "name": "speed boost",
+        "description": "This Pokémon's Speed rises one stage after each turn."
+      }
+    ]
+  },
+  "mega-gardevoir": {
+    "id": 10051,
+    "name": "Mega Gardevoir",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10051.png",
+    "abilities": [
+      {
+        "name": "pixilate",
+        "description": "Turns the bearer's Normal-type moves into Fairy moves.  Moves changed by this ability have 1.3× their power."
+      }
+    ]
+  },
+  "mega-mawile": {
+    "id": 10052,
+    "name": "Mega Mawile",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "speed": 50,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10052.png",
+    "abilities": [
+      {
+        "name": "huge power",
+        "description": "This Pokémon's Attack is doubled while in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to Pure Power."
+      }
+    ]
+  },
+  "mega-aggron": {
+    "id": 10053,
+    "name": "Mega Aggron",
+    "types": [
+      "Steel"
+    ],
+    "speed": 50,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10053.png",
+    "abilities": [
+      {
+        "name": "filter",
+        "description": "This Pokémon takes 0.75× as much damage from moves that are super effective against it.\n\nThis ability functions identically to Solid Rock."
+      }
+    ]
+  },
+  "mega-medicham": {
+    "id": 10054,
+    "name": "Mega Medicham",
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10054.png",
+    "abilities": [
+      {
+        "name": "pure power",
+        "description": "This Pokémon's Attack is doubled in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to Huge Power."
+      }
+    ]
+  },
+  "mega-manectric": {
+    "id": 10055,
+    "name": "Mega Manectric",
+    "types": [
+      "Electric"
+    ],
+    "speed": 135,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10055.png",
+    "abilities": [
+      {
+        "name": "intimidate",
+        "description": "When this Pokémon enters battle, the opponent's Attack is lowered by one stage.  In a double battle, both opponents are affected.\n\nThis ability also takes effect when acquired during a battle, but will not take effect again if lost and reobtained without leaving battle.\n\nThis ability has no effect on an opponent that has a Substitute.\n\nOverworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
+      }
+    ]
+  },
+  "mega-banette": {
+    "id": 10056,
+    "name": "Mega Banette",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 75,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10056.png",
+    "abilities": [
+      {
+        "name": "prankster",
+        "description": "This Pokémon's non-damaging moves have their priority increased by one stage."
+      }
+    ]
+  },
+  "mega-absol": {
+    "id": 10057,
+    "name": "Mega Absol",
+    "types": [
+      "Dark"
+    ],
+    "speed": 115,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10057.png",
+    "abilities": [
+      {
+        "name": "magic bounce",
+        "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or Magic Coat cannot be reflected back."
+      }
+    ]
+  },
+  "mega-garchomp": {
+    "id": 10058,
+    "name": "Mega Garchomp",
+    "types": [
+      "Dragon",
+      "Ground"
+    ],
+    "speed": 92,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10058.png",
+    "abilities": [
+      {
+        "name": "sand force",
+        "description": "During a sandstorm, this Pokémon's Rock-, Ground-, and Steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type."
+      }
+    ]
+  },
+  "mega-lucario": {
+    "id": 10059,
+    "name": "Mega Lucario",
+    "types": [
+      "Fighting",
+      "Steel"
+    ],
+    "speed": 112,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10059.png",
+    "abilities": [
+      {
+        "name": "adaptability",
+        "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×."
+      }
+    ]
+  },
+  "mega-meowstic": {
+    "id": 678,
+    "name": "Mega Meowstic",
+    "types": [
+      "Psychic"
+    ],
+    "speed": 124,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png"
+  },
+  "mega-abomasnow": {
+    "id": 10060,
+    "name": "Mega Abomasnow",
+    "types": [
+      "Grass",
+      "Ice"
+    ],
+    "speed": 30,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10060.png",
+    "abilities": [
+      {
+        "name": "snow warning",
+        "description": "The weather changes to hail when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Sand Stream are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
+      }
+    ]
+  },
+  "mega-swampert": {
+    "id": 10064,
+    "name": "Mega Swampert",
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10064.png",
+    "abilities": [
+      {
+        "name": "swift swim",
+        "description": "This Pokémon's Speed is doubled during rain.\n\nThis bonus does not count as a stat modifier."
+      }
+    ]
+  },
+  "mega-sceptile": {
+    "id": 10065,
+    "name": "Mega Sceptile",
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
+    "speed": 145,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10065.png",
+    "abilities": [
+      {
+        "name": "lightning rod",
+        "description": "All other Pokémon's single-target Electric-type moves are redirected to this Pokémon if it is an eligible target.  Other Pokémon's Electric moves raise this Pokémon's Special Attack one stage, negating any other effect on it, and cannot miss it.\n\nIf the move's intended target also has this ability, the move is not redirected.  When multiple Pokémon with this ability are possible targets for redirection, the move is redirected to the one with the highest Speed stat, or, in the case of a tie, to a random tied Pokémon.  Follow Me takes precedence over this ability.\n\nIf the Pokémon is a Ground-type and thus immune to Electric moves, its immunity prevents the Special Attack boost."
+      }
+    ]
+  },
+  "mega-sableye": {
+    "id": 10066,
+    "name": "Mega Sableye",
+    "types": [
+      "Dark",
+      "Ghost"
+    ],
+    "speed": 20,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10066.png",
+    "abilities": [
+      {
+        "name": "magic bounce",
+        "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or Magic Coat cannot be reflected back."
+      }
+    ]
+  },
+  "mega-altaria": {
+    "id": 10067,
+    "name": "Mega Altaria",
+    "types": [
+      "Dragon",
+      "Fairy"
+    ],
+    "speed": 80,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10067.png",
+    "abilities": [
+      {
+        "name": "pixilate",
+        "description": "Turns the bearer's Normal-type moves into Fairy moves.  Moves changed by this ability have 1.3× their power."
+      }
+    ]
+  },
+  "aegislash-blade": {
+    "id": 10067,
+    "name": "Aegislash (Blade)",
+    "types": [
+      "Steel",
+      "Ghost"
+    ],
+    "speed": 60,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10067.png"
+  },
+  "mega-gallade": {
+    "id": 10068,
+    "name": "Mega Gallade",
+    "types": [
+      "Psychic",
+      "Fighting"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
+    "abilities": [
+      {
+        "name": "inner focus",
+        "description": "This Pokémon cannot flinch."
+      }
+    ]
+  },
+  "mega-audino": {
+    "id": 10069,
+    "name": "Mega Audino",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "speed": 50,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
+    "abilities": [
+      {
+        "name": "healer",
+        "description": "Friendly Pokémon next to this Pokémon in double and triple battles each have a 30% chance of being cured of any major status ailment after each turn."
+      }
+    ]
+  },
+  "mega-sharpedo": {
+    "id": 10070,
+    "name": "Mega Sharpedo",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 105,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
+    "abilities": [
+      {
+        "name": "strong jaw",
+        "description": "Strengthens biting moves to 1.5× their power."
+      }
+    ]
+  },
+  "mega-slowbro": {
+    "id": 10071,
+    "name": "Mega Slowbro",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
+    "abilities": [
+      {
+        "name": "shell armor",
+        "description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to Battle Armor."
+      }
+    ]
+  },
+  "mega-steelix": {
+    "id": 10072,
+    "name": "Mega Steelix",
+    "types": [
+      "Steel",
+      "Ground"
+    ],
+    "speed": 30,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
+    "abilities": [
+      {
+        "name": "sand force",
+        "description": "During a sandstorm, this Pokémon's Rock-, Ground-, and Steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type."
+      }
+    ]
+  },
+  "mega-pidgeot": {
+    "id": 10073,
+    "name": "Mega Pidgeot",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "speed": 121,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10073.png",
+    "abilities": [
+      {
+        "name": "no guard",
+        "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled."
+      }
+    ]
+  },
+  "mega-glalie": {
+    "id": 10074,
+    "name": "Mega Glalie",
+    "types": [
+      "Ice"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10074.png",
+    "abilities": [
+      {
+        "name": "refrigerate",
+        "description": "Turns the bearer's Normal-type moves into Ice-type moves.  Moves changed by this ability have 1.3× their power."
+      }
+    ]
+  },
+  "mega-metagross": {
+    "id": 10076,
+    "name": "Mega Metagross",
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10076.png",
+    "abilities": [
+      {
+        "name": "tough claws",
+        "description": "Strengthens moves that make contact to 1.33× their power."
+      }
+    ]
+  },
+  "mega-camerupt": {
+    "id": 10087,
+    "name": "Mega Camerupt",
+    "types": [
+      "Fire",
+      "Ground"
+    ],
+    "speed": 20,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10087.png",
+    "abilities": [
+      {
+        "name": "sheer force",
+        "description": "This Pokémon's moves with extra effects have 1.3× their power, but lose their extra effects.\n\nAn effect chance is a move's chance to inflict a status ailment, cause a stat change, or make the target flinch in addition to the move's main effect. For example, Thunder Shock's paralysis is an extra effect, but Thunder Wave's is not, nor are Knock Off's item removal and Air Cutter's increased critical hit rate.\n\nMoves that lower the user's stats are unaffected."
+      }
+    ]
+  },
+  "mega-lopunny": {
+    "id": 10088,
+    "name": "Mega Lopunny",
+    "types": [
+      "Normal",
+      "Fighting"
+    ],
+    "speed": 135,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10088.png",
+    "abilities": [
+      {
+        "name": "scrappy",
+        "description": "This Pokémon ignores Ghost-type Pokémon's immunity to Normal- and Fighting-type moves.\n\nGhost Pokémon's other types affect damage as usual."
+      }
+    ]
+  },
+  "mega-beedrill": {
+    "id": 10090,
+    "name": "Mega Beedrill",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 145,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10090.png",
+    "abilities": [
+      {
+        "name": "adaptability",
+        "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×."
+      }
+    ]
+  },
   "raichu-alola": {
     "id": 10100,
     "name": "Alolan Raichu",
@@ -5724,6 +5266,94 @@
         "description": "The weather changes to hail when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Sand Stream are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
       }
     ]
+  },
+  "gourgeist-small": {
+    "id": 10121,
+    "name": "Gourgeist (Small)",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "speed": 99,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10121.png"
+  },
+  "gourgeist-large": {
+    "id": 10122,
+    "name": "Gourgeist (Large)",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "speed": 69,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10122.png"
+  },
+  "gourgeist-super": {
+    "id": 10123,
+    "name": "Gourgeist (Super)",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "speed": 54,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10123.png"
+  },
+  "lycanroc-midnight": {
+    "id": 10125,
+    "name": "Lycanroc (Midnight)",
+    "types": [
+      "Rock"
+    ],
+    "speed": 82,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10125.png"
+  },
+  "lycanroc-dusk": {
+    "id": 10126,
+    "name": "Lycanroc (Dusk)",
+    "types": [
+      "Rock"
+    ],
+    "speed": 117,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10126.png"
+  },
+  "slowbro-galar": {
+    "id": 10165,
+    "name": "Galarian Slowbro",
+    "types": [
+      "Poison",
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10165.png"
+  },
+  "slowking-galar": {
+    "id": 10166,
+    "name": "Galarian Slowking",
+    "types": [
+      "Poison",
+      "Psychic"
+    ],
+    "speed": 30,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10166.png"
+  },
+  "stunfisk-galar": {
+    "id": 10176,
+    "name": "Galarian Stunfisk",
+    "types": [
+      "Ground",
+      "Steel"
+    ],
+    "speed": 32,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10176.png"
+  },
+  "morpeko-hangry": {
+    "id": 10186,
+    "name": "Morpeko (Hangry)",
+    "types": [
+      "Electric",
+      "Dark"
+    ],
+    "speed": 97,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10186.png"
   },
   "arcanine-hisui": {
     "id": 10230,
@@ -5894,6 +5524,605 @@
       {
         "name": "scrappy",
         "description": "This Pokémon ignores Ghost-type Pokémon's immunity to Normal- and Fighting-type moves.\n\nGhost Pokémon's other types affect damage as usual."
+      }
+    ]
+  },
+  "basculegion-f": {
+    "id": 10249,
+    "name": "Basculegion (Female)",
+    "types": [
+      "Water",
+      "Ghost"
+    ],
+    "speed": 78,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10249.png"
+  },
+  "tauros-paldea": {
+    "id": 10251,
+    "name": "Paldean Tauros (Combat)",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10251.png"
+  },
+  "tauros-paldea-blaze": {
+    "id": 10252,
+    "name": "Paldean Tauros (Blaze)",
+    "types": [
+      "Fighting",
+      "Fire"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10252.png"
+  },
+  "tauros-paldea-aqua": {
+    "id": 10253,
+    "name": "Paldean Tauros (Aqua)",
+    "types": [
+      "Fighting",
+      "Water"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10253.png"
+  },
+  "palafin-hero": {
+    "id": 10274,
+    "name": "Palafin (Hero)",
+    "types": [
+      "Water"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10274.png"
+  },
+  "maushold-three": {
+    "id": 10275,
+    "name": "Maushold (Family of Three)",
+    "types": [
+      "Normal"
+    ],
+    "speed": 111,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10275.png"
+  },
+  "polteageist-antique": {
+    "id": 10276,
+    "name": "Polteageist (Antique)",
+    "types": [
+      "Ghost"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10276.png"
+  },
+  "sinistcha-masterpiece": {
+    "id": 10277,
+    "name": "Sinistcha (Masterpiece)",
+    "types": [
+      "Grass",
+      "Ghost"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10277.png"
+  },
+  "mega-clefable": {
+    "id": 10278,
+    "name": "Mega Clefable",
+    "types": [
+      "Fairy",
+      "Flying"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10278.png",
+    "abilities": [
+      {
+        "name": "magic bounce",
+        "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or Magic Coat cannot be reflected back."
+      }
+    ]
+  },
+  "mega-victreebel": {
+    "id": 10279,
+    "name": "Mega Victreebel",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "speed": 70,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10279.png",
+    "abilities": [
+      {
+        "name": "innards out",
+        "description": "When this Pokémon faints from an opponent's move, that opponent takes damage equal to the HP this Pokémon had remaining."
+      }
+    ]
+  },
+  "mega-starmie": {
+    "id": 10280,
+    "name": "Mega Starmie",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "speed": 120,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10280.png",
+    "abilities": [
+      {
+        "name": "huge power",
+        "description": "This Pokémon's Attack is doubled while in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to Pure Power."
+      }
+    ]
+  },
+  "mega-dragonite": {
+    "id": 10281,
+    "name": "Mega Dragonite",
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10281.png",
+    "abilities": [
+      {
+        "name": "multiscale",
+        "description": "This Pokémon takes half as much damage when it is hit having full HP."
+      }
+    ]
+  },
+  "mega-meganium": {
+    "id": 10282,
+    "name": "Mega Meganium",
+    "types": [
+      "Grass",
+      "Fairy"
+    ],
+    "speed": 80,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10282.png",
+    "abilities": [
+      {
+        "name": "mega sol",
+        "description": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight."
+      }
+    ]
+  },
+  "mega-feraligatr": {
+    "id": 10283,
+    "name": "Mega Feraligatr",
+    "types": [
+      "Water",
+      "Dragon"
+    ],
+    "speed": 78,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10283.png",
+    "abilities": [
+      {
+        "name": "dragonize",
+        "description": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%."
+      }
+    ]
+  },
+  "mega-skarmory": {
+    "id": 10284,
+    "name": "Mega Skarmory",
+    "types": [
+      "Steel",
+      "Flying"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10284.png",
+    "abilities": [
+      {
+        "name": "stalwart",
+        "description": "Ignores the effects of opposing Pokémon’s Abilities and moves that draw in moves."
+      }
+    ]
+  },
+  "mega-froslass": {
+    "id": 10285,
+    "name": "Mega Froslass",
+    "types": [
+      "Ice",
+      "Ghost"
+    ],
+    "speed": 120,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10285.png",
+    "abilities": [
+      {
+        "name": "snow warning",
+        "description": "The weather changes to hail when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, Drizzle, Drought, or Sand Stream are sent out at the same time, the abilities will activate in order of Speed, respecting Trick Room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay."
+      }
+    ]
+  },
+  "mega-emboar": {
+    "id": 10286,
+    "name": "Mega Emboar",
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "speed": 75,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10286.png",
+    "abilities": [
+      {
+        "name": "mold breaker",
+        "description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as Water Absorb; abilities that would prevent any of their effects, such as Clear Body, Shell Armor, or Sticky Hold; and abilities that grant any general protective benefit, such as Simple, Snow Cloak, or Thick Fat.  If an ability could either hinder or help this Pokémon's moves, e.g. Dry Skin or Unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, Cursed Body only affects potential future uses of the move, while Liquid Ooze and Shadow Tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example Color Change or Forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from Drizzle.  This ability cannot ignore Multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with Limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's Spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to Teravolt and Turboblaze."
+      }
+    ]
+  },
+  "mega-excadrill": {
+    "id": 10287,
+    "name": "Mega Excadrill",
+    "types": [
+      "Ground",
+      "Steel"
+    ],
+    "speed": 103,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10287.png",
+    "abilities": [
+      {
+        "name": "piercing drill",
+        "description": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered."
+      }
+    ]
+  },
+  "mega-scolipede": {
+    "id": 10288,
+    "name": "Mega Scolipede",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "speed": 62,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10288.png",
+    "abilities": [
+      {
+        "name": "shell armor",
+        "description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to Battle Armor."
+      }
+    ]
+  },
+  "mega-scrafty": {
+    "id": 10289,
+    "name": "Mega Scrafty",
+    "types": [
+      "Dark",
+      "Fighting"
+    ],
+    "speed": 68,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10289.png",
+    "abilities": [
+      {
+        "name": "intimidate",
+        "description": "When this Pokémon enters battle, the opponent's Attack is lowered by one stage.  In a double battle, both opponents are affected.\n\nThis ability also takes effect when acquired during a battle, but will not take effect again if lost and reobtained without leaving battle.\n\nThis ability has no effect on an opponent that has a Substitute.\n\nOverworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
+      }
+    ]
+  },
+  "mega-eelektross": {
+    "id": 10290,
+    "name": "Mega Eelektross",
+    "types": [
+      "Electric"
+    ],
+    "speed": 80,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10290.png",
+    "abilities": [
+      {
+        "name": "eelevate",
+        "description": "The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. When the Pokémon knocks out a target with an attack, its highest stat is boosted by 1 stage."
+      }
+    ]
+  },
+  "mega-chandelure": {
+    "id": 10291,
+    "name": "Mega Chandelure",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "speed": 90,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10291.png",
+    "abilities": [
+      {
+        "name": "infiltrator",
+        "description": "This Pokémon's moves ignore Light Screen, Reflect, and Safeguard."
+      }
+    ]
+  },
+  "mega-chesnaught": {
+    "id": 10292,
+    "name": "Mega Chesnaught",
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "speed": 44,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10292.png",
+    "abilities": [
+      {
+        "name": "bulletproof",
+        "description": "Protects against bullet, ball, and bomb-based moves."
+      }
+    ]
+  },
+  "mega-delphox": {
+    "id": 10293,
+    "name": "Mega Delphox",
+    "types": [
+      "Fire",
+      "Psychic"
+    ],
+    "speed": 134,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10293.png",
+    "abilities": [
+      {
+        "name": "levitate",
+        "description": "This Pokémon is immune to Ground-type moves, Spikes, Toxic Spikes, and Arena Trap.\n\nThis ability is disabled during Gravity or Ingrain, or while holding an Iron Ball.  This ability is not disabled during Roost."
+      }
+    ]
+  },
+  "mega-greninja": {
+    "id": 10294,
+    "name": "Mega Greninja",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "speed": 142,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10294.png",
+    "abilities": [
+      {
+        "name": "protean",
+        "description": "Changes the bearer's type to match each move it uses.\n\nThe type change takes place just before the move is used."
+      }
+    ]
+  },
+  "mega-pyroar": {
+    "id": 10295,
+    "name": "Mega Pyroar",
+    "types": [
+      "Fire",
+      "Normal"
+    ],
+    "speed": 126,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
+    "abilities": [
+      {
+        "name": "fire mane",
+        "description": "Boosts the power of the Pokémon's Fire-type moves by 50%."
+      }
+    ]
+  },
+  "mega-floette": {
+    "id": 10296,
+    "name": "Mega Floette",
+    "types": [
+      "Fairy"
+    ],
+    "speed": 102,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10296.png",
+    "abilities": [
+      {
+        "name": "fairy aura",
+        "description": "Strengthens Fairy moves for all friendly and opposing Pokémon."
+      }
+    ]
+  },
+  "mega-malamar": {
+    "id": 10297,
+    "name": "Mega Malamar",
+    "types": [
+      "Dark",
+      "Psychic"
+    ],
+    "speed": 88,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10297.png",
+    "abilities": [
+      {
+        "name": "contrary",
+        "description": "Whenever this Pokémon's stats would be raised, they are instead lowered by the same amount, and vice versa."
+      }
+    ]
+  },
+  "mega-barbaracle": {
+    "id": 10298,
+    "name": "Mega Barbaracle",
+    "types": [
+      "Rock",
+      "Fighting"
+    ],
+    "speed": 88,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10298.png",
+    "abilities": [
+      {
+        "name": "tough claws",
+        "description": "Strengthens moves that make contact to 1.33× their power."
+      }
+    ]
+  },
+  "mega-dragalge": {
+    "id": 10299,
+    "name": "Mega Dragalge",
+    "types": [
+      "Poison",
+      "Dragon"
+    ],
+    "speed": 44,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10299.png",
+    "abilities": [
+      {
+        "name": "regenerator",
+        "description": "This Pokémon regains 1/3 of its maximum HP when it is switched out for another Pokémon under any circumstances other than having fainted.\n\nThis ability does not take effect when a battle ends."
+      }
+    ]
+  },
+  "mega-hawlucha": {
+    "id": 10300,
+    "name": "Mega Hawlucha",
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
+    "speed": 118,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10300.png",
+    "abilities": [
+      {
+        "name": "no guard",
+        "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled."
+      }
+    ]
+  },
+  "mega-drampa": {
+    "id": 10302,
+    "name": "Mega Drampa",
+    "types": [
+      "Normal",
+      "Dragon"
+    ],
+    "speed": 36,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10302.png",
+    "abilities": [
+      {
+        "name": "berserk",
+        "description": "Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage."
+      }
+    ]
+  },
+  "mega-falinks": {
+    "id": 10303,
+    "name": "Mega Falinks",
+    "types": [
+      "Fighting"
+    ],
+    "speed": 100,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10303.png",
+    "abilities": [
+      {
+        "name": "defiant",
+        "description": "When any of this Pokémon's stats are lowered, its Attack rises by two stages.\n\nIf multiple stats are lowered at once, this ability takes effect with each stat lowered."
+      }
+    ]
+  },
+  "mega-raichu-x": {
+    "id": 10304,
+    "name": "Mega Raichu X",
+    "types": [
+      "Electric"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10304.png",
+    "abilities": [
+      {
+        "name": "electric surge",
+        "description": "When this Pokémon enters battle, it changes the terrain to Electric Terrain."
+      }
+    ]
+  },
+  "mega-raichu-y": {
+    "id": 10305,
+    "name": "Mega Raichu Y",
+    "types": [
+      "Electric"
+    ],
+    "speed": 130,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10305.png",
+    "abilities": [
+      {
+        "name": "no guard",
+        "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled."
+      }
+    ]
+  },
+  "mega-chimecho": {
+    "id": 10306,
+    "name": "Mega Chimecho",
+    "types": [
+      "Psychic",
+      "Steel"
+    ],
+    "speed": 65,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10306.png",
+    "abilities": [
+      {
+        "name": "levitate",
+        "description": "This Pokémon is immune to Ground-type moves, Spikes, Toxic Spikes, and Arena Trap.\n\nThis ability is disabled during Gravity or Ingrain, or while holding an Iron Ball.  This ability is not disabled during Roost."
+      }
+    ]
+  },
+  "mega-staraptor": {
+    "id": 10308,
+    "name": "Mega Staraptor",
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
+    "speed": 110,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10308.png",
+    "abilities": [
+      {
+        "name": "contrary",
+        "description": "Whenever this Pokémon's stats would be raised, they are instead lowered by the same amount, and vice versa."
+      }
+    ]
+  },
+  "mega-golurk": {
+    "id": 10313,
+    "name": "Mega Golurk",
+    "types": [
+      "Ground",
+      "Ghost"
+    ],
+    "speed": 55,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10313.png",
+    "abilities": [
+      {
+        "name": "unseen fist",
+        "description": "If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself."
+      }
+    ]
+  },
+  "mega-crabominable": {
+    "id": 10315,
+    "name": "Mega Crabominable",
+    "types": [
+      "Fighting",
+      "Ice"
+    ],
+    "speed": 33,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10315.png",
+    "abilities": [
+      {
+        "name": "iron fist",
+        "description": "Moves flagged as being punch-based have 1.2× their base power for this Pokémon.\n\nSucker Punch is not flagged as punch-based; its original, Japanese name only means \"surprise attack\"."
+      }
+    ]
+  },
+  "mega-scovillain": {
+    "id": 10320,
+    "name": "Mega Scovillain",
+    "types": [
+      "Grass",
+      "Fire"
+    ],
+    "speed": 75,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10320.png",
+    "abilities": [
+      {
+        "name": "spicy spray",
+        "description": "When the Pokémon takes damage from a move, it burns the attacker."
+      }
+    ]
+  },
+  "mega-glimmora": {
+    "id": 10321,
+    "name": "Mega Glimmora",
+    "types": [
+      "Rock",
+      "Poison"
+    ],
+    "speed": 101,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10321.png",
+    "abilities": [
+      {
+        "name": "adaptability",
+        "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×."
       }
     ]
   }

@@ -1,9 +1,5 @@
 export function getSpriteUrl(id: number, name?: string): string {
-  // Handle special cases like rotom forms
-  if (name && name.includes('Rotom-')) {
-    const form = name.split('-')[1].toLowerCase();
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}-${form}.png`;
-  }
+  // Use PokeAPI sprites via raw.githubusercontent.com (allowed by CSP)
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }
 
