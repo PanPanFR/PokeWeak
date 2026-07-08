@@ -6,6 +6,7 @@ const sectionColor = {
   'type-immunities': '#FBBF24',
   'move-hidden-effects': '#E63946',
   'field-weather': '#A855F7',
+  'champions-changes': '#3B82F6',
   'double-battle': '#14B8A6',
 };
 
@@ -130,6 +131,7 @@ function AccordionSection({ section, isOpen, onToggle }) {
             {section.id === 'type-immunities' && <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />}
             {section.id === 'move-hidden-effects' && <><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" /><line x1="13" y1="19" x2="19" y2="13" /></>}
             {section.id === 'field-weather' && <><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" /></>}
+            {section.id === 'champions-changes' && <><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></>}
             {section.id === 'double-battle' && <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></>}
           </svg>
         </span>
