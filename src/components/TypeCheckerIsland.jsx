@@ -224,6 +224,7 @@ export default function TypeCheckerIsland() {
             <button
               key={t}
               onClick={() => toggleType(t)}
+              aria-label={`${isSelected ? 'Deselect' : 'Select'} ${t} type`}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

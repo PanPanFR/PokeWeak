@@ -53,55 +53,6 @@ const megaAndForms = Object.keys(pokemonData).filter(name =>
 
 const allChampionsPokemon = [...championsPokemon, ...megaAndForms];
 
-const PokemonListItem = ({ name, data, idx, focusedIdx = -1, query = '' }) => {
-  const isDropdown = focusedIdx >= 0;
-  return (
-    <a
-      key={name}
-      id={isDropdown ? `search-result-${idx}` : undefined}
-      role={isDropdown ? "option" : undefined}
-      aria-selected={focusedIdx === idx}
-      href={`/pokemon/${name}`}
-      class={isDropdown ? undefined : "pk-list-item"}
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '10px',
-        width: '100%',
-        padding: isDropdown ? '10px 16px' : '8px 16px',
-        background: focusedIdx === idx ? 'var(--bg-focus)' : 'transparent',
-        color: 'var(--text-primary)',
-        cursor: 'pointer',
-        fontSize: '14px',
-        fontFamily: 'inherit',
-        minHeight: '44px',
-        textAlign: 'left',
-        textDecoration: 'none',
-        borderBottom: isDropdown ? 'none' : '1px solid var(--border-subtle)',
-        borderRadius: '8px',
-        transition: isDropdown ? 'background 150ms ease' : 'none',
-      }}
-    >
-      <img
-        src={getSprite(data)}
-        alt={formatName(name, data)}
-        width={isDropdown ? 40 : 36}
-        height={isDropdown ? 40 : 36}
-        loading={idx < 8 ? "eager" : "lazy"}
-        fetchpriority={idx < 4 ? "high" : "auto"}
-        decoding="async"
-        style={{ imageRendering: 'pixelated', flexShrink: 0 }}
-      />
-      <span style={{ fontWeight: 500 }}>{highlightMatch(formatName(name, data), query)}</span>
-      <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
-        {data.types.map((t) => (
-          <TypeIcon key={t} type={t} size={isDropdown ? 16 : 14} />
-        ))}
-      </div>
-    </a>
-  );
-};
-
 export default function SearchIsland() {
   const [query, setQuery] = useState('');
   const [filterTypes, setFilterTypes] = useState([]);
@@ -205,6 +156,11 @@ export default function SearchIsland() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const hasQuery = query.trim().length > 0;
+  const hasResults = results.length > 0;
+  const showDropdown = hasQuery && hasResults;
+  const showNoResults = hasQuery && !hasResults;
+
   return (
     <div>
       <p style={{
@@ -242,14 +198,14 @@ export default function SearchIsland() {
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search Pokémon..."
+            placeholder="Search Pokémon…"
             value={query}
             onInput={handleInput}
             onKeyDown={handleKeyDown}
             aria-label="Search Pokémon by name"
             role="combobox"
             aria-autocomplete="list"
-            aria-expanded={query.trim() && results.length > 0 ? 'true' : 'false'}
+            aria-expanded={showDropdown ? 'true' : 'false'}
             aria-activedescendant={focusedIdx >= 0 ? `search-result-${focusedIdx}` : undefined}
             class="search-input-glow"
             style={{
@@ -265,7 +221,7 @@ export default function SearchIsland() {
               minHeight: '44px',
             }}
           />
-          {query.trim() && (
+          {hasQuery && (
             <button
               onClick={() => { setQuery(''); inputRef.current?.focus(); }}
               aria-label="Clear search"
@@ -292,7 +248,7 @@ export default function SearchIsland() {
               ×
             </button>
           )}
-          {query.trim() && results.length > 0 && (
+          {showDropdown && (
             <div
               ref={dropdownRef}
               role="listbox"
@@ -313,9 +269,70 @@ export default function SearchIsland() {
             >
               <div ref={listRef}>
                 {results.map(([name, data], idx) => (
-                  <PokemonListItem key={name} name={name} data={data} idx={idx} focusedIdx={focusedIdx} query={query} />
+                  <a
+                    key={name}
+                    id={`search-result-${idx}`}
+                    role="option"
+                    aria-selected={focusedIdx === idx}
+                    href={`/pokemon/${name}`}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      width: '100%',
+                      padding: '10px 16px',
+                      background: focusedIdx === idx ? 'var(--bg-focus)' : 'transparent',
+                      color: 'var(--text-primary)',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      fontFamily: 'inherit',
+                      minHeight: '44px',
+                      textAlign: 'left',
+                      textDecoration: 'none',
+                      borderBottom: 'none',
+                      borderRadius: '8px',
+                      transition: 'background 150ms ease',
+                    }}
+                  >
+                    <img
+                      src={getSprite(data)}
+                      alt={formatName(name, data)}
+                      width={40}
+                      height={40}
+                      loading={idx < 8 ? "eager" : "lazy"}
+                      fetchpriority={idx < 4 ? "high" : "auto"}
+                      decoding="async"
+                      style={{ imageRendering: 'pixelated', flexShrink: 0 }}
+                    />
+                    <span style={{ fontWeight: 500 }}>{highlightMatch(formatName(name, data), query)}</span>
+                    <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+                      {data.types.map((t) => (
+                        <TypeIcon key={t} type={t} size={16} />
+                      ))}
+                    </div>
+                  </a>
                 ))}
               </div>
+            </div>
+          )}
+          {showNoResults && (
+            <div
+              style={{
+                position: 'absolute',
+                top: 'calc(100% + 4px)',
+                left: 0,
+                right: 0,
+                background: 'var(--bg-surface)',
+                border: '1px solid var(--border-medium)',
+                borderRadius: '12px',
+                padding: '16px',
+                textAlign: 'center',
+                color: 'var(--text-muted)',
+                fontSize: '13px',
+                zIndex: 100,
+              }}
+            >
+              No Pokémon found for "{query.trim()}"
             </div>
           )}
         </div>
@@ -331,6 +348,7 @@ export default function SearchIsland() {
         >
           <button
             onClick={() => setFilterTypes([])}
+            aria-label="Show all types"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -376,18 +394,91 @@ export default function SearchIsland() {
         </div>
       </div>
 
-      {!query.trim() && filterTypes.length === 0 && (
+      {!hasQuery && filterTypes.length === 0 && (
         <div style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 4000px' }}>
           {sortedChampions.map(([name, data], idx) => (
-            <PokemonListItem key={name} name={name} data={data} idx={idx} />
+            <a
+              key={name}
+              href={`/pokemon/${name}`}
+              class="pk-list-item"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                width: '100%',
+                padding: '8px 16px',
+                color: 'var(--text-primary)',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontFamily: 'inherit',
+                minHeight: '44px',
+                textAlign: 'left',
+                textDecoration: 'none',
+                borderBottom: '1px solid var(--border-subtle)',
+                borderRadius: '8px',
+              }}
+            >
+              <img
+                src={getSprite(data)}
+                alt={formatName(name, data)}
+                width={36}
+                height={36}
+                loading={idx < 8 ? "eager" : "lazy"}
+                fetchpriority={idx < 4 ? "high" : "auto"}
+                decoding="async"
+                style={{ imageRendering: 'pixelated', flexShrink: 0 }}
+              />
+              <span style={{ fontWeight: 500 }}>{formatName(name, data)}</span>
+              <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+                {data.types.map((t) => (
+                  <TypeIcon key={t} type={t} size={14} />
+                ))}
+              </div>
+            </a>
           ))}
         </div>
       )}
 
-      {!query.trim() && filterTypes.length > 0 && (
+      {!hasQuery && filterTypes.length > 0 && (
         <div>
-          {results.map(([name, data], idx) => (
-            <PokemonListItem key={name} name={name} data={data} idx={idx} />
+          {results.map(([name, data]) => (
+            <a
+              key={name}
+              href={`/pokemon/${name}`}
+              class="pk-list-item"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                width: '100%',
+                padding: '8px 16px',
+                color: 'var(--text-primary)',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontFamily: 'inherit',
+                minHeight: '44px',
+                textAlign: 'left',
+                textDecoration: 'none',
+                borderBottom: '1px solid var(--border-subtle)',
+                borderRadius: '8px',
+              }}
+            >
+              <img
+                src={getSprite(data)}
+                alt={formatName(name, data)}
+                width={36}
+                height={36}
+                loading="lazy"
+                decoding="async"
+                style={{ imageRendering: 'pixelated', flexShrink: 0 }}
+              />
+              <span style={{ fontWeight: 500 }}>{formatName(name, data)}</span>
+              <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+                {data.types.map((t) => (
+                  <TypeIcon key={t} type={t} size={14} />
+                ))}
+              </div>
+            </a>
           ))}
         </div>
       )}

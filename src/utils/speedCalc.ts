@@ -1,7 +1,11 @@
 /**
  * Calculates VGC Level 50 Speed stats based on base speed.
- * Formula at Lv 50: floor( (2 * Base + IV + floor(EV/4)) * 50/100 + 5 ) * Nature
- * Assuming 31 IVs (perfect): floor( Base + 15.5 + EV/8 + 5 ) * Nature
+ * Assumes 31 IVs (perfect).
+ * - No Invest (0 EV, Neutral): base + 20
+ * - No Invest+ (0 EV, Positive Nature): floor((base + 20) * 1.1)
+ * - MAX (252 EV, Neutral): base + 52
+ * - MAX+ (252 EV, Positive Nature): floor((base + 52) * 1.1)
+ * - Tailwind: MAX+ * 2
  */
 export function calculateSpeedTiers(baseSpeed: number) {
   const base = baseSpeed;

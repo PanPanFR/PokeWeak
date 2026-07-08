@@ -1,4 +1,4 @@
-export function getSpriteUrl(id: number, name?: string): string {
+function getSpriteUrl(id: number, _name?: string): string {
   // Use PokeAPI sprites via raw.githubusercontent.com (allowed by CSP)
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }

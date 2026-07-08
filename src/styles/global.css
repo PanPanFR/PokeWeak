@@ -23,6 +23,7 @@
   --card-gradient-start: rgba(251, 191, 36, 0.18);
   --card-gradient-end: rgba(56, 189, 248, 0.1);
   --overlay-bg: rgba(0, 0, 0, 0.8);
+  --nav-bg: #1A1A1A;
   --body-gradient-1: rgba(239, 68, 68, 0.16);
   --body-gradient-2: #090B10;
   --body-gradient-3: #111827;
@@ -52,6 +53,7 @@
   --card-gradient-start: rgba(217, 160, 20, 0.08);
   --card-gradient-end: rgba(14, 165, 233, 0.04);
   --overlay-bg: rgba(0, 0, 0, 0.4);
+  --nav-bg: #F0EDE8;
   --body-gradient-1: rgba(239, 68, 68, 0.04);
   --body-gradient-2: #EAE8E3;
   --body-gradient-3: #F5F3EC;

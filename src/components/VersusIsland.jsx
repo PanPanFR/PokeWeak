@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import typeChart from '../data/types.json';
 import { calculateWeaknesses } from '../utils/typeCalc';
@@ -72,9 +72,6 @@ function AttackAnalysis({ attacker, defender }) {
 }
 
 function MatchupSummary({ attackerA, defenderB, speedA, speedB }) {
-  const weakB = calculateWeaknesses(defenderB.types, typeChart);
-  const weakA = calculateWeaknesses(attackerA.types, typeChart);
-  
   const getMultiplier = (atkTypes, defWeak) => {
     let best = 1;
     for (const t of atkTypes) {
@@ -112,7 +109,7 @@ function MatchupSummary({ attackerA, defenderB, speedA, speedB }) {
   }
 
   return (
-    <div style={{ background: 'var(--bg-elevated)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-medium)', textAlign: 'center', marginTop: '4px' }}>
+    <div aria-live="polite" style={{ background: 'var(--bg-elevated)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-medium)', textAlign: 'center', marginTop: '4px' }}>
       <h3 style={{ margin: '0 0 8px', fontSize: '14px', color: 'var(--text-primary)' }}>Matchup Summary</h3>
       <p style={{ margin: 0, fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
         {summary}
@@ -152,7 +149,7 @@ export default function VersusIsland() {
       </div>
 
       {aData && bData && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', animation: 'fadeIn 0.3s ease' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} class="versus-animate">
           {/* Sprites & Types */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg-surface)', padding: '20px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: 1 }}>
@@ -227,9 +224,12 @@ export default function VersusIsland() {
         </div>
       )}
       <style>{`
-        @keyframes fadeIn {
+        @keyframes versusFadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        .versus-animate {
+          animation: versusFadeIn 0.3s ease;
         }
       `}</style>
     </div>

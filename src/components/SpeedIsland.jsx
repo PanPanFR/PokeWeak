@@ -59,7 +59,7 @@ export default function SpeedIsland() {
     return list.map(([name, data]) => [name, data, calculateSpeedTiers(data.speed)]);
   }, [sortDesc, query, filterTypes]);
 
-  // Kalkulasi untuk Comparison
+  // Comparison calculation
   const compA_Data = pokemonData[compA_Pokemon];
   const compB_Data = pokemonData[compB_Pokemon];
   const compA_Tiers = compA_Data ? calculateSpeedTiers(compA_Data.speed) : null;
@@ -304,21 +304,22 @@ export default function SpeedIsland() {
           borderCollapse: 'collapse',
           minWidth: '600px', // Ensures it scrolls on mobile instead of squishing
           textAlign: 'left',
-          fontSize: '13px'
+          fontSize: '13px',
+          fontVariantNumeric: 'tabular-nums',
         }}>
           <thead>
             <tr style={{
               background: '#0B2239', // Dark blue header from image
               color: '#FFFFFF',
             }}>
-              <th style={{ padding: '12px 16px', fontWeight: 600, borderTopLeftRadius: '8px', borderBottomLeftRadius: '8px' }}>#</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600 }}>Pokémon</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>Base</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>No Invest</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>No Invest+</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>MAX</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>MAX+</th>
-              <th style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center', borderTopRightRadius: '8px', borderBottomRightRadius: '8px' }}>Tailwind / +2</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, borderTopLeftRadius: '8px', borderBottomLeftRadius: '8px' }}>#</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600 }}>Pokémon</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>Base</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>No Invest</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>No Invest+</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>MAX</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center' }}>MAX+</th>
+              <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, textAlign: 'center', borderTopRightRadius: '8px', borderBottomRightRadius: '8px' }}>Tailwind / +2</th>
             </tr>
           </thead>
           <tbody>

@@ -54,11 +54,8 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
   }
 
   return (
-    <div
+    <button
       onClick={() => onSearch(slotIndex)}
-      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSearch(slotIndex); } }}
-      role="button"
-      tabIndex={0}
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -73,13 +70,15 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
         cursor: 'pointer',
         fontSize: '13px',
         transition: 'background 0.2s',
+        fontFamily: 'inherit',
+        width: '100%',
       }}
       onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
       onMouseLeave={(e) => e.currentTarget.style.background = 'var(--bg-surface)'}
     >
       <span style={{ fontSize: '16px' }}>+</span>
       <span>{label || `Slot ${slotIndex + 1}`}</span>
-    </div>
+    </button>
   );
 }
 
@@ -311,7 +310,9 @@ export default function TeamBuilderIsland() {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length === 6) return parsed;
       }
-    } catch {}
+    } catch (e) {
+      console.warn('Failed to load team from localStorage:', e);
+    }
     return Array(6).fill(null);
   });
   
@@ -322,7 +323,7 @@ export default function TeamBuilderIsland() {
 
   // Persist team to localStorage
   useEffect(() => {
-    try { localStorage.setItem('pokeweak-team', JSON.stringify(team)); } catch {}
+    try { localStorage.setItem('pokeweak-team', JSON.stringify(team)); } catch (e) { console.warn('Failed to save team to localStorage:', e); }
   }, [team]);
 
   const closeModal = useCallback(() => {

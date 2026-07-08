@@ -5,6 +5,7 @@ import pokemonData from '../../data/pokemon.json';
 import typeChart from '../../data/types.json';
 import { calculateWeaknesses } from '../../utils/typeCalc';
 import { calculateSpeedTiers } from '../../utils/speedCalc';
+import { getSprite } from '../../utils/pokemon';
 
 export function getStaticPaths() {
   return Object.keys(pokemonData).map((name) => ({
@@ -33,7 +34,7 @@ const alternativeForms = Object.keys(pokemonData).filter(key => {
 });
 
 const typeColor = (type) => `var(--color-pk-${type.toLowerCase()})`;
-const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
+const spriteUrl = getSprite(data);
 ---
 
 <MainLayout title={`${data.name || Astro.params.name} — PokeWeak`} description={`${data.name || Astro.params.name} type weaknesses and resistances`} currentPath={`/pokemon/${Astro.params.name}`}>
