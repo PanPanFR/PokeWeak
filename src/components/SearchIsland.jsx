@@ -1,12 +1,22 @@
-import { h } from 'preact';
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import typeChart from '../data/types.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite, displayName } from '../utils/pokemon';
+import { getSprite, formatName } from '../utils/pokemon';
 
 const pokemonList = Object.entries(pokemonData);
 const allTypes = Object.keys(typeChart);
+
+function highlightMatch(text, query) {
+  if (!query) return text;
+  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  if (idx === -1) return text;
+  return [
+    text.slice(0, idx),
+    <strong style={{ color: 'var(--text-primary)', fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</strong>,
+    text.slice(idx + query.length),
+  ];
+}
 
 const championsPokemon = [
   'abomasnow','absol','aegislash','aerodactyl','aggron','alakazam','alcremie','altaria','ampharos',
@@ -32,7 +42,7 @@ const championsPokemon = [
   'sneasler','snorlax','spiritomb','staraptor','starmie','steelix','stunfisk','swampert','sylveon',
   'talonflame','tauros','tinkaton','torkoal','torterra','toucannon','toxapex','toxicroak','trevenant',
   'tsareena','typhlosion','tyranitar','tyrantrum','umbreon','vanilluxe','vaporeon','venusaur','victreebel',
-  'vileplume','vivillon','volcarona','watchog','weavile','whimsicott','wyrdeer','zoroark'
+  'vileplume','vivillon','volcarona','watchog','weavile','whimsicott','wyrdeer','zoroark','kommo-o'
 ].filter(name => pokemonData[name]);
 
 // Add mega and alternative forms
@@ -43,7 +53,7 @@ const megaAndForms = Object.keys(pokemonData).filter(name =>
 
 const allChampionsPokemon = [...championsPokemon, ...megaAndForms];
 
-const PokemonListItem = ({ name, data, idx, focusedIdx = -1 }) => {
+const PokemonListItem = ({ name, data, idx, focusedIdx = -1, query = '' }) => {
   const isDropdown = focusedIdx >= 0;
   return (
     <a
@@ -74,7 +84,7 @@ const PokemonListItem = ({ name, data, idx, focusedIdx = -1 }) => {
     >
       <img
         src={getSprite(data)}
-        alt={displayName(name, data)}
+        alt={formatName(name, data)}
         width={isDropdown ? 40 : 36}
         height={isDropdown ? 40 : 36}
         loading={idx < 8 ? "eager" : "lazy"}
@@ -82,7 +92,7 @@ const PokemonListItem = ({ name, data, idx, focusedIdx = -1 }) => {
         decoding="async"
         style={{ imageRendering: 'pixelated', flexShrink: 0 }}
       />
-      <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
+      <span style={{ fontWeight: 500 }}>{highlightMatch(formatName(name, data), query)}</span>
       <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
         {data.types.map((t) => (
           <TypeIcon key={t} type={t} size={isDropdown ? 16 : 14} />
@@ -237,6 +247,7 @@ export default function SearchIsland() {
             onInput={handleInput}
             onKeyDown={handleKeyDown}
             aria-label="Search Pokémon by name"
+            role="combobox"
             aria-autocomplete="list"
             aria-expanded={query.trim() && results.length > 0 ? 'true' : 'false'}
             aria-activedescendant={focusedIdx >= 0 ? `search-result-${focusedIdx}` : undefined}
@@ -302,7 +313,7 @@ export default function SearchIsland() {
             >
               <div ref={listRef}>
                 {results.map(([name, data], idx) => (
-                  <PokemonListItem key={name} name={name} data={data} idx={idx} focusedIdx={focusedIdx} />
+                  <PokemonListItem key={name} name={name} data={data} idx={idx} focusedIdx={focusedIdx} query={query} />
                 ))}
               </div>
             </div>
@@ -356,8 +367,9 @@ export default function SearchIsland() {
                   cursor: 'pointer',
                 }}
                 title={t}
+                aria-label={`Filter by ${t} type${isSelected ? ' (active)' : ''}`}
               >
-                <TypeIcon type={t} size={16} />
+                <TypeIcon type={t} size={16} aria-hidden="true" />
               </button>
             );
           })}
@@ -365,7 +377,7 @@ export default function SearchIsland() {
       </div>
 
       {!query.trim() && filterTypes.length === 0 && (
-        <div>
+        <div style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 4000px' }}>
           {sortedChampions.map(([name, data], idx) => (
             <PokemonListItem key={name} name={name} data={data} idx={idx} />
           ))}

@@ -1,0 +1,16 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Page Not Found — PokeWeak" description="The page you're looking for doesn't exist." currentPath="">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:24px;">
+    <div style="font-size:80px;font-weight:900;color:var(--text-muted);line-height:1;">404</div>
+    <h1 style="font-size:24px;font-weight:700;color:var(--text-primary);margin:16px 0 8px;">Page Not Found</h1>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 24px;max-width:360px;">
+      The Pokémon you're looking for might have fled to another route.
+    </p>
+    <a href="/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--primary,#E63946);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">
+      Back to Search
+    </a>
+  </div>
+</MainLayout>

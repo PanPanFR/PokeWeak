@@ -1,5 +1,3 @@
-import { h } from 'preact';
-
 export default function TypeIcon({ type, size = 20 }) {
   return (
     <img
@@ -7,6 +5,7 @@ export default function TypeIcon({ type, size = 20 }) {
       alt={type}
       width={size}
       height={size}
+      aria-hidden="true"
       style={{ display: 'inline-block', verticalAlign: 'middle', flexShrink: 0 }}
     />
   );

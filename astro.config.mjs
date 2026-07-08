@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import preact from '@astrojs/preact';
+import sitemap from '@astrojs/sitemap';
 import AstroPWA from '@vite-pwa/astro';
 
 export default defineConfig({
+  site: 'https://pokeweak.my.id',
   vite: {
     plugins: [
       tailwindcss(),
@@ -11,6 +13,7 @@ export default defineConfig({
   },
   integrations: [
     preact(),
+    sitemap(),
     AstroPWA({
       registerType: 'autoUpdate',
       manifest: {
@@ -48,6 +51,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        navigateFallback: '/',
         cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,svg,png,ico,json}'],
         runtimeCaching: [

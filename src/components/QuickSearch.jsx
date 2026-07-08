@@ -1,8 +1,7 @@
-import { h } from 'preact';
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite, displayName } from '../utils/pokemon';
+import { getSprite, formatName } from '../utils/pokemon';
 
 const pokemonList = Object.entries(pokemonData);
 
@@ -175,14 +174,14 @@ export default function QuickSearch() {
               >
                 <img
                   src={getSprite(data)}
-                  alt={displayName(name, data)}
+                  alt={formatName(name, data)}
                   width={40}
                   height={40}
                   loading="lazy"
                   decoding="async"
                   style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                 />
-                <span style={{ fontWeight: 500 }}>{displayName(name, data)}</span>
+                <span style={{ fontWeight: 500 }}>{formatName(name, data)}</span>
                 <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
                   {data.types.map((t) => (
                     <TypeIcon key={t} type={t} />

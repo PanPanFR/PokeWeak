@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { useState, useMemo } from 'preact/hooks';
 import TypeIcon from './TypeIcon.jsx';
 import { calculateWeaknesses, calculateStrengths } from '../utils/typeCalc';

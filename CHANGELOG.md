@@ -1,130 +1,54 @@
-# Changelog
+# Changelog PokeWeak
 
-All notable changes to the PokeWeak project will be documented in this file.
+## v1.1.0 — 2026-07-08
 
-## [Unreleased] - 2026-06-30
+### Data
+- Added Kommo-o to champion list
+- Fixed Electric→Rock type chart (`0.5` → `1`) — Aerodactyl now weak to Electric (×2)
 
-### Added
-- **Meta Analysis Page** - New page for viewing top meta Pokémon and team compositions
-  - Single Battle and Double Battle format support
-  - Top 15 most used Pokémon per format
-  - Popular team compositions with synergy analysis
-  - Usage percentage display
+### Bugs
+- Theme fallback: `dark:dark` → `dark:light` (system preference now works)
+- Removed conflicting manual service worker registration
+- BottomNav: `@container` → `@media` (queries now match)
+- Unified theme-color meta to `#EAE8E3`
+- VersusIsland: multiplier now multiplies per-type, not `Math.max`
+- `onmouseover`/`onmouseout` → CSS `:hover`
+- Renamed `displayName` → `formatName` (avoids React collision)
 
-- **Team Weakness Checker** - New page for analyzing team vulnerabilities
-  - 6 Pokémon team builder with search functionality
-  - Aggregated weakness analysis
-  - Coverage gap identification
-  - Suggested counter Pokémon
+### SEO
+- Added OG + Twitter Card meta tags, canonical URL, JSON-LD schema
+- Added sitemap (`@astrojs/sitemap`) + `robots.txt`
+- Set `site` in astro config
 
-- **Manual Type Checker** - Enhancement to cheatsheet page
-  - Input manual type combinations
-  - Real-time weakness calculation
-  - Support for single and dual-type combinations
+### Accessibility
+- Added skip-to-content link, `color-scheme: dark` on `<html>`
+- Search: `role="combobox"` + query highlight in results
+- Type filter buttons: `aria-label` + `aria-hidden` on TypeIcon
+- Speed table: `aria-label` + `aria-pressed` on sort button
+- Team modal: `role="dialog"`, Escape handler, focus trap, `aria-modal`
+- Empty slot: keyboard accessible (`role="button"`, `tabIndex`, `onKeyDown`)
 
-- **Ability Field** - Added to Pokémon data
-  - Most used ability per Pokémon (competitive format)
-  - Displayed on Pokémon detail pages
+### Performance
+- Pre-computed `calculateSpeedTiers` and `calculateWeaknesses` (no longer per-row)
+- `content-visibility: auto` on long lists
+- `client:load` → `client:idle` on Speed/Team/Versus/Cheatsheet
+- Removed ~200 lines dead CSS + dead imports/files
 
-### Fixed
-- Added missing Rotom forms (Rotom-Wash, Rotom-Heat, Rotom-Mow, Rotom-Frost)
-- Added other missing Pokémon forms and variants
+### PWA
+- Added `navigateFallback` for offline navigation
+- Added install prompt button + `visualViewport` fix
+- Removed redundant deps (`vite-plugin-pwa`, `workbox-build`, `workbox-window`)
 
-### Changed
-- Updated BottomNav with new "Meta" and "Team" tabs
-- Enhanced Pokémon detail page to show ability information
+### UX
+- Added 404 page, error boundary, search highlight
+- Team builder persists to `localStorage`
+- PWA install button
 
----
+### Security
+- Added `_headers` (CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)
 
-## Implementation Details
-
-### File Structure Changes
-
-```
-src/
-├── components/
-│   ├── MetaIsland.jsx       # NEW: Meta analysis component
-│   ├── TypeCheckerIsland.jsx # NEW: Manual type checker
-│   ├── TeamBuilderIsland.jsx # NEW: Team builder component
-│   └── BottomNav.astro       # MODIFIED: Added Meta & Team nav items
-├── data/
-│   ├── meta.json            # NEW: Meta usage data
-│   └── pokemon.json         # MODIFIED: Added ability field, missing Pokémon
-├── pages/
-│   ├── meta.astro           # NEW: Meta analysis page
-│   ├── team.astro           # NEW: Team weakness checker
-│   └── cheatsheet.astro     # MODIFIED: Added type input feature
-└── utils/
-    └── typeCalc.ts          # MODIFIED: Added team aggregation function
-```
-
-### Data Updates
-
-#### Pokemon Interface
-```typescript
-interface Pokemon {
-  id: number;
-  name: string;
-  types: string[];
-  speed: number;
-  sprite?: string;
-  ability: string;  // NEW
-}
-```
-
-#### Meta Data Structure
-```typescript
-interface MetaData {
-  single: {
-    topPokemon: Array<{
-      name: string;
-      usage: number;
-      rank: number;
-    }>;
-    topTeams: Array<{
-      team: string[];
-      usage: number;
-    }>;
-  };
-  double: {
-    topPokemon: Array<{
-      name: string;
-      usage: number;
-      rank: number;
-    }>;
-    topTeams: Array<{
-      team: string[];
-      usage: number;
-    }>;
-  };
-}
-```
-
-### UI Components
-
-#### MetaIsland.jsx Features
-- Tab switching between Single/Double formats
-- Ranked Pokémon list with usage percentages
-- Team composition display (6 Pokémon grid)
-- Responsive design for mobile
-
-#### TeamBuilderIsland.jsx Features
-- 6 selectable Pokémon slots
-- Search integration per slot
-- Real-time weakness aggregation
-- Visual indicators for common weaknesses
-
-#### TypeCheckerIsland.jsx Features
-- Dual type selection dropdowns
-- Instant weakness calculation
-- Visual display of ×4, ×2, ×½, ×¼, ×0 results
-
----
-
-## Future Considerations
-
-- [ ] Add filtering by tier (OU, UU, RU, etc.)
-- [ ] Add export/import team functionality
-- [ ] Add damage calculator integration
-- [ ] Add type effectiveness calculator for moves
-- [ ] Add comparison between multiple teams
+### Code Quality
+- Package name: `extra-heliosphere` → `pokeweak`
+- Removed `@vercel/analytics` (migrated to Cloudflare Pages)
+- Added path aliases, ESLint, Prettier, Vitest (11 tests)
+- New scripts: `test`, `lint`, `format`

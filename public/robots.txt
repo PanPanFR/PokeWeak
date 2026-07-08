@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pokeweak.my.id/sitemap-index.xml

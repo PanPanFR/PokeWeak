@@ -111,7 +111,7 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
         {formGroup.items.map((form) => {
           const formData = pokemonData[form];
           return (
-            <a href={`/pokemon/${form}`} style={`display:inline-flex;align-items:center;gap:6px;padding:8px 12px;background:${formGroup.color};color:#FFFFFF;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;transition:background 0.2s;cursor:pointer;`} onmouseover={`this.style.background='${formGroup.hover}'`} onmouseout={`this.style.background='${formGroup.color}'`}>
+            <a href={`/pokemon/${form}`} class="form-link" style={`--form-color:${formGroup.color};--form-hover:${formGroup.hover};`}>
               <span>{formData?.name?.replaceAll('-', ' ') || form.replaceAll('-', ' ')}</span>
               {formData?.types && (
                 <div style="display:flex;gap:3px;">
@@ -172,5 +172,24 @@ const spriteUrl = data.sprite || `https://raw.githubusercontent.com/PokeAPI/spri
   }
   .header-row > *:last-child {
     flex: 1;
+  }
+
+  .form-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: var(--form-color);
+    color: #FFFFFF;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+
+  .form-link:hover {
+    background: var(--form-hover);
   }
 </style>

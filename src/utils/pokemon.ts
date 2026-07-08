@@ -12,10 +12,6 @@ export function getSprite(data: { id: number; name?: string; sprite?: string }):
   return getSpriteUrl(data.id, data.name);
 }
 
-export function displayName(key: string, data: { name?: string }): string {
+export function formatName(key: string, data: { name?: string }): string {
   return data.name || key.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-}
-
-export function makeChampionsSet(champions: string[]): Set<string> {
-  return new Set(champions);
 }

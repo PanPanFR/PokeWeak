@@ -1,9 +1,8 @@
-import { h } from 'preact';
 import { useState, useMemo } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import typeChart from '../data/types.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite as getPokemonSprite, displayName } from '../utils/pokemon';
+import { getSprite as getPokemonSprite, formatName } from '../utils/pokemon';
 import { calculateSpeedTiers } from '../utils/speedCalc';
 import SearchSelect from './SearchSelect.jsx';
 
@@ -56,7 +55,8 @@ export default function SpeedIsland() {
     }
     
     list.sort(([, a], [, b]) => sortDesc ? b.speed - a.speed : a.speed - b.speed);
-    return list;
+    // Pre-compute speed tiers to avoid recalculation per row
+    return list.map(([name, data]) => [name, data, calculateSpeedTiers(data.speed)]);
   }, [sortDesc, query, filterTypes]);
 
   // Kalkulasi untuk Comparison
@@ -116,6 +116,7 @@ export default function SpeedIsland() {
             </button>
             <button
               onClick={() => setSortDesc((v) => !v)}
+              aria-pressed={sortDesc}
               style={{
                 background: 'var(--bg-surface)',
                 border: '1px solid var(--border-medium)',
@@ -224,9 +225,9 @@ export default function SpeedIsland() {
               color: compA_Speed === compB_Speed ? 'var(--text-secondary)' : (compA_Speed > compB_Speed ? '#EF4444' : '#3B82F6')
             }}>
               {compA_Speed > compB_Speed 
-                ? `${displayName(compA_Pokemon, compA_Data)} is faster by ${compA_Speed - compB_Speed} points!` 
+                ? `${formatName(compA_Pokemon, compA_Data)} is faster by ${compA_Speed - compB_Speed} points!` 
                 : compB_Speed > compA_Speed 
-                  ? `${displayName(compB_Pokemon, compB_Data)} is faster by ${compB_Speed - compA_Speed} points!` 
+                  ? `${formatName(compB_Pokemon, compB_Data)} is faster by ${compB_Speed - compA_Speed} points!` 
                   : "It's a Speed Tie!"}
             </div>
           </div>
@@ -284,8 +285,9 @@ export default function SpeedIsland() {
                     padding: '0',
                   }}
                   title={t}
+                  aria-label={`Filter by ${t} type${isSelected ? ' (active)' : ''}`}
                 >
-                  <TypeIcon type={t} size={16} />
+                  <TypeIcon type={t} size={16} aria-hidden="true" />
                 </button>
               );
             })}
@@ -297,7 +299,7 @@ export default function SpeedIsland() {
       </div>
 
       <div style={{ overflowX: 'auto', marginTop: '12px', paddingBottom: '16px' }}>
-        <table style={{
+        <table aria-label="Speed tiers leaderboard" style={{
           width: '100%',
           borderCollapse: 'collapse',
           minWidth: '600px', // Ensures it scrolls on mobile instead of squishing
@@ -320,9 +322,8 @@ export default function SpeedIsland() {
             </tr>
           </thead>
           <tbody>
-            {sorted.map(([name, data], idx) => {
+            {sorted.map(([name, data, tiers], idx) => {
               const rank = idx + 1;
-              const tiers = calculateSpeedTiers(data.speed);
               return (
                 <tr 
                   key={name}
@@ -330,6 +331,8 @@ export default function SpeedIsland() {
                     borderBottom: '1px solid var(--border-subtle)',
                     background: idx % 2 === 0 ? 'transparent' : 'var(--bg-surface)',
                     transition: 'background 0.2s',
+                    contentVisibility: 'auto',
+                    containIntrinsicSize: 'auto 56px',
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
                   onMouseLeave={(e) => e.currentTarget.style.background = idx % 2 === 0 ? 'transparent' : 'var(--bg-surface)'}
@@ -350,7 +353,7 @@ export default function SpeedIsland() {
                     >
                       <img
                         src={getPokemonSprite(data)}
-                        alt={displayName(name, data)}
+                        alt={formatName(name, data)}
                         width={40}
                         height={40}
                         loading="lazy"
@@ -359,7 +362,7 @@ export default function SpeedIsland() {
                       />
                       <div>
                         <div style={{ fontWeight: 600, color: '#3182CE', marginBottom: '2px', textDecoration: 'underline' }}>
-                          {displayName(name, data)}
+                          {formatName(name, data)}
                         </div>
                         <div style={{ display: 'flex', gap: '4px' }}>
                           {data.types.map((t) => (

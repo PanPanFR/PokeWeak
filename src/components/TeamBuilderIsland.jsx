@@ -1,8 +1,7 @@
-import { h } from 'preact';
-import { useState, useMemo } from 'preact/hooks';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite, displayName } from '../utils/pokemon';
+import { getSprite, formatName } from '../utils/pokemon';
 import { calculateWeaknesses, calculateStrengths } from '../utils/typeCalc';
 import typeChart from '../data/types.json';
 
@@ -30,7 +29,7 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
           style={{ imageRendering: 'pixelated', flexShrink: 0 }}
         />
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>{displayName(pokemon.name, pokemon)}</div>
+          <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>{formatName(pokemon.name, pokemon)}</div>
           <div style={{ display: 'flex', gap: '3px', marginTop: '2px' }}>
             {pokemon.types.map((t) => (
               <TypeIcon key={t} type={t} size={12} />
@@ -57,6 +56,9 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
   return (
     <div
       onClick={() => onSearch(slotIndex)}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSearch(slotIndex); } }}
+      role="button"
+      tabIndex={0}
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -128,12 +130,14 @@ function TeamWeaknessDisplay({ team }) {
       });
     });
 
+    // Pre-compute weaknesses per team member
+    const teamWeaknesses = team.map((p) => calculateWeaknesses(p.types, typeChart));
+
     allTypes.forEach((attackingType) => {
       let count = 0;
       let maxMultiplier = 0;
 
-      team.forEach((p) => {
-        const weaknesses = calculateWeaknesses(p.types, typeChart);
+      teamWeaknesses.forEach((weaknesses) => {
         const allWeak = [...weaknesses.quadWeak, ...weaknesses.doubleWeak];
         if (allWeak.includes(attackingType)) {
           count++;
@@ -300,11 +304,61 @@ function TeamStrengthDisplay({ team }) {
 }
 
 export default function TeamBuilderIsland() {
-  const [team, setTeam] = useState(Array(6).fill(null));
+  const [team, setTeam] = useState(() => {
+    try {
+      const saved = localStorage.getItem('pokeweak-team');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length === 6) return parsed;
+      }
+    } catch {}
+    return Array(6).fill(null);
+  });
   
-  const [searchSlot, setSearchSlot] = useState(null); // { type: 'player', index: number }
+  const [searchSlot, setSearchSlot] = useState(null);
   const [query, setQuery] = useState('');
   const [filterTypes, setFilterTypes] = useState([]);
+  const modalRef = useRef(null);
+
+  // Persist team to localStorage
+  useEffect(() => {
+    try { localStorage.setItem('pokeweak-team', JSON.stringify(team)); } catch {}
+  }, [team]);
+
+  const closeModal = useCallback(() => {
+    setSearchSlot(null);
+    setQuery('');
+    setFilterTypes([]);
+  }, []);
+
+  useEffect(() => {
+    if (searchSlot === null) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (e.key === 'Tab' && modalRef.current) {
+        const focusable = modalRef.current.querySelectorAll('input, button, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [searchSlot, closeModal]);
 
   const toggleFilterType = (type) => {
     setFilterTypes((prev) => {
@@ -419,20 +473,28 @@ export default function TeamBuilderIsland() {
       </div>
 
       {searchSlot !== null && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'var(--overlay-bg)',
-          zIndex: 100,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '16px',
-        }}>
-          <div style={{
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'var(--overlay-bg)',
+            zIndex: 100,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '16px',
+          }}
+          onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
+        >
+          <div
+            ref={modalRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Select Pokémon for your team"
+            style={{
             background: 'var(--bg-elevated)',
             borderRadius: '16px',
             width: '100%',
@@ -511,8 +573,9 @@ export default function TeamBuilderIsland() {
                         padding: '0',
                       }}
                       title={t}
+                      aria-label={`Filter by ${t} type${isSelected ? ' (active)' : ''}`}
                     >
-                      <TypeIcon type={t} size={20} />
+                      <TypeIcon type={t} size={20} aria-hidden="true" />
                     </button>
                   );
                 })}
@@ -553,7 +616,7 @@ export default function TeamBuilderIsland() {
                       height={40}
                       style={{ imageRendering: 'pixelated', flexShrink: 0 }}
                     />
-                    <span style={{ fontWeight: 600, fontSize: '14px' }}>{displayName(name, data)}</span>
+                    <span style={{ fontWeight: 600, fontSize: '14px' }}>{formatName(name, data)}</span>
                     <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
                       {data.types.map((t) => (
                         <TypeIcon key={t} type={t} size={14} />
@@ -565,11 +628,7 @@ export default function TeamBuilderIsland() {
             </div>
             <div style={{ padding: '16px', borderTop: '1px solid var(--border-subtle)', background: 'var(--bg-surface)' }}>
               <button
-                onClick={() => {
-                  setSearchSlot(null);
-                  setQuery('');
-                  setFilterTypes([]);
-                }}
+                onClick={closeModal}
                 style={{
                   width: '100%',
                   padding: '12px',

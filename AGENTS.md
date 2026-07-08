@@ -17,6 +17,8 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 - View type weakness breakdown (×4, ×2, ×½, ×¼, ×0)
 - Speed leaderboard with filtering
 - Type matchup cheatsheet
+- Versus mode (1v1 Pokémon comparison)
+- Team builder (up to 6 Pokémon)
 - PWA support with offline caching
 - Mobile-first responsive design
 
@@ -25,26 +27,36 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 ```
 src/
 ├── components/
-│   ├── BottomNav.astro      # Mobile bottom navigation
-│   ├── QuickSearch.jsx      # Search component for detail pages
-│   ├── SearchIsland.jsx     # Main search with champions list
-│   ├── SpeedIsland.jsx      # Speed leaderboard with filters
-│   ├── TypeIcon.astro       # Astro type icon component
-│   └── TypeIcon.jsx         # Preact type icon component
+│   ├── BottomNav.astro         # Mobile bottom navigation
+│   ├── QuickSearch.jsx         # Search component for detail pages
+│   ├── SearchIsland.jsx        # Main search with Pokémon list
+│   ├── SearchSelect.jsx        # Reusable search dropdown
+│   ├── SpeedIsland.jsx         # Speed leaderboard with filters
+│   ├── TeamBuilderIsland.jsx   # Team builder (6 Pokémon)
+│   ├── TypeCheckerIsland.jsx   # Type checker component
+│   ├── TypeIcon.astro          # Astro type icon component
+│   ├── TypeIcon.jsx            # Preact type icon component
+│   └── VersusIsland.jsx        # Versus mode (1v1 comparison)
 ├── data/
-│   ├── pokemon.json         # Pokémon data (id, name, types, speed, sprite)
-│   └── types.json           # Type effectiveness chart
+│   ├── pokemon.json            # Pokémon data (id, name, types, speed, sprite)
+│   └── types.json              # Type effectiveness chart
 ├── layouts/
-│   └── MainLayout.astro     # Base layout with PWA meta tags
+│   └── MainLayout.astro        # Base layout with PWA meta tags
 ├── pages/
-│   ├── index.astro          # Home - search page
-│   ├── speed.astro          # Speed leaderboard
-│   ├── cheatsheet.astro   # Type matchups reference
+│   ├── index.astro             # Home - search page
+│   ├── speed.astro             # Speed leaderboard
+│   ├── cheatsheet.astro        # Type matchups reference
+│   ├── team.astro              # Team builder page
+│   ├── versus.astro            # Versus mode page
 │   └── pokemon/
-│       └── [name].astro     # Dynamic Pokémon detail page
+│       └── [name].astro        # Dynamic Pokémon detail page
+├── styles/
+│   └── global.css              # Global styles
 └── utils/
-    ├── pokemon.ts           # Helper functions (getSprite, displayName)
-    └── typeCalc.ts          # Type weakness calculation logic
+    ├── pokemon.ts              # Helper functions (getSprite, displayName)
+    ├── speedCalc.ts            # Speed calculation utilities
+    ├── typeCalc.ts             # Type weakness calculation logic
+    └── versusCalc.ts           # Versus mode calculation logic
 ```
 
 ## Data Structure
@@ -113,4 +125,4 @@ Consult these guides before working on related tasks:
 
 ## Deploy
 
-Push to the `main` branch → GitHub Actions → auto-deploys to Vercel.
+Push to the `main` branch → GitHub Actions → auto-deploys to Cloudflare Pages.

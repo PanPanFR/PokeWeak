@@ -25,3 +25,9 @@ Thumbs.db
 # opencode local config
 .kilo/
 .agents/
+.playwright-mcp/
+
+# audit & screenshots (local only)
+audit.md
+pokeweak-*.png
+lighthouse*.json

@@ -1,14 +1,11 @@
-import { h } from 'preact';
 import { useState, useMemo } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import typeChart from '../data/types.json';
 import { calculateWeaknesses } from '../utils/typeCalc';
 import { calculateSpeedTiers } from '../utils/speedCalc';
-import { getSprite, displayName } from '../utils/pokemon';
+import { getSprite, formatName } from '../utils/pokemon';
 import TypeIcon from './TypeIcon.jsx';
 import SearchSelect from './SearchSelect.jsx';
-
-const allPokemon = Object.entries(pokemonData);
 
 
 function AttackAnalysis({ attacker, defender }) {
@@ -78,23 +75,20 @@ function MatchupSummary({ attackerA, defenderB, speedA, speedB }) {
   const weakB = calculateWeaknesses(defenderB.types, typeChart);
   const weakA = calculateWeaknesses(attackerA.types, typeChart);
   
-  let aMult = 1;
-  attackerA.types.forEach(t => {
-    if (weakB.quadWeak.includes(t)) aMult = Math.max(aMult, 4);
-    else if (weakB.doubleWeak.includes(t)) aMult = Math.max(aMult, 2);
-    else if (weakB.resist.includes(t)) aMult = Math.max(aMult, 0.5);
-    else if (weakB.doubleResist.includes(t)) aMult = Math.max(aMult, 0.25);
-    else if (weakB.immune.includes(t)) aMult = 0;
-  });
+  const getMultiplier = (atkTypes, defWeak) => {
+    let best = 1;
+    for (const t of atkTypes) {
+      let mult = 1;
+      for (const def of defWeak.defenderTypes) {
+        mult *= (typeChart[t]?.[def] ?? 1);
+      }
+      best = Math.max(best, mult);
+    }
+    return best;
+  };
 
-  let bMult = 1;
-  defenderB.types.forEach(t => {
-    if (weakA.quadWeak.includes(t)) bMult = Math.max(bMult, 4);
-    else if (weakA.doubleWeak.includes(t)) bMult = Math.max(bMult, 2);
-    else if (weakA.resist.includes(t)) bMult = Math.max(bMult, 0.5);
-    else if (weakA.doubleResist.includes(t)) bMult = Math.max(bMult, 0.25);
-    else if (weakA.immune.includes(t)) bMult = 0;
-  });
+  let aMult = getMultiplier(attackerA.types, { defenderTypes: defenderB.types });
+  let bMult = getMultiplier(defenderB.types, { defenderTypes: attackerA.types });
 
   const aFaster = speedA.maxPlus > speedB.maxPlus;
   const bFaster = speedB.maxPlus > speedA.maxPlus;
@@ -102,18 +96,18 @@ function MatchupSummary({ attackerA, defenderB, speedA, speedB }) {
 
   let summary = "";
   if (tie) {
-    if (aMult > bMult) summary = `${displayName(attackerA.name, attackerA)} has a better type advantage, but it's a speed tie. Could go either way!`;
-    else if (bMult > aMult) summary = `${displayName(defenderB.name, defenderB)} has a better type advantage, but it's a speed tie. Could go either way!`;
+    if (aMult > bMult) summary = `${formatName(attackerA.name, attackerA)} has a better type advantage, but it's a speed tie. Could go either way!`;
+    else if (bMult > aMult) summary = `${formatName(defenderB.name, defenderB)} has a better type advantage, but it's a speed tie. Could go either way!`;
     else summary = "A completely balanced matchup. Stats and movesets will decide the winner.";
   } else {
-    if (aFaster && aMult > 1 && bMult <= 1) summary = `${displayName(attackerA.name, attackerA)} is faster and has a type advantage! Likely an easy win.`;
-    else if (bFaster && bMult > 1 && aMult <= 1) summary = `${displayName(defenderB.name, defenderB)} is faster and has a type advantage! Likely an easy win.`;
-    else if (aFaster && aMult > 1 && bMult > 1) summary = `${displayName(attackerA.name, attackerA)} is faster and both have super-effective moves. First to strike wins!`;
-    else if (bFaster && bMult > 1 && aMult > 1) summary = `${displayName(defenderB.name, defenderB)} is faster and both have super-effective moves. First to strike wins!`;
-    else if (aFaster && aMult <= 1 && bMult > 1) summary = `${displayName(attackerA.name, attackerA)} is faster, but ${displayName(defenderB.name, defenderB)} can hit super-effectively if it survives!`;
-    else if (bFaster && bMult <= 1 && aMult > 1) summary = `${displayName(defenderB.name, defenderB)} is faster, but ${displayName(attackerA.name, attackerA)} can hit super-effectively if it survives!`;
-    else if (aFaster && aMult > bMult) summary = `${displayName(attackerA.name, attackerA)} has the speed and type advantage.`;
-    else if (bFaster && bMult > aMult) summary = `${displayName(defenderB.name, defenderB)} has the speed and type advantage.`;
+    if (aFaster && aMult > 1 && bMult <= 1) summary = `${formatName(attackerA.name, attackerA)} is faster and has a type advantage! Likely an easy win.`;
+    else if (bFaster && bMult > 1 && aMult <= 1) summary = `${formatName(defenderB.name, defenderB)} is faster and has a type advantage! Likely an easy win.`;
+    else if (aFaster && aMult > 1 && bMult > 1) summary = `${formatName(attackerA.name, attackerA)} is faster and both have super-effective moves. First to strike wins!`;
+    else if (bFaster && bMult > 1 && aMult > 1) summary = `${formatName(defenderB.name, defenderB)} is faster and both have super-effective moves. First to strike wins!`;
+    else if (aFaster && aMult <= 1 && bMult > 1) summary = `${formatName(attackerA.name, attackerA)} is faster, but ${formatName(defenderB.name, defenderB)} can hit super-effectively if it survives!`;
+    else if (bFaster && bMult <= 1 && aMult > 1) summary = `${formatName(defenderB.name, defenderB)} is faster, but ${formatName(attackerA.name, attackerA)} can hit super-effectively if it survives!`;
+    else if (aFaster && aMult > bMult) summary = `${formatName(attackerA.name, attackerA)} has the speed and type advantage.`;
+    else if (bFaster && bMult > aMult) summary = `${formatName(defenderB.name, defenderB)} has the speed and type advantage.`;
     else summary = "A relatively neutral matchup. Stats and movesets will decide the winner.";
   }
 
@@ -163,7 +157,7 @@ export default function VersusIsland() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg-surface)', padding: '20px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: 1 }}>
               <img src={getSprite(aData)} alt={pokeA} width={80} height={80} style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }} />
-              <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-primary)', textAlign: 'center' }}>{displayName(pokeA, aData)}</div>
+              <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-primary)', textAlign: 'center' }}>{formatName(pokeA, aData)}</div>
               <div style={{ display: 'flex', gap: '4px' }}>
                 {aData.types.map(t => <TypeIcon key={t} type={t} size={16} />)}
               </div>
@@ -173,7 +167,7 @@ export default function VersusIsland() {
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: 1 }}>
               <img src={getSprite(bData)} alt={pokeB} width={80} height={80} style={{ imageRendering: 'pixelated' }} />
-              <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-primary)', textAlign: 'center' }}>{displayName(pokeB, bData)}</div>
+              <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-primary)', textAlign: 'center' }}>{formatName(pokeB, bData)}</div>
               <div style={{ display: 'flex', gap: '4px' }}>
                 {bData.types.map(t => <TypeIcon key={t} type={t} size={16} />)}
               </div>
@@ -206,9 +200,9 @@ export default function VersusIsland() {
             </div>
             <div style={{ marginTop: '12px', textAlign: 'center', fontSize: '13px', fontWeight: 700, color: speedA.maxPlus === speedB.maxPlus ? 'var(--text-secondary)' : '#E63946' }}>
               {speedA.maxPlus > speedB.maxPlus 
-                ? `${displayName(pokeA, aData)} is faster! (Max Speed)`
+                ? `${formatName(pokeA, aData)} is faster! (Max Speed)`
                 : speedB.maxPlus > speedA.maxPlus
-                  ? `${displayName(pokeB, bData)} is faster! (Max Speed)`
+                  ? `${formatName(pokeB, bData)} is faster! (Max Speed)`
                   : 'Speed Tie! (Max Speed)'}
             </div>
           </div>
@@ -216,14 +210,14 @@ export default function VersusIsland() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             <div style={{ background: 'var(--bg-surface)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
               <h3 style={{ margin: '0 0 12px', fontSize: '14px', color: 'var(--text-primary)' }}>
-                {displayName(pokeA, aData)} <span style={{ color: 'var(--text-secondary)' }}>Attacking</span> {displayName(pokeB, bData)}
+                {formatName(pokeA, aData)} <span style={{ color: 'var(--text-secondary)' }}>Attacking</span> {formatName(pokeB, bData)}
               </h3>
               <AttackAnalysis attacker={aData} defender={bData} />
             </div>
 
             <div style={{ background: 'var(--bg-surface)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
               <h3 style={{ margin: '0 0 12px', fontSize: '14px', color: 'var(--text-primary)' }}>
-                {displayName(pokeB, bData)} <span style={{ color: 'var(--text-secondary)' }}>Attacking</span> {displayName(pokeA, aData)}
+                {formatName(pokeB, bData)} <span style={{ color: 'var(--text-secondary)' }}>Attacking</span> {formatName(pokeA, aData)}
               </h3>
               <AttackAnalysis attacker={bData} defender={aData} />
             </div>

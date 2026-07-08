@@ -1,8 +1,7 @@
-import { h, Fragment } from 'preact';
 import { useState, useMemo } from 'preact/hooks';
 import pokemonData from '../data/pokemon.json';
 import TypeIcon from './TypeIcon.jsx';
-import { getSprite, displayName } from '../utils/pokemon';
+import { getSprite, formatName } from '../utils/pokemon';
 
 import typeChart from '../data/types.json';
 
@@ -62,7 +61,7 @@ export default function SearchSelect({ value, onChange, placeholder, disabled })
         {selectedData ? (
           <>
             <img src={getSprite(selectedData)} alt={value} width={32} height={32} style={{ imageRendering: 'pixelated' }} />
-            <span style={{ fontWeight: 600, fontSize: '14px', color: 'var(--text-primary)' }}>{displayName(value, selectedData)}</span>
+            <span style={{ fontWeight: 600, fontSize: '14px', color: 'var(--text-primary)' }}>{formatName(value, selectedData)}</span>
           </>
         ) : (
           <span style={{ color: 'var(--text-muted)', fontSize: '14px' }}>{placeholder}</span>
@@ -152,7 +151,7 @@ export default function SearchSelect({ value, onChange, placeholder, disabled })
             >
               <img src={getSprite(v)} alt={k} width={32} height={32} style={{ imageRendering: 'pixelated' }} />
               <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: 600, fontSize: '13px', color: 'var(--text-primary)' }}>{displayName(k, v)}</div>
+                <div style={{ fontWeight: 600, fontSize: '13px', color: 'var(--text-primary)' }}>{formatName(k, v)}</div>
                 <div style={{ display: 'flex', gap: '2px', marginTop: '2px' }}>
                   {v.types.map(t => <TypeIcon key={t} type={t} size={10} />)}
                 </div>

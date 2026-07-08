@@ -4,10 +4,12 @@ Search any Pokémon to find its type weaknesses, resistances, and immunities. Bu
 
 ## Features
 
-- Search Pokémon by name
+- Search Pokémon by name with autocomplete
 - View type weakness breakdown (×4, ×2, ×½, ×¼, ×0)
 - Speed leaderboard with filtering
 - Type matchup cheatsheet
+- Versus mode (1v1 Pokémon comparison)
+- Team builder (up to 6 Pokémon)
 - PWA support with offline caching
 - Mobile-first responsive design
 
@@ -23,4 +25,4 @@ Search any Pokémon to find its type weaknesses, resistances, and immunities. Bu
 
 ## Deploy
 
-Push to the `main` branch → GitHub Actions → auto-deploys to Vercel.
+Push to the `main` branch → GitHub Actions → auto-deploys to Cloudflare Pages.
