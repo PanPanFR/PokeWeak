@@ -7,7 +7,7 @@
       "Poison"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/003.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
     "abilities": [
       {
         "name": "chlorophyll",
@@ -20,14 +20,14 @@
     ]
   },
   "mega-venusaur": {
-    "id": 3,
+    "id": 10033,
     "name": "Mega Venusaur",
     "types": [
       "Grass",
       "Poison"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/003-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10033.png",
     "abilities": [
       {
         "name": "thick fat",
@@ -43,7 +43,7 @@
       "Flying"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
     "abilities": [
       {
         "name": "blaze",
@@ -56,14 +56,14 @@
     ]
   },
   "mega-charizard-x": {
-    "id": 6,
+    "id": 10034,
     "name": "Mega Charizard X",
     "types": [
       "Fire",
       "Dragon"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006-mx.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png",
     "abilities": [
       {
         "name": "tough claws",
@@ -72,14 +72,14 @@
     ]
   },
   "mega-charizard-y": {
-    "id": 6,
+    "id": 10035,
     "name": "Mega Charizard Y",
     "types": [
       "Fire",
       "Flying"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/006-my.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png",
     "abilities": [
       {
         "name": "drought",
@@ -94,7 +94,7 @@
       "Water"
     ],
     "speed": 78,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/009.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
     "abilities": [
       {
         "name": "rain dish",
@@ -107,13 +107,13 @@
     ]
   },
   "mega-blastoise": {
-    "id": 9,
+    "id": 10036,
     "name": "Mega Blastoise",
     "types": [
       "Water"
     ],
     "speed": 78,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/009-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10036.png",
     "abilities": [
       {
         "name": "mega launcher",
@@ -129,7 +129,7 @@
       "Poison"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/015.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
     "abilities": [
       {
         "name": "sniper",
@@ -142,14 +142,14 @@
     ]
   },
   "mega-beedrill": {
-    "id": 15,
+    "id": 10090,
     "name": "Mega Beedrill",
     "types": [
       "Bug",
       "Poison"
     ],
     "speed": 145,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/015-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10090.png",
     "abilities": [
       {
         "name": "adaptability",
@@ -165,7 +165,7 @@
       "Flying"
     ],
     "speed": 101,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/018.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
     "abilities": [
       {
         "name": "big pecks",
@@ -182,14 +182,14 @@
     ]
   },
   "mega-pidgeot": {
-    "id": 18,
+    "id": 10073,
     "name": "Mega Pidgeot",
     "types": [
       "Normal",
       "Flying"
     ],
     "speed": 121,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/018-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10073.png",
     "abilities": [
       {
         "name": "no guard",
@@ -204,7 +204,7 @@
       "Poison"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/024.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -227,7 +227,7 @@
       "Electric"
     ],
     "speed": 90,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/025.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     "abilities": [
       {
         "name": "lightning rod",
@@ -246,7 +246,7 @@
       "Electric"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     "abilities": [
       {
         "name": "lightning rod",
@@ -259,13 +259,13 @@
     ]
   },
   "mega-raichu-x": {
-    "id": 26,
+    "id": 10304,
     "name": "Mega Raichu X",
     "types": [
       "Electric"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026-mx.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10304.png",
     "abilities": [
       {
         "name": "electric surge",
@@ -274,13 +274,13 @@
     ]
   },
   "mega-raichu-y": {
-    "id": 26,
+    "id": 10305,
     "name": "Mega Raichu Y",
     "types": [
       "Electric"
     ],
     "speed": 130,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/026-my.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10305.png",
     "abilities": [
       {
         "name": "no guard",
@@ -295,7 +295,7 @@
       "Fairy"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/036.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
     "abilities": [
       {
         "name": "cute charm",
@@ -312,14 +312,14 @@
     ]
   },
   "mega-clefable": {
-    "id": 36,
+    "id": 10278,
     "name": "Mega Clefable",
     "types": [
       "Fairy",
       "Flying"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/036-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10278.png",
     "abilities": [
       {
         "name": "magic bounce",
@@ -334,7 +334,7 @@
       "Fire"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/038.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
     "abilities": [
       {
         "name": "drought",
@@ -354,7 +354,7 @@
       "Poison"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/045.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
     "abilities": [
       {
         "name": "chlorophyll",
@@ -373,7 +373,7 @@
       "Fire"
     ],
     "speed": 95,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/059.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
     "abilities": [
       {
         "name": "flash fire",
@@ -396,7 +396,7 @@
       "Psychic"
     ],
     "speed": 120,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/065.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -413,13 +413,13 @@
     ]
   },
   "mega-alakazam": {
-    "id": 65,
+    "id": 10037,
     "name": "Mega Alakazam",
     "types": [
       "Psychic"
     ],
     "speed": 150,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/065-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10037.png",
     "abilities": [
       {
         "name": "trace",
@@ -434,7 +434,7 @@
       "Fighting"
     ],
     "speed": 55,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/068.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
     "abilities": [
       {
         "name": "guts",
@@ -458,7 +458,7 @@
       "Poison"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/071.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
     "abilities": [
       {
         "name": "chlorophyll",
@@ -471,14 +471,14 @@
     ]
   },
   "mega-victreebel": {
-    "id": 71,
+    "id": 10279,
     "name": "Mega Victreebel",
     "types": [
       "Grass",
       "Poison"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/071-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10279.png",
     "abilities": [
       {
         "name": "innards out",
@@ -494,7 +494,7 @@
       "Psychic"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/080.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
     "abilities": [
       {
         "name": "oblivious",
@@ -511,14 +511,14 @@
     ]
   },
   "mega-slowbro": {
-    "id": 80,
+    "id": 10071,
     "name": "Mega Slowbro",
     "types": [
       "Water",
       "Psychic"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/080-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
     "abilities": [
       {
         "name": "shell armor",
@@ -534,7 +534,7 @@
       "Poison"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/094.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
     "abilities": [
       {
         "name": "cursed body",
@@ -543,14 +543,14 @@
     ]
   },
   "mega-gengar": {
-    "id": 94,
+    "id": 10038,
     "name": "Mega Gengar",
     "types": [
       "Ghost",
       "Poison"
     ],
     "speed": 130,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/094-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png",
     "abilities": [
       {
         "name": "shadow tag",
@@ -565,7 +565,7 @@
       "Normal"
     ],
     "speed": 90,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/115.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
     "abilities": [
       {
         "name": "early bird",
@@ -582,13 +582,13 @@
     ]
   },
   "mega-kangaskhan": {
-    "id": 115,
+    "id": 10039,
     "name": "Mega Kangaskhan",
     "types": [
       "Normal"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/115-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10039.png",
     "abilities": [
       {
         "name": "parental bond",
@@ -604,7 +604,7 @@
       "Psychic"
     ],
     "speed": 115,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/121.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
     "abilities": [
       {
         "name": "analytic",
@@ -621,14 +621,14 @@
     ]
   },
   "mega-starmie": {
-    "id": 121,
+    "id": 10280,
     "name": "Mega Starmie",
     "types": [
       "Water",
       "Psychic"
     ],
     "speed": 120,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/121-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10280.png",
     "abilities": [
       {
         "name": "huge power",
@@ -643,7 +643,7 @@
       "Bug"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/127.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
     "abilities": [
       {
         "name": "hyper cutter",
@@ -660,14 +660,14 @@
     ]
   },
   "mega-pinsir": {
-    "id": 127,
+    "id": 10040,
     "name": "Mega Pinsir",
     "types": [
       "Bug",
       "Flying"
     ],
     "speed": 105,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/127-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10040.png",
     "abilities": [
       {
         "name": "aerilate",
@@ -682,7 +682,7 @@
       "Normal"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/128.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
     "abilities": [
       {
         "name": "anger point",
@@ -706,7 +706,7 @@
       "Flying"
     ],
     "speed": 81,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/130.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -719,14 +719,14 @@
     ]
   },
   "mega-gyarados": {
-    "id": 130,
+    "id": 10041,
     "name": "Mega Gyarados",
     "types": [
       "Water",
       "Dark"
     ],
     "speed": 81,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/130-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10041.png",
     "abilities": [
       {
         "name": "mold breaker",
@@ -741,7 +741,7 @@
       "Normal"
     ],
     "speed": 48,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/132.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
     "abilities": [
       {
         "name": "imposter",
@@ -760,7 +760,7 @@
       "Water"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/134.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
     "abilities": [
       {
         "name": "hydration",
@@ -779,7 +779,7 @@
       "Electric"
     ],
     "speed": 130,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/135.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
     "abilities": [
       {
         "name": "quick feet",
@@ -798,7 +798,7 @@
       "Fire"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/136.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
     "abilities": [
       {
         "name": "flash fire",
@@ -818,7 +818,7 @@
       "Flying"
     ],
     "speed": 130,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/142.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
     "abilities": [
       {
         "name": "pressure",
@@ -835,14 +835,14 @@
     ]
   },
   "mega-aerodactyl": {
-    "id": 142,
+    "id": 10042,
     "name": "Mega Aerodactyl",
     "types": [
       "Rock",
       "Flying"
     ],
     "speed": 150,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/142-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10042.png",
     "abilities": [
       {
         "name": "tough claws",
@@ -857,7 +857,7 @@
       "Normal"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/143.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
     "abilities": [
       {
         "name": "gluttony",
@@ -881,7 +881,7 @@
       "Flying"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/149.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -894,14 +894,14 @@
     ]
   },
   "mega-dragonite": {
-    "id": 149,
+    "id": 10281,
     "name": "Mega Dragonite",
     "types": [
       "Dragon",
       "Flying"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/149-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10281.png",
     "abilities": [
       {
         "name": "multiscale",
@@ -916,7 +916,7 @@
       "Grass"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/154.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
     "abilities": [
       {
         "name": "leaf guard",
@@ -929,14 +929,14 @@
     ]
   },
   "mega-meganium": {
-    "id": 154,
+    "id": 10282,
     "name": "Mega Meganium",
     "types": [
       "Grass",
       "Fairy"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/154-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10282.png",
     "abilities": [
       {
         "name": "mega sol",
@@ -951,7 +951,7 @@
       "Fire"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/157.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
     "abilities": [
       {
         "name": "blaze",
@@ -970,7 +970,7 @@
       "Water"
     ],
     "speed": 78,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/160.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
     "abilities": [
       {
         "name": "sheer force",
@@ -983,14 +983,14 @@
     ]
   },
   "mega-feraligatr": {
-    "id": 160,
+    "id": 10283,
     "name": "Mega Feraligatr",
     "types": [
       "Water",
       "Dragon"
     ],
     "speed": 78,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/160-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10283.png",
     "abilities": [
       {
         "name": "dragonize",
@@ -1006,7 +1006,7 @@
       "Poison"
     ],
     "speed": 40,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/168.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png",
     "abilities": [
       {
         "name": "insomnia",
@@ -1029,7 +1029,7 @@
       "Electric"
     ],
     "speed": 55,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/181.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
     "abilities": [
       {
         "name": "plus",
@@ -1042,14 +1042,14 @@
     ]
   },
   "mega-ampharos": {
-    "id": 181,
+    "id": 10045,
     "name": "Mega Ampharos",
     "types": [
       "Electric",
       "Dragon"
     ],
     "speed": 45,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/181-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10045.png",
     "abilities": [
       {
         "name": "mold breaker",
@@ -1065,7 +1065,7 @@
       "Fairy"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/184.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png",
     "abilities": [
       {
         "name": "huge power",
@@ -1088,7 +1088,7 @@
       "Water"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/186.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png",
     "abilities": [
       {
         "name": "damp",
@@ -1111,7 +1111,7 @@
       "Psychic"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/196.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
     "abilities": [
       {
         "name": "magic bounce",
@@ -1130,7 +1130,7 @@
       "Dark"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/197.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -1150,7 +1150,7 @@
       "Psychic"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/199.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
     "abilities": [
       {
         "name": "oblivious",
@@ -1174,7 +1174,7 @@
       "Steel"
     ],
     "speed": 40,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/205.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png",
     "abilities": [
       {
         "name": "overcoat",
@@ -1194,7 +1194,7 @@
       "Ground"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/208.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
     "abilities": [
       {
         "name": "rock head",
@@ -1211,14 +1211,14 @@
     ]
   },
   "mega-steelix": {
-    "id": 208,
+    "id": 10072,
     "name": "Mega Steelix",
     "types": [
       "Steel",
       "Ground"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/208-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
     "abilities": [
       {
         "name": "sand force",
@@ -1234,7 +1234,7 @@
       "Poison"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/211.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -1258,7 +1258,7 @@
       "Steel"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/212.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png",
     "abilities": [
       {
         "name": "light metal",
@@ -1275,14 +1275,14 @@
     ]
   },
   "mega-scizor": {
-    "id": 212,
+    "id": 10046,
     "name": "Mega Scizor",
     "types": [
       "Bug",
       "Steel"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/212-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10046.png",
     "abilities": [
       {
         "name": "technician",
@@ -1298,7 +1298,7 @@
       "Fighting"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/214.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png",
     "abilities": [
       {
         "name": "guts",
@@ -1315,14 +1315,14 @@
     ]
   },
   "mega-heracross": {
-    "id": 214,
+    "id": 10047,
     "name": "Mega Heracross",
     "types": [
       "Bug",
       "Fighting"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/214-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10047.png",
     "abilities": [
       {
         "name": "skill link",
@@ -1338,7 +1338,7 @@
       "Flying"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/227.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
     "abilities": [
       {
         "name": "keen eye",
@@ -1355,14 +1355,14 @@
     ]
   },
   "mega-skarmory": {
-    "id": 227,
+    "id": 10284,
     "name": "Mega Skarmory",
     "types": [
       "Steel",
       "Flying"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/227-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10284.png",
     "abilities": [
       {
         "name": "stalwart",
@@ -1378,7 +1378,7 @@
       "Fire"
     ],
     "speed": 95,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/229.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
     "abilities": [
       {
         "name": "early bird",
@@ -1395,14 +1395,14 @@
     ]
   },
   "mega-houndoom": {
-    "id": 229,
+    "id": 10048,
     "name": "Mega Houndoom",
     "types": [
       "Dark",
       "Fire"
     ],
     "speed": 115,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/229-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10048.png",
     "abilities": [
       {
         "name": "solar power",
@@ -1418,7 +1418,7 @@
       "Dark"
     ],
     "speed": 61,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/248.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
     "abilities": [
       {
         "name": "sand stream",
@@ -1431,14 +1431,14 @@
     ]
   },
   "mega-tyranitar": {
-    "id": 248,
+    "id": 10049,
     "name": "Mega Tyranitar",
     "types": [
       "Rock",
       "Dark"
     ],
     "speed": 71,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/248-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10049.png",
     "abilities": [
       {
         "name": "sand stream",
@@ -1453,7 +1453,7 @@
       "Grass"
     ],
     "speed": 120,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/254.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
     "abilities": [
       {
         "name": "overgrow",
@@ -1466,14 +1466,14 @@
     ]
   },
   "mega-sceptile": {
-    "id": 254,
+    "id": 10065,
     "name": "Mega Sceptile",
     "types": [
       "Grass",
       "Dragon"
     ],
     "speed": 145,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/254-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10065.png",
     "abilities": [
       {
         "name": "lightning rod",
@@ -1489,7 +1489,7 @@
       "Fighting"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/257.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png",
     "abilities": [
       {
         "name": "blaze",
@@ -1502,14 +1502,14 @@
     ]
   },
   "mega-blaziken": {
-    "id": 257,
+    "id": 10050,
     "name": "Mega Blaziken",
     "types": [
       "Fire",
       "Fighting"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/257-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10050.png",
     "abilities": [
       {
         "name": "speed boost",
@@ -1525,7 +1525,7 @@
       "Ground"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/260.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png",
     "abilities": [
       {
         "name": "damp",
@@ -1538,14 +1538,14 @@
     ]
   },
   "mega-swampert": {
-    "id": 260,
+    "id": 10064,
     "name": "Mega Swampert",
     "types": [
       "Water",
       "Ground"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/260-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10064.png",
     "abilities": [
       {
         "name": "swift swim",
@@ -1561,7 +1561,7 @@
       "Flying"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/279.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png",
     "abilities": [
       {
         "name": "drizzle",
@@ -1585,7 +1585,7 @@
       "Fairy"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/282.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png",
     "abilities": [
       {
         "name": "synchronize",
@@ -1602,14 +1602,14 @@
     ]
   },
   "mega-gardevoir": {
-    "id": 282,
+    "id": 10051,
     "name": "Mega Gardevoir",
     "types": [
       "Psychic",
       "Fairy"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/282-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10051.png",
     "abilities": [
       {
         "name": "pixilate",
@@ -1625,7 +1625,7 @@
       "Ghost"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/302.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/302.png",
     "abilities": [
       {
         "name": "keen eye",
@@ -1642,14 +1642,14 @@
     ]
   },
   "mega-sableye": {
-    "id": 302,
+    "id": 10066,
     "name": "Mega Sableye",
     "types": [
       "Dark",
       "Ghost"
     ],
     "speed": 20,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/302-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10066.png",
     "abilities": [
       {
         "name": "magic bounce",
@@ -1665,7 +1665,7 @@
       "Fairy"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/303.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/303.png",
     "abilities": [
       {
         "name": "hyper cutter",
@@ -1682,14 +1682,14 @@
     ]
   },
   "mega-mawile": {
-    "id": 303,
+    "id": 10052,
     "name": "Mega Mawile",
     "types": [
       "Steel",
       "Fairy"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/303-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10052.png",
     "abilities": [
       {
         "name": "huge power",
@@ -1705,7 +1705,7 @@
       "Rock"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/306.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png",
     "abilities": [
       {
         "name": "heavy metal",
@@ -1722,13 +1722,13 @@
     ]
   },
   "mega-aggron": {
-    "id": 306,
+    "id": 10053,
     "name": "Mega Aggron",
     "types": [
       "Steel"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/306-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10053.png",
     "abilities": [
       {
         "name": "filter",
@@ -1744,7 +1744,7 @@
       "Psychic"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/308.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png",
     "abilities": [
       {
         "name": "pure power",
@@ -1757,14 +1757,14 @@
     ]
   },
   "mega-medicham": {
-    "id": 308,
+    "id": 10054,
     "name": "Mega Medicham",
     "types": [
       "Fighting",
       "Psychic"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/308-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10054.png",
     "abilities": [
       {
         "name": "pure power",
@@ -1779,7 +1779,7 @@
       "Electric"
     ],
     "speed": 105,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/310.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png",
     "abilities": [
       {
         "name": "lightning rod",
@@ -1796,13 +1796,13 @@
     ]
   },
   "mega-manectric": {
-    "id": 310,
+    "id": 10055,
     "name": "Mega Manectric",
     "types": [
       "Electric"
     ],
     "speed": 135,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/310-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10055.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -1818,7 +1818,7 @@
       "Dark"
     ],
     "speed": 95,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/319.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/319.png",
     "abilities": [
       {
         "name": "rough skin",
@@ -1831,14 +1831,14 @@
     ]
   },
   "mega-sharpedo": {
-    "id": 319,
+    "id": 10070,
     "name": "Mega Sharpedo",
     "types": [
       "Water",
       "Dark"
     ],
     "speed": 105,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/319-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
     "abilities": [
       {
         "name": "strong jaw",
@@ -1854,7 +1854,7 @@
       "Ground"
     ],
     "speed": 40,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/323.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/323.png",
     "abilities": [
       {
         "name": "anger point",
@@ -1871,14 +1871,14 @@
     ]
   },
   "mega-camerupt": {
-    "id": 323,
+    "id": 10087,
     "name": "Mega Camerupt",
     "types": [
       "Fire",
       "Ground"
     ],
     "speed": 20,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/323-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10087.png",
     "abilities": [
       {
         "name": "sheer force",
@@ -1893,7 +1893,7 @@
       "Fire"
     ],
     "speed": 20,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/324.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png",
     "abilities": [
       {
         "name": "drought",
@@ -1917,7 +1917,7 @@
       "Flying"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/334.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
     "abilities": [
       {
         "name": "cloud nine",
@@ -1930,14 +1930,14 @@
     ]
   },
   "mega-altaria": {
-    "id": 334,
+    "id": 10067,
     "name": "Mega Altaria",
     "types": [
       "Dragon",
       "Fairy"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/334-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10067.png",
     "abilities": [
       {
         "name": "pixilate",
@@ -1952,7 +1952,7 @@
       "Water"
     ],
     "speed": 81,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/350.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/350.png",
     "abilities": [
       {
         "name": "competitive",
@@ -1975,7 +1975,7 @@
       "Normal"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/351.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/351.png",
     "abilities": [
       {
         "name": "forecast",
@@ -1990,7 +1990,7 @@
       "Ghost"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/354.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/354.png",
     "abilities": [
       {
         "name": "cursed body",
@@ -2007,13 +2007,13 @@
     ]
   },
   "mega-banette": {
-    "id": 354,
+    "id": 10056,
     "name": "Mega Banette",
     "types": [
       "Ghost"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/354-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10056.png",
     "abilities": [
       {
         "name": "prankster",
@@ -2028,7 +2028,7 @@
       "Psychic"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/358.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2037,14 +2037,14 @@
     ]
   },
   "mega-chimecho": {
-    "id": 358,
+    "id": 10306,
     "name": "Mega Chimecho",
     "types": [
       "Psychic",
       "Steel"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/358-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10306.png",
     "abilities": [
       {
         "name": "levitate",
@@ -2059,7 +2059,7 @@
       "Dark"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/359.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png",
     "abilities": [
       {
         "name": "justified",
@@ -2076,13 +2076,13 @@
     ]
   },
   "mega-absol": {
-    "id": 359,
+    "id": 10057,
     "name": "Mega Absol",
     "types": [
       "Dark"
     ],
     "speed": 115,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/359-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10057.png",
     "abilities": [
       {
         "name": "magic bounce",
@@ -2097,7 +2097,7 @@
       "Ice"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/362.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png",
     "abilities": [
       {
         "name": "ice body",
@@ -2114,13 +2114,13 @@
     ]
   },
   "mega-glalie": {
-    "id": 362,
+    "id": 10074,
     "name": "Mega Glalie",
     "types": [
       "Ice"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/362-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10074.png",
     "abilities": [
       {
         "name": "refrigerate",
@@ -2136,7 +2136,7 @@
       "Psychic"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/376.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png",
     "abilities": [
       {
         "name": "clear body",
@@ -2149,14 +2149,14 @@
     ]
   },
   "mega-metagross": {
-    "id": 376,
+    "id": 10076,
     "name": "Mega Metagross",
     "types": [
       "Steel",
       "Psychic"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/376-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10076.png",
     "abilities": [
       {
         "name": "tough claws",
@@ -2172,7 +2172,7 @@
       "Ground"
     ],
     "speed": 56,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/389.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png",
     "abilities": [
       {
         "name": "overgrow",
@@ -2192,7 +2192,7 @@
       "Fighting"
     ],
     "speed": 108,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/392.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png",
     "abilities": [
       {
         "name": "blaze",
@@ -2212,7 +2212,7 @@
       "Steel"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/395.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png",
     "abilities": [
       {
         "name": "competitive",
@@ -2232,7 +2232,7 @@
       "Flying"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/398.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -2245,14 +2245,14 @@
     ]
   },
   "mega-staraptor": {
-    "id": 398,
+    "id": 10308,
     "name": "Mega Staraptor",
     "types": [
       "Fighting",
       "Flying"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/398-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10308.png",
     "abilities": [
       {
         "name": "contrary",
@@ -2267,7 +2267,7 @@
       "Electric"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/405.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png",
     "abilities": [
       {
         "name": "guts",
@@ -2291,7 +2291,7 @@
       "Poison"
     ],
     "speed": 90,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/407.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png",
     "abilities": [
       {
         "name": "natural cure",
@@ -2314,7 +2314,7 @@
       "Rock"
     ],
     "speed": 58,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/409.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png",
     "abilities": [
       {
         "name": "mold breaker",
@@ -2334,7 +2334,7 @@
       "Steel"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/411.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/411.png",
     "abilities": [
       {
         "name": "soundproof",
@@ -2353,7 +2353,7 @@
       "Normal"
     ],
     "speed": 105,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/428.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png",
     "abilities": [
       {
         "name": "cute charm",
@@ -2370,14 +2370,14 @@
     ]
   },
   "mega-lopunny": {
-    "id": 428,
+    "id": 10088,
     "name": "Mega Lopunny",
     "types": [
       "Normal",
       "Fighting"
     ],
     "speed": 135,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/428-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10088.png",
     "abilities": [
       {
         "name": "scrappy",
@@ -2393,7 +2393,7 @@
       "Dark"
     ],
     "speed": 35,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/442.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png",
     "abilities": [
       {
         "name": "infiltrator",
@@ -2413,7 +2413,7 @@
       "Ground"
     ],
     "speed": 102,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/445.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png",
     "abilities": [
       {
         "name": "rough skin",
@@ -2426,14 +2426,14 @@
     ]
   },
   "mega-garchomp": {
-    "id": 445,
+    "id": 10058,
     "name": "Mega Garchomp",
     "types": [
       "Dragon",
       "Ground"
     ],
     "speed": 92,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/445-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10058.png",
     "abilities": [
       {
         "name": "sand force",
@@ -2449,7 +2449,7 @@
       "Steel"
     ],
     "speed": 90,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/448.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -2466,14 +2466,14 @@
     ]
   },
   "mega-lucario": {
-    "id": 448,
+    "id": 10059,
     "name": "Mega Lucario",
     "types": [
       "Fighting",
       "Steel"
     ],
     "speed": 112,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/448-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10059.png",
     "abilities": [
       {
         "name": "adaptability",
@@ -2488,7 +2488,7 @@
       "Ground"
     ],
     "speed": 47,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/450.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png",
     "abilities": [
       {
         "name": "sand force",
@@ -2508,7 +2508,7 @@
       "Fighting"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/454.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/454.png",
     "abilities": [
       {
         "name": "anticipation",
@@ -2532,7 +2532,7 @@
       "Ice"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/460.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png",
     "abilities": [
       {
         "name": "snow warning",
@@ -2545,14 +2545,14 @@
     ]
   },
   "mega-abomasnow": {
-    "id": 460,
+    "id": 10060,
     "name": "Mega Abomasnow",
     "types": [
       "Grass",
       "Ice"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/460-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10060.png",
     "abilities": [
       {
         "name": "snow warning",
@@ -2568,7 +2568,7 @@
       "Ice"
     ],
     "speed": 125,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/461.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png",
     "abilities": [
       {
         "name": "pickpocket",
@@ -2588,7 +2588,7 @@
       "Rock"
     ],
     "speed": 40,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/464.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png",
     "abilities": [
       {
         "name": "lightning rod",
@@ -2611,7 +2611,7 @@
       "Grass"
     ],
     "speed": 95,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/470.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png",
     "abilities": [
       {
         "name": "chlorophyll",
@@ -2630,7 +2630,7 @@
       "Ice"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/471.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png",
     "abilities": [
       {
         "name": "ice body",
@@ -2650,7 +2650,7 @@
       "Flying"
     ],
     "speed": 95,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/472.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png",
     "abilities": [
       {
         "name": "hyper cutter",
@@ -2674,7 +2674,7 @@
       "Ground"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/473.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
     "abilities": [
       {
         "name": "oblivious",
@@ -2698,7 +2698,7 @@
       "Fighting"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/475.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png",
     "abilities": [
       {
         "name": "justified",
@@ -2715,14 +2715,14 @@
     ]
   },
   "mega-gallade": {
-    "id": 475,
+    "id": 10068,
     "name": "Mega Gallade",
     "types": [
       "Psychic",
       "Fighting"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/475-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -2738,7 +2738,7 @@
       "Ghost"
     ],
     "speed": 110,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/478.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/478.png",
     "abilities": [
       {
         "name": "cursed body",
@@ -2751,14 +2751,14 @@
     ]
   },
   "mega-froslass": {
-    "id": 478,
+    "id": 10285,
     "name": "Mega Froslass",
     "types": [
       "Ice",
       "Ghost"
     ],
     "speed": 120,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/478-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10285.png",
     "abilities": [
       {
         "name": "snow warning",
@@ -2853,7 +2853,7 @@
       "Grass"
     ],
     "speed": 113,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/497.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/497.png",
     "abilities": [
       {
         "name": "contrary",
@@ -2873,7 +2873,7 @@
       "Fighting"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/500.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png",
     "abilities": [
       {
         "name": "blaze",
@@ -2886,14 +2886,14 @@
     ]
   },
   "mega-emboar": {
-    "id": 500,
+    "id": 10286,
     "name": "Mega Emboar",
     "types": [
       "Fire",
       "Fighting"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/500-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10286.png",
     "abilities": [
       {
         "name": "mold breaker",
@@ -2908,7 +2908,7 @@
       "Water"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/503.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/503.png",
     "abilities": [
       {
         "name": "shell armor",
@@ -2927,7 +2927,7 @@
       "Normal"
     ],
     "speed": 77,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/505.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png",
     "abilities": [
       {
         "name": "analytic",
@@ -2950,7 +2950,7 @@
       "Dark"
     ],
     "speed": 106,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/510.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/510.png",
     "abilities": [
       {
         "name": "limber",
@@ -2973,7 +2973,7 @@
       "Grass"
     ],
     "speed": 101,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/512.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png",
     "abilities": [
       {
         "name": "gluttony",
@@ -2992,7 +2992,7 @@
       "Fire"
     ],
     "speed": 101,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/514.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/514.png",
     "abilities": [
       {
         "name": "blaze",
@@ -3011,7 +3011,7 @@
       "Water"
     ],
     "speed": 101,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/516.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/516.png",
     "abilities": [
       {
         "name": "gluttony",
@@ -3030,7 +3030,7 @@
       "Psychic"
     ],
     "speed": 29,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/518.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/518.png",
     "abilities": [
       {
         "name": "forewarn",
@@ -3054,7 +3054,7 @@
       "Steel"
     ],
     "speed": 88,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/530.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
     "abilities": [
       {
         "name": "mold breaker",
@@ -3071,14 +3071,14 @@
     ]
   },
   "mega-excadrill": {
-    "id": 530,
+    "id": 10287,
     "name": "Mega Excadrill",
     "types": [
       "Ground",
       "Steel"
     ],
     "speed": 103,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/530-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10287.png",
     "abilities": [
       {
         "name": "piercing drill",
@@ -3093,7 +3093,7 @@
       "Normal"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/531.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/531.png",
     "abilities": [
       {
         "name": "healer",
@@ -3110,14 +3110,14 @@
     ]
   },
   "mega-audino": {
-    "id": 531,
+    "id": 10069,
     "name": "Mega Audino",
     "types": [
       "Normal",
       "Fairy"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/531-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
     "abilities": [
       {
         "name": "healer",
@@ -3132,7 +3132,7 @@
       "Fighting"
     ],
     "speed": 45,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/534.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/534.png",
     "abilities": [
       {
         "name": "guts",
@@ -3156,7 +3156,7 @@
       "Poison"
     ],
     "speed": 112,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/545.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/545.png",
     "abilities": [
       {
         "name": "poison point",
@@ -3173,14 +3173,14 @@
     ]
   },
   "mega-scolipede": {
-    "id": 545,
+    "id": 10288,
     "name": "Mega Scolipede",
     "types": [
       "Bug",
       "Poison"
     ],
     "speed": 62,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/545-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10288.png",
     "abilities": [
       {
         "name": "shell armor",
@@ -3196,7 +3196,7 @@
       "Fairy"
     ],
     "speed": 116,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/547.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png",
     "abilities": [
       {
         "name": "chlorophyll",
@@ -3220,7 +3220,7 @@
       "Dark"
     ],
     "speed": 92,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/553.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/553.png",
     "abilities": [
       {
         "name": "anger point",
@@ -3244,7 +3244,7 @@
       "Fighting"
     ],
     "speed": 58,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/560.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/560.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -3261,14 +3261,14 @@
     ]
   },
   "mega-scrafty": {
-    "id": 560,
+    "id": 10289,
     "name": "Mega Scrafty",
     "types": [
       "Dark",
       "Fighting"
     ],
     "speed": 68,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/560-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10289.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -3283,7 +3283,7 @@
       "Ghost"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/563.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png",
     "abilities": [
       {
         "name": "mummy",
@@ -3298,7 +3298,7 @@
       "Poison"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/569.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png",
     "abilities": [
       {
         "name": "aftermath",
@@ -3321,7 +3321,7 @@
       "Dark"
     ],
     "speed": 105,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/571.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/571.png",
     "abilities": [
       {
         "name": "illusion",
@@ -3336,7 +3336,7 @@
       "Psychic"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/579.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/579.png",
     "abilities": [
       {
         "name": "magic guard",
@@ -3359,7 +3359,7 @@
       "Ice"
     ],
     "speed": 79,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/584.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/584.png",
     "abilities": [
       {
         "name": "ice body",
@@ -3383,7 +3383,7 @@
       "Flying"
     ],
     "speed": 103,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/587.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/587.png",
     "abilities": [
       {
         "name": "motor drive",
@@ -3402,7 +3402,7 @@
       "Electric"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/604.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png",
     "abilities": [
       {
         "name": "levitate",
@@ -3411,13 +3411,13 @@
     ]
   },
   "mega-eelektross": {
-    "id": 604,
+    "id": 10290,
     "name": "Mega Eelektross",
     "types": [
       "Electric"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/604-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10290.png",
     "abilities": [
       {
         "name": "eelevate",
@@ -3433,7 +3433,7 @@
       "Fire"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/609.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
     "abilities": [
       {
         "name": "flame body",
@@ -3450,14 +3450,14 @@
     ]
   },
   "mega-chandelure": {
-    "id": 609,
+    "id": 10291,
     "name": "Mega Chandelure",
     "types": [
       "Ghost",
       "Fire"
     ],
     "speed": 90,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/609-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10291.png",
     "abilities": [
       {
         "name": "infiltrator",
@@ -3472,7 +3472,7 @@
       "Ice"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/614.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/614.png",
     "abilities": [
       {
         "name": "slush rush",
@@ -3496,7 +3496,7 @@
       "Electric"
     ],
     "speed": 32,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/618.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/618.png",
     "abilities": [
       {
         "name": "limber",
@@ -3520,7 +3520,7 @@
       "Ghost"
     ],
     "speed": 55,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/623.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png",
     "abilities": [
       {
         "name": "iron fist",
@@ -3537,14 +3537,14 @@
     ]
   },
   "mega-golurk": {
-    "id": 623,
+    "id": 10313,
     "name": "Mega Golurk",
     "types": [
       "Ground",
       "Ghost"
     ],
     "speed": 55,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/623-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10313.png",
     "abilities": [
       {
         "name": "unseen fist",
@@ -3560,7 +3560,7 @@
       "Dragon"
     ],
     "speed": 98,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/635.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png",
     "abilities": [
       {
         "name": "levitate",
@@ -3576,7 +3576,7 @@
       "Fire"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/637.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
     "abilities": [
       {
         "name": "flame body",
@@ -3596,7 +3596,7 @@
       "Fighting"
     ],
     "speed": 64,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/652.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png",
     "abilities": [
       {
         "name": "bulletproof",
@@ -3609,14 +3609,14 @@
     ]
   },
   "mega-chesnaught": {
-    "id": 652,
+    "id": 10292,
     "name": "Mega Chesnaught",
     "types": [
       "Grass",
       "Fighting"
     ],
     "speed": 44,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/652-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10292.png",
     "abilities": [
       {
         "name": "bulletproof",
@@ -3632,7 +3632,7 @@
       "Psychic"
     ],
     "speed": 104,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/655.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png",
     "abilities": [
       {
         "name": "blaze",
@@ -3645,14 +3645,14 @@
     ]
   },
   "mega-delphox": {
-    "id": 655,
+    "id": 10293,
     "name": "Mega Delphox",
     "types": [
       "Fire",
       "Psychic"
     ],
     "speed": 134,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/655-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10293.png",
     "abilities": [
       {
         "name": "levitate",
@@ -3668,7 +3668,7 @@
       "Dark"
     ],
     "speed": 122,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/658.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png",
     "abilities": [
       {
         "name": "protean",
@@ -3681,14 +3681,14 @@
     ]
   },
   "mega-greninja": {
-    "id": 658,
+    "id": 10294,
     "name": "Mega Greninja",
     "types": [
       "Water",
       "Dark"
     ],
     "speed": 142,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/658-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10294.png",
     "abilities": [
       {
         "name": "protean",
@@ -3704,7 +3704,7 @@
       "Ground"
     ],
     "speed": 78,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/660.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png",
     "abilities": [
       {
         "name": "cheek pouch",
@@ -3728,7 +3728,7 @@
       "Flying"
     ],
     "speed": 126,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/663.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/663.png",
     "abilities": [
       {
         "name": "flame body",
@@ -3748,7 +3748,7 @@
       "Flying"
     ],
     "speed": 89,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/666.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png",
     "abilities": [
       {
         "name": "compound eyes",
@@ -3772,7 +3772,7 @@
       "Normal"
     ],
     "speed": 106,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/668.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png",
     "abilities": [
       {
         "name": "rivalry",
@@ -3789,14 +3789,14 @@
     ]
   },
   "mega-pyroar": {
-    "id": 668,
+    "id": 10295,
     "name": "Mega Pyroar",
     "types": [
       "Fire",
       "Normal"
     ],
     "speed": 126,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/668-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
     "abilities": [
       {
         "name": "fire mane",
@@ -3811,7 +3811,7 @@
       "Fairy"
     ],
     "speed": 52,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/670-e.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/670.png",
     "abilities": [
       {
         "name": "flower veil",
@@ -3824,13 +3824,13 @@
     ]
   },
   "mega-floette": {
-    "id": 670,
+    "id": 10296,
     "name": "Mega Floette",
     "types": [
       "Fairy"
     ],
     "speed": 102,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/670-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10296.png",
     "abilities": [
       {
         "name": "fairy aura",
@@ -3845,7 +3845,7 @@
       "Fairy"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/671.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/671.png",
     "abilities": [
       {
         "name": "flower veil",
@@ -3865,7 +3865,7 @@
       "Dark"
     ],
     "speed": 58,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/675.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/675.png",
     "abilities": [
       {
         "name": "iron fist",
@@ -3888,7 +3888,7 @@
       "Normal"
     ],
     "speed": 102,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/676.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/676.png",
     "abilities": [
       {
         "name": "fur coat",
@@ -3903,7 +3903,7 @@
       "Psychic"
     ],
     "speed": 104,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/678.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png",
     "abilities": [
       {
         "name": "keen eye",
@@ -3927,7 +3927,7 @@
       "Ghost"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/681.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png",
     "abilities": [
       {
         "name": "stance change",
@@ -3942,7 +3942,7 @@
       "Fairy"
     ],
     "speed": 29,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/683.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png",
     "abilities": [
       {
         "name": "aroma veil",
@@ -3961,7 +3961,7 @@
       "Fairy"
     ],
     "speed": 72,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/685.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/685.png",
     "abilities": [
       {
         "name": "sweet veil",
@@ -3981,7 +3981,7 @@
       "Psychic"
     ],
     "speed": 73,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/687.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/687.png",
     "abilities": [
       {
         "name": "contrary",
@@ -3998,14 +3998,14 @@
     ]
   },
   "mega-malamar": {
-    "id": 687,
+    "id": 10297,
     "name": "Mega Malamar",
     "types": [
       "Dark",
       "Psychic"
     ],
     "speed": 88,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/687-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10297.png",
     "abilities": [
       {
         "name": "contrary",
@@ -4021,7 +4021,7 @@
       "Water"
     ],
     "speed": 68,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/689.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png",
     "abilities": [
       {
         "name": "pickpocket",
@@ -4038,14 +4038,14 @@
     ]
   },
   "mega-barbaracle": {
-    "id": 689,
+    "id": 10298,
     "name": "Mega Barbaracle",
     "types": [
       "Rock",
       "Fighting"
     ],
     "speed": 88,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/689-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10298.png",
     "abilities": [
       {
         "name": "tough claws",
@@ -4061,7 +4061,7 @@
       "Dragon"
     ],
     "speed": 44,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/691.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png",
     "abilities": [
       {
         "name": "adaptability",
@@ -4078,14 +4078,14 @@
     ]
   },
   "mega-dragalge": {
-    "id": 691,
+    "id": 10299,
     "name": "Mega Dragalge",
     "types": [
       "Poison",
       "Dragon"
     ],
     "speed": 44,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/691-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10299.png",
     "abilities": [
       {
         "name": "regenerator",
@@ -4100,7 +4100,7 @@
       "Water"
     ],
     "speed": 59,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/693.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/693.png",
     "abilities": [
       {
         "name": "mega launcher",
@@ -4116,7 +4116,7 @@
       "Normal"
     ],
     "speed": 109,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/695.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/695.png",
     "abilities": [
       {
         "name": "dry skin",
@@ -4140,7 +4140,7 @@
       "Dragon"
     ],
     "speed": 71,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/697.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/697.png",
     "abilities": [
       {
         "name": "rock head",
@@ -4160,7 +4160,7 @@
       "Ice"
     ],
     "speed": 58,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/699.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png",
     "abilities": [
       {
         "name": "refrigerate",
@@ -4179,7 +4179,7 @@
       "Fairy"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/700.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png",
     "abilities": [
       {
         "name": "cute charm",
@@ -4199,7 +4199,7 @@
       "Flying"
     ],
     "speed": 118,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/701.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png",
     "abilities": [
       {
         "name": "limber",
@@ -4216,14 +4216,14 @@
     ]
   },
   "mega-hawlucha": {
-    "id": 701,
+    "id": 10300,
     "name": "Mega Hawlucha",
     "types": [
       "Fighting",
       "Flying"
     ],
     "speed": 118,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/701-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10300.png",
     "abilities": [
       {
         "name": "no guard",
@@ -4239,7 +4239,7 @@
       "Fairy"
     ],
     "speed": 101,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/702.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/702.png",
     "abilities": [
       {
         "name": "cheek pouch",
@@ -4262,7 +4262,7 @@
       "Dragon"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/706.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/706.png",
     "abilities": [
       {
         "name": "gooey",
@@ -4286,7 +4286,7 @@
       "Fairy"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/707.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png",
     "abilities": [
       {
         "name": "magician",
@@ -4306,7 +4306,7 @@
       "Grass"
     ],
     "speed": 56,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/709.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png",
     "abilities": [
       {
         "name": "frisk",
@@ -4330,7 +4330,7 @@
       "Grass"
     ],
     "speed": 84,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/711.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png",
     "abilities": [
       {
         "name": "pickup",
@@ -4353,7 +4353,7 @@
       "Ice"
     ],
     "speed": 28,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/713.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/713.png",
     "abilities": [
       {
         "name": "ice body",
@@ -4377,7 +4377,7 @@
       "Dragon"
     ],
     "speed": 123,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/715.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/715.png",
     "abilities": [
       {
         "name": "frisk",
@@ -4401,7 +4401,7 @@
       "Ghost"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/724.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/724.png",
     "abilities": [
       {
         "name": "long reach",
@@ -4421,7 +4421,7 @@
       "Dark"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/727.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/727.png",
     "abilities": [
       {
         "name": "blaze",
@@ -4441,7 +4441,7 @@
       "Fairy"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/730.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/730.png",
     "abilities": [
       {
         "name": "liquid voice",
@@ -4461,7 +4461,7 @@
       "Flying"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/733.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/733.png",
     "abilities": [
       {
         "name": "keen eye",
@@ -4485,7 +4485,7 @@
       "Ice"
     ],
     "speed": 43,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/740.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
     "abilities": [
       {
         "name": "anger point",
@@ -4502,14 +4502,14 @@
     ]
   },
   "mega-crabominable": {
-    "id": 740,
+    "id": 10315,
     "name": "Mega Crabominable",
     "types": [
       "Fighting",
       "Ice"
     ],
     "speed": 33,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/740-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10315.png",
     "abilities": [
       {
         "name": "iron fist",
@@ -4524,7 +4524,7 @@
       "Rock"
     ],
     "speed": 112,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/745.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
     "abilities": [
       {
         "name": "keen eye",
@@ -4548,7 +4548,7 @@
       "Water"
     ],
     "speed": 35,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/748.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/748.png",
     "abilities": [
       {
         "name": "limber",
@@ -4571,7 +4571,7 @@
       "Ground"
     ],
     "speed": 35,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/750.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/750.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -4595,7 +4595,7 @@
       "Bug"
     ],
     "speed": 42,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/752.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/752.png",
     "abilities": [
       {
         "name": "water absorb",
@@ -4615,7 +4615,7 @@
       "Fire"
     ],
     "speed": 117,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/758.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/758.png",
     "abilities": [
       {
         "name": "corrosion",
@@ -4634,7 +4634,7 @@
       "Grass"
     ],
     "speed": 72,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/763.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/763.png",
     "abilities": [
       {
         "name": "leaf guard",
@@ -4658,7 +4658,7 @@
       "Psychic"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/765.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/765.png",
     "abilities": [
       {
         "name": "inner focus",
@@ -4681,7 +4681,7 @@
       "Fighting"
     ],
     "speed": 80,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/766.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/766.png",
     "abilities": [
       {
         "name": "defiant",
@@ -4701,7 +4701,7 @@
       "Fairy"
     ],
     "speed": 96,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/778.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png",
     "abilities": [
       {
         "name": "disguise",
@@ -4717,7 +4717,7 @@
       "Dragon"
     ],
     "speed": 36,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/780.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/780.png",
     "abilities": [
       {
         "name": "berserk",
@@ -4734,14 +4734,14 @@
     ]
   },
   "mega-drampa": {
-    "id": 780,
+    "id": 10302,
     "name": "Mega Drampa",
     "types": [
       "Normal",
       "Dragon"
     ],
     "speed": 36,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/780-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10302.png",
     "abilities": [
       {
         "name": "berserk",
@@ -4757,7 +4757,7 @@
       "Fighting"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/784.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/784.png",
     "abilities": [
       {
         "name": "bulletproof",
@@ -4781,7 +4781,7 @@
       "Steel"
     ],
     "speed": 67,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/823.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png",
     "abilities": [
       {
         "name": "mirror armor",
@@ -4805,7 +4805,7 @@
       "Dragon"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/841.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/841.png",
     "abilities": [
       {
         "name": "gluttony",
@@ -4829,7 +4829,7 @@
       "Dragon"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/842.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/842.png",
     "abilities": [
       {
         "name": "gluttony",
@@ -4852,7 +4852,7 @@
       "Ground"
     ],
     "speed": 71,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/844.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/844.png",
     "abilities": [
       {
         "name": "sand spit",
@@ -4875,7 +4875,7 @@
       "Ghost"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/855.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/855.png",
     "abilities": [
       {
         "name": "cursed body",
@@ -4895,7 +4895,7 @@
       "Fairy"
     ],
     "speed": 29,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/858.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/858.png",
     "abilities": [
       {
         "name": "anticipation",
@@ -4919,7 +4919,7 @@
       "Fairy"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/861.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/861.png",
     "abilities": [
       {
         "name": "frisk",
@@ -4943,7 +4943,7 @@
       "Psychic"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/866.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/866.png",
     "abilities": [
       {
         "name": "ice body",
@@ -4967,7 +4967,7 @@
       "Ghost"
     ],
     "speed": 30,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/867.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/867.png",
     "abilities": [
       {
         "name": "wandering spirit",
@@ -4982,7 +4982,7 @@
       "Fairy"
     ],
     "speed": 64,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/869.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/869.png",
     "abilities": [
       {
         "name": "aroma veil",
@@ -5001,7 +5001,7 @@
       "Fighting"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/870.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/870.png",
     "abilities": [
       {
         "name": "battle armor",
@@ -5014,13 +5014,13 @@
     ]
   },
   "mega-falinks": {
-    "id": 870,
+    "id": 10303,
     "name": "Mega Falinks",
     "types": [
       "Fighting"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/870-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10303.png",
     "abilities": [
       {
         "name": "defiant",
@@ -5036,7 +5036,7 @@
       "Dark"
     ],
     "speed": 97,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/877.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/877.png",
     "abilities": [
       {
         "name": "hunger switch",
@@ -5052,7 +5052,7 @@
       "Ghost"
     ],
     "speed": 142,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/887.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/887.png",
     "abilities": [
       {
         "name": "clear body",
@@ -5076,7 +5076,7 @@
       "Psychic"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/899.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/899.png",
     "abilities": [
       {
         "name": "frisk",
@@ -5100,7 +5100,7 @@
       "Rock"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/900.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/900.png",
     "abilities": [
       {
         "name": "sharpness",
@@ -5124,7 +5124,7 @@
       "Ghost"
     ],
     "speed": 78,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/902.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/902.png",
     "abilities": [
       {
         "name": "swift swim",
@@ -5148,7 +5148,7 @@
       "Poison"
     ],
     "speed": 120,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/903.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/903.png",
     "abilities": [
       {
         "name": "poison touch",
@@ -5172,7 +5172,7 @@
       "Poison"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/904.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/904.png",
     "abilities": [
       {
         "name": "intimidate",
@@ -5196,7 +5196,7 @@
       "Dark"
     ],
     "speed": 123,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/908.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/908.png",
     "abilities": [
       {
         "name": "overgrow",
@@ -5216,7 +5216,7 @@
       "Ghost"
     ],
     "speed": 66,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/911.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/911.png",
     "abilities": [
       {
         "name": "blaze",
@@ -5236,7 +5236,7 @@
       "Fighting"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/914.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/914.png",
     "abilities": [
       {
         "name": "moxie",
@@ -5255,7 +5255,7 @@
       "Normal"
     ],
     "speed": 111,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/925.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/925.png",
     "abilities": [
       {
         "name": "friend guard",
@@ -5278,7 +5278,7 @@
       "Rock"
     ],
     "speed": 35,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/934.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/934.png",
     "abilities": [
       {
         "name": "clear body",
@@ -5302,7 +5302,7 @@
       "Psychic"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/936.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/936.png",
     "abilities": [
       {
         "name": "flash fire",
@@ -5322,7 +5322,7 @@
       "Ghost"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/937.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/937.png",
     "abilities": [
       {
         "name": "flash fire",
@@ -5341,7 +5341,7 @@
       "Electric"
     ],
     "speed": 45,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/939.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/939.png",
     "abilities": [
       {
         "name": "damp",
@@ -5365,7 +5365,7 @@
       "Fire"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/952.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/952.png",
     "abilities": [
       {
         "name": "chlorophyll",
@@ -5382,14 +5382,14 @@
     ]
   },
   "mega-scovillain": {
-    "id": 952,
+    "id": 10320,
     "name": "Mega Scovillain",
     "types": [
       "Grass",
       "Fire"
     ],
     "speed": 75,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/952-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10320.png",
     "abilities": [
       {
         "name": "spicy spray",
@@ -5404,7 +5404,7 @@
       "Psychic"
     ],
     "speed": 105,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/956.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/956.png",
     "abilities": [
       {
         "name": "frisk",
@@ -5428,7 +5428,7 @@
       "Steel"
     ],
     "speed": 94,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/959.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/959.png",
     "abilities": [
       {
         "name": "mold breaker",
@@ -5451,7 +5451,7 @@
       "Water"
     ],
     "speed": 100,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/964.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/964.png",
     "abilities": [
       {
         "name": "zero to hero",
@@ -5466,7 +5466,7 @@
       "Steel"
     ],
     "speed": 65,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/968.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/968.png",
     "abilities": [
       {
         "name": "earth eater",
@@ -5486,7 +5486,7 @@
       "Poison"
     ],
     "speed": 86,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/970.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/970.png",
     "abilities": [
       {
         "name": "corrosion",
@@ -5499,14 +5499,14 @@
     ]
   },
   "mega-glimmora": {
-    "id": 970,
+    "id": 10321,
     "name": "Mega Glimmora",
     "types": [
       "Rock",
       "Poison"
     ],
     "speed": 101,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/970-m.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10321.png",
     "abilities": [
       {
         "name": "adaptability",
@@ -5521,7 +5521,7 @@
       "Ghost"
     ],
     "speed": 68,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/972.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/972.png",
     "abilities": [
       {
         "name": "fluffy",
@@ -5541,7 +5541,7 @@
       "Ghost"
     ],
     "speed": 90,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/979.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/979.png",
     "abilities": [
       {
         "name": "defiant",
@@ -5565,7 +5565,7 @@
       "Psychic"
     ],
     "speed": 60,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/981.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/981.png",
     "abilities": [
       {
         "name": "armor tail",
@@ -5589,7 +5589,7 @@
       "Steel"
     ],
     "speed": 50,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/983.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/983.png",
     "abilities": [
       {
         "name": "defiant",
@@ -5613,7 +5613,7 @@
       "Ghost"
     ],
     "speed": 84,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1000.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1000.png",
     "abilities": [
       {
         "name": "good as gold",
@@ -5629,7 +5629,7 @@
       "Ghost"
     ],
     "speed": 70,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1013.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png",
     "abilities": [
       {
         "name": "heatproof",
@@ -5649,7 +5649,7 @@
       "Dragon"
     ],
     "speed": 85,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1018.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png",
     "abilities": [
       {
         "name": "stalwart",
@@ -5673,7 +5673,7 @@
       "Dragon"
     ],
     "speed": 44,
-    "sprite": "https://www.serebii.net/pokemonhome/pokemon/small/1019.png",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png",
     "abilities": [
       {
         "name": "regenerator",
