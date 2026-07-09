@@ -1,11 +1,13 @@
-function getSpriteUrl(id: number, _name?: string): string {
-  // Use PokeAPI sprites via raw.githubusercontent.com (allowed by CSP)
-  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+const SPRITE_BASE_URL =
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon';
+
+/** Build the PokeAPI sprite URL for a Pokédex id (raw.githubusercontent.com is allowed by CSP). */
+function getSpriteUrl(id: number): string {
+  return `${SPRITE_BASE_URL}/${id}.png`;
 }
 
-export function getSprite(data: { id: number; name?: string; sprite?: string }): string {
-  if (data.sprite) return data.sprite;
-  return getSpriteUrl(data.id, data.name);
+export function getSprite(data: { id: number; sprite?: string }): string {
+  return data.sprite ?? getSpriteUrl(data.id);
 }
 
 export function formatName(key: string, data: { name?: string }): string {
