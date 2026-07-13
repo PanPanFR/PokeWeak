@@ -1,7 +1,8 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
-import pokemonData from '../data/pokemon.json';
+import { pokemonData } from '../data/pokemonData';
 import TypeIcon from './TypeIcon.jsx';
 import { getSprite, formatName } from '../utils/pokemon';
+import { filterPokemonEntries } from '../utils/pokemonSearch';
 
 const pokemonList = Object.entries(pokemonData);
 
@@ -13,13 +14,11 @@ export default function QuickSearch() {
   const dropdownRef = useRef(null);
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return [];
-    const normalizedQ = q.replace(/\s+/g, '-');
-    return pokemonList
-      .filter(([name]) => name.includes(q) || name.includes(normalizedQ))
-      .slice(0, 30);
+    if (!query.trim()) return [];
+    return filterPokemonEntries(pokemonList, { query, limit: 30 });
   }, [query]);
+
+  const showResults = query.trim() && results.length > 0;
 
   const handleInput = useCallback((e) => {
     setQuery(e.target.value);
@@ -92,6 +91,11 @@ export default function QuickSearch() {
           onInput={handleInput}
           onKeyDown={handleKeyDown}
           aria-label="Search Pokémon by name"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded={showResults ? 'true' : 'false'}
+          aria-controls="quick-search-results"
+          aria-activedescendant={focusedIdx >= 0 ? `quick-search-result-${focusedIdx}` : undefined}
           class="search-input-glow"
           style={{
             width: '100%',
@@ -102,7 +106,6 @@ export default function QuickSearch() {
             color: 'var(--text-primary)',
             fontSize: '16px',
             fontFamily: 'inherit',
-            outline: 'none',
             minHeight: '44px',
           }}
         />
@@ -134,9 +137,12 @@ export default function QuickSearch() {
           </button>
         )}
       </div>
-      {query.trim() && results.length > 0 && (
+      {showResults && (
         <div
           ref={dropdownRef}
+          id="quick-search-results"
+          role="listbox"
+          aria-label="Search results"
           class="scrollbar-thin dropdown-animate"
           style={{
             position: 'absolute',
@@ -155,6 +161,9 @@ export default function QuickSearch() {
             {results.map(([name, data], idx) => (
               <a
                 key={name}
+                id={`quick-search-result-${idx}`}
+                role="option"
+                aria-selected={focusedIdx === idx}
                 href={`/pokemon/${name}`}
                 style={{
                   display: 'flex',

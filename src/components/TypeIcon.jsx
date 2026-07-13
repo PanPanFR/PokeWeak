@@ -1,7 +1,9 @@
+import { getTypeIconSrc } from '../utils/typeIcon';
+
 export default function TypeIcon({ type, size = 20 }) {
   return (
     <img
-      src={`/icons/types/${type.toLowerCase()}.svg`}
+      src={getTypeIconSrc(type)}
       alt={type}
       width={size}
       height={size}

@@ -21,7 +21,7 @@ const isDev = import.meta.env.DEV;
 ---
 
 <!doctype html>
-<html lang="en" style="color-scheme: dark;">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
@@ -63,8 +63,16 @@ const isDev = import.meta.env.DEV;
     <ClientRouter />
     <script is:inline>
       (function() {
+        const getStoredTheme = () => {
+          try {
+            return localStorage.getItem('pokeweak-theme');
+          } catch (error) {
+            return null;
+          }
+        };
+
         const applyTheme = () => {
-          const stored = localStorage.getItem('pokeweak-theme');
+          const stored = getStoredTheme();
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
           const theme = stored || (prefersDark ? 'dark' : 'light');
           if (theme === 'light') {
@@ -132,7 +140,11 @@ const isDev = import.meta.env.DEV;
             const current = document.documentElement.getAttribute('data-theme');
             const next = current === 'light' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', next === 'light' ? 'light' : '');
-            localStorage.setItem('pokeweak-theme', next);
+            try {
+              localStorage.setItem('pokeweak-theme', next);
+            } catch (error) {
+              // Theme still changes for this page even when persistent storage is unavailable.
+            }
             
             const meta = document.querySelector('meta[name="theme-color"]');
             if (meta) {

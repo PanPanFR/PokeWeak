@@ -203,28 +203,27 @@ const aggregatedWeaknesses = useMemo(() => {
 ### localStorage Persistence
 
 ```typescript
-// Load team from localStorage on mount
 const [team, setTeam] = useState(() => {
+  if (typeof window === 'undefined') return Array(6).fill(null);
   try {
-    const saved = localStorage.getItem('pokeweak-team');
+    const saved = window.localStorage.getItem('pokeweak-team');
     if (saved) {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length === 6) {
         return parsed;
       }
     }
-  } catch (e) {
-    console.warn('Failed to load team from localStorage:', e);
+  } catch {
+    return Array(6).fill(null);
   }
   return Array(6).fill(null);
 });
 
-// Save team to localStorage on change
 useEffect(() => {
   try {
-    localStorage.setItem('pokeweak-team', JSON.stringify(team));
-  } catch (e) {
-    console.warn('Failed to save team to localStorage:', e);
+    window.localStorage.setItem('pokeweak-team', JSON.stringify(team));
+  } catch {
+    // Storage can be disabled; keep the in-memory team usable.
   }
 }, [team]);
 ```

@@ -1,10 +1,11 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
-import pokemonData from '../data/pokemon.json';
-import typeChart from '../data/types.json';
+import { pokemonData } from '../data/pokemonData';
+import { typeChart } from '../data/typeChart';
+import { championFormPatterns, championPokemonNames } from '../data/champions';
 import TypeIcon from './TypeIcon.jsx';
 import { getSprite, formatName } from '../utils/pokemon';
+import { filterPokemonEntries } from '../utils/pokemonSearch';
 
-const pokemonList = Object.entries(pokemonData);
 const allTypes = Object.keys(typeChart);
 
 function highlightMatch(text, query) {
@@ -18,36 +19,11 @@ function highlightMatch(text, query) {
   ];
 }
 
-const championsPokemon = [
-  'abomasnow','absol','aegislash','aerodactyl','aggron','alakazam','alcremie','altaria','ampharos',
-  'annihilape','appletun','araquanid','arbok','arcanine','archaludon','ariados','armarouge',
-  'aromatisse','audino','aurorus','avalugg','azumarill','banette','barbaracle','basculegion',
-  'bastiodon','beartic','beedrill','bellibolt','blastoise','blaziken','camerupt','castform',
-  'ceruledge','chandelure','charizard','chesnaught','chimecho','clawitzer','clefable','cofagrigus',
-  'conkeldurr','corviknight','crabominable','decidueye','dedenne','delphox','diggersby','ditto','dragalge',
-  'dragapult','dragonite','drampa','eelektross','emboar','emolga','empoleon','espathra','espeon',
-  'excadrill','farigiraf','feraligatr','flapple','flareon','floette','florges','forretress','froslass',
-  'furfrou','gallade','garchomp','gardevoir','garganacl','gengar','gholdengo','glaceon','glalie',
-  'glimmora','gliscor','golurk','goodra','gourgeist','greninja','grimmsnarl','gyarados','hatterene',
-  'hawlucha','heliolisk','heracross','hippowdon','houndoom','houndstone','hydrapple','hydreigon',
-  'incineroar','infernape','jolteon','kangaskhan','kingambit','kleavor','klefki','krookodile',
-  'leafeon','liepard','lopunny','lucario','luxray','lycanroc','machamp','malamar','mamoswine',
-  'manectric','maushold','mawile','medicham','meganium','meowscarada','meowstic','metagross',
-  'milotic','mimikyu','morpeko','mudsdale','musharna','ninetales','noivern','oranguru','orthworm',
-  'overqwil','palafin','pangoro','passimian','pelipper','pidgeot','pikachu','pinsir','politoed',
-  'polteageist','primarina','pyroar','quaquaval','qwilfish','raichu','rampardos','reuniclus','rhyperior',
-  'roserade','rotom','rotom-wash','rotom-heat','rotom-mow','rotom-frost','runerigus','sableye','salazzle',
-  'samurott','sandaconda','sceptile','scizor','scolipede','scovillain','scrafty','serperior','sharpedo',
-  'simipour','simisage','simisear','sinistcha','skarmory','skeledirge','slowbro','slowking','slurpuff',
-  'sneasler','snorlax','spiritomb','staraptor','starmie','steelix','stunfisk','swampert','sylveon',
-  'talonflame','tauros','tinkaton','torkoal','torterra','toucannon','toxapex','toxicroak','trevenant',
-  'tsareena','typhlosion','tyranitar','tyrantrum','umbreon','vanilluxe','vaporeon','venusaur','victreebel',
-  'vileplume','vivillon','volcarona','watchog','weavile','whimsicott','wyrdeer','zoroark','kommo-o'
-].filter(name => pokemonData[name]);
+const championsPokemon = championPokemonNames.filter(name => pokemonData[name]);
 
 // Add mega and alternative forms
 const megaAndForms = Object.keys(pokemonData).filter(name => 
-  (name.includes('mega-') || name.includes('rotom-') || name.includes('-alola') || name.includes('-galar') || name.includes('-hisui')) 
+  championFormPatterns.some((pattern) => name.includes(pattern))
   && !championsPokemon.includes(name)
 );
 
@@ -61,8 +37,6 @@ export default function SearchIsland() {
   const listRef = useRef(null);
   const dropdownRef = useRef(null);
 
-  const championsSet = useMemo(() => new Set(allChampionsPokemon), []);
-
   const sortedChampions = useMemo(() =>
     allChampionsPokemon
       .map(name => [name, pokemonData[name]])
@@ -70,37 +44,13 @@ export default function SearchIsland() {
   []);
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    let filtered = pokemonList;
-
-    if (q) {
-      // Support both "mega pyroar" and "mega-pyroar" format
-      const normalizedQ = q.replace(/\s+/g, '-');
-      filtered = filtered.filter(([name]) => 
-        championsSet.has(name) && (name.includes(q) || name.includes(normalizedQ))
-      );
-    } else {
-      filtered = sortedChampions;
-    }
-
-    if (filterTypes.length > 0) {
-      filtered = filtered.filter(([, data]) =>
-        filterTypes.some(t => data.types.includes(t))
-      );
-    }
-
-    if (filterTypes.length === 2) {
-      filtered.sort(([, a], [, b]) => {
-        const aHasBoth = filterTypes.every(t => a.types.includes(t));
-        const bHasBoth = filterTypes.every(t => b.types.includes(t));
-        if (aHasBoth && !bHasBoth) return -1;
-        if (!aHasBoth && bHasBoth) return 1;
-        return 0;
-      });
-    }
-
-    return filtered.slice(0, 20);
-  }, [query, filterTypes, sortedChampions, championsSet]);
+    return filterPokemonEntries(sortedChampions, {
+      query,
+      types: filterTypes,
+      limit: 20,
+      sortDualTypeMatchesFirst: true,
+    });
+  }, [query, filterTypes, sortedChampions]);
 
   const toggleFilterType = useCallback((type) => {
     setFilterTypes((prev) => {
@@ -206,6 +156,7 @@ export default function SearchIsland() {
             role="combobox"
             aria-autocomplete="list"
             aria-expanded={showDropdown ? 'true' : 'false'}
+            aria-controls="search-results-list"
             aria-activedescendant={focusedIdx >= 0 ? `search-result-${focusedIdx}` : undefined}
             class="search-input-glow"
             style={{
@@ -217,7 +168,6 @@ export default function SearchIsland() {
               color: 'var(--text-primary)',
               fontSize: '16px',
               fontFamily: 'inherit',
-              outline: 'none',
               minHeight: '44px',
             }}
           />
@@ -252,6 +202,7 @@ export default function SearchIsland() {
             <div
               ref={dropdownRef}
               role="listbox"
+              id="search-results-list"
               aria-label="Search results"
               class="scrollbar-thin dropdown-animate"
               style={{

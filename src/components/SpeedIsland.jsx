@@ -1,10 +1,11 @@
 import { useState, useMemo } from 'preact/hooks';
-import pokemonData from '../data/pokemon.json';
-import typeChart from '../data/types.json';
+import { pokemonData } from '../data/pokemonData';
+import { typeChart } from '../data/typeChart';
 import TypeIcon from './TypeIcon.jsx';
 import { getSprite as getPokemonSprite, formatName } from '../utils/pokemon';
 import { calculateSpeedTiers } from '../utils/speedCalc';
 import SearchSelect from './SearchSelect.jsx';
+import { filterPokemonEntries } from '../utils/pokemonSearch';
 
 const pokemonList = Object.entries(pokemonData);
 const allTypes = Object.keys(typeChart);
@@ -38,24 +39,8 @@ export default function SpeedIsland() {
   };
 
   const sorted = useMemo(() => {
-    let list = [...pokemonList];
-    const q = query.trim().toLowerCase();
-    
-    if (q) {
-      const normalizedQ = q.replace(/\s+/g, '-');
-      list = list.filter(([name, data]) => 
-        name.includes(q) || name.includes(normalizedQ) ||
-        (data.name && data.name.toLowerCase().includes(q)) || 
-        data.types.some(t => t.toLowerCase().includes(q))
-      );
-    }
-    
-    if (filterTypes.length > 0) {
-      list = list.filter(([, data]) => filterTypes.some(t => data.types.includes(t)));
-    }
-    
+    const list = filterPokemonEntries(pokemonList, { query, types: filterTypes });
     list.sort(([, a], [, b]) => sortDesc ? b.speed - a.speed : a.speed - b.speed);
-    // Pre-compute speed tiers to avoid recalculation per row
     return list.map(([name, data]) => [name, data, calculateSpeedTiers(data.speed)]);
   }, [sortDesc, query, filterTypes]);
 
@@ -168,7 +153,6 @@ export default function SpeedIsland() {
           fontSize: '13px'
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {/* Pokemon A Select */}
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
               <div style={{ width: '24px', textAlign: 'center', fontWeight: 'bold', color: '#EF4444' }}>A</div>
               <SearchSelect 
@@ -179,6 +163,7 @@ export default function SpeedIsland() {
               <select 
                 value={compA_Tier} 
                 onChange={(e) => setCompA_Tier(e.target.value)}
+                aria-label="Speed tier for Pokémon A"
                 style={{ width: '100px', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-subtle)', background: 'var(--bg-body)', color: 'var(--text-primary)' }}
               >
                 <option value="base">BASE</option>
@@ -191,7 +176,6 @@ export default function SpeedIsland() {
               <div style={{ width: '40px', textAlign: 'right', fontWeight: 'bold' }}>{compA_Speed}</div>
             </div>
 
-            {/* Pokemon B Select */}
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
               <div style={{ width: '24px', textAlign: 'center', fontWeight: 'bold', color: '#3B82F6' }}>B</div>
               <SearchSelect 
@@ -202,6 +186,7 @@ export default function SpeedIsland() {
               <select 
                 value={compB_Tier} 
                 onChange={(e) => setCompB_Tier(e.target.value)}
+                aria-label="Speed tier for Pokémon B"
                 style={{ width: '100px', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-subtle)', background: 'var(--bg-body)', color: 'var(--text-primary)' }}
               >
                 <option value="base">BASE</option>
@@ -214,7 +199,6 @@ export default function SpeedIsland() {
               <div style={{ width: '40px', textAlign: 'right', fontWeight: 'bold' }}>{compB_Speed}</div>
             </div>
 
-            {/* Result */}
             <div style={{
               marginTop: '4px',
               padding: '8px',
@@ -247,6 +231,7 @@ export default function SpeedIsland() {
             placeholder="Search Pokémon..."
             value={query}
             onInput={(e) => setQuery(e.target.value)}
+            aria-label="Search Pokémon"
             style={{
               width: '100%',
               padding: '12px 16px',
@@ -256,7 +241,6 @@ export default function SpeedIsland() {
               color: 'var(--text-primary)',
               fontSize: '14px',
               fontFamily: 'inherit',
-              outline: 'none',
               boxSizing: 'border-box',
             }}
           />

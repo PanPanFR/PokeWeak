@@ -9,7 +9,7 @@ All notable changes to PokeWeak are documented here.
 Comprehensive audit performed using Clean Code, Codebase Design, Web Interface Guidelines, and Lighthouse standards. Full report in `audit.md`.
 
 ---
-
+~
 ### Critical Fixes
 
 - **ESLint config** — Fixed broken `npm run lint`. Added `files` pattern for JS/JSX/TS/TSX, configured `@typescript-eslint/parser`, added `globals.browser`. Now reports 0 errors, 0 warnings.
@@ -36,7 +36,7 @@ Comprehensive audit performed using Clean Code, Codebase Design, Web Interface G
 - **Empty state** — Added "No Pokémon found" message when search query returns no results in `SearchIsland.jsx`.
 - **JSDoc accuracy** — Updated `speedCalc.ts` JSDoc to match actual VGC Level 50 speed calculation implementation.
 - **Comment standardization** — Changed Indonesian comment `// Kalkulasi untuk Comparison` to English `// Comparison calculation` in `SpeedIsland.jsx`.
-- **Error visibility** — Added `console.warn` to previously silent `try-catch` blocks in `TeamBuilderIsland.jsx` localStorage operations.
+- **Storage resilience** — Added SSR-safe localStorage handling in `TeamBuilderIsland.jsx`.
 - **Sprite helper** — Detail page `[name].astro` now uses `getSprite()` utility instead of hardcoded GitHub URL.
 - **Animation class** — Moved `VersusIsland.jsx` inline `<style>` keyframes to named `.versus-animate` CSS class.
 - **Typography** — Changed placeholder `"..."` to `"…"` per Web Interface Guidelines.

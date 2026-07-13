@@ -95,7 +95,6 @@ Type effectiveness multipliers:
 | `test-driven-development` | TDD approach for new features |
 | `testing-strategy` | Testing strategy and implementation |
 | `ui-ux-pro-max` | Advanced UI/UX design guidance |
-| `vercel-react-best-practices` | React/Preact best practices |
 | `web-design-guidelines` | Web design principles |
 | `webapp-testing` | Web application testing |
 | `audit-speed` | Performance auditing |
@@ -125,4 +124,4 @@ Consult these guides before working on related tasks:
 
 ## Deploy
 
-Push to the `main` branch → GitHub Actions → auto-deploys to Cloudflare Pages.
+Push to the `main` branch → Cloudflare Pages auto-deploys the static `dist/` build.

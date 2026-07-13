@@ -1,11 +1,12 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import QuickSearch from '../../components/QuickSearch.jsx';
-import pokemonData from '../../data/pokemon.json';
-import typeChart from '../../data/types.json';
+import { pokemonData } from '../../data/pokemonData';
+import { typeChart } from '../../data/typeChart';
 import { calculateWeaknesses } from '../../utils/typeCalc';
 import { calculateSpeedTiers } from '../../utils/speedCalc';
 import { getSprite } from '../../utils/pokemon';
+import { getTypeIconSrc } from '../../utils/typeIcon';
 
 export function getStaticPaths() {
   return Object.keys(pokemonData).map((name) => ({
@@ -53,7 +54,7 @@ const spriteUrl = getSprite(data);
     <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
       {data.types.map((t) => (
         <span style={`display:inline-flex;align-items:center;gap:4px;border-radius:9999px;border:1px solid ${typeColor(t)};background:color-mix(in srgb, ${typeColor(t)} 20%, transparent);padding:4px 12px;font-size:13px;font-weight:500;white-space:nowrap;color:inherit;`}>
-          <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="20" height="20" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+          <img src={getTypeIconSrc(t)} alt={t} width="20" height="20" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
           <span>{t}</span>
         </span>
       ))}
@@ -117,7 +118,7 @@ const spriteUrl = getSprite(data);
               {formData?.types && (
                 <div style="display:flex;gap:3px;">
                   {formData.types.map((t) => (
-                    <img key={t} src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="14" height="14" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+                    <img key={t} src={getTypeIconSrc(t)} alt={t} width="14" height="14" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
                   ))}
                 </div>
               )}
@@ -145,7 +146,7 @@ const spriteUrl = getSprite(data);
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {section.data.map((t) => (
             <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
-              <img src={`/icons/types/${t.toLowerCase()}.svg`} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
+              <img src={getTypeIconSrc(t)} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
               <span>{t}</span>
               <span style={`margin-left:auto;font-weight:700;color:${section.color};`} set:html={section.multiplierHtml} />
             </span>

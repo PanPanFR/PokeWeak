@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
-import pokemonData from '../data/pokemon.json';
-import typeChart from '../data/types.json';
+import { pokemonData } from '../data/pokemonData';
+import { typeChart } from '../data/typeChart';
 import { calculateWeaknesses } from '../utils/typeCalc';
 import { calculateSpeedTiers } from '../utils/speedCalc';
 import { getSprite, formatName } from '../utils/pokemon';
@@ -91,7 +91,7 @@ function MatchupSummary({ attackerA, defenderB, speedA, speedB }) {
   const bFaster = speedB.maxPlus > speedA.maxPlus;
   const tie = speedA.maxPlus === speedB.maxPlus;
 
-  let summary = "";
+  let summary;
   if (tie) {
     if (aMult > bMult) summary = `${formatName(attackerA.name, attackerA)} has a better type advantage, but it's a speed tie. Could go either way!`;
     else if (bMult > aMult) summary = `${formatName(defenderB.name, defenderB)} has a better type advantage, but it's a speed tie. Could go either way!`;
@@ -153,7 +153,7 @@ export default function VersusIsland() {
           {/* Sprites & Types */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg-surface)', padding: '20px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: 1 }}>
-              <img src={getSprite(aData)} alt={pokeA} width={80} height={80} style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }} />
+              <img src={getSprite(aData)} alt={formatName(pokeA, aData)} width={80} height={80} style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }} />
               <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-primary)', textAlign: 'center' }}>{formatName(pokeA, aData)}</div>
               <div style={{ display: 'flex', gap: '4px' }}>
                 {aData.types.map(t => <TypeIcon key={t} type={t} size={16} />)}
@@ -163,7 +163,7 @@ export default function VersusIsland() {
             <div style={{ fontWeight: 800, fontSize: '24px', color: 'var(--text-muted)', opacity: 0.5 }}>VS</div>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: 1 }}>
-              <img src={getSprite(bData)} alt={pokeB} width={80} height={80} style={{ imageRendering: 'pixelated' }} />
+              <img src={getSprite(bData)} alt={formatName(pokeB, bData)} width={80} height={80} style={{ imageRendering: 'pixelated' }} />
               <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-primary)', textAlign: 'center' }}>{formatName(pokeB, bData)}</div>
               <div style={{ display: 'flex', gap: '4px' }}>
                 {bData.types.map(t => <TypeIcon key={t} type={t} size={16} />)}
@@ -224,12 +224,14 @@ export default function VersusIsland() {
         </div>
       )}
       <style>{`
-        @keyframes versusFadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .versus-animate {
-          animation: versusFadeIn 0.3s ease;
+        @media (prefers-reduced-motion: no-preference) {
+          @keyframes versusFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .versus-animate {
+            animation: versusFadeIn 0.3s ease;
+          }
         }
       `}</style>
     </div>

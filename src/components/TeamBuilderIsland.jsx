@@ -1,12 +1,27 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'preact/hooks';
-import pokemonData from '../data/pokemon.json';
-import TypeIcon from './TypeIcon.jsx';
+import { pokemonData } from '../data/pokemonData';
+import { typeChart } from '../data/typeChart';
 import { getSprite, formatName } from '../utils/pokemon';
 import { calculateWeaknesses, calculateStrengths } from '../utils/typeCalc';
-import typeChart from '../data/types.json';
+import { filterPokemonEntries } from '../utils/pokemonSearch';
+import TypeIcon from './TypeIcon.jsx';
 
 const pokemonList = Object.entries(pokemonData);
 const allTypes = Object.keys(typeChart);
+const emptyTeam = () => Array(6).fill(null);
+
+function loadSavedTeam() {
+  if (typeof window === 'undefined') return emptyTeam();
+  try {
+    const saved = window.localStorage.getItem('pokeweak-team');
+    if (!saved) return emptyTeam();
+    const parsed = JSON.parse(saved);
+    if (Array.isArray(parsed) && parsed.length === 6) return parsed;
+  } catch {
+    return emptyTeam();
+  }
+  return emptyTeam();
+}
 
 function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
   if (pokemon) {
@@ -37,6 +52,7 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
           </div>
         </div>
         <button
+          aria-label={`Remove ${formatName(pokemon.name, pokemon)} from team`}
           onClick={() => onRemove(slotIndex)}
           style={{
             background: 'transparent',
@@ -303,27 +319,19 @@ function TeamStrengthDisplay({ team }) {
 }
 
 export default function TeamBuilderIsland() {
-  const [team, setTeam] = useState(() => {
-    try {
-      const saved = localStorage.getItem('pokeweak-team');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length === 6) return parsed;
-      }
-    } catch (e) {
-      console.warn('Failed to load team from localStorage:', e);
-    }
-    return Array(6).fill(null);
-  });
+  const [team, setTeam] = useState(loadSavedTeam);
   
   const [searchSlot, setSearchSlot] = useState(null);
   const [query, setQuery] = useState('');
   const [filterTypes, setFilterTypes] = useState([]);
   const modalRef = useRef(null);
 
-  // Persist team to localStorage
   useEffect(() => {
-    try { localStorage.setItem('pokeweak-team', JSON.stringify(team)); } catch (e) { console.warn('Failed to save team to localStorage:', e); }
+    try {
+      window.localStorage.setItem('pokeweak-team', JSON.stringify(team));
+    } catch {
+      // Storage can be disabled in private browsing; keep the in-memory team usable.
+    }
   }, [team]);
 
   const closeModal = useCallback(() => {
@@ -392,31 +400,12 @@ export default function TeamBuilderIsland() {
   };
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    let filtered = pokemonList;
-
-    if (q) {
-      const normalizedQ = q.replace(/\s+/g, '-');
-      filtered = filtered.filter(([name]) => name.includes(q) || name.includes(normalizedQ));
-    }
-
-    if (filterTypes.length > 0) {
-      filtered = filtered.filter(([, data]) =>
-        filterTypes.some(t => data.types.includes(t))
-      );
-    }
-
-    if (filterTypes.length === 2) {
-      filtered.sort(([, a], [, b]) => {
-        const aHasBoth = filterTypes.every(t => a.types.includes(t));
-        const bHasBoth = filterTypes.every(t => b.types.includes(t));
-        if (aHasBoth && !bHasBoth) return -1;
-        if (!aHasBoth && bHasBoth) return 1;
-        return 0;
-      });
-    }
-
-    return filtered.slice(0, 20);
+    return filterPokemonEntries(pokemonList, {
+      query,
+      types: filterTypes,
+      limit: 20,
+      sortDualTypeMatchesFirst: true,
+    });
   }, [query, filterTypes]);
 
   const activePlayerTeam = team.filter(Boolean);
@@ -475,6 +464,7 @@ export default function TeamBuilderIsland() {
 
       {searchSlot !== null && (
         <div
+          role="presentation"
           style={{
             position: 'fixed',
             top: 0,
@@ -489,6 +479,8 @@ export default function TeamBuilderIsland() {
             padding: '16px',
           }}
           onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
+          onKeyDown={(e) => { if (e.key === 'Escape') closeModal(); }}
+          tabIndex={-1}
         >
           <div
             ref={modalRef}
@@ -513,6 +505,7 @@ export default function TeamBuilderIsland() {
               </h3>
               <input
                 type="text"
+                aria-label="Search Pokémon for team"
                 placeholder="Search Pokémon..."
                 value={query}
                 onInput={(e) => setQuery(e.target.value)}
@@ -527,9 +520,7 @@ export default function TeamBuilderIsland() {
                   fontFamily: 'inherit',
                   outline: 'none',
                   marginBottom: '12px',
-                  boxSizing: 'border-box'
                 }}
-                autoFocus
               />
               <div style={{
                 display: 'flex',

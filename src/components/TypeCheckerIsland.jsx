@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'preact/hooks';
 import TypeIcon from './TypeIcon.jsx';
 import { calculateWeaknesses, calculateStrengths } from '../utils/typeCalc';
-import typeChart from '../data/types.json';
+import { typeChart } from '../data/typeChart';
 
 const allTypes = Object.keys(typeChart);
 
@@ -192,6 +192,8 @@ export default function TypeCheckerIsland() {
             <button
               key={key}
               onClick={() => setMode(key)}
+              role="tab"
+              aria-selected={mode === key}
               style={{
                 padding: '4px 10px',
                 borderRadius: '6px',
@@ -202,7 +204,7 @@ export default function TypeCheckerIsland() {
                 fontSize: '11px',
                 fontWeight: 600,
                 fontFamily: 'inherit',
-                transition: 'all 0.15s ease',
+                transition: 'background 0.15s ease, border-color 0.15s ease, color 0.15s ease',
               }}
             >
               {label}
@@ -224,7 +226,6 @@ export default function TypeCheckerIsland() {
             <button
               key={t}
               onClick={() => toggleType(t)}
-              aria-label={`${isSelected ? 'Deselect' : 'Select'} ${t} type`}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -239,6 +240,7 @@ export default function TypeCheckerIsland() {
                 transition: 'all 0.15s ease',
               }}
               title={t}
+              aria-label={`${isSelected ? 'Deselect' : 'Select'} ${t} type`}
             >
               <TypeIcon type={t} size={24} />
             </button>

@@ -26,7 +26,7 @@ Search any Pokémon to find its type weaknesses, resistances, and immunities. Bu
 | Styling | [Tailwind CSS](https://tailwindcss.com) 4.x |
 | Language | TypeScript 6.x |
 | Testing | Vitest 4.x |
-| Deployment | Vercel |
+| Deployment | Cloudflare Pages |
 
 ## Quick Start
 
