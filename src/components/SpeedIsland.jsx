@@ -11,9 +11,9 @@ const pokemonList = Object.entries(pokemonData);
 const allTypes = Object.keys(typeChart);
 
 function getRankColor(rank) {
-  if (rank === 1) return '#FFD700';
-  if (rank === 2) return '#C0C0C0';
-  if (rank === 3) return '#CD7F32';
+  if (rank === 1) return 'var(--rank-gold)';
+  if (rank === 2) return 'var(--rank-silver)';
+  if (rank === 3) return 'var(--rank-bronze)';
   return 'var(--text-primary)';
 }
 
@@ -76,10 +76,11 @@ export default function SpeedIsland() {
                 border: '1px solid var(--border-medium)',
                 borderRadius: '8px',
                 color: 'var(--text-primary)',
-                padding: '8px 12px',
+                padding: '10px 14px',
                 fontSize: '12px',
                 fontWeight: 600,
                 cursor: 'pointer',
+                minHeight: '44px',
               }}
             >
               Compare
@@ -91,10 +92,11 @@ export default function SpeedIsland() {
                 border: '1px solid var(--border-medium)',
                 borderRadius: '8px',
                 color: 'var(--text-primary)',
-                padding: '8px 12px',
+                padding: '10px 14px',
                 fontSize: '12px',
                 fontWeight: 600,
                 cursor: 'pointer',
+                minHeight: '44px',
               }}
             >
               Info
@@ -107,10 +109,11 @@ export default function SpeedIsland() {
                 border: '1px solid var(--border-medium)',
                 borderRadius: '8px',
                 color: 'var(--text-primary)',
-                padding: '8px 12px',
+                padding: '10px 14px',
                 fontSize: '12px',
                 fontWeight: 600,
                 cursor: 'pointer',
+                minHeight: '44px',
               }}
             >
               {sortDesc ? 'Fastest ↓' : 'Slowest ↑'}
@@ -154,7 +157,7 @@ export default function SpeedIsland() {
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-              <div style={{ width: '24px', textAlign: 'center', fontWeight: 'bold', color: '#EF4444' }}>A</div>
+              <div style={{ width: '24px', textAlign: 'center', fontWeight: 'bold', color: 'var(--compare-a)' }}>A</div>
               <SearchSelect 
                 value={compA_Pokemon} 
                 onChange={setCompA_Pokemon} 
@@ -177,7 +180,7 @@ export default function SpeedIsland() {
             </div>
 
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-              <div style={{ width: '24px', textAlign: 'center', fontWeight: 'bold', color: '#3B82F6' }}>B</div>
+              <div style={{ width: '24px', textAlign: 'center', fontWeight: 'bold', color: 'var(--compare-b)' }}>B</div>
               <SearchSelect 
                 value={compB_Pokemon} 
                 onChange={setCompB_Pokemon} 
@@ -206,7 +209,7 @@ export default function SpeedIsland() {
               borderRadius: '6px',
               textAlign: 'center',
               fontWeight: 600,
-              color: compA_Speed === compB_Speed ? 'var(--text-secondary)' : (compA_Speed > compB_Speed ? '#EF4444' : '#3B82F6')
+              color: compA_Speed === compB_Speed ? 'var(--text-secondary)' : (compA_Speed > compB_Speed ? 'var(--compare-a)' : 'var(--compare-b)')
             }}>
               {compA_Speed > compB_Speed 
                 ? `${formatName(compA_Pokemon, compA_Data)} is faster by ${compA_Speed - compB_Speed} points!` 
@@ -228,7 +231,7 @@ export default function SpeedIsland() {
       }}>
           <input
             type="text"
-            placeholder="Search Pokémon..."
+            placeholder="Search Pokémon…"
             value={query}
             onInput={(e) => setQuery(e.target.value)}
             aria-label="Search Pokémon"
@@ -260,8 +263,8 @@ export default function SpeedIsland() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: '32px',
-                    height: '32px',
+                    width: '44px',
+                    height: '44px',
                     borderRadius: '8px',
                     border: isSelected ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
                     background: isSelected ? 'var(--bg-focus)' : 'var(--bg-card)',
@@ -271,7 +274,7 @@ export default function SpeedIsland() {
                   title={t}
                   aria-label={`Filter by ${t} type${isSelected ? ' (active)' : ''}`}
                 >
-                  <TypeIcon type={t} size={16} aria-hidden="true" />
+                  <TypeIcon type={t} size={20} aria-hidden="true" />
                 </button>
               );
             })}
@@ -293,8 +296,8 @@ export default function SpeedIsland() {
         }}>
           <thead>
             <tr style={{
-              background: '#0B2239', // Dark blue header from image
-              color: '#FFFFFF',
+              background: 'var(--bg-elevated)',
+              color: 'var(--text-primary)',
             }}>
               <th scope="col" style={{ padding: '12px 16px', fontWeight: 600, borderTopLeftRadius: '8px', borderBottomLeftRadius: '8px' }}>#</th>
               <th scope="col" style={{ padding: '12px 16px', fontWeight: 600 }}>Pokémon</th>
@@ -346,7 +349,7 @@ export default function SpeedIsland() {
                         style={{ imageRendering: 'pixelated' }}
                       />
                       <div>
-                        <div style={{ fontWeight: 600, color: '#3182CE', marginBottom: '2px', textDecoration: 'underline' }}>
+                        <div style={{ fontWeight: 600, color: 'var(--link-color)', marginBottom: '2px', textDecoration: 'underline' }}>
                           {formatName(name, data)}
                         </div>
                         <div style={{ display: 'flex', gap: '4px' }}>
@@ -372,7 +375,7 @@ export default function SpeedIsland() {
                   <td style={{ padding: '8px 16px', textAlign: 'center', fontWeight: 600, color: 'var(--text-primary)' }}>
                     {tiers.maxPlus}
                   </td>
-                  <td style={{ padding: '8px 16px', textAlign: 'center', fontWeight: 600, color: '#6390F0' }}>
+                  <td style={{ padding: '8px 16px', textAlign: 'center', fontWeight: 600, color: 'var(--color-pk-water)' }}>
                     {tiers.tailwind}
                   </td>
                 </tr>

@@ -3,10 +3,10 @@ import TypeIcon from './TypeIcon.jsx';
 import { hiddenMechanics } from '../data/hiddenMechanics.js';
 
 const sectionColor = {
-  'type-immunities': '#FBBF24',
-  'move-hidden-effects': '#E63946',
+  'type-immunities': 'var(--rank-gold)',
+  'move-hidden-effects': 'var(--color-accent)',
   'field-weather': '#A855F7',
-  'champions-changes': '#3B82F6',
+  'champions-changes': 'var(--compare-b)',
   'double-battle': '#14B8A6',
 };
 
@@ -21,6 +21,7 @@ function ChevronIcon({ open }) {
       stroke-width="2.5"
       stroke-linecap="round"
       stroke-linejoin="round"
+      aria-hidden="true"
       style={{
         transition: 'transform 150ms ease',
         transform: open ? 'rotate(180deg)' : 'rotate(0)',
@@ -89,7 +90,7 @@ function MechanicCard({ item, color }) {
 }
 
 function AccordionSection({ section, isOpen, onToggle }) {
-  const color = sectionColor[section.id] || '#A0A0A0';
+  const color = sectionColor[section.id] || 'var(--text-muted)';
   const isTypeImmunity = section.id === 'type-immunities';
 
   return (
@@ -108,7 +109,7 @@ function AccordionSection({ section, isOpen, onToggle }) {
           display: 'flex',
           alignItems: 'center',
           width: '100%',
-          padding: '12px 14px',
+          padding: '14px',
           background: 'transparent',
           border: 'none',
           cursor: 'pointer',
@@ -160,7 +161,7 @@ function AccordionSection({ section, isOpen, onToggle }) {
         <div style={{
           padding: '0 14px 14px',
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
           gap: '8px',
         }}>
           {section.items.map((item, i) => (

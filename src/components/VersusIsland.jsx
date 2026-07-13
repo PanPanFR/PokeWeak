@@ -20,24 +20,24 @@ function AttackAnalysis({ attacker, defender }) {
         
         if (defWeaknesses.quadWeak.includes(atkType)) {
           effectiveness = 'Extremely Effective (×4)';
-          color = '#FFFFFF';
-          bg = '#E63946';
+          color = 'var(--text-primary)';
+          bg = 'var(--effect-quad)';
         } else if (defWeaknesses.doubleWeak.includes(atkType)) {
           effectiveness = 'Super Effective (×2)';
-          color = '#FFFFFF';
-          bg = '#FF6B35';
+          color = 'var(--text-primary)';
+          bg = 'var(--effect-double)';
         } else if (defWeaknesses.resist.includes(atkType)) {
           effectiveness = 'Resisted (×½)';
-          color = '#FFFFFF';
-          bg = '#7AC74C';
+          color = 'var(--text-primary)';
+          bg = 'var(--effect-half)';
         } else if (defWeaknesses.doubleResist.includes(atkType)) {
           effectiveness = 'Double Resisted (×¼)';
-          color = '#FFFFFF';
-          bg = '#6390F0';
+          color = 'var(--text-primary)';
+          bg = 'var(--effect-quarter)';
         } else if (defWeaknesses.immune.includes(atkType)) {
           effectiveness = 'Immune (×0)';
-          color = '#FFFFFF';
-          bg = '#A0A0A0';
+          color = 'var(--text-primary)';
+          bg = 'var(--effect-immune)';
         }
 
         return (
@@ -141,9 +141,9 @@ export default function VersusIsland() {
         }}>
           Pick two Pokémon for a 1v1 matchup breakdown — type effectiveness, speed comparison, and battle prediction.
         </p>
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
           <SearchSelect value={pokeA} onChange={setPokeA} placeholder="Pokémon A" />
-          <div style={{ fontWeight: 800, fontSize: '14px', color: '#E63946' }}>VS</div>
+          <div style={{ fontWeight: 800, fontSize: '14px', color: 'var(--color-accent)' }}>VS</div>
           <SearchSelect value={pokeB} onChange={setPokeB} placeholder="Pokémon B" />
         </div>
       </div>
@@ -175,27 +175,27 @@ export default function VersusIsland() {
           <div style={{ background: 'var(--bg-surface)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
             <h3 style={{ margin: '0 0 12px', fontSize: '14px', color: 'var(--text-primary)', textAlign: 'center' }}>Speed Comparison</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 60px 1fr', gap: '8px', alignItems: 'center' }}>
-              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.maxPlus > speedB.maxPlus ? '#7AC74C' : 'var(--text-primary)' }}>{speedA.maxPlus}</div>
+              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.maxPlus > speedB.maxPlus ? 'var(--success)' : 'var(--text-primary)' }}>{speedA.maxPlus}</div>
               <div style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', background: 'var(--bg-card)', padding: '4px', borderRadius: '4px' }}>MAX+</div>
-              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.maxPlus > speedA.maxPlus ? '#7AC74C' : 'var(--text-primary)' }}>{speedB.maxPlus}</div>
+              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.maxPlus > speedA.maxPlus ? 'var(--success)' : 'var(--text-primary)' }}>{speedB.maxPlus}</div>
               
-              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.max > speedB.max ? '#7AC74C' : 'var(--text-primary)' }}>{speedA.max}</div>
+              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.max > speedB.max ? 'var(--success)' : 'var(--text-primary)' }}>{speedA.max}</div>
               <div style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', background: 'var(--bg-card)', padding: '4px', borderRadius: '4px' }}>MAX</div>
-              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.max > speedA.max ? '#7AC74C' : 'var(--text-primary)' }}>{speedB.max}</div>
+              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.max > speedA.max ? 'var(--success)' : 'var(--text-primary)' }}>{speedB.max}</div>
 
-              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.basePlus > speedB.basePlus ? '#7AC74C' : 'var(--text-primary)' }}>{speedA.basePlus}</div>
+              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.basePlus > speedB.basePlus ? 'var(--success)' : 'var(--text-primary)' }}>{speedA.basePlus}</div>
               <div style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', background: 'var(--bg-card)', padding: '4px', borderRadius: '4px' }}>No Invest</div>
-              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.basePlus > speedA.basePlus ? '#7AC74C' : 'var(--text-primary)' }}>{speedB.basePlus}</div>
+              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.basePlus > speedA.basePlus ? 'var(--success)' : 'var(--text-primary)' }}>{speedB.basePlus}</div>
 
-              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.noInvestPlus > speedB.noInvestPlus ? '#7AC74C' : 'var(--text-primary)' }}>{speedA.noInvestPlus}</div>
+              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.noInvestPlus > speedB.noInvestPlus ? 'var(--success)' : 'var(--text-primary)' }}>{speedA.noInvestPlus}</div>
               <div style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', background: 'var(--bg-card)', padding: '4px', borderRadius: '4px' }}>No Invest+</div>
-              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.noInvestPlus > speedA.noInvestPlus ? '#7AC74C' : 'var(--text-primary)' }}>{speedB.noInvestPlus}</div>
+              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.noInvestPlus > speedA.noInvestPlus ? 'var(--success)' : 'var(--text-primary)' }}>{speedB.noInvestPlus}</div>
 
-              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.base > speedB.base ? '#7AC74C' : 'var(--text-primary)' }}>{speedA.base}</div>
+              <div style={{ textAlign: 'right', fontWeight: 600, color: speedA.base > speedB.base ? 'var(--success)' : 'var(--text-primary)' }}>{speedA.base}</div>
               <div style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', background: 'var(--bg-card)', padding: '4px', borderRadius: '4px' }}>BASE</div>
-              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.base > speedA.base ? '#7AC74C' : 'var(--text-primary)' }}>{speedB.base}</div>
+              <div style={{ textAlign: 'left', fontWeight: 600, color: speedB.base > speedA.base ? 'var(--success)' : 'var(--text-primary)' }}>{speedB.base}</div>
             </div>
-            <div style={{ marginTop: '12px', textAlign: 'center', fontSize: '13px', fontWeight: 700, color: speedA.maxPlus === speedB.maxPlus ? 'var(--text-secondary)' : '#E63946' }}>
+            <div style={{ marginTop: '12px', textAlign: 'center', fontSize: '13px', fontWeight: 700, color: speedA.maxPlus === speedB.maxPlus ? 'var(--text-secondary)' : 'var(--color-accent)' }}>
               {speedA.maxPlus > speedB.maxPlus 
                 ? `${formatName(pokeA, aData)} is faster! (Max Speed)`
                 : speedB.maxPlus > speedA.maxPlus
@@ -204,7 +204,7 @@ export default function VersusIsland() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px' }}>
             <div style={{ background: 'var(--bg-surface)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-subtle)' }}>
               <h3 style={{ margin: '0 0 12px', fontSize: '14px', color: 'var(--text-primary)' }}>
                 {formatName(pokeA, aData)} <span style={{ color: 'var(--text-secondary)' }}>Attacking</span> {formatName(pokeB, bData)}

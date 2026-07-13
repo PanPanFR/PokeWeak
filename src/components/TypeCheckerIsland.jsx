@@ -175,43 +175,43 @@ export default function TypeCheckerIsland() {
   return (
     <div>
       {/* Mode Toggle */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        marginBottom: '16px',
-      }}>
-        <h3 style={{ fontSize: '14px', fontWeight: 600, margin: 0 }}>
-          Manual Type Check
-        </h3>
-        <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
-          {[
-            { key: 'weak', label: 'Weak Against' },
-            { key: 'strong', label: 'Strong Against' },
-          ].map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setMode(key)}
-              role="tab"
-              aria-selected={mode === key}
-              style={{
-                padding: '4px 10px',
-                borderRadius: '6px',
-                border: mode === key ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
-                background: mode === key ? 'var(--bg-focus)' : 'var(--bg-card)',
-                color: mode === key ? 'var(--text-primary)' : 'var(--text-secondary)',
-                cursor: 'pointer',
-                fontSize: '11px',
-                fontWeight: 600,
-                fontFamily: 'inherit',
-                transition: 'background 0.15s ease, border-color 0.15s ease, color 0.15s ease',
-              }}
-            >
-              {label}
-            </button>
-          ))}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          marginBottom: '16px',
+        }}>
+          <h3 style={{ fontSize: '14px', fontWeight: 600, margin: 0 }}>
+            Manual Type Check
+          </h3>
+          <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }} role="tablist" aria-label="Mode selection">
+            {[
+              { key: 'weak', label: 'Weak Against' },
+              { key: 'strong', label: 'Strong Against' },
+            ].map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => setMode(key)}
+                role="tab"
+                aria-selected={mode === key}
+                style={{
+                  padding: '10px 14px',
+                  minHeight: '44px',
+                  borderRadius: '6px',
+                  border: mode === key ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
+                  background: mode === key ? 'var(--bg-focus)' : 'var(--bg-card)',
+                  color: mode === key ? 'var(--text-primary)' : 'var(--text-secondary)',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  fontFamily: 'inherit',
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
 
       {/* Type Selector Buttons */}
       <div style={{
@@ -230,14 +230,13 @@ export default function TypeCheckerIsland() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: '40px',
-                height: '40px',
+                width: '44px',
+                height: '44px',
                 borderRadius: '10px',
                 border: isSelected ? '2px solid var(--text-primary)' : '2px solid transparent',
                 background: isSelected ? 'var(--bg-focus)' : 'var(--bg-card)',
                 cursor: 'pointer',
                 padding: '0',
-                transition: 'all 0.15s ease',
               }}
               title={t}
               aria-label={`${isSelected ? 'Deselect' : 'Select'} ${t} type`}
@@ -257,7 +256,7 @@ export default function TypeCheckerIsland() {
           minHeight: '18px',
         }}>
           {isInvalid ? (
-            <span style={{ color: '#E63946', fontWeight: 600 }}>
+            <span style={{ color: 'var(--effect-quad)', fontWeight: 600 }} role="alert">
               Invalid: Maximum 2 types only
             </span>
           ) : (
@@ -278,7 +277,7 @@ export default function TypeCheckerIsland() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {weaknesses.quadWeak.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#E63946', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-quad)', marginBottom: '6px' }}>
                 Extremely Weak (×4)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -288,7 +287,7 @@ export default function TypeCheckerIsland() {
           )}
           {weaknesses.doubleWeak.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#FF6B35', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-double)', marginBottom: '6px' }}>
                 Weak (×2)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -298,31 +297,31 @@ export default function TypeCheckerIsland() {
           )}
           {weaknesses.resist.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#7AC74C', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-half)', marginBottom: '6px' }}>
                 Resists (×½)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {weaknesses.resist.map((t) => <TypeBadge key={t} type={t} opacity={0.8} />)}
+                {weaknesses.resist.map((t) => <TypeBadge key={t} type={t} />)}
               </div>
             </div>
           )}
           {weaknesses.doubleResist.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#6390F0', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-quarter)', marginBottom: '6px' }}>
                 Double Resists (×¼)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {weaknesses.doubleResist.map((t) => <TypeBadge key={t} type={t} opacity={0.6} />)}
+                {weaknesses.doubleResist.map((t) => <TypeBadge key={t} type={t} />)}
               </div>
             </div>
           )}
           {weaknesses.immune.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#A0A0A0', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-immune)', marginBottom: '6px' }}>
                 Immune (×0)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {weaknesses.immune.map((t) => <TypeBadge key={t} type={t} opacity={0.4} />)}
+                {weaknesses.immune.map((t) => <TypeBadge key={t} type={t} />)}
               </div>
             </div>
           )}
@@ -334,7 +333,7 @@ export default function TypeCheckerIsland() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {strengths.extremelyEffective.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#E63946', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-quad)', marginBottom: '6px' }}>
                 Extremely Effective (×4)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -346,7 +345,7 @@ export default function TypeCheckerIsland() {
           )}
           {strengths.superEffective.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#7AC74C', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--success)', marginBottom: '6px' }}>
                 Super Effective (×2)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -356,21 +355,21 @@ export default function TypeCheckerIsland() {
           )}
           {strengths.notVeryEffective.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#FF6B35', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-double)', marginBottom: '6px' }}>
                 Not Very Effective (×½)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {strengths.notVeryEffective.map((t) => <TypeBadge key={t} type={t} opacity={0.8} />)}
+                {strengths.notVeryEffective.map((t) => <TypeBadge key={t} type={t} />)}
               </div>
             </div>
           )}
           {strengths.noEffect.length > 0 && (
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#A0A0A0', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--effect-immune)', marginBottom: '6px' }}>
                 No Effect (×0)
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {strengths.noEffect.map((t) => <TypeBadge key={t} type={t} opacity={0.4} />)}
+                {strengths.noEffect.map((t) => <TypeBadge key={t} type={t} />)}
               </div>
             </div>
           )}

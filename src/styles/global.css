@@ -28,6 +28,36 @@
   --body-gradient-2: #090B10;
   --body-gradient-3: #111827;
   --body-gradient-4: #0B1117;
+
+  /* Type Effectiveness Colors */
+  --effect-quad: #DC2626;
+  --effect-quad-bg: rgba(220, 38, 38, 0.15);
+  --effect-double: #F97316;
+  --effect-double-bg: rgba(249, 115, 22, 0.15);
+  --effect-neutral: #6B7280;
+  --effect-neutral-bg: rgba(107, 114, 128, 0.1);
+  --effect-half: #22C55E;
+  --effect-half-bg: rgba(34, 197, 94, 0.15);
+  --effect-quarter: #0EA5E9;
+  --effect-quarter-bg: rgba(14, 165, 233, 0.15);
+  --effect-immune: #6B7280;
+  --effect-immune-bg: rgba(107, 114, 128, 0.2);
+
+  /* Rank/Medal Colors */
+  --rank-gold: #FBBF24;
+  --rank-silver: #9CA3AF;
+  --rank-bronze: #D97706;
+
+  /* Compare/VS Colors */
+  --compare-a: #EF4444;
+  --compare-b: #3B82F6;
+
+  /* Success/Positive Colors */
+  --success: #22C55E;
+  --success-bg: rgba(34, 197, 94, 0.15);
+
+  /* Link Color */
+  --link-color: #60A5FA;
 }
 
 [data-theme="light"] {
@@ -58,6 +88,36 @@
   --body-gradient-2: #EAE8E3;
   --body-gradient-3: #F5F3EC;
   --body-gradient-4: #DFDDD6;
+
+  /* Type Effectiveness Colors - Light Theme */
+  --effect-quad: #B91C1C;
+  --effect-quad-bg: rgba(185, 28, 28, 0.12);
+  --effect-double: #EA580C;
+  --effect-double-bg: rgba(234, 88, 12, 0.12);
+  --effect-neutral: #4B5563;
+  --effect-neutral-bg: rgba(75, 85, 99, 0.1);
+  --effect-half: #16A34A;
+  --effect-half-bg: rgba(22, 163, 74, 0.12);
+  --effect-quarter: #0284C7;
+  --effect-quarter-bg: rgba(2, 132, 199, 0.12);
+  --effect-immune: #4B5563;
+  --effect-immune-bg: rgba(75, 85, 99, 0.15);
+
+  /* Rank/Medal Colors - Light Theme */
+  --rank-gold: #D97706;
+  --rank-silver: #6B7280;
+  --rank-bronze: #B45309;
+
+  /* Compare/VS Colors - Light Theme */
+  --compare-a: #DC2626;
+  --compare-b: #2563EB;
+
+  /* Success/Positive Colors - Light Theme */
+  --success: #16A34A;
+  --success-bg: rgba(22, 163, 74, 0.12);
+
+  /* Link Color - Light Theme */
+  --link-color: #2563EB;
 }
 
 @theme {
@@ -140,9 +200,25 @@ input {
 
 button:focus-visible,
 a:focus-visible,
-input:focus-visible {
-  outline: 2px solid #FBBF24;
-  outline-offset: 3px;
+input:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="option"]:focus-visible {
+  outline: 2px solid var(--rank-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Focus ring class for custom elements */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--rank-gold);
+  outline-offset: 2px;
+}
+
+/* Touch target minimum size */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .type-icon {

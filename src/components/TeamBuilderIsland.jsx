@@ -59,8 +59,13 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
             border: 'none',
             color: 'var(--text-secondary)',
             cursor: 'pointer',
-            fontSize: '16px',
-            padding: '4px',
+            fontSize: '18px',
+            padding: '10px',
+            minWidth: '44px',
+            minHeight: '44px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           ×
@@ -100,7 +105,7 @@ function TeamSlot({ slotIndex, pokemon, onRemove, onSearch, label }) {
 
 function TypeBadge({ type, count, multiplier }) {
   const label = multiplier === 4 ? '×4' : '×2';
-  const color = multiplier === 4 ? '#E63946' : '#FF6B35';
+  const color = multiplier === 4 ? 'var(--effect-quad)' : 'var(--effect-double)';
   return (
     <span
       style={{
@@ -178,12 +183,12 @@ function TeamWeaknessDisplay({ team }) {
     return (
       <div style={{
         textAlign: 'center',
-        color: '#7AC74C',
+        color: 'var(--success)',
         padding: '20px',
         fontSize: '13px',
         fontWeight: 500,
       }}>
-        No significant weaknesses found for this team!
+        <span role="img" aria-label="success">✓</span> No significant weaknesses found for this team!
       </div>
     );
   }
@@ -207,7 +212,7 @@ function TeamWeaknessDisplay({ team }) {
 
       {quadWeak.length > 0 && (
         <div style={{ marginBottom: '10px' }}>
-          <div style={{ fontSize: '11px', fontWeight: 600, color: '#E63946', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--effect-quad)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             ×4 Weak
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -220,7 +225,7 @@ function TeamWeaknessDisplay({ team }) {
 
       {doubleWeak.length > 0 && (
         <div>
-          <div style={{ fontSize: '11px', fontWeight: 600, color: '#FF6B35', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--effect-double)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             ×2 Weak
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -303,7 +308,7 @@ function TeamStrengthDisplay({ team }) {
             <span style={{
               marginLeft: '4px',
               fontWeight: 700,
-              color: '#7AC74C',
+              color: 'var(--success)',
               background: 'var(--bg-card)',
               borderRadius: '4px',
               padding: '2px 6px',
@@ -506,7 +511,7 @@ export default function TeamBuilderIsland() {
               <input
                 type="text"
                 aria-label="Search Pokémon for team"
-                placeholder="Search Pokémon..."
+                placeholder="Search Pokémon…"
                 value={query}
                 onInput={(e) => setQuery(e.target.value)}
                 style={{
@@ -518,7 +523,6 @@ export default function TeamBuilderIsland() {
                   color: 'var(--text-primary)',
                   fontSize: '15px',
                   fontFamily: 'inherit',
-                  outline: 'none',
                   marginBottom: '12px',
                 }}
               />
@@ -533,7 +537,7 @@ export default function TeamBuilderIsland() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: '36px',
+                    height: '44px',
                     padding: '0 14px',
                     borderRadius: '8px',
                     border: filterTypes.length === 0 ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
@@ -556,8 +560,8 @@ export default function TeamBuilderIsland() {
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: '36px',
-                        height: '36px',
+                        width: '44px',
+                        height: '44px',
                         borderRadius: '8px',
                         border: isSelected ? '1.5px solid var(--text-primary)' : '1.5px solid transparent',
                         background: isSelected ? 'var(--bg-focus)' : 'var(--bg-card)',
@@ -588,7 +592,8 @@ export default function TeamBuilderIsland() {
                       alignItems: 'center',
                       gap: '12px',
                       width: '100%',
-                      padding: '10px 12px',
+                      padding: '12px',
+                      minHeight: '44px',
                       background: 'transparent',
                       border: 'none',
                       borderRadius: '8px',
@@ -596,10 +601,7 @@ export default function TeamBuilderIsland() {
                       cursor: 'pointer',
                       textAlign: 'left',
                       fontFamily: 'inherit',
-                      transition: 'background 0.2s',
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
-                    onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                   >
                     <img
                       src={getSprite(data)}

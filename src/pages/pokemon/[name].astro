@@ -20,13 +20,11 @@ const currentKey = Astro.params.name;
 const weaknesses = calculateWeaknesses(data.types, typeChart);
 const speedTiers = calculateSpeedTiers(data.speed);
 
-// Find mega forms
 const megaForms = Object.keys(pokemonData).filter(key => 
   key.startsWith('mega-') && 
   key.includes(currentKey.replace('mega-', '').split('-')[0])
 );
 
-// Find alternative forms (rotom-, alola, galar, hisui variants)
 const baseName = currentKey.replace(/^mega-/, '').split('-')[0];
 const alternativeForms = Object.keys(pokemonData).filter(key => {
   if (key === currentKey || key.startsWith('mega-')) return false;
@@ -40,8 +38,8 @@ const spriteUrl = getSprite(data);
 
 <MainLayout title={`${data.name || Astro.params.name} — PokeWeak`} description={`${data.name || Astro.params.name} type weaknesses and resistances`} currentPath={`/pokemon/${Astro.params.name}`}>
   <div class="header-row">
-    <a href="/" class="back-link" aria-label="Go back" onclick="history.back();return false">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <a href="/" class="back-link" aria-label="Go back to search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/>
       </svg>
     </a>
@@ -61,54 +59,49 @@ const spriteUrl = getSprite(data);
     </div>
   </div>
 
-
-  <div style="margin-top:24px;text-align:left;">
-    <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;text-align:center;">Speed Tiers (Lv 50)</div>
-    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:8px;">
-      {[
-        { label: 'Base', val: speedTiers.base },
-        { label: 'No Invest', val: speedTiers.basePlus },
-        { label: 'No Invest+', val: speedTiers.noInvestPlus },
-        { label: 'MAX', val: speedTiers.max },
-        { label: 'MAX+', val: speedTiers.maxPlus },
-        { label: 'Tailwind', val: speedTiers.tailwind }
-      ].map((stat) => (
-        <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
-          <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">{stat.label}</div>
-          <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{stat.val}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <div style="margin-top:16px;text-align:left;">
-    <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;text-align:center;">Abilities</div>
-    {data.abilities && data.abilities.length > 0 ? (
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        {data.abilities.map((ab) => {
-          const abilityName = typeof ab === 'string' ? ab : ab.name;
-          const abilityDesc = typeof ab === 'object' ? ab.description : '';
-          return (
-            <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:10px 12px;">
-              <div style="font-size:13px;font-weight:600;color:var(--text-primary);text-transform:capitalize;margin-bottom:4px;">{abilityName}</div>
-              {abilityDesc && (
-                <div style="font-size:12px;color:var(--text-secondary);line-height:1.4;">{abilityDesc}</div>
-              )}
-            </div>
-          );
-        })}
+  <h2 style="font-size:13px;font-weight:700;color:var(--text-primary);margin:24px 0 8px;text-align:center;">Speed Tiers (Lv 50)</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px;">
+    {[
+      { label: 'Base', val: speedTiers.base },
+      { label: 'No Invest', val: speedTiers.basePlus },
+      { label: 'No Invest+', val: speedTiers.noInvestPlus },
+      { label: 'MAX', val: speedTiers.max },
+      { label: 'MAX+', val: speedTiers.maxPlus },
+      { label: 'Tailwind', val: speedTiers.tailwind }
+    ].map((stat) => (
+      <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:2px;">{stat.label}</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text-primary);">{stat.val}</div>
       </div>
-    ) : (
-      <div style="color:var(--text-secondary);font-size:13px;text-align:center;">No abilities data</div>
-    )}
+    ))}
   </div>
+
+  <h2 style="font-size:13px;font-weight:700;color:var(--text-primary);margin:16px 0 8px;text-align:center;">Abilities</h2>
+  {data.abilities && data.abilities.length > 0 ? (
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      {data.abilities.map((ab) => {
+        const abilityName = typeof ab === 'string' ? ab : ab.name;
+        const abilityDesc = typeof ab === 'object' ? ab.description : '';
+        return (
+          <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;font-weight:600;color:var(--text-primary);text-transform:capitalize;margin-bottom:4px;">{abilityName}</div>
+            {abilityDesc && (
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.4;">{abilityDesc}</div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  ) : (
+    <div style="color:var(--text-secondary);font-size:13px;text-align:center;">No abilities data</div>
+  )}
 
   {[
-    { title: 'Mega Forms', items: megaForms, color: '#E63946', hover: '#c92a35' },
-    { title: 'Alternative Forms', items: alternativeForms, color: '#1E40AF', hover: '#1E3A8A' }
+    { title: 'Mega Forms', items: megaForms, color: 'var(--color-accent)', hover: 'var(--effect-quad)' },
+    { title: 'Alternative Forms', items: alternativeForms, color: 'var(--compare-b)', hover: 'var(--link-color)' }
   ].map((formGroup) => formGroup.items.length > 0 && (
     <div style="margin-top:16px;">
-      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">{formGroup.title}</div>
+      <h3 style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">{formGroup.title}</h3>
       <div style="display:flex;flex-wrap:wrap;gap:6px;">
         {formGroup.items.map((form) => {
           const formData = pokemonData[form];
@@ -133,19 +126,19 @@ const spriteUrl = getSprite(data);
 
   <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
     {[
-      { data: weaknesses.quadWeak, title: 'Extremely Weak', multiplierHtml: '&times;4', color: '#E63946' },
-      { data: weaknesses.doubleWeak, title: 'Weak', multiplierHtml: '&times;2', color: '#FF6B35' },
-      { data: weaknesses.resist, title: 'Resists', multiplierHtml: '&times;&frac12;', color: '#7AC74C' },
-      { data: weaknesses.doubleResist, title: 'Double Resists', multiplierHtml: '&times;&frac14;', color: '#6390F0' },
-      { data: weaknesses.immune, title: 'Immune', multiplierHtml: '&times;0', color: '#A0A0A0' }
+      { data: weaknesses.quadWeak, title: 'Extremely Weak', multiplierHtml: '&times;4', color: 'var(--effect-quad)' },
+      { data: weaknesses.doubleWeak, title: 'Weak', multiplierHtml: '&times;2', color: 'var(--effect-double)' },
+      { data: weaknesses.resist, title: 'Resists', multiplierHtml: '&times;&frac12;', color: 'var(--effect-half)' },
+      { data: weaknesses.doubleResist, title: 'Double Resists', multiplierHtml: '&times;&frac14;', color: 'var(--effect-quarter)' },
+      { data: weaknesses.immune, title: 'Immune', multiplierHtml: '&times;0', color: 'var(--effect-immune)' }
     ].map((section, idx) => section.data?.length > 0 && (
-      <section aria-label={`${section.title} types`} class="animate-stagger" style={`--i:${idx};background:var(--color-surface,#1E1E1E);border-radius:12px;padding:12px;border:1px solid ${section.color}30;`}>
+      <section aria-label={`${section.title} types`} class="animate-stagger" style={`--i:${idx};background:var(--bg-surface);border-radius:12px;padding:12px;border:1px solid var(--border-subtle);`}>
         <div style={`font-size:13px;font-weight:700;color:${section.color};margin-bottom:8px;`}>
           {section.title} (<span set:html={section.multiplierHtml} />)
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           {section.data.map((t) => (
-            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--color-surface-alt,#2A2A2A);border-radius:8px;padding:4px 8px;font-size:12px;`}>
+            <span style={`display:inline-flex;align-items:center;gap:4px;color:inherit;background:var(--bg-surface-alt);border-radius:8px;padding:4px 8px;font-size:12px;`}>
               <img src={getTypeIconSrc(t)} alt={t} width="16" height="16" style="display:inline-block;vertical-align:middle;flex-shrink:0;" />
               <span>{t}</span>
               <span style={`margin-left:auto;font-weight:700;color:${section.color};`} set:html={section.multiplierHtml} />
@@ -162,9 +155,12 @@ const spriteUrl = getSprite(data);
   .back-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     color: var(--text-secondary);
     text-decoration: none;
     flex-shrink: 0;
+    min-width: 44px;
+    min-height: 44px;
   }
   .header-row {
     display: flex;
@@ -180,18 +176,23 @@ const spriteUrl = getSprite(data);
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     background: var(--form-color);
-    color: #FFFFFF;
+    color: var(--text-inverse);
     border-radius: 8px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 600;
-    transition: background 0.2s;
+    min-height: 44px;
     cursor: pointer;
   }
 
   .form-link:hover {
     background: var(--form-hover);
+  }
+
+  .form-link:focus-visible {
+    outline: 2px solid var(--rank-gold);
+    outline-offset: 2px;
   }
 </style>
