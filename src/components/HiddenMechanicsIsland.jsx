@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
 import TypeIcon from './TypeIcon.jsx';
-import { hiddenMechanics } from '../data/hiddenMechanics.js';
+import { hiddenMechanics } from '../data/hiddenMechanics';
 
 const sectionColor = {
   'type-immunities': 'var(--rank-gold)',

@@ -1,4 +1,25 @@
-export const hiddenMechanics = [
+// Hidden battle mechanics data for the Cheatsheet page.
+
+export interface TypeImmunityItem {
+  type?: string;
+  types?: string[];
+  text: string;
+}
+
+export interface MechanicItem {
+  name?: string;
+  type?: string;
+  types?: string[];
+  text: string;
+}
+
+export interface MechanicSection {
+  id: string;
+  title: string;
+  items: (TypeImmunityItem | MechanicItem)[];
+}
+
+export const hiddenMechanics: MechanicSection[] = [
   {
     id: 'type-immunities',
     title: 'Type Immunities',
@@ -40,7 +61,7 @@ export const hiddenMechanics = [
       { name: 'Toxic Spikes', text: 'Removed when a Poison-type switches in (not Poison/Flying or Levitate)' },
       { name: 'Sheer Force + Life Orb', text: 'Moves with secondary effects get both boosts, but no Life Orb recoil' },
       { name: 'Ingrain', text: 'Removes Ground immunity from Flying-types and Levitate users' },
-      { name: 'Fake Out', text: 'Only works on the user\'s first turn on the field. Ghost-types immune. Encoring into Fake Out forces Struggle' },
+      { name: 'Fake Out', text: "Only works on the user's first turn on the field. Ghost-types immune. Encoring into Fake Out forces Struggle" },
       { name: 'Protect / Endure', text: 'Consecutive uses have decreasing success rate (100% → 50% → 25%...)' },
       { name: 'Trick Room', text: 'Priority −7, slowest priority bracket in the game' },
     ],

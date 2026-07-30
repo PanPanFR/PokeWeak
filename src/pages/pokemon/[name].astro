@@ -5,7 +5,7 @@ import { pokemonData } from '../../data/pokemonData';
 import { typeChart } from '../../data/typeChart';
 import { calculateWeaknesses } from '../../utils/typeCalc';
 import { calculateSpeedTiers } from '../../utils/speedCalc';
-import { getSprite } from '../../utils/pokemon';
+import { getSprite, getRelatedForms } from '../../utils/pokemon';
 import { getTypeIconSrc } from '../../utils/typeIcon';
 
 export function getStaticPaths() {
@@ -20,17 +20,7 @@ const currentKey = Astro.params.name;
 const weaknesses = calculateWeaknesses(data.types, typeChart);
 const speedTiers = calculateSpeedTiers(data.speed);
 
-const megaForms = Object.keys(pokemonData).filter(key => 
-  key.startsWith('mega-') && 
-  key.includes(currentKey.replace('mega-', '').split('-')[0])
-);
-
-const baseName = currentKey.replace(/^mega-/, '').split('-')[0];
-const alternativeForms = Object.keys(pokemonData).filter(key => {
-  if (key === currentKey || key.startsWith('mega-')) return false;
-  const keyBase = key.split('-')[0];
-  return keyBase === baseName;
-});
+const { megaForms, alternativeForms } = getRelatedForms(currentKey, Object.keys(pokemonData));
 
 const typeColor = (type) => `var(--color-pk-${type.toLowerCase()})`;
 const spriteUrl = getSprite(data);

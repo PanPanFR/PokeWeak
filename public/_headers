@@ -1,2 +1,2 @@
 /*
-  Content-Security-Policy: img-src 'self' data: https://www.serebii.net https://raw.githubusercontent.com https://*.githubusercontent.com; connect-src 'self' https://cloudflareinsights.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com
+  Content-Security-Policy: img-src 'self' data: https://raw.githubusercontent.com https://*.githubusercontent.com; connect-src 'self' https://cloudflareinsights.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com
